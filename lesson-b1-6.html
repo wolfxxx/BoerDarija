@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | B1 Module 6: Complex Conditionals (Hypotheticals)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .conditional-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .conditional-table th, .conditional-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .conditional-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .conditional-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .conditional-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .conditional-table .condition-marker { color: #ffcc99; font-weight: bold; }
+    .conditional-table .verb-phrase { color: #fff; }
+    .conditional-table .past-verb { color: #99ff99; } /* Highlight past tense in condition */
+    .conditional-table .result-verb { color: #ff9999; } /* Highlight result verb */
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 150px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .conditional-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 6: Complex Conditionals (Hypotheticals)</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>B1 Module 6: More Complex Conditionals (Hypotheticals)</h1>
+    <p>Learn to talk about unreal situations in the present or past ("If I had..., I would...") and express hypothetical outcomes.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Review: Simple Future Conditionals (A2)</h2>
+      <p>In A2 (Module 14), you learned the common structure for real future possibilities:</p>
+      <p><strong>`Ila` + [Verb in Past Tense], `ghadi` + [Verb]**</p>
+      <p>Example: <span class="darija-script">إلى مشيت للسوق، غادي نشري الخضرة.</span> (<span class="transcription">Ila mshit l s-souq, ghadi nshri l-khdra.</span>) - If I go to the market, I will buy vegetables.</p>
+      <p>Now, we'll explore conditionals that talk about situations that are not real or are contrary to fact.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Present Unreal Conditionals: "If... were/did..., ...would..."</h2>
+      <p>This type of conditional talks about a hypothetical situation in the present that is not true, and its imagined result.</p>
+      <p>Common Structure: **`kun` + [Verb in Past Tense (for the "if" clause)] , `kun` + [Verb in Past Tense (for the "would" clause)]**</p>
+      <p>Alternatively: **`kun` + [Verb in Past Tense], `ghadi` + [Verb Stem (for "would" clause - less common for true unreal present)]**</p>
+      <p>The word `kun` (<span class="darija-script">كون</span>) or `kunt` (<span class="darija-script">كنت</span> - if 'I' am the subject of the 'if' clause) often signals this unreality. The repetition of `kun` in both clauses is common.</p>
+      
+      <table class="conditional-table">
+        <thead>
+            <tr>
+                <th>English</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Breakdown / Notes</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>If I had money (now), I would travel.</td>
+                <td><span class="condition-marker darija-script">كون</span> <span class="past-verb darija-script">كان عندي الفلوس،</span> <span class="condition-marker darija-script">كون</span> <span class="result-verb darija-script">سافرت.</span></td>
+                <td class="transcription"><span class="condition-marker">Kun</span> <span class="past-verb">kan 3ndi l-flus,</span> <span class="condition-marker">kun</span> <span class="result-verb">safert.</span></td>
+                <td>If I had (past form for unreal present), I would have traveled (past form for would result)</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 1')"></span></td>
+            </tr>
+            <tr>
+                <td>If he were here (now), he would help us.</td>
+                <td><span class="condition-marker darija-script">كون</span> <span class="past-verb darija-script">كان هنا،</span> <span class="condition-marker darija-script">كون</span> <span class="result-verb darija-script">عاونا.</span></td>
+                <td class="transcription"><span class="condition-marker">Kun</span> <span class="past-verb">kan hna,</span> <span class="condition-marker">kun</span> <span class="result-verb">3awenna.</span></td>
+                <td>If he was (past for unreal present), he would have helped us (past for would result)</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 2')"></span></td>
+            </tr>
+            <tr>
+                <td>If I were you (m.s.), I would study.</td>
+                <td><span class="condition-marker darija-script">كون كنت</span> <span class="past-verb darija-script">ف بلاصتك،</span> <span class="condition-marker darija-script">كون</span> <span class="result-verb darija-script">قريت.</span></td>
+                <td class="transcription"><span class="condition-marker">Kun kunt</span> <span class="past-verb">f blasstek,</span> <span class="condition-marker">kun</span> <span class="result-verb">qrit.</span></td>
+                <td>`kunt f blasstek` = I were in your place</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 3')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+       <div class="note">
+        <strong>Using Past Tense for Unreal Present:</strong> Notice that, like in English "If I *were* rich...", Darija often uses past tense verb forms in both the "if" clause (`kun kan 3ndi...`) and the "would" clause (`kun safert...`) to indicate that the present situation is hypothetical or contrary to fact.
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Past Unreal Conditionals: "If... had..., ...would have..."</h2>
+        <p>This type describes a hypothetical situation in the past that did *not* happen, and its imagined past result.</p>
+        <p>Structure: **`kun` + [Verb in Past Tense (for the "if" clause)] , `kun rani / rak / rah...` + [Verb in Past Tense (for the "would have" clause)]**</p>
+        <p>The `rani/rak/rah` part (I am/you are/he is - but here used for hypothetical past result) is common here. It conjugates: `rani` (I would have), `rak` (you s. would have), `rah` (he would have), `raha` (she would have), `rana` (we would have), `rakum` (you pl. would have), `rahum` (they would have).</p>
+
+        <table class="conditional-table">
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Breakdown / Notes</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>If I had studied, I would have passed.</td>
+                    <td><span class="condition-marker darija-script">كون</span> <span class="past-verb darija-script">قريت،</span> <span class="condition-marker darija-script">كون راني</span> <span class="result-verb darija-script">نجحت.</span></td>
+                    <td class="transcription"><span class="condition-marker">Kun</span> <span class="past-verb">qrit,</span> <span class="condition-marker">kun rani</span> <span class="result-verb">nje7t.</span></td>
+                    <td>If I studied (past), I would have passed (past)</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 4')"></span></td>
+                </tr>
+                <tr>
+                    <td>If she had come earlier, she would have seen him.</td>
+                    <td><span class="condition-marker darija-script">كون</span> <span class="past-verb darija-script">جات بكري،</span> <span class="condition-marker darija-script">كون راها</span> <span class="result-verb darija-script">شافتو.</span></td>
+                    <td class="transcription"><span class="condition-marker">Kun</span> <span class="past-verb">jat bekri,</span> <span class="condition-marker">kun raha</span> <span class="result-verb">shafetu.</span></td>
+                    <td>If she came (past), she would have seen him (past)</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 5')"></span></td>
+                </tr>
+                <tr>
+                    <td>If they had had money, they would have traveled.</td>
+                    <td><span class="condition-marker darija-script">كون</span> <span class="past-verb darija-script">كان عندهم الفلوس،</span> <span class="condition-marker darija-script">كون راهُم</span> <span class="result-verb darija-script">سافرو.</span></td>
+                    <td class="transcription"><span class="condition-marker">Kun</span> <span class="past-verb">kan 3ndhum l-flus,</span> <span class="condition-marker">kun rahum</span> <span class="result-verb">safru.</span></td>
+                    <td>If they had (past), they would have traveled (past)</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 6')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+         <div class="note">
+            <strong>`Lu kan` (<span class="darija-script">لو كان</span>):</strong> For a stronger sense of "If only..." or a more emphasized hypothetical, `lu kan` can be used instead of just `kun` at the beginning of the "if" clause. The rest of the structure often remains similar.
+            <br>Example: <span class="darija-script">لو كان عرفت، كون جيت.</span> (<span class="transcription">Lu kan 3reft, kun jit.</span>) - If only I had known, I would have come.
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Expressing Wishes/Regrets (Related to Conditionals)</h2>
+        <p>Wishes about the present or past often use similar structures with `kun`.</p>
+        <ul>
+            <li>I wish I had money (now): <span class="darija-script">كون كان عندي الفلوس!</span> (<span class="transcription">Kun kan 3ndi l-flus!</span>) - (Same as present unreal condition).</li>
+            <li>I wish I had studied (regret about the past): <span class="darija-script">كون (غار) قريت!</span> (<span class="transcription">Kun (ghar) qrit!</span>) - (`ghar` <span class="darija-script">غار</span> adds emphasis like "if only").</li>
+        </ul>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Present Unreal Conditionals</h3>
+      <p>Complete the sentences. (Assume the result clause also uses `kun` + Past Tense)</p>
+      <ol>
+          <li>If I were a bird (طير - tir), <span class="fill-blank">kun tert.</span> (tert - I would fly, from طار - tar)</li>
+          <li>If he knew (عرف - 3ref) the answer, <span class="fill-blank">kun qal lina.</span> (qal lina - he would tell us)</li>
+          <li>If we had a car (now), <span class="fill-blank">kun mshina l l-b7er.</span> (mshina l l-b7er - we would go to the beach)</li>
+      </ol>
+
+      <h3>Exercise 2: Past Unreal Conditionals</h3>
+      <p>Complete the sentences using `kun` + Past Tense in both clauses (add `rani/rak/rah...` in the result clause).</p>
+      <ol>
+          <li>If you (m.s.) had called me (عيّطتي ليا - 3iyyetti liya), <span class="fill-blank">kun rani jit.</span> (jit - I would have come)</li>
+          <li>If she hadn't been sick (ما كانتش مريضة - ma kanetsh mrida), <span class="fill-blank">kun raha khdmet.</span> (khdmet - she would have worked)</li>
+          <li>If they had asked (سوّلو - suwwlu), <span class="fill-blank">kun rana 3awennahum.</span> (3awennahum - we would have helped them)</li>
+      </ol>
+
+       <h3>Exercise 3: Translate to Darija</h3>
+      <ol>
+          <li>If I had money now, I would buy a new phone.
+              <br>Answer: <span class="fill-blank">Kun kan 3ndi l-flus daba, kun shrit tilifun jdid.</span></li>
+          <li>If you (f.s.) had told me yesterday, I would have helped you.
+              <br>Answer: <span class="fill-blank">Kun qelti liya l-bare7, kun rani 3awntek.</span></li>
+          <li>I wish he were here!
+              <br>Answer: <span class="fill-blank">Kun kan hna!</span></li>
+      </ol>
+      <div class="note">
+          Hypothetical conditionals are more advanced but very useful for expressing regrets, wishes, and imagining different scenarios. Focus on recognizing the `kun` marker for unreality.
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

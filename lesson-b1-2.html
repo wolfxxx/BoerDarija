@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | B1 Module 2: The Imperfect (Habitual Past)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .verb-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .verb-table th, .verb-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .verb-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .verb-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .verb-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .verb-table .pronoun { font-weight: bold; color: #fff; }
+    .verb-table .verb-form { font-weight: bold; color: #99ff99; }
+    .verb-table .kan-part { color: #ffcc66; }
+    .verb-table .ka-verb-part { color: #99ff99; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 150px; /* Wider for verb phrases */
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .verb-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 2: The Imperfect (Habitual Past)</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>B1 Module 2: The Imperfect (Habitual Past / "Used To")</h1>
+    <p>Learn how to talk about actions that used to happen regularly or were ongoing in the past using the "kan + ka-verb" structure.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Introducing the Imperfect Tense</h2>
+      <p>The "imperfect" tense in Darija (though not always called this formally, it functions similarly to imperfect tenses in other languages) is used to describe:</p>
+      <ul>
+          <li><strong>Habitual actions in the past:</strong> Things you "used to do" regularly.</li>
+          <li><strong>Ongoing actions in the past:</strong> Things you "were doing" when something else happened.</li>
+          <li><strong>Descriptions of states or conditions in the past:</strong> How things "were."</li>
+      </ul>
+      <p>It's formed by combining the past tense of the verb `kan` (<span class="darija-script">كان</span> - to be) with the present habitual `ka-` form of the main verb.</p>
+      <p>Structure: **[Conjugated `kan` in past tense] + [Main verb in `ka-` present form]**</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Formation with `kan` + `ka-Verb`</h2>
+      <p>First, let's quickly review the past tense of `kan` (from B1 Module 1):</p>
+      <ul>
+          <li>`kunt` (I was)</li>
+          <li>`kunti` (You (s.) were)</li>
+          <li>`kan` (He was)</li>
+          <li>`kanet` (She was)</li>
+          <li>`kunna` (We were)</li>
+          <li>`kuntu` (You (pl.) were)</li>
+          <li>`kanu` (They were)</li>
+      </ul>
+      <p>Now, we add the `ka-` form of the main verb. For example, with `kteb` (to write), its `ka-` forms are `kankteb` (I write), `katkteb` (you/she writes), `kaykteb` (he writes), etc.</p>
+
+      <h3>Example: "to write" - `kteb` (<span class="darija-script">كتب</span>) in the Imperfect</h3>
+      <table class="verb-table">
+        <thead>
+            <tr>
+                <th>Pronoun</th>
+                <th>Imperfect Form (Darija Script)</th>
+                <th>Transcription</th>
+                <th>Meaning (I used to write / I was writing)</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="pronoun">Ana (I)</td>
+                <td><span class="kan-part darija-script">كنت</span> <span class="ka-verb-part darija-script">كانكتب</span></td>
+                <td><span class="kan-part">kunt</span> <span class="ka-verb-part">kankteb</span></td>
+                <td>I used to write / I was writing</td>
+                <td><span class="play-button" onclick="alert('Audio: kunt kankteb')"></span></td>
+            </tr>
+            <tr>
+                <td class="pronoun">Nta (You m.s.)</td>
+                <td><span class="kan-part darija-script">كنتي</span> <span class="ka-verb-part darija-script">كاتكتب</span></td>
+                <td><span class="kan-part">kunti</span> <span class="ka-verb-part">katkteb</span></td>
+                <td>You used to write / You were writing</td>
+                <td><span class="play-button" onclick="alert('Audio: kunti katkteb')"></span></td>
+            </tr>
+             <tr>
+                <td class="pronoun">Nti (You f.s.)</td>
+                <td><span class="kan-part darija-script">كنتي</span> <span class="ka-verb-part darija-script">كاتكتبي</span></td>
+                <td><span class="kan-part">kunti</span> <span class="ka-verb-part">katketbi</span></td>
+                <td>You used to write / You were writing</td>
+                <td><span class="play-button" onclick="alert('Audio: kunti katketbi')"></span></td>
+            </tr>
+            <tr>
+                <td class="pronoun">Huwa (He)</td>
+                <td><span class="kan-part darija-script">كان</span> <span class="ka-verb-part darija-script">كايكتب</span></td>
+                <td><span class="kan-part">kan</span> <span class="ka-verb-part">kaykteb</span></td>
+                <td>He used to write / He was writing</td>
+                <td><span class="play-button" onclick="alert('Audio: kan kaykteb')"></span></td>
+            </tr>
+            <tr>
+                <td class="pronoun">Hiya (She)</td>
+                <td><span class="kan-part darija-script">كانت</span> <span class="ka-verb-part darija-script">كاتكتب</span></td>
+                <td><span class="kan-part">kanet</span> <span class="ka-verb-part">katkteb</span></td>
+                <td>She used to write / She was writing</td>
+                <td><span class="play-button" onclick="alert('Audio: kanet katkteb')"></span></td>
+            </tr>
+            <tr>
+                <td class="pronoun">7na (We)</td>
+                <td><span class="kan-part darija-script">كنا</span> <span class="ka-verb-part darija-script">كانكتبو</span></td>
+                <td><span class="kan-part">kunna</span> <span class="ka-verb-part">kanketbu</span></td>
+                <td>We used to write / We were writing</td>
+                <td><span class="play-button" onclick="alert('Audio: kunna kanketbu')"></span></td>
+            </tr>
+            <tr>
+                <td class="pronoun">Ntuma (You pl.)</td>
+                <td><span class="kan-part darija-script">كنتو</span> <span class="ka-verb-part darija-script">كاتكتبو</span></td>
+                <td><span class="kan-part">kuntu</span> <span class="ka-verb-part">katketbu</span></td>
+                <td>You (pl) used to write / You were writing</td>
+                <td><span class="play-button" onclick="alert('Audio: kuntu katketbu')"></span></td>
+            </tr>
+            <tr>
+                <td class="pronoun">Huma (They)</td>
+                <td><span class="kan-part darija-script">كانو</span> <span class="ka-verb-part darija-script">كايكتبو</span></td>
+                <td><span class="kan-part">kanu</span> <span class="ka-verb-part">kayketbu</span></td>
+                <td>They used to write / They were writing</td>
+                <td><span class="play-button" onclick="alert('Audio: kanu kayketbu')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+       <div class="note">
+        <strong>Consistency:</strong> The `kan` part conjugates for the person and past tense. The `ka-verb` part conjugates for the person in the present habitual form.
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Examples in Context</h2>
+        <h3>Habitual Past ("Used to...")</h3>
+        <ul>
+            <li><span class="darija-script">ملي كنت صغير، كنت كانلعب الكورة كل نهار.</span><br>
+            <span class="transcription">Melli kunt sghir, kunt kanl3eb l-kura kul nhar.</span><br>
+            When I was young, I used to play football every day.</li>
+            
+            <li><span class="darija-script">شحال هادي، كنا كانسافرو بزاف.</span><br>
+            <span class="transcription">Sh7al hadi, kunna kansafru bzzaf.</span><br>
+            A long time ago, we used to travel a lot. (Lit: "How much this," meaning "some time ago")</li>
+
+            <li><span class="darija-script">كان كايقرا ف هاديك المدرسة.</span><br>
+            <span class="transcription">Kan kayqra f hadik l-mdrasa.</span><br>
+            He used to study at that school.</li>
+        </ul>
+
+        <h3>Ongoing Past Action ("Was/Were -ing")</h3>
+         <p>This usage often describes a background action that was happening when another, shorter action (simple past) interrupted it.</p>
+        <ul>
+            <li><span class="darija-script">كنت كانتفرج ف التلفزة ملي دق الباب.</span><br>
+            <span class="transcription">Kunt kantferrej f t-telfaza melli deqq l-bab.</span><br>
+            I was watching TV when the door knocked. (`deqq l-bab` - the door knocked)</li>
+
+            <li><span class="darija-script">كانو كايهدرو ملي دخلت.</span><br>
+            <span class="transcription">Kanu kayhdru melli dkhalt.</span><br>
+            They were talking when I entered. (`dkhalt` - I entered)</li>
+        </ul>
+        <div class="note">
+            <strong>Simple Past vs. Imperfect:</strong>
+            <ul>
+                <li>Simple Past (`ktebt` - I wrote): A completed action at a specific point in the past.</li>
+                <li>Imperfect (`kunt kankteb` - I used to write / was writing): A habitual action in the past, or an ongoing action in the past.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Negating the Imperfect</h2>
+        <p>To negate the imperfect, you negate the `kan` part: `ma kunt-sh...`, `ma kan-sh...`, etc.</p>
+        <p>Structure: **`ma` + [Conjugated `kan` in past] + `sh` + [Main verb in `ka-` present form]**</p>
+        
+        <ul>
+            <li>I didn't used to play / I wasn't playing: <span class="darija-script">ما كنتش كانلعب.</span> (`ma kuntsh kanl3eb`)</li>
+            <li>He didn't used to study / He wasn't studying: <span class="darija-script">ما كانش كايقرا.</span> (`ma kansh kayqra`)</li>
+            <li>They didn't used to travel / They weren't traveling: <span class="darija-script">ما كانوش كايسافرو.</span> (`ma kanush kaysafru`)</li>
+        </ul>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Conjugate in Imperfect</h3>
+      <p>Conjugate the verb `safr` (<span class="darija-script">سافر</span> - to travel) in the imperfect tense for:</p>
+      <ol>
+          <li>Ana (I): <span class="fill-blank">Kunt kansafr.</span></li>
+          <li>Hiya (She): <span class="fill-blank">Kanet katsafr.</span></li>
+          <li>Huma (They): <span class="fill-blank">Kanu kaysafru.</span></li>
+          <li>Nta (You m.s. - Negative): <span class="fill-blank">Ma kuntish katsafr.</span></li>
+      </ol>
+
+      <h3>Exercise 2: Translate to Darija</h3>
+      <p>Translate these sentences using the imperfect tense:</p>
+      <ol>
+          <li>We used to live in Rabat. (`sken` - to live)
+              <br>Answer: <span class="fill-blank">Kunna kanskunu f Rbat.</span></li>
+          <li>She was cooking when the phone rang. (`tiyyeb` - to cook; `souna t-tilifun` - the phone rang)
+              <br>Answer: <span class="fill-blank">Kanet kattiyyeb melli souna t-tilifun.</span></li>
+          <li>I didn't used to like coffee. (`kay3jbni` for "I like")
+              <br>Answer: <span class="fill-blank">Ma kantsh kat3jbni l-qhwa. / Ma kuntsh kanbghi l-qhwa.</span> (Using `bgha` is also common for "like" in past context like this)</li>
+          <li>They were always playing outside. (`l3eb` - to play; `berra` - outside)
+              <br>Answer: <span class="fill-blank">Kanu dima kayl3bu berra.</span></li>
+      </ol>
+      <div class="note">
+          The imperfect tense adds a lot of richness to your ability to talk about the past. Think about your childhood habits or what you were doing at a specific time yesterday and try to express it in Darija!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

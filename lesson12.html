@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | Module 12: Prepositions of Place & Conjunctions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .particle-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .particle-table th, .particle-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .particle-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .particle-table .particle { font-weight: bold; color: #99ff99; font-size: 1.3em; }
+    .particle-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .particle-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+     .particle-table .example-sentence {
+        color: #fff;
+    }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 50px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .particle-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a1.html">A1 Beginner</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 12: Prepositions of Place & Conjunctions</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>Module 12: Prepositions of Place & Basic Conjunctions</h1>
+    <p>Learn how to describe where things are and connect simple ideas using essential prepositions and conjunctions.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Prepositions of Place: Where is it?</h2>
+      <p>These words help you specify the location of objects or people relative to each other.</p>
+      
+      <table class="particle-table">
+        <thead>
+            <tr>
+                <th>Preposition (Darija/Trans.)</th>
+                <th>Meaning</th>
+                <th>Example Sentence (Darija)</th>
+                <th>Example Sentence (Transcription)</th>
+                <th>English Translation</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="particle darija-script">ف</span> / f</td>
+                <td>in, at</td>
+                <td class="example-sentence darija-script">الستيلو ف الصاك.</td>
+                <td class="transcription">S-stilo f s-sak.</td>
+                <td>The pen is in the bag.</td>
+                <td><span class="play-button" onclick="alert('Audio: f')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="particle darija-script">على</span> / 3la</td>
+                <td>on, upon</td>
+                <td class="example-sentence darija-script">الكتاب على الطبلة.</td>
+                <td class="transcription">L-ktab 3la t-tbla.</td>
+                <td>The book is on the table.</td>
+                <td><span class="play-button" onclick="alert('Audio: 3la')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="particle darija-script">تحت</span> / t7t</td>
+                <td>under</td>
+                <td class="example-sentence darija-script">الكرة تحت الكرسي.</td> <!-- Kura = Ball -->
+                <td class="transcription">L-kura t7t l-kursi.</td>
+                <td>The ball is under the chair.</td>
+                <td><span class="play-button" onclick="alert('Audio: t7t')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="particle darija-script">حدا</span> / 7da</td>
+                <td>next to, beside, near</td>
+                <td class="example-sentence darija-script">الدار حدا الجامع.</td>
+                <td class="transcription">D-dar 7da j-jam3.</td>
+                <td>The house is next to the mosque.</td>
+                <td><span class="play-button" onclick="alert('Audio: 7da')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="particle darija-script">قدام</span> / qddam</td>
+                <td>in front of</td>
+                <td class="example-sentence darija-script">الطموبيل قدام الباب.</td>
+                <td class="transcription">T-ttomobil qddam l-bab.</td>
+                <td>The car is in front of the door.</td>
+                <td><span class="play-button" onclick="alert('Audio: qddam')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="particle darija-script">مورا</span> / mura</td>
+                <td>behind</td>
+                <td class="example-sentence darija-script">الشجرة مورا الدار.</td> <!-- Shjra = Tree -->
+                <td class="transcription">Sh-shjra mura d-dar.</td>
+                <td>The tree is behind the house.</td>
+                <td><span class="play-button" onclick="alert('Audio: mura')"></span></td>
+            </tr>
+             <tr>
+                <td><span class="particle darija-script">بين</span> / bin</td>
+                <td>between</td>
+                <td class="example-sentence darija-script">الصاك بين الكتاب و الستيلو.</td>
+                <td class="transcription">S-sak bin l-ktab u s-stilo.</td>
+                <td>The bag is between the book and the pen.</td>
+                <td><span class="play-button" onclick="alert('Audio: bin')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+      <div class="note">
+        <strong>Remember `l-` (The):</strong> Notice how nouns often take the definite article `l-` (or its variations like `s-`, `t-`, `d-`, `j-` etc.) when used with prepositions of place, as you're usually talking about a specific object's location.
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Basic Conjunctions: Connecting Ideas</h2>
+        <p>These are essential for linking words or simple phrases.</p>
+
+        <table class="particle-table">
+            <thead>
+                <tr>
+                    <th>Conjunction (Darija/Trans.)</th>
+                    <th>Meaning</th>
+                    <th>Example Sentence (Darija)</th>
+                    <th>Example Sentence (Transcription)</th>
+                    <th>English Translation</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="particle darija-script">و</span> / u / w</td>
+                    <td>and</td>
+                    <td class="example-sentence darija-script">أنا و نتا.</td>
+                    <td class="transcription">Ana u nta.</td>
+                    <td>Me and you.</td>
+                    <td><span class="play-button" onclick="alert('Audio: u / w')"></span></td>
+                </tr>
+                 <tr>
+                    <td><span class="particle darija-script">و</span> / u / w</td>
+                    <td>and</td>
+                    <td class="example-sentence darija-script">كاناكل الخبز و الفرماج.</td> <!-- frmaj = cheese -->
+                    <td class="transcription">Kanakul l-khobz u l-frmaj.</td>
+                    <td>I eat bread and cheese.</td>
+                    <td><span class="play-button" onclick="alert('Audio: u / w')"></span></td>
+                </tr>
+                <tr>
+                    <td><span class="particle darija-script">أو / ولا</span> / aw / wella</td>
+                    <td>or</td>
+                    <td class="example-sentence darija-script">أتاي ولا قهوة؟</td>
+                    <td class="transcription">Atay wella qhwa?</td>
+                    <td>Tea or coffee?</td>
+                    <td><span class="play-button" onclick="alert('Audio: wella')"></span></td>
+                </tr>
+                <tr>
+                    <td><span class="particle darija-script">أو / ولا</span> / aw / wella</td>
+                    <td>or</td>
+                    <td class="example-sentence darija-script">نمشيو للسوق ولا للدار؟</td>
+                    <td class="transcription">Nmshiw l s-souq wella l d-dar?</td>
+                    <td>Shall we go to the market or to the house?</td>
+                    <td><span class="play-button" onclick="alert('Audio: wella')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+         <div class="note">
+            <strong>`wella` vs `aw`:</strong> `wella` is very common in spoken Darija for "or." `aw` is closer to formal Arabic but also sometimes heard.
+        </div>
+    </section>
+
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Where Is It?</h3>
+      <p>Choose the best preposition to complete the sentence based on the English meaning.</p>
+      <ol>
+          <li>L-ktab <span class="fill-blank">3la</span> t-tbla. (The book is ON the table.)</li>
+          <li>Ana kanskn (I live) <span class="fill-blank">f</span> Casablanca. (I live IN Casablanca.)</li>
+          <li>L-kursi <span class="fill-blank">qddam</span> l-biru (desk). (The chair is IN FRONT OF the desk.)</li>
+          <li>Hiya kayna (she is) <span class="fill-blank">bin</span> Youssef <span class="fill-blank">u</span> Fatima. (She is BETWEEN Youssef AND Fatima.)</li>
+          <li>T-tilifun <span class="fill-blank">t7t</span> l-ktab. (The phone is UNDER the book.)</li>
+          <li>Bghit atay <span class="fill-blank">bla</span> skkar. (I want tea WITHOUT sugar.)</li>
+      </ol>
+
+      <h3>Exercise 2: Translate</h3>
+      <p>Translate these simple phrases/sentences into Darija:</p>
+      <ol>
+          <li>Bread and water. <span class="fill-blank">L-khobz u l-ma.</span></li>
+          <li>The car is behind the house. <span class="fill-blank">T-ttomobil mura d-dar.</span></li>
+          <li>Tea or coffee? <span class="fill-blank">Atay wella qhwa?</span></li>
+          <li>The key is next to the door. <span class="fill-blank">S-sarut 7da l-bab.</span></li>
+      </ol>
+      <div class="note">
+          Describing locations and connecting simple ideas are fundamental skills. Try describing where things are in your room using these prepositions!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

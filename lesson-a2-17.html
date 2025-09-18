@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | A2 Module 17: Cultural Insights & Common Expressions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .expression-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .expression-table th, .expression-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .expression-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .expression-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .expression-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .expression-table .explanation {
+        font-size: 0.95em;
+        color: #ccc;
+    }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 120px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .expression-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a2.html">A2 Elementary</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 17: Cultural Insights & Common Expressions</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>A2 Module 17: Cultural Insights & Common Expressions</h1>
+    <p>Go beyond basic grammar and learn common Darija expressions, simple proverbs, and cultural etiquette to enhance your communication.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>The Importance of Culture in Language</h2>
+      <p>Language is deeply intertwined with culture. Understanding common expressions and social etiquette will not only help you speak more naturally but also show respect and build better connections with native speakers.</p>
+      <p>This module introduces some phrases and concepts that reflect Moroccan culture and everyday interactions.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Common Polite Expressions & Responses (Review & Expand)</h2>
+      <p>You've learned some politeness in A1. Let's expand and see them in more contexts.</p>
+      <table class="expression-table">
+        <thead>
+            <tr>
+                <th>English Phrase</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Context / Nuance</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Thank God / Praise be to God</td>
+                <td class="darija-script">الحمد لله</td>
+                <td class="transcription">l-7amdullah</td>
+                <td class="explanation">Used very frequently: when things are good, after eating, when asked how you are, etc.</td>
+                <td><span class="play-button" onclick="alert('Audio: l-7amdullah')"></span></td>
+            </tr>
+            <tr>
+                <td>God willing / If God wills</td>
+                <td class="darija-script">إن شاء الله</td>
+                <td class="transcription">Insha'Allah</td>
+                <td class="explanation">Used for future plans, hopes, or anything uncertain. Expresses that the outcome is in God's hands.</td>
+                <td><span class="play-button" onclick="alert('Audio: Insha\'Allah')"></span></td>
+            </tr>
+            <tr>
+                <td>What God has willed (Expressing admiration or when something good happens)</td>
+                <td class="darija-script">ما شاء الله</td>
+                <td class="transcription">Masha'Allah</td>
+                <td class="explanation">Said to appreciate something good and to protect it from envy.</td>
+                <td><span class="play-button" onclick="alert('Audio: Masha\'Allah')"></span></td>
+            </tr>
+            <tr>
+                <td>May God give you health/strength (often said when someone gives you something, e.g., food, drink)</td>
+                <td class="darija-script">الله يعطيك الصحة</td>
+                <td class="transcription">Allah y3tik s-se77a</td>
+                <td class="explanation">A way of saying thank you, especially for hospitality.</td>
+                <td><span class="play-button" onclick="alert('Audio: Allah y3tik s-se77a')"></span></td>
+            </tr>
+             <tr>
+                <td>Reply to "Allah y3tik s-se77a"</td>
+                <td class="darija-script">الله يبارك فيك / آمين</td>
+                <td class="transcription">Allah ybarik fik / Amin</td>
+                <td class="explanation">"May God bless you" / "Amen"</td>
+                <td><span class="play-button" onclick="alert('Audio: Allah ybarik fik')"></span></td>
+            </tr>
+            <tr>
+                <td>Welcome! / You're welcome!</td>
+                <td class="darija-script">مرحبا (بيك)</td>
+                <td class="transcription">Mer7ba (bik)</td>
+                <td class="explanation">Used to welcome guests. `Bik` means "to you."</td>
+                <td><span class="play-button" onclick="alert('Audio: Mer7ba bik')"></span></td>
+            </tr>
+             <tr>
+                <td>With pleasure / You're very welcome</td>
+                <td class="darija-script">على الراس و العين</td>
+                <td class="transcription">3la r-ras u l-3in</td>
+                <td class="explanation">Literally "On the head and the eye," a very polite way to say you're happy to do something.</td>
+                <td><span class="play-button" onclick="alert('Audio: 3la r-ras u l-3in')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Everyday Expressions & Interjections</h2>
+        <table class="expression-table">
+             <thead>
+                <tr>
+                    <th>English Phrase</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Meaning / Usage</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Okay / Fine / Alright</td>
+                    <td class="darija-script">واخا</td>
+                    <td class="transcription">wakha</td>
+                    <td class="explanation">Very common agreement word.</td>
+                    <td><span class="play-button" onclick="alert('Audio: wakha')"></span></td>
+                </tr>
+                 <tr>
+                    <td>Enough! / Stop! / That's it!</td>
+                    <td class="darija-script">صافي / باراكا</td>
+                    <td class="transcription">safi / baraka</td>
+                    <td class="explanation">`Safi` can also mean "okay, done." `Baraka` means "enough."</td>
+                    <td><span class="play-button" onclick="alert('Audio: safi / baraka')"></span></td>
+                </tr>
+                <tr>
+                    <td>Really? / Seriously?</td>
+                    <td class="darija-script">بصح؟</td>
+                    <td class="transcription">Bssa7?</td>
+                    <td class="explanation">Expresses surprise or seeks confirmation.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Bssa7?')"></span></td>
+                </tr>
+                <tr>
+                    <td>Exactly / For sure</td>
+                    <td class="darija-script">نيشان</td>
+                    <td class="transcription">nishan</td>
+                    <td class="explanation">Also means "straight ahead" for directions.</td>
+                    <td><span class="play-button" onclick="alert('Audio: nishan')"></span></td>
+                </tr>
+                 <tr>
+                    <td>No problem</td>
+                    <td class="darija-script">ماشي مشكل</td>
+                    <td class="transcription">Mashi mushkil</td>
+                    <td></td>
+                    <td><span class="play-button" onclick="alert('Audio: Mashi mushkil')"></span></td>
+                </tr>
+                 <tr>
+                    <td>I don't know</td>
+                    <td class="darija-script">ما عرفتش</td>
+                    <td class="transcription">Ma 3reftsh</td>
+                    <td></td>
+                    <td><span class="play-button" onclick="alert('Audio: Ma 3reftsh')"></span></td>
+                </tr>
+                 <tr>
+                    <td>Wait a bit / Just a moment</td>
+                    <td class="darija-script">بلاتي / تسنى شوية</td>
+                    <td class="transcription">belati / tsenna shwiya</td>
+                    <td></td>
+                    <td><span class="play-button" onclick="alert('Audio: belati / tsenna shwiya')"></span></td>
+                </tr>
+                <tr>
+                    <td>Be careful! / Watch out! (to m/f/pl)</td>
+                    <td class="darija-script">رد البال! / ردي البال! / ردو البال!</td>
+                    <td class="transcription">Redd l-bal! / Reddi l-bal! / Reddu l-bal!</td>
+                    <td>Lit. "Return the attention!"</td>
+                    <td><span class="play-button" onclick="alert('Audio: Redd l-bal!')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Simple Proverbs & Wise Sayings (Optional for A2)</h2>
+        <p>Understanding a few proverbs can give you insight into cultural values. These are more for recognition at this stage.</p>
+        <ul>
+            <li><span class="darija-script">اللي فات مات.</span> (<span class="transcription">Lli fat mat.</span>) - What's past is dead. (Let bygones be bygones.)</li>
+            <li><span class="darija-script">شوية بشوية، الجمل كايمشي ل القنت.</span> (<span class="transcription">Shwiya b shwiya, j-jmel kaymshi l l-qent.</span>) - Little by little, the camel goes to the corner/destination. (Slow and steady wins the race.)</li>
+            <li><span class="darija-script">يد وحدة ما كاتصفقش.</span> (<span class="transcription">Yedd we7da ma katseffeqsh.</span>) - One hand doesn't clap. (Teamwork makes the dream work.)</li>
+        </ul>
+         <div class="note">
+            Proverbs are rich in meaning and often have deeper cultural contexts. Don't worry about using them actively yet, but it's interesting to start hearing them.
+        </div>
+    </section>
+
+     <section class="lesson-section">
+        <h2>Cultural Etiquette Snippets</h2>
+        <h3>Hospitality:</h3>
+        <p>Moroccan culture is renowned for its hospitality. If invited to someone's home:</p>
+        <ul>
+            <li>It's polite to bring a small gift (e.g., pastries, sugar, tea).</li>
+            <li>Accept tea or food offered; refusing can sometimes be seen as impolite, though you can politely decline if you're full (`Shbe3t, l-7amdullah` - I'm full, thank God).</li>
+            <li>Compliment the food: `L-makla bnina bzzaf, Allah y3tik s-se77a!` (The food is very delicious, may God give you health!)</li>
+            <li>Remove your shoes before entering a home if others do.</li>
+        </ul>
+        <h3>Greetings:</h3>
+        <ul>
+            <li>Handshakes are common, sometimes followed by touching the heart. Between close friends or family of the same gender, kisses on the cheek (2-4) are also common.</li>
+            <li>Always inquire about health and family: `Labas? L-walidin labas? L-wlidat?` (How are you? Are your parents well? The children?)</li>
+        </ul>
+         <div class="note">
+            These are general guidelines. Observing and adapting to the specific situation is always best. When in doubt, a polite smile and `Shukran` go a long way!
+        </div>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: What would you say?</h3>
+      <p class="prompt">Choose an appropriate Darija expression for these situations:</p>
+      <ol>
+          <li>Someone gives you a cup of tea: <span class="fill-blank">Allah y3tik s-se77a.</span></li>
+          <li>You are making plans for tomorrow: <span class="fill-blank">Insha'Allah.</span></li>
+          <li>You see a beautiful sunset: <span class="fill-blank">Masha'Allah.</span></li>
+          <li>Someone asks if you want more food, but you are full: <span class="fill-blank">Shbe3t, l-7amdullah. / Baraka, Allah ykhlef.</span> (Allah ykhlef = May God replenish you - polite)</li>
+          <li>You need someone to wait a moment: <span class="fill-blank">Belati / Tsenna shwiya.</span></li>
+      </ol>
+
+      <h3>Exercise 2: Understanding Expressions</h3>
+      <p class="prompt">What do these expressions generally mean?</p>
+      <ol>
+          <li>`Mashi mushkil`: <span class="fill-blank">No problem.</span></li>
+          <li>`3la r-ras u l-3in`: <span class="fill-blank">With pleasure / You're very welcome.</span></li>
+          <li>`Safi`: <span class="fill-blank">Okay / Enough / That's it.</span></li>
+          <li>`Bssa7?`: <span class="fill-blank">Really? / Seriously?</span></li>
+      </ol>
+
+      <div class="note">
+          Using these expressions correctly will make your Darija sound more natural and show cultural awareness. Listen for them when Moroccans speak!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

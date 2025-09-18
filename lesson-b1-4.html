@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | B1 Module 4: Ability, Possibility & Permission</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .modal-table { /* Renamed for clarity */
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .modal-table th, .modal-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .modal-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .modal-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .modal-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .modal-table .verb-form { font-weight: bold; color: #99ff99; }
+    .modal-table .pronoun { font-weight: bold; color: #fff; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 150px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .modal-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 4: Ability, Possibility & Permission</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>B1 Module 4: Expressing Ability, Possibility & Permission</h1>
+    <p>Learn how to talk about what you can do, what might happen, and how to ask for and give permission.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Expressing Ability: `qder` (<span class="darija-script">قدر</span> - to be able to / can)</h2>
+      <p>The verb `qder` is used to express ability or capability. It's followed by another verb, usually in its present stem form (often starting with `n-`, `t-`, `y-` depending on the subject).</p>
+      <p>Structure: **[Conjugated `qder`] + [Verb Stem (often with n-/t-/y- prefix)]**</p>
+
+      <h3>`qder` in Present Tense (`ka-` form):</h3>
+      <table class="modal-table">
+        <thead>
+            <tr>
+                <th>Pronoun</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Meaning (I can / am able to...)</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td class="pronoun">Ana</td><td><span class="darija-script">كانقدر</span></td><td class="verb-form">kanqder</td><td>I can / I am able to</td><td><span class="play-button" onclick="alert('Audio: kanqder')"></span></td></tr>
+            <tr><td class="pronoun">Nta/Nti</td><td><span class="darija-script">كاتقدر</span></td><td class="verb-form">katqder</td><td>You can / are able to</td><td><span class="play-button" onclick="alert('Audio: katqder')"></span></td></tr>
+            <tr><td class="pronoun">Huwa</td><td><span class="darija-script">كايقدر</span></td><td class="verb-form">kayqder</td><td>He can / is able to</td><td><span class="play-button" onclick="alert('Audio: kayqder')"></span></td></tr>
+            <tr><td class="pronoun">Hiya</td><td><span class="darija-script">كاتقدر</span></td><td class="verb-form">katqder</td><td>She can / is able to</td><td><span class="play-button" onclick="alert('Audio: katqder (f)')"></span></td></tr>
+            <!-- ... Add We, You pl, They ... -->
+            <tr><td class="pronoun">7na</td><td><span class="darija-script">كانقدرو</span></td><td class="verb-form">kanqdru</td><td>We can / are able to</td><td><span class="play-button" onclick="alert('Audio: kanqdru')"></span></td></tr>
+            <tr><td class="pronoun">Ntuma</td><td><span class="darija-script">كاتقدرو</span></td><td class="verb-form">katqdru</td><td>You (pl) can / are able to</td><td><span class="play-button" onclick="alert('Audio: katqdru')"></span></td></tr>
+            <tr><td class="pronoun">Huma</td><td><span class="darija-script">كايقدرو</span></td><td class="verb-form">kayqdru</td><td>They can / are able to</td><td><span class="play-button" onclick="alert('Audio: kayqdru')"></span></td></tr>
+        </tbody>
+      </table>
+      <p>Example: <span class="darija-script">كانقدر نهضر بالدارجة شوية.</span> (<span class="transcription">Kanqder nhder b d-darija shwiya.</span>) - I can speak a little Darija.</p>
+      <p>Example: <span class="darija-script">واش كاتقدر تعاوني؟</span> (<span class="transcription">Wash katqder t3awenni?</span>) - Can you (s.) help me?</p>
+
+      <h3>`qder` in Past Tense:</h3>
+       <p>(Conjugates like a regular past tense verb: `qdert`, `qderti`, `qder`, `qdret`, `qderna`, `qdertu`, `qdru`)</p>
+       <p>Example: <span class="darija-script">البارح قدرت نفيق بكري.</span> (<span class="transcription">L-bare7 qdert nfiq bekri.</span>) - Yesterday I was able to wake up early.</p>
+       <p>Example: <span class="darija-script">ما قدرش يجي.</span> (<span class="transcription">Ma qdersh yji.</span>) - He couldn't come.</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Expressing Possibility: `yemken` (<span class="darija-script">يمكن</span> - it's possible / maybe)</h2>
+        <p>`yemken` is an impersonal expression meaning "it is possible" or "maybe." It's often followed by a verb (with pronoun prefix) or a full clause.</p>
+        <p>Structure 1: **`yemken` + [Verb (with n-/t-/y- prefix for subject)]**</p>
+        <p>Structure 2: **`yemken` + [Pronoun Suffix] + [Verb (with n-/t-/y- prefix for subject)]** (e.g., `yemken-li` - it's possible for me)</p>
+        <p>Structure 3: **`yemken` + `belli` + [Full Clause]**</p>
+
+        <table class="modal-table">
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maybe I will go. / It's possible I will go.</td>
+                    <td><span class="darija-script">يمكن نمشي.</span></td>
+                    <td class="transcription">Yemken nmshi.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Yemken nmshi.')"></span></td>
+                </tr>
+                <tr>
+                    <td>It's possible for you (s.) to help.</td>
+                    <td><span class="darija-script">يمكن ليك تعاون.</span></td>
+                    <td class="transcription">Yemken lik t3awen.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Yemken lik t3awen.')"></span></td>
+                </tr>
+                <tr>
+                    <td>Maybe he is sick.</td>
+                    <td><span class="darija-script">يمكن بلي هو مريض.</span></td>
+                    <td class="transcription">Yemken belli huwa mrid.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Yemken belli huwa mrid.')"></span></td>
+                </tr>
+                 <tr>
+                    <td>Maybe it will rain tomorrow.</td>
+                    <td><span class="darija-script">يمكن غادي طيح الشتا غدا.</span></td>
+                    <td class="transcription">Yemken ghadi ti7 sh-shta ghdda.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Yemken ghadi ti7 sh-shta ghdda.')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+         <div class="note">
+            <strong>`Yemken li / lik / lih...` etc.:</strong> This structure `yemken` + preposition `l-` + pronoun suffix emphasizes "it's possible *for someone* to do something." It's very common.
+            <br>Example: `Yemken liya nsafr` - It's possible for me to travel / I might travel.
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Asking for & Giving Permission</h2>
+        <p>Here are common ways to ask if you can do something and how to respond.</p>
+        <table class="modal-table">
+            <thead>
+                <tr>
+                    <th>English Phrase</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Notes</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Can I...? / Is it possible for me to...?</td>
+                    <td class="darija-script">واش يمكن ليا...؟ / واش نقدر...؟</td>
+                    <td class="transcription">Wash yemken li-ya...? / Wash nqder...?</td>
+                    <td>Followed by verb stem (e.g., `ndkhol` - I enter)</td>
+                    <td><span class="play-button" onclick="alert('Audio: Wash yemken liya...?')"></span></td>
+                </tr>
+                <tr>
+                    <td>Can I sit here?</td>
+                    <td class="darija-script">واش يمكن ليا نجلس هنا؟</td>
+                    <td class="transcription">Wash yemken li-ya ngles hna?</td>
+                    <td></td>
+                    <td><span class="play-button" onclick="alert('Audio: Wash yemken liya ngles hna?')"></span></td>
+                </tr>
+                <tr>
+                    <td>Yes, you can. / It's possible.</td>
+                    <td class="darija-script">إييه، يمكن ليك. / واخا.</td>
+                    <td class="transcription">Iyyeh, yemken lik. / Wakha.</td>
+                    <td></td>
+                    <td><span class="play-button" onclick="alert('Audio: Iyyeh, yemken lik.')"></span></td>
+                </tr>
+                <tr>
+                    <td>No, you can't. / It's not possible.</td>
+                    <td class="darija-script">لا، ما يمكنش ليك. / لا.</td>
+                    <td class="transcription">La, ma yemken-sh lik. / La.</td>
+                    <td>`ma yemken-sh` (it's not possible)</td>
+                    <td><span class="play-button" onclick="alert('Audio: La, ma yemkensh lik.')"></span></td>
+                </tr>
+                <tr>
+                    <td>Is it allowed...? / Is it permitted...?</td>
+                    <td class="darija-script">واش مسموح...؟</td>
+                    <td class="transcription">Wash mesmu7...?</td>
+                    <td>`mesmu7` (allowed)</td>
+                    <td><span class="play-button" onclick="alert('Audio: Wash mesmu7...?')"></span></td>
+                </tr>
+                 <tr>
+                    <td>It's forbidden / Not allowed.</td>
+                    <td class="darija-script">ممنوع.</td>
+                    <td class="transcription">Memnu3.</td>
+                    <td></td>
+                    <td><span class="play-button" onclick="alert('Audio: Memnu3.')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Expressing Ability</h3>
+      <p>Translate to Darija using `qder` (can):</p>
+      <ol>
+          <li>I can swim. (`3um` - to swim) <span class="fill-blank">Kanqder n3um.</span></li>
+          <li>She can cook tagine very well. (`tiyyeb`) <span class="fill-blank">Katqder tiyyeb ttajin mzyan bzzaf.</span></li>
+          <li>Could you (m.s.) help me yesterday? (`3awen`) <span class="fill-blank">Wash qderti t3awenni l-bare7?</span></li>
+          <li>They cannot come tomorrow. <span class="fill-blank">Ma ghadi-sh yqdru yjiw ghdda. / Ma kayqdrush yjiw ghdda.</span> (Future or general inability)</li>
+      </ol>
+
+      <h3>Exercise 2: Expressing Possibility</h3>
+      <p>Translate using `yemken`:</p>
+      <ol>
+          <li>Maybe we will go to the beach. (`l-b7er` - beach) <span class="fill-blank">Yemken ghadi nmshiw l l-b7er.</span></li>
+          <li>It's possible for him to finish the work today. (`salla l-khedma`) <span class="fill-blank">Yemken lih ysali l-khedma l-yum.</span></li>
+          <li>Maybe she didn't understand. <span class="fill-blank">Yemken belli ma fhemtsh.</span></li>
+      </ol>
+
+       <h3>Exercise 3: Asking for Permission</h3>
+       <p>How would you ask the following in Darija?</p>
+       <ol>
+           <li>Can I open the window (shrjem)? <span class="fill-blank">Wash yemken liya n7ell sh-shrjem?</span> (`n7ell` - I open)</li>
+           <li>Is it allowed to take photos here? (`صور` suwwer - to take photos) <span class="fill-blank">Wash mesmu7 nsuwwer hna?</span></li>
+           <li>Can you (f.s.) wait a minute, please? (`tsenna dqiqa`) <span class="fill-blank">Wash yemken lik ttsennay dqiqa, 3afak?</span></li>
+       </ol>
+      <div class="note">
+          These modal-like expressions (`qder`, `yemken`) are fundamental for expressing nuances beyond simple statements. Practice them in different tenses too!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

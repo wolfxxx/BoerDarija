@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | A2 Module 8: Comparative & Superlative Adjectives</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .comparison-table th, .comparison-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .comparison-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .comparison-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .comparison-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .comparison-table .structure { font-weight: bold; color: #fff; }
+    .comparison-table .example { color: #ccc; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 100px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .comparison-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a2.html">A2 Elementary</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 8: Comparative & Superlative Adjectives</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>A2 Module 8: Comparative & Superlative Adjectives</h1>
+    <p>Learn how to compare people, things, and actions, and how to identify the "most" or "least" of something.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Comparative Adjectives: More Than / Less Than</h2>
+      <p>To say something is "more [adjective] than" something else, you use the adjective followed by `kter mn` (<span class="darija-script">كتر من</span> - more than).</p>
+      <p>Pattern: **[Noun 1] + [Adjective (agrees with Noun 1)] + `kter mn` + [Noun 2]**</p>
+      
+      <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>English</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>This house is bigger than that house.</td>
+                <td><span class="darija-script">هاد الدار كبيرة كتر من هاديك الدار.</span></td>
+                <td class="transcription">Had d-dar kbira kter mn hadik d-dar.</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 1')"></span></td>
+            </tr>
+            <tr>
+                <td>Ahmed is taller than Ali.</td>
+                <td><span class="darija-script">أحمد طويل كتر من علي.</span></td>
+                <td class="transcription">Ahmed twil kter mn Ali.</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 2')"></span></td>
+            </tr>
+            <tr>
+                <td>This car is more expensive than my car.</td>
+                <td><span class="darija-script">هاد الطموبيل غالية كتر من طموبيلتي.</span></td>
+                <td class="transcription">Had t-ttomobil ghalya kter mn ttomobilti.</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 3')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+
+      <p>To say something is "less [adjective] than" something else, you use `qell mn` (<span class="darija-script">قل من</span> - less than).</p>
+      <p>Pattern: **[Noun 1] + [Adjective (agrees with Noun 1)] + `qell mn` + [Noun 2]**</p>
+       <table class="comparison-table">
+        <tbody>
+             <tr>
+                <td>My book is smaller than your book.</td>
+                <td><span class="darija-script">كتابي صغير قل من كتابك.</span></td>
+                <td class="transcription">Ktabi sghir qell mn ktabek.</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 4')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+       <div class="note">
+        <strong>Adjective Agreement:</strong> Remember, the adjective must always agree in gender and number with the <strong>first noun</strong> being described.
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Comparative Adjectives: As... As</h2>
+        <p>To say something is "as [adjective] as" something else, you use `b7al` (<span class="darija-script">بحال</span> - like, as) or `qed qed m3a` (<span class="darija-script">قد قد مع</span> - same size/level with).</p>
+        <p>Pattern 1: **[Noun 1] + [Adjective] + `b7al` + [Noun 2]** (Noun 2 often implied or a pronoun)</p>
+        <p>Pattern 2: **[Noun 1] + `qed qed m3a` + [Noun 2]** (Often for size/equality)</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>My house is as big as your house.</td>
+                    <td><span class="darija-script">داري كبيرة بحال دارك.</span><br>OR <span class="darija-script">داري قد قد مع دارك.</span></td>
+                    <td class="transcription">Dari kbira b7al darek.<br>OR Dari qed qed m3a darek.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 5')"></span></td>
+                </tr>
+                <tr>
+                    <td>He is as tall as his brother.</td>
+                    <td><span class="darija-script">هو طويل بحال خوه.</span></td>
+                    <td class="transcription">Huwa twil b7al khuh.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 6')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Superlative Adjectives: The Most / The Least</h2>
+        <p>To say something is "the most [adjective]" (e.g., the biggest, the tallest), you often use the structure:</p>
+        <p>Pattern: **`ahsan` (<span class="darija-script">أحسن</span> - best) / `akbar` (<span class="darija-script">أكبر</span> - biggest) / `asghar` (<span class="darija-script">أصغر</span> - smallest) + [Noun]** (These are common forms that function as superlatives)</p>
+        <p>OR: **` huwa/hiya/huma l-` + [Adjective with `a-` prefix pattern, e.g., `akbar`, `atwel`]**</p>
+        <p>OR for general "the most": **`كتر واحد(ة)` (kter wa7ed/wa7da - the most one) after the noun and adjective.**</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Notes</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The biggest house.</td>
+                    <td><span class="darija-script">أكبر دار. / الدار الكبيرة كتر وحدة.</span></td>
+                    <td class="transcription">Akbar dar. / D-dar l-kbira kter we7da.</td>
+                    <td class="example">`Akbar` is an elative form.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 7')"></span></td>
+                </tr>
+                <tr>
+                    <td>The tallest man.</td>
+                    <td><span class="darija-script">أطول راجل. / الراجل الطويل كتر واحد.</span></td>
+                    <td class="transcription">Atwal rajl. / R-rajl t-twil kter wa7ed.</td>
+                    <td class="example">`Atwal` is an elative form.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 8')"></span></td>
+                </tr>
+                <tr>
+                    <td>The best book.</td>
+                    <td><span class="darija-script">أحسن كتاب.</span></td>
+                    <td class="transcription">A7san ktab.</td>
+                    <td class="example">`A7san` means best.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 9')"></span></td>
+                </tr>
+                 <tr>
+                    <td>The most expensive car.</td>
+                    <td><span class="darija-script">الطموبيل الغالية كتر وحدة. / أغلى طموبيل.</span></td>
+                    <td class="transcription">T-ttomobil l-ghalya kter we7da. / Aghla ttomobil.</td>
+                    <td class="example">`Aghla` is an elative form.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 10')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>To say "the least [adjective]", you can use `aqall` (<span class="darija-script">أقل</span> - least) or by negating the "most":</p>
+        <ul>
+            <li>The least expensive car: <span class="darija-script">أقل طموبيل غالية.</span> (Aqall ttomobil ghalya.) OR <span class="darija-script">الطموبيل اللي ماشي غالية بزاف.</span> (T-ttomobil lli mashi ghalya bzzaf. - The car that is not very expensive.)</li>
+        </ul>
+        <div class="note">
+            <strong>Elative Form:</strong> Many superlatives in Arabic (and Darija by extension) use a special adjective pattern called the "elative" form, often starting with `a-` (like `akbar` from `kbir`, `atwal` from `twil`). `A7san` (best) is a common one. For A2, recognizing `akbar`, `asghar`, and `a7san` is a good start. The "kter wa7ed/wa7da" construction is also very useful.
+        </div>
+    </section>
+
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Make Comparisons (More Than)</h3>
+      <p>Translate these sentences into Darija:</p>
+      <ol>
+          <li>My car (f.) is newer than your car (m.). (new: jdid/jdida)<br> Answer: <span class="fill-blank">Tomobilti jdida kter mn tomobiltek.</span></li>
+          <li>Coffee is more expensive than tea. (expensive: ghali/ghalya)<br> Answer: <span class="fill-blank">L-qhwa ghalya kter mn atay.</span></li>
+          <li>He is kinder than his sister. (kind: drif/drifa)<br> Answer: <span class="fill-blank">Huwa drif kter mn khtu.</span></li>
+      </ol>
+
+      <h3>Exercise 2: As... As</h3>
+      <p>Translate using `b7al` or `qed qed m3a`:</p>
+      <ol>
+          <li>This book is as interesting as that book. (interesting: <span class="darija-script">ممتع</span> mumti3 / <span class="darija-script">ممتعة</span> mumti3a)<br> Answer: <span class="fill-blank">Had l-ktab mumti3 b7al hadak l-ktab.</span></li>
+          <li>Fatima is as tall as her mother. <br> Answer: <span class="fill-blank">Fatima twila b7al mamaha. / Fatima qed qed m3a mamaha f t-tul.</span> (f t-tul = in height)</li>
+      </ol>
+
+      <h3>Exercise 3: Superlatives</h3>
+      <p>How would you say the following in Darija?</p>
+      <ol>
+          <li>The smallest house. <span class="fill-blank">Asghar dar. / D-dar s-sghira kter we7da.</span></li>
+          <li>The best student (m.). <span class="fill-blank">A7san talib.</span></li>
+          <li>The most beautiful city (f.). <span class="fill-blank">A7san mdina. / L-mdina z-zwina kter we7da.</span> (Using a7san for "most beautiful" is common, or zwina kter we7da).</li>
+      </ol>
+      <div class="note">
+          Comparisons are a great way to add more detail to your conversations. Try comparing things around you or people you know!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

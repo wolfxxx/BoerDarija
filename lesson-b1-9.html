@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | B1 Module 9: Derived Verb Forms II (Forms V, VII)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .breadcrumb a:hover {
+      color: #4dabf7;
+    }
+    .breadcrumb-separator {
+      margin: 0 8px;
+      color: #666;
+    }
+    .breadcrumb-current {
+      color: #4dabf7;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .verb-pattern-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .verb-pattern-table th, .verb-pattern-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .verb-pattern-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .verb-pattern-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .verb-pattern-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .verb-pattern-table .verb-form { font-weight: bold; color: #99ff99; }
+    .verb-pattern-table .related-verb { font-style: italic; color: #ccc; }
+    .verb-pattern-table .meaning-change { color: #fff; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 120px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .verb-pattern-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 9: Derived Verb Forms II (Forms V, VII)</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>B1 Module 9: Derived Verb Forms II (Reflexive/Passive - Forms V, VII)</h1>
+    <p>Continue exploring Darija verb patterns, focusing on Form V (`tfe33el`) and Form VII (`nfe3el`) which often indicate reflexive or passive meanings.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Review: Derived Verb Forms & Form II</h2>
+      <p>In the previous module, you were introduced to derived verb forms (`l-awzan`) and specifically Form II (`fe33el`), which often adds a causative or intensive meaning to a basic verb.</p>
+      <p>Example: `fhhem` (<span class="darija-script">فهّــم</span> - to make understand/explain) from `fhem` (<span class="darija-script">فهم</span> - to understand).</p>
+      <p>Now, let's look at other important derived forms.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Form V: The `tfe33el` (<span class="darija-script">تفعّــل</span>) Pattern</h2>
+      <p>Form V is characterized by a `t-` prefix added to the Form II pattern. It often has one of these meanings:</p>
+      <ul>
+          <li>**Reflexive of Form II:** The subject does the action of Form II to itself (e.g., if Form II is "to teach," Form V might be "to learn" - to teach oneself).</li>
+          <li>**Passive of Form II:** The subject undergoes the action of Form II.</li>
+          <li>It can also indicate a change of state or becoming something.</li>
+      </ul>
+      
+      <h3>Examples of Form V Verbs:</h3>
+      <table class="verb-pattern-table">
+        <thead>
+            <tr>
+                <th>Related Form II (Meaning)</th>
+                <th>Form V Verb (Script/Trans.)</th>
+                <th>Meaning of Form V</th>
+                <th>Example Sentence (Form V)</th>
+                <th>Audio (Form V)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="related-verb">علّم (3llem)</span> - to teach</td>
+                <td><span class="verb-form darija-script">تعلّم</span> / <span class="verb-form transcription">t3llem</span></td>
+                <td class="meaning-change">Reflexive: To learn (to teach oneself)</td>
+                <td class="example-sentence"><span class="darija-script">كانبغي نتعلّم لغات جداد.</span> (Kanbghi nt3llem lughat jdad.) - I like to learn new languages.</td>
+                <td><span class="play-button" onclick="alert('Audio: t3llem')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="related-verb">بدّل (beddel)</span> - to change (something)</td>
+                <td><span class="verb-form darija-script">تبدّل</span> / <span class="verb-form transcription">tbeddel</span></td>
+                <td class="meaning-change">Reflexive/Passive: To change (oneself), to be changed</td>
+                <td class="example-sentence"><span class="darija-script">الجو تبدّل اليوم.</span> (L-jeww tbeddel l-yum.) - The weather changed today.</td>
+                <td><span class="play-button" onclick="alert('Audio: tbeddel')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="related-verb">صوّر (Suwwer)</span> - to photograph/film</td>
+                <td><span class="verb-form darija-script">تصوّر</span> / <span class="verb-form transcription">tsuwwer</span></td>
+                <td class="meaning-change">Reflexive: To imagine, to take a photo of oneself (less common for this meaning) / Passive: To be photographed</td>
+                <td class="example-sentence"><span class="darija-script">تصوّرت بلي أنا ف مكان آخر.</span> (Tsuwwert belli ana f makan akher.) - I imagined that I was in another place.</td>
+                <td><span class="play-button" onclick="alert('Audio: tsuwwer')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="related-verb">كلّم (kellem)</span> - to speak to</td>
+                <td><span class="verb-form darija-script">تكلّم</span> / <span class="verb-form transcription">tkellem</span></td>
+                <td class="meaning-change">To speak, to talk</td>
+                <td class="example-sentence"><span class="darija-script">خاصك تتكلّم معاه.</span> (Khassk ttkellem m3ah.) - You need to speak with him.</td>
+                <td><span class="play-button" onclick="alert('Audio: tkellem')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+      <div class="note">
+          Form V verbs conjugate regularly in the past, present (`ka-`), and future (`ghadi`), following the patterns for verbs starting with `t-`.
+          <br>Example (Present `ka-` for `t3llem`): Ana `kant3llem`, Nta `katt3llem`, Huwa `kayt3llem`.
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Form VII: The `nfe3el` (<span class="darija-script"> انفعل</span>) Pattern</h2>
+        <p>Form VII is characterized by an `n-` prefix (or `en-`, `in-`) added to the Form I root. It often imparts a **passive** or **reflexive-passive** meaning, indicating that the subject undergoes an action or changes state without an explicit doer.</p>
+        
+        <h3>Examples of Form VII Verbs:</h3>
+        <table class="verb-pattern-table">
+            <thead>
+                <tr>
+                    <th>Related Form I (Meaning)</th>
+                    <th>Form VII Verb (Script/Trans.)</th>
+                    <th>Meaning of Form VII</th>
+                    <th>Example Sentence (Form VII)</th>
+                    <th>Audio (Form VII)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="related-verb">فتح (fte7)</span> - to open (something)</td>
+                    <td><span class="verb-form darija-script">انفتح / تحلّ</span> / <span class="verb-form transcription">nfeta7 / t7ell</span></td>
+                    <td class="meaning-change">Passive: To be opened, to open (by itself)</td>
+                    <td class="example-sentence"><span class="darija-script">الباب تحلّ بوحدو.</span> (L-bab t7ell bu7du.) - The door opened by itself. (`t7ell` is more common than `nfeta7` in Darija for "to be opened")</td>
+                    <td><span class="play-button" onclick="alert('Audio: t7ell')"></span></td>
+                </tr>
+                <tr>
+                    <td><span class="related-verb">هرس (hres)</span> - to break (something)</td>
+                    <td><span class="verb-form darija-script">تهرّس</span> / <span class="verb-form transcription">therres</span></td> <!-- Note: this is more like a Form V of Form II -->
+                    <td class="meaning-change">Passive: To be broken, to get broken</td>
+                    <td class="example-sentence"><span class="darija-script">الكاس تهرّس.</span> (L-kas therres.) - The glass broke / got broken.</td>
+                    <td><span class="play-button" onclick="alert('Audio: therres')"></span></td>
+                </tr>
+                 <tr>
+                    <td><span class="related-verb">كتب (kteb)</span> - to write</td>
+                    <td><span class="verb-form darija-script">انكتب / تكتب</span> / <span class="verb-form transcription">nkateb / tkteb</span></td>
+                    <td class="meaning-change">Passive: To be written</td>
+                    <td class="example-sentence"><span class="darija-script">الكتاب تكتب ف 2020.</span> (L-ktab tkteb f 2020.) - The book was written in 2020. (`tkteb` is more common)</td>
+                    <td><span class="play-button" onclick="alert('Audio: tkteb')"></span></td>
+                </tr>
+                 <tr>
+                    <td><span class="related-verb">حبس (7bes)</span> - to stop/imprison</td>
+                    <td><span class="verb-form darija-script">انحبس / تحبس</span> / <span class="verb-form transcription">n7abes / t7bes</span></td>
+                    <td class="meaning-change">Passive: To be stopped/imprisoned</td>
+                    <td class="example-sentence"><span class="darija-script">اللص تحبس.</span> (L-less t7bes.) - The thief was imprisoned. (`L-less` = thief)</td>
+                    <td><span class="play-button" onclick="alert('Audio: t7bes')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">
+            <strong>Darija Variations:</strong> While standard Arabic has a clear Form VII (`nfe3el`), in Darija, the `t-` prefix (similar to Form V or a `t-` prefixed Form I) is often used for passive meanings for some verbs, sometimes more commonly than the `n-` prefix. For example, `t7ell` (to be opened) is very common. `Therres` (to be broken) looks like a Form V derived from Form II (`herres` - to smash).
+            <br>Focus on recognizing the passive meaning.
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Identifying and Using These Forms</h2>
+        <ul>
+            <li>**Form V (`tfe33el`):** Look for the `t-` prefix combined with a doubled middle consonant. Think "reflexive of Form II" or "to become/undergo the action of Form II."</li>
+            <li>**Form VII (`nfe3el` / `tfe3el` variants):** Look for an `n-` prefix or a `t-` prefix on a Form I root, often indicating something happens *to* the subject or the subject changes state.</li>
+        </ul>
+        <p>These forms conjugate regularly once their pattern is established.</p>
+        <p>Example: <span class="darija-script">كل نهار كانتعلّم شي حاجة جديدة.</span> (<span class="transcription">Kul nhar kant3llem shi 7aja jdida.</span>) - Every day I learn something new.</p>
+        <p>Example: <span class="darija-script">مللي تهرس الكاس، ما بقيتش نقدر نشرب فيه.</span> (<span class="transcription">Melli therres l-kas, ma bqitsh nqder nshrb fih.</span>) - When the glass broke, I could no longer drink from it.</p>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Identify the Form and Meaning</h3>
+      <p class="prompt">For each verb, identify if it's likely Form V or Form VII (or a Darija variant) and guess its meaning based on the related verb.</p>
+      <ol>
+          <li>`tkhdem` (Related to `kheddem` - to make work): Form <span class="fill-blank">V</span>, Meaning: <span class="fill-blank">To be employed / To work (reflexive)</span></li>
+          <li>`nsme3` (Related to `sme3` - to hear): Form <span class="fill-blank">VII</span>, Meaning: <span class="fill-blank">To be heard</span></li>
+          <li>`tferrej` (Related to `ferrej` - to make watch): Form <span class="fill-blank">V</span>, Meaning: <span class="fill-blank">To watch (for oneself)</span></li>
+          <li>`tqra` (Related to `qerra` - to teach): Form <span class="fill-blank">V</span>, Meaning: <span class="fill-blank">To be read / To study (reflexive: to make oneself read)</span></li>
+      </ol>
+
+      <h3>Exercise 2: Complete the Sentence</h3>
+      <p class="prompt">Use the correct derived form of the verb in parentheses.</p>
+      <ol>
+          <li>L-kursi <span class="fill-blank">therres</span> البارح. (`hres` - to break; needs passive form for "was broken")</li>
+          <li>Ana <span class="fill-blank">kantkellem</span> مع المدير. (`kellem` - to speak to; Form V for "to speak")</li>
+          <li>D-dwa khassu <span class="fill-blank">ytshreb</span> (or `ynshrb`) قبل الماكلة. (`shrb` - to drink; needs passive "to be drunk")</li>
+          <li>Had l-film <span class="fill-blank">tsuwwer</span> ف المغرب. (`Suwwer` - to film; needs passive "was filmed")</li>
+      </ol>
+
+      <div class="note">
+          Derived verb forms unlock a huge amount of vocabulary! Start by recognizing the patterns (`t-` prefix, `n-` prefix, doubled middle consonants) and the typical meaning changes they bring.
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Simple script to ensure correct breadcrumb is shown (if copy-pasting template)
+    if (document.getElementById('b1-breadcrumb')) {
+        let allBreadcrumbs = document.querySelectorAll('.breadcrumb');
+        allBreadcrumbs.forEach(bc => bc.style.display = 'none');
+        document.getElementById('b1-breadcrumb').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

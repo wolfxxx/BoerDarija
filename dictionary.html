@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | Darija Dictionary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="resources.html">Resources</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Dictionary</span>
+    </div>
+  </div>
+
+  <!-- Dictionary Header -->
+  <header>
+    <h1>Darija Dictionary</h1>
+    <p>A comprehensive collection of everyday Moroccan Arabic words and phrases</p>
+  </header>
+
+  <!-- Search Bar -->
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search for words...">
+  </div>
+
+  <!-- Dictionary Content -->
+  <div class="container" id="dictionary-container">
+    <!-- Content will be loaded here dynamically -->
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const dictionaryContainer = document.getElementById('dictionary-container');
+      const searchInput = document.getElementById('search-input');
+      let dictionaryData = [];
+
+      // Fetch and render the dictionary
+      fetch('dictionary.json')
+        .then(response => response.json())
+        .then(data => {
+          dictionaryData = data.categories;
+          renderDictionary(dictionaryData);
+        })
+        .catch(error => {
+          console.error('Error loading dictionary data:', error);
+          dictionaryContainer.innerHTML = '<p>Error loading dictionary. Please try again later.</p>';
+        });
+
+      // Function to safely sanitize Arabic text (hide mojibake)
+      function sanitizeArabic(text) {
+        if (!text) return '';
+        try {
+          const cleaned = text.replace(/\uFFFD/g, '').trim();
+          return cleaned || text.trim();
+        } catch (e) {
+          return text || '';
+        }
+      }
+
+      // Function to render the dictionary
+      function renderDictionary(categories) {
+        dictionaryContainer.innerHTML = '';
+        categories.forEach(category => {
+          const categorySection = document.createElement('section');
+          categorySection.className = 'category-section';
+
+          const categoryTitle = document.createElement('h2');
+          const entryCount = category.words.length;
+          const entryLabel = entryCount === 1 ? 'entry' : 'entries';
+          categoryTitle.textContent = `${category.name} (${entryCount} ${entryLabel})`;
+          categorySection.appendChild(categoryTitle);
+
+          const wordTable = document.createElement('table');
+          wordTable.className = 'word-table';
+          wordTable.innerHTML = `
+            <thead>
+              <tr>
+                <th>Term</th>
+                <th>Arabic</th>
+                <th>Meaning</th>
+                <th>Verify</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          `;
+
+          const wordTableBody = wordTable.querySelector('tbody');
+
+          category.words.forEach(word => {
+            const wordRow = document.createElement('tr');
+            wordRow.innerHTML = `
+              <td>${word.term}</td>
+              <td>${sanitizeArabic(word.arabic)}</td>
+              <td>${word.meaning}</td>
+              <td><a href="https://www.google.com/search?q=${encodeURIComponent(word.term + ' darija')}" target="_blank">Verify</a></td>
+            `;
+            wordTableBody.appendChild(wordRow);
+          });
+
+          categorySection.appendChild(wordTable);
+          dictionaryContainer.appendChild(categorySection);
+        });
+      }
+
+      // Function to filter the dictionary based on search input
+      function filterDictionary() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredData = dictionaryData.map(category => {
+          const filteredWords = category.words.filter(word =>
+            word.term.toLowerCase().includes(searchTerm) ||
+            word.meaning.toLowerCase().includes(searchTerm) ||
+            (word.arabic || '').toLowerCase().includes(searchTerm)
+          );
+          return { ...category, words: filteredWords };
+        }).filter(category => category.words.length > 0);
+
+        renderDictionary(filteredData);
+      }
+
+      // Add event listener for the search input
+      searchInput.addEventListener('input', filterDictionary);
+
+      // Function to check for duplicates
+      function checkForDuplicates(categories) {
+        const words = categories.flatMap(category => category.words);
+        const uniqueWords = new Set();
+        const duplicates = [];
+
+        for (const word of words) {
+          const key = `${word.term}-${word.meaning}`;
+          if (uniqueWords.has(key)) {
+            duplicates.push(word);
+          } else {
+            uniqueWords.add(key);
+          }
+        }
+
+        if (duplicates.length > 0) {
+          console.warn('Found the following duplicate entries:');
+          console.warn(duplicates);
+        } else {
+          console.log('No duplicate entries found.');
+        }
+      }
+
+      // Function to check for inconsistencies
+      function checkForInconsistencies(categories) {
+        const words = categories.flatMap(category => category.words);
+        const terms = {};
+
+        for (const word of words) {
+          if (terms[word.term]) {
+            if (terms[word.term].meaning !== word.meaning) {
+              console.warn(`Inconsistent meaning for term "${word.term}":`);
+              console.warn(`  - "${terms[word.term].meaning}"`);
+              console.warn(`  - "${word.meaning}"`);
+            }
+            if (terms[word.term].arabic !== word.arabic) {
+              console.warn(`Inconsistent arabic spelling for term "${word.term}":`);
+              console.warn(`  - "${terms[word.term].arabic}"`);
+              console.warn(`  - "${word.arabic}"`);
+            }
+          } else {
+            terms[word.term] = word;
+          }
+        }
+      }
+
+      // Function to check random words
+      function checkRandomWords(categories) {
+        const words = categories.flatMap(category => category.words);
+        const randomWords = [];
+        for (let i = 0; i < 5; i++) {
+          const randomIndex = Math.floor(Math.random() * words.length);
+          randomWords.push(words[randomIndex]);
+        }
+
+        console.log('--- Random words for manual verification ---');
+        for (const word of randomWords) {
+          console.log(`Term: ${word.term}, Arabic: ${word.arabic}, Meaning: ${word.meaning}`);
+        }
+        console.log('-------------------------------------------');
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+

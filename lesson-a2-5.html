@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | A2 Module 5: Future Tense with 'Ghadi'</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .future-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .future-table th, .future-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .future-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .future-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .future-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .future-table .pronoun { font-weight: bold; color: #fff; }
+    .future-table .future-marker { font-weight: bold; color: #99ff99; }
+    .future-table .verb-stem { color: #ffcc66; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 120px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .future-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a2.html">A2 Elementary</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 5: Future Tense with 'Ghadi'</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>A2 Module 5: Future Tense with `Ghadi`</h1>
+    <p>Learn how to talk about future plans and intentions using the common future marker `ghadi`.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Introducing the Future Tense</h2>
+      <p>To express future actions in Darija, the most common way is to use the particle `ghadi` (<span class="darija-script">غادي</span>), which means "going to" or "will." It's placed before the main verb.</p>
+      <p>The main verb that follows `ghadi` is usually in a form similar to its present tense conjugation (often the `ka-` form without the `ka-`, or the simple stem for some persons).</p>
+      <p>Pattern: **[Subject Pronoun (optional)] + `ghadi` (or variant) + [Main Verb Form]**</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Conjugating `ghadi` (or using its variants)</h2>
+      <p>There are a few ways `ghadi` is used:</p>
+      <ol>
+          <li><strong>Invariable `ghadi` or `gha`:** In many casual contexts, especially in Casablanca, `ghadi` or a shortened `gha` can be used for all persons without changing. This is often the easiest for learners.
+             <br>Example: Ana `gha` nmshi. (I will go), Nta `gha` tktb. (You will write).</li>
+          <li><strong>`ghadi` conjugating like an adjective:** `ghadi` (m.s.), `ghada` (f.s.), `ghadin` (pl.). This is also common.</li>
+      </ol>
+       <p>For this A2 module, we will focus on the **invariable `ghadi` / `gha`** combined with the appropriate present tense stem of the main verb (usually the one without the `ka-` prefix, but with the pronoun prefixes like `n-`, `t-`, `y-`).</p>
+
+      <table class="future-table">
+        <thead>
+            <tr>
+                <th>Pronoun</th>
+                <th>Future Construction (Darija Script)</th>
+                <th>Transcription</th>
+                <th>Meaning (with "to go" - `msha`)</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="pronoun">Ana (I)</td>
+                <td><span class="future-marker darija-script">غادي</span> <span class="verb-stem darija-script">نمشي</span></td>
+                <td><span class="future-marker">ghadi</span> <span class="verb-stem">nmshi</span> (or `gha nmshi`)</td>
+                <td>I will go</td>
+                <td><span class="play-button" onclick="alert('Audio: ghadi nmshi')"></span></td>
+            </tr>
+            <tr>
+                <td class="pronoun">Nta (You m.s.)</td>
+                <td><span class="future-marker darija-script">غادي</span> <span class="verb-stem darija-script">تمشي</span></td>
+                <td><span class="future-marker">ghadi</span> <span class="verb-stem">tmshi</span> (or `gha tmshi`)</td>
+                <td>You will go</td>
+                <td><span class="play-button" onclick="alert('Audio: ghadi tmshi (m)')"></span></td>
+            </tr>
+            <tr>
+                <td class="pronoun">Nti (You f.s.)</td>
+                <td><span class="future-marker darija-script">غادي</span> <span class="verb-stem darija-script">تمشي</span></td>
+                <td><span class="future-marker">ghadi</span> <span class="verb-stem">tmshi</span> (or `gha tmshi`)</td>
+                <td>You will go</td>
+                <td><span class="play-button" onclick="alert('Audio: ghadi tmshi (f)')"></span></td>
+            </tr>
+            <tr>
+                <td class="pronoun">Huwa (He)</td>
+                <td><span class="future-marker darija-script">غادي</span> <span class="verb-stem darija-script">يمشي</span></td>
+                <td><span class="future-marker">ghadi</span> <span class="verb-stem">ymshi</span> (or `gha ymshi`)</td>
+                <td>He will go</td>
+                <td><span class="play-button" onclick="alert('Audio: ghadi ymshi')"></span></td>
+            </tr>
+            <tr>
+                <td class="pronoun">Hiya (She)</td>
+                <td><span class="future-marker darija-script">غادي</span> <span class="verb-stem darija-script">تمشي</span></td>
+                <td><span class="future-marker">ghadi</span> <span class="verb-stem">tmshi</span> (or `gha tmshi`)</td>
+                <td>She will go</td>
+                <td><span class="play-button" onclick="alert('Audio: ghadi tmshi (she)')"></span></td>
+            </tr>
+            <tr>
+                <td class="pronoun">7na (We)</td>
+                <td><span class="future-marker darija-script">غادي</span> <span class="verb-stem darija-script">نمشيو</span></td>
+                <td><span class="future-marker">ghadi</span> <span class="verb-stem">nmshiw</span> (or `gha nmshiw`)</td>
+                <td>We will go</td>
+                <td><span class="play-button" onclick="alert('Audio: ghadi nmshiw')"></span></td>
+            </tr>
+            <tr>
+                <td class="pronoun">Ntuma (You pl.)</td>
+                <td><span class="future-marker darija-script">غادي</span> <span class="verb-stem darija-script">تمشيو</span></td>
+                <td><span class="future-marker">ghadi</span> <span class="verb-stem">tmshiw</span> (or `gha tmshiw`)</td>
+                <td>You (pl) will go</td>
+                <td><span class="play-button" onclick="alert('Audio: ghadi tmshiw (pl)')"></span></td>
+            </tr>
+            <tr>
+                <td class="pronoun">Huma (They)</td>
+                <td><span class="future-marker darija-script">غادي</span> <span class="verb-stem darija-script">يمشيو</span></td>
+                <td><span class="future-marker">ghadi</span> <span class="verb-stem">ymshiw</span> (or `gha ymshiw`)</td>
+                <td>They will go</td>
+                <td><span class="play-button" onclick="alert('Audio: ghadi ymshiw')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+      <div class="note">
+        <strong>The Main Verb Form:</strong> The verb after `ghadi` uses the prefixes `n-` (for Ana), `t-` (for Nta, Nti, Hiya, Ntuma), `y-` (for Huwa, Huma), and the plural suffix `-u` (for 7na, Ntuma, Huma). This is similar to the present `ka-` tense, just without the `ka-`.
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h3>More Examples with Other Verbs</h3>
+        <table class="future-table">
+            <thead>
+                <tr>
+                    <th>English Sentence</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I will eat couscous. (`kul` - to eat)</td>
+                    <td><span class="darija-script">غادي ناكل كسكسو.</span></td>
+                    <td>Ghadi nakul ksksu.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Ghadi nakul ksksu.')"></span></td>
+                </tr>
+                <tr>
+                    <td>She will drink tea. (`shrb` - to drink)</td>
+                    <td><span class="darija-script">غادي تشرب أتاي.</span></td>
+                    <td>Ghadi tshrb atay.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Ghadi tshrb atay.')"></span></td>
+                </tr>
+                <tr>
+                    <td>He will write a letter. (`kteb` - to write)</td>
+                    <td><span class="darija-script">غادي يكتب برا.</span></td>
+                    <td>Ghadi ykteb bra.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Ghadi ykteb bra.')"></span></td>
+                </tr>
+                <tr>
+                    <td>We will see a film. (`shaf` - to see)</td>
+                    <td><span class="darija-script">غادي نشوفو فيلم.</span></td>
+                    <td>Ghadi nshufu film.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Ghadi nshufu film.')"></span></td>
+                </tr>
+                <tr>
+                    <td>They will do their homework. (`dar` - to do; `tamarin` - homework)</td>
+                    <td><span class="darija-script">غادي يديرو التمارين ديالهم.</span></td>
+                    <td>Ghadi ydiru t-tamarin dyalhum.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Ghadi ydiru t-tamarin dyalhum.')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Future Time Expressions</h2>
+        <p>To specify when in the future an action will happen:</p>
+        <table class="future-table">
+             <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija Script</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+             <tbody>
+                <tr><td>Tomorrow</td><td class="darija-script">غدا</td><td class="transcription">ghdda</td><td><span class="play-button" onclick="alert('Audio: ghdda')"></span></td></tr>
+                <tr><td>The day after tomorrow</td><td class="darija-script">بعد غدا</td><td class="transcription">ba3d ghdda</td><td><span class="play-button" onclick="alert('Audio: ba3d ghdda')"></span></td></tr>
+                <tr><td>Next week</td><td class="darija-script">السيمانة الجاية</td><td class="transcription">s-simana j-jaya</td><td><span class="play-button" onclick="alert('Audio: s-simana j-jaya')"></span></td></tr>
+                <tr><td>Next month</td><td class="darija-script">الشهر الجاي</td><td class="transcription">sh-shher j-jay</td><td><span class="play-button" onclick="alert('Audio: sh-shher j-jay')"></span></td></tr>
+                <tr><td>Next year</td><td class="darija-script">العام الجاي</td><td class="transcription">l-3am j-jay</td><td><span class="play-button" onclick="alert('Audio: l-3am j-jay')"></span></td></tr>
+                 <tr><td>Later / After</td><td class="darija-script">من بعد</td><td class="transcription">mn ba3d</td><td><span class="play-button" onclick="alert('Audio: mn ba3d')"></span></td></tr>
+                 <tr><td>Soon</td><td class="darija-script">قريب / عن قريب</td><td class="transcription">qrib / 3an qarib</td><td><span class="play-button" onclick="alert('Audio: qrib')"></span></td></tr>
+            </tbody>
+        </table>
+
+        <h3>Example Sentences with Time Expressions:</h3>
+        <ul>
+            <li>I will go to the market tomorrow: <span class="darija-script">غادي نمشي للسوق غدا.</span> (Ghadi nmshi l s-souq ghdda.)</li>
+            <li>She will travel next week: <span class="darija-script">غادي تسافر السيمانة الجاية.</span> (Ghadi tsafr s-simana j-jaya.) (`tsafr` from `safr` - to travel)</li>
+        </ul>
+    </section>
+
+     <section class="lesson-section">
+        <h2>Negating the Future Tense</h2>
+        <p>To say "I will not..." or "I am not going to...", you negate `ghadi` using `ma-...-sh`.</p>
+        <p>Pattern: **`ma ghadi-sh` + [Main Verb Form]**</p>
+        <p>(The `ghadi` part itself is negated. The `-sh` attaches to `ghadi`.)</p>
+
+        <table class="future-table">
+            <thead>
+                <tr>
+                    <th>English Sentence</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I will not go.</td>
+                    <td><span class="darija-script">ما غاديش نمشي.</span></td>
+                    <td>Ma ghadi-sh nmshi. (or `ma gha-sh nmshi`)</td>
+                    <td><span class="play-button" onclick="alert('Audio: Ma ghadi-sh nmshi.')"></span></td>
+                </tr>
+                <tr>
+                    <td>He will not eat.</td>
+                    <td><span class="darija-script">ما غاديش ياكل.</span></td>
+                    <td>Ma ghadi-sh yakul.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Ma ghadi-sh yakul.')"></span></td>
+                </tr>
+                <tr>
+                    <td>They will not travel tomorrow.</td>
+                    <td><span class="darija-script">ما غاديش يسافرو غدا.</span></td>
+                    <td>Ma ghadi-sh ysafru ghdda.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Ma ghadi-sh ysafru ghdda.')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Form Future Sentences</h3>
+      <p>Write the future tense for the following using `ghadi` + verb:</p>
+      <ol>
+          <li>Ana (to drink - `shrb`): <span class="fill-blank">Ghadi nshrb.</span></li>
+          <li>Huwa (to write - `kteb`): <span class="fill-blank">Ghadi ykteb.</span></li>
+          <li>7na (to see - `shaf`): <span class="fill-blank">Ghadi nshufu.</span></li>
+          <li>Hiya (not to go - `msha`): <span class="fill-blank">Ma ghadi-sh tmshi.</span></li>
+      </ol>
+
+      <h3>Exercise 2: Translate to Darija</h3>
+      <p>Translate these sentences about future plans:</p>
+      <ol>
+          <li>We will travel next month. <span class="fill-blank">Ghadi nsafru sh-shher j-jay.</span></li>
+          <li>I will not eat tagine tomorrow. <span class="fill-blank">Ma ghadi-sh nakul ttajin ghdda.</span></li>
+          <li>What will you (m.s.) do later? <span class="fill-blank">Shnu ghadi tdir mn ba3d?</span></li>
+          <li>She will visit her family soon. <span class="fill-blank">Ghadi tzur l-3a'ila dyalha qrib.</span> (`tzur` from `zar` - to visit)</li>
+      </ol>
+      <div class="note">
+          Talking about the future is exciting! Try to make sentences about your own plans for tomorrow or next week.
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | A2 Module 3: Object Pronoun Suffixes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .pronoun-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .pronoun-table th, .pronoun-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .pronoun-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .pronoun-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .pronoun-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .pronoun-table .suffix { font-weight: bold; color: #ffcc66; }
+    .pronoun-table .verb-example { font-weight: bold; color: #99ff99; }
+    .pronoun-table .verb-stem { color: #fff; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 100px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .pronoun-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a2.html">A2 Elementary</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 3: Object Pronoun Suffixes</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>A2 Module 3: Object Pronoun Suffixes</h1>
+    <p>Learn how to use suffixes attached to verbs to indicate "me," "you," "him," "her," "us," and "them" as the object of an action.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>What are Object Pronouns?</h2>
+      <p>Subject pronouns (Ana, Nta, Huwa, etc.) are the ones *doing* the action. Object pronouns are the ones *receiving* the action. For example, in "He saw <strong>me</strong>," "me" is the object pronoun.</p>
+      <p>In Darija, these object pronouns are usually suffixes attached directly to the end of the verb.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>The Object Pronoun Suffixes</h2>
+      <p>These suffixes are very similar to the possessive suffixes you learned for nouns and `3nd-`.</p>
+      <table class="pronoun-table">
+        <thead>
+            <tr>
+                <th>Object Pronoun (English)</th>
+                <th>Suffix (Transcription)</th>
+                <th>Example Verb: `shaf` (to see)</th>
+                <th>Transcription of Example</th>
+                <th>Meaning of Example</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>me</td>
+                <td class="suffix">-ni</td>
+                <td><span class="verb-stem">shaf</span><span class="suffix darija-script">ني</span></td>
+                <td class="verb-example">shaf-ni</td>
+                <td>He saw me</td>
+                <td><span class="play-button" onclick="alert('Audio: -ni / shafni')"></span></td>
+            </tr>
+            <tr>
+                <td>you (singular m. & f.)</td>
+                <td class="suffix">-ek</td>
+                <td><span class="verb-stem">shaf</span><span class="suffix darija-script">ك</span></td>
+                <td class="verb-example">shaf-ek</td>
+                <td>He saw you</td>
+                <td><span class="play-button" onclick="alert('Audio: -ek / shafek')"></span></td>
+            </tr>
+            <tr>
+                <td>him / it (masc.)</td>
+                <td class="suffix">-u</td>
+                <td><span class="verb-stem">شاف</span><span class="suffix darija-script">و</span></td>
+                <td class="verb-example">shaf-u</td>
+                <td>He saw him/it</td>
+                <td><span class="play-button" onclick="alert('Audio: -u / shafu (obj)')"></span></td>
+            </tr>
+            <tr>
+                <td>her / it (fem.)</td>
+                <td class="suffix">-ha</td>
+                <td><span class="verb-stem">شاف</span><span class="suffix darija-script">ها</span></td>
+                <td class="verb-example">shaf-ha</td>
+                <td>He saw her/it</td>
+                <td><span class="play-button" onclick="alert('Audio: -ha / shafha')"></span></td>
+            </tr>
+            <tr>
+                <td>us</td>
+                <td class="suffix">-na</td>
+                <td><span class="verb-stem">شاف</span><span class="suffix darija-script">نا</span></td>
+                <td class="verb-example">shaf-na</td>
+                <td>He saw us</td>
+                <td><span class="play-button" onclick="alert('Audio: -na / shafna')"></span></td>
+            </tr>
+            <tr>
+                <td>you (plural)</td>
+                <td class="suffix">-kum</td>
+                <td><span class="verb-stem">شاف</span><span class="suffix darija-script">كم</span></td>
+                <td class="verb-example">shaf-kum</td>
+                <td>He saw you (pl.)</td>
+                <td><span class="play-button" onclick="alert('Audio: -kum / shafkum')"></span></td>
+            </tr>
+            <tr>
+                <td>them</td>
+                <td class="suffix">-hum</td>
+                <td><span class="verb-stem">شاف</span><span class="suffix darija-script">هُم</span></td>
+                <td class="verb-example">shaf-hum</td>
+                <td>He saw them</td>
+                <td><span class="play-button" onclick="alert('Audio: -hum / shafhum')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+       <div class="note">
+        <strong>Vowel Harmony/Changes:</strong> Sometimes, the vowel of the suffix or the end of the verb might slightly adjust for smoother pronunciation. For instance, if a verb ends in a vowel, a linking sound might appear. Listen carefully to the audio examples.
+        <br>Example with verb ending in `-t` (like "I saw" - `sheft`):
+        <ul>
+            <li>I saw him: <span class="darija-script">شفتو</span> (`sheft-u`)</li>
+            <li>I saw her: <span class="darija-script">شفتها</span> (`sheft-ha`)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Examples in Sentences (Past Tense)</h2>
+        <p>Let's see these suffixes in action with past tense verbs you've learned.</p>
+        <table class="pronoun-table">
+            <thead>
+                <tr>
+                    <th>English Sentence</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I saw you (m.s.) yesterday.</td>
+                    <td class="darija-script">شفتك البارح.</td>
+                    <td>Sheftek l-bare7.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sheftek l-bare7.')"></span></td>
+                </tr>
+                <tr>
+                    <td>She wrote me a letter.</td>
+                    <td class="darija-script">كتبات ليا برا.</td>
+                    <td>Ketbat li-ya bra.</td> <!-- Note: 'liya' for 'to me' - a bit different with 'kteb l-' -->
+                    <td><span class="play-button" onclick="alert('Audio: Ketbat liya bra.')"></span></td>
+                </tr>
+                 <tr>
+                    <td>He helped us. (To help: <span class="darija-script">عاون</span> `3awen`)</td>
+                    <td class="darija-script">عاونا.</td>
+                    <td>3awen-na.</td>
+                    <td><span class="play-button" onclick="alert('Audio: 3awenna.')"></span></td>
+                </tr>
+                <tr>
+                    <td>Did they understand you (f.s.)?</td>
+                    <td class="darija-script">واش فهموك؟</td>
+                    <td>Wash fhem-u-k?</td> <!-- fhem-u (they understood) + -k (you) -->
+                    <td><span class="play-button" onclick="alert('Audio: Wash fhemuk?')"></span></td>
+                </tr>
+                 <tr>
+                    <td>I gave him the book. (To give: <span class="darija-script">عطى</span> `3ta`)</td>
+                    <td class="darija-script">عطيتو الكتاب.</td>
+                    <td>3titu l-ktab.</td>
+                    <td><span class="play-button" onclick="alert('Audio: 3titu l-ktab.')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+         <div class="note">
+            <strong>Indirect Objects:</strong> For verbs like "to give" (`3ta`) or "to write to" (`kteb l-`), the recipient is often an indirect object. "To me" becomes `liya`, "to you" `lik`, "to him" `lih`, etc. This is slightly different from direct object suffixes but related. We'll explore this more later. For now, focus on direct objects with verbs like "see" or "help."
+            <br>The example "She wrote me a letter" (`Ketbat liya bra`) uses this indirect object form for "to me".
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Using with Present Tense `ka-` Verbs</h2>
+        <p>Object suffixes can also be attached to present tense `ka-` verbs.</p>
+         <table class="pronoun-table">
+            <thead>
+                <tr>
+                    <th>English Sentence</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>He sees me every day.</td>
+                    <td class="darija-script">كايشوفني كل نهار.</td>
+                    <td>Kayishuf-ni kul nhar.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Kayishufni kul nhar.')"></span></td>
+                </tr>
+                <tr>
+                    <td>I understand you (f.s.) well.</td>
+                    <td class="darija-script">كانفهمك مزيان.</td>
+                    <td>Kanfhem-ek mzyan.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Kanfhemek mzyan.')"></span></td>
+                </tr>
+                <tr>
+                    <td>Does she help them?</td>
+                    <td class="darija-script">واش كاتعاونهم؟</td>
+                    <td>Wash kat3awen-hum?</td>
+                    <td><span class="play-button" onclick="alert('Audio: Wash kat3awenhum?')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Identify the Suffix</h3>
+      <p>What object pronoun does the suffix represent in these Darija verbs?</p>
+      <ol>
+          <li><span class="darija-script">سمعتك</span> (sma3t-ek): <span class="fill-blank">You (s.)</span></li>
+          <li><span class="darija-script">عاونهم</span> (3awen-hum): <span class="fill-blank">Them</span></li>
+          <li><span class="darija-script">ضربني</span> (Dreb-ni): <span class="fill-blank">Me</span> (Dreb = to hit)</li>
+          <li><span class="darija-script">كايعرفنا</span> (Kay3rf-na): <span class="fill-blank">Us</span> (Kay3ref = he knows)</li>
+      </ol>
+
+      <h3>Exercise 2: Add the Suffix</h3>
+      <p>Attach the correct object pronoun suffix to the verb.</p>
+      <ol>
+          <li>Ana sheft + (her) → Ana <span class="fill-blank">sheft-ha</span></li>
+          <li>Huwa kteb + (you s.) → Huwa <span class="fill-blank">kteb-ek</span></li>
+          <li>Hiya katakul + (it - masc., e.g., bread) → Hiya katakul<span class="fill-blank">-u</span></li> <!-- kayakul-u -> kayakl-u often -->
+          <li>7na bghina + (them) → 7na bghina<span class="fill-blank">-hum</span></li>
+      </ol>
+
+       <h3>Exercise 3: Translate to Darija</h3>
+      <p>Translate these sentences using object pronoun suffixes:</p>
+      <ol>
+          <li>He helped me yesterday. <span class="fill-blank">3awenni l-bare7.</span></li>
+          <li>I see you (plural) now. <span class="fill-blank">Kanshufkum daba.</span></li>
+          <li>She understood him. <span class="fill-blank">Fhemtu.</span> (or Fhemet-u)</li>
+          <li>Did you (f.s.) call us? (To call: <span class="darija-script">عيّط على</span> `3iyyet 3la`)<br> <span class="fill-blank">Wash 3iyyetti 3lina?</span> (This uses preposition + suffix)</li>
+      </ol>
+      <div class="note">
+          Object pronouns make your sentences much more dynamic! Notice how they are very similar to possessive suffixes. This pattern repetition is helpful. The example with "call us" shows suffixes on prepositions, which is also very common.
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

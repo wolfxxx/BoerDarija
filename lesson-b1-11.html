@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | B1 Module 11: Reported Speech (Simple)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .speech-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .speech-table th, .speech-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .speech-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .speech-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .speech-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .speech-table .reporting-verb { font-weight: bold; color: #ffcc99; }
+    .speech-table .conjunction { font-style: italic; color: #fff; }
+    .speech-table .reported-clause { color: #ccc; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 150px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+    .practice-section .original-quote { font-style: italic; color: #ccc; }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .speech-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 11: Reported Speech (Simple)</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>B1 Module 11: Reported Speech (Simple Statements & Questions)</h1>
+    <p>Learn the basics of how to report what someone else said or asked in Moroccan Darija.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>What is Reported Speech?</h2>
+      <p>Reported speech (also called indirect speech) is when you tell someone what another person said, without quoting them directly. For example:</p>
+      <ul>
+          <li><strong>Direct Speech:</strong> Ali said, "I am tired."</li>
+          <li><strong>Reported Speech:</strong> Ali said that he was tired.</li>
+      </ul>
+      <p>In Darija, this often involves a reporting verb (like "to say" or "to ask") followed by the conjunction `belli` (<span class="darija-script">بلي</span> - that) for statements, or `wash` (<span class="darija-script">واش</span> - if/whether) for reported yes/no questions.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Reporting Statements with `qal belli...`</h2>
+      <p>The most common verb for "to say" is `qal` (<span class="darija-script">قال</span>). To report a statement, you use:</p>
+      <p>Structure: **[Reporter] + [Conjugated `qal`] + `belli` + [Reported Statement (often with pronoun/tense changes)]**</p>
+      
+      <table class="speech-table">
+        <thead>
+            <tr>
+                <th>Direct Speech (Said by...)</th>
+                <th>Reported Speech (Darija Script)</th>
+                <th>Transcription</th>
+                <th>English of Reported Speech</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ahmed: "Ana mrid." (I am sick.)</td>
+                <td><span class="reporting-verb darija-script">أحمد قال</span> <span class="conjunction darija-script">بلي</span> <span class="reported-clause darija-script">هو مريض.</span></td>
+                <td class="transcription"><span class="reporting-verb">Ahmed qal</span> <span class="conjunction">belli</span> <span class="reported-clause">huwa mrid.</span></td>
+                <td>Ahmed said that he is sick.</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 1')"></span></td>
+            </tr>
+            <tr>
+                <td>Fatima: "Ghadi nsafr ghdda." (I will travel tomorrow.)</td>
+                <td><span class="reporting-verb darija-script">فاطمة قالت</span> <span class="conjunction darija-script">بلي</span> <span class="reported-clause darija-script">هي غادي تسافر غدا.</span></td>
+                <td class="transcription"><span class="reporting-verb">Fatima qalet</span> <span class="conjunction">belli</span> <span class="reported-clause">hiya ghadi tsafr ghdda.</span></td>
+                <td>Fatima said that she will travel tomorrow.</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 2')"></span></td>
+            </tr>
+            <tr>
+                <td>You (m.s.) said: "Shrebt atay." (I drank tea.)</td>
+                <td><span class="reporting-verb darija-script">قلتي</span> <span class="conjunction darija-script">بلي</span> <span class="reported-clause darija-script">شربتي أتاي.</span></td>
+                <td class="transcription"><span class="reporting-verb">Qelti</span> <span class="conjunction">belli</span> <span class="reported-clause">shrebti atay.</span></td>
+                <td>You said that you drank tea.</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 3')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+       <div class="note">
+        <strong>Pronoun & Tense Changes:</strong>
+        <ul>
+            <li>**Pronouns:** Often change to reflect the perspective of the reporter (e.g., "I" in direct speech might become "he/she" in reported speech).</li>
+            <li>**Tenses:** In English, tenses often "shift back" in reported speech (e.g., "I *am* tired" becomes "He said he *was* tired"). In Darija, for simple reporting, the tense in the reported clause often *remains the same* as the original statement if the reporting verb (`qal`) is in the past and the situation is still true or relevant. However, if reporting something that is no longer true, or if more nuance is needed, tense shifts can occur (this becomes more complex at higher levels). For B1, keeping the original tense (while changing pronouns) is a good starting point.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Reporting Yes/No Questions with `suwwel wash...`</h2>
+        <p>To report a yes/no question, you typically use the verb `suwwel` (<span class="darija-script">سوّل</span> - to ask) followed by `wash` (<span class="darija-script">واش</span> - if/whether).</p>
+        <p>Structure: **[Reporter] + [Conjugated `suwwel`] + [Person Asked (optional, e.g., `suwwel-ni` - he asked me)] + `wash` + [Reported Question (as a statement)]**</p>
+
+        <table class="speech-table">
+            <thead>
+                <tr>
+                    <th>Direct Question (Asked by...)</th>
+                    <th>Reported Question (Darija Script)</th>
+                    <th>Transcription</th>
+                    <th>English of Reported Question</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ali: "Wash nta mrid?" (Are you (m.s.) sick?)</td>
+                    <td><span class="reporting-verb darija-script">علي سوّلني</span> <span class="conjunction darija-script">واش</span> <span class="reported-clause darija-script">أنا مريض.</span></td>
+                    <td class="transcription"><span class="reporting-verb">Ali suwwel-ni</span> <span class="conjunction">wash</span> <span class="reported-clause">ana mrid.</span></td>
+                    <td>Ali asked me if I am sick.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 4')"></span></td>
+                </tr>
+                <tr>
+                    <td>Layla: "Wash ghadi tji?" (Will you (s.) come?)</td>
+                    <td><span class="reporting-verb darija-script">ليلى سوّلاتو</span> <span class="conjunction darija-script">واش</span> <span class="reported-clause darija-script">غادي يجي.</span></td>
+                    <td class="transcription"><span class="reporting-verb">Layla suwwlat-u</span> <span class="conjunction">wash</span> <span class="reported-clause">ghadi yji.</span></td>
+                    <td>Layla asked him if he will come.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 5')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">
+            The reported question part after `wash` becomes a statement (no question intonation or word order change needed there). Pronoun changes are still important.
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Reporting Wh-Questions (Brief Introduction)</h2>
+        <p>Reporting Wh-questions (who, what, where, when, why, how) is more complex as it involves keeping the question word and sometimes adjusting the verb structure. For B1, we'll just touch on the idea.</p>
+        <p>Structure: **[Reporter] + [Conjugated `suwwel`] + [Question Word] + [Rest of reported clause (often rephrased)]**</p>
+        <p>Example Direct: Ahmed: "Shnu derti l-bare7?" (What did you do yesterday?)</p>
+        <p>Example Reported: <span class="darija-script">أحمد سوّلني شنو درت البارح.</span> (<span class="transcription">Ahmed suwwel-ni shnu dert l-bare7.</span>) - Ahmed asked me what I did yesterday.</p>
+        <div class="note">
+            The word order in the reported Wh-question often remains similar to the direct question, but without the question intonation. This will be explored more in higher levels.
+        </div>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Report the Statement</h3>
+      <p class="prompt">Change the direct speech to reported speech using `qal belli...`.</p>
+      <ol>
+          <li>Nadia said: "Ana fer7ana." (I am happy.)
+              <br>Reported: <span class="fill-blank">Nadia qalet belli hiya fer7ana.</span></li>
+          <li>Omar and Ali said: "7na ghadi nsafru." (We will travel.)
+              <br>Reported: <span class="fill-blank">Omar u Ali qalu belli huma ghadi ysafru.</span></li>
+          <li>You (f.s.) said: "3ndi ktab jdid." (I have a new book.)
+              <br>Reported: <span class="fill-blank">Qelti belli 3ndek ktab jdid.</span></li>
+      </ol>
+
+      <h3>Exercise 2: Report the Yes/No Question</h3>
+      <p class="prompt">Change the direct question to reported speech using `suwwel wash...`.</p>
+      <ol>
+          <li>He asked me: "Wash bghiti atay?" (Do you want tea?)
+              <br>Reported: <span class="fill-blank">Suwwelni wash bghit atay.</span></li>
+          <li>She asked him: "Wash fhemti d-ders?" (Did you (m.s.) understand the lesson?)
+              <br>Reported: <span class="fill-blank">Suwwlatu wash fhem d-ders.</span></li>
+      </ol>
+
+       <h3>Exercise 3: From Reported to Direct (Challenge!)</h3>
+       <p class="prompt">What might have been the original direct speech?</p>
+       <ol>
+           <li><span class="darija-script">هو قال ليا بلي غادي يجي معطل.</span> (Huwa qal liya belli ghadi yji m3ettel.) - He told me that he will come late.
+               <br>Direct Speech: <span class="fill-blank">"Ana ghadi nji m3ettel."</span> (Said by him)</li>
+           <li><span class="darija-script">هي سوّلاتني واش كانعجبها.</span> (Hiya suwwlatni wash kan3jbha.) - She asked me if I like her. (This is ambiguous with `kay3jbni` structure, let's simplify or rephrase for clarity. A better example: She asked me if I know the answer. `Hiya suwwlatni wash kan3ref l-jawab.` )
+            <br> Let's use: <span class="darija-script">هي سوّلاتني واش قريت الكتاب.</span> (Hiya suwwlatni wash qrit l-ktab.) - She asked me if I read the book.
+               <br>Direct Speech: <span class="fill-blank">"Wash qriti l-ktab?"</span> (Asked to you)</li>
+       </ol>
+      <div class="note">
+          Reported speech is a key skill for recounting conversations and sharing information. Pay attention to pronoun changes!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Simple script to ensure correct breadcrumb is shown
+    if (document.getElementById('b1-breadcrumb')) { 
+        let allBreadcrumbs = document.querySelectorAll('.breadcrumb');
+        let b1BreadcrumbExists = false;
+        allBreadcrumbs.forEach(bc => {
+            if (bc.innerHTML.includes("B1 Intermediate")) b1BreadcrumbExists = true;
+        });
+
+        if (b1BreadcrumbExists) { 
+            allBreadcrumbs.forEach(bc => {
+                if (!bc.innerHTML.includes("B1 Module 11")) { // Adjust module number
+                    bc.style.display = 'none';
+                } else {
+                    bc.style.display = 'block';
+                }
+            });
+        }
+    }
+  </script>
+</body>
+</html>

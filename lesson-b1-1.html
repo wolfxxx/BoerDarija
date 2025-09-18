@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | B1 Module 1: A2 Review & Advanced Past Tense</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+    .review-list {
+        list-style-type: '✅ ';
+        padding-left: 30px;
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
+    .review-list li { font-size: 1rem; margin-bottom: 8px;}
+
+    .verb-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .verb-table th, .verb-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .verb-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .verb-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .verb-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .verb-table .pronoun { font-weight: bold; color: #fff; }
+    .verb-table .verb-form { font-weight: bold; color: #99ff99; }
+    .verb-table .infinitive { font-style: italic; color: #ccc; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 100px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .verb-table { font-size: 0.9rem; }
+      .review-list { columns: 1; -webkit-columns: 1; -moz-columns: 1; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 1: A2 Review & Advanced Past Tense</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>B1 Module 1: A2 Review & Advanced Past Tense Nuances</h1>
+    <p>Welcome to B1 Intermediate Darija! We'll start by refreshing key A2 concepts and then explore more complex aspects of the past tense, including "hollow" and "weak" verbs.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Quick A2 Review: Building Blocks</h2>
+      <p>Before diving into B1 material, let's ensure our A2 foundation is solid. You should be comfortable with:</p>
+      <ul class="review-list">
+          <li>Regular & common irregular past tenses (A2.1, A2.2)</li>
+          <li>Object pronoun suffixes (A2.3)</li>
+          <li>Future tense with `ghadi` (A2.5)</li>
+          <li>Comparatives & superlatives (A2.8)</li>
+          <li>Relative clauses with `lli` (A2.13)</li>
+          <li>Simple conditionals with `ila` (A2.14)</li>
+          <li>Expressing opinions & suggestions (A2.15)</li>
+          <li>Expanded vocabulary (daily routines, health, travel, etc.)</li>
+      </ul>
+      <p>This module will build directly on your knowledge of past tense formation.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Revisiting Past Tense Conjugation</h2>
+      <p>Recall the general past tense suffixes from A2 Module 1:</p>
+      <ul>
+          <li>I: `-t` (e.g., `ktebt` - I wrote)</li>
+          <li>You (s.): `-ti`</li>
+          <li>He: (root, or root + `a`)</li>
+          <li>She: `-at`</li>
+          <li>We: `-na`</li>
+          <li>You (pl.): `-tu`</li>
+          <li>They: `-u` (often with a vowel change in the stem)</li>
+      </ul>
+      <p>Now, we'll look at verb types that have specific changes in the past tense due to their root structure.</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2>"Hollow" Verbs (Verbs with a Middle Weak Letter `waw` or `ya'`)</h2>
+        <p>"Hollow" verbs have a weak middle root consonant, typically <span class="darija-script">و</span> (waw) or <span class="darija-script">ي</span> (ya'), which often disappears or changes to a long vowel in conjugation. `kan` (<span class="darija-script">كان</span> - to be) which you learned in A2 is a prime example.</p>
+
+        <h3>Example: `qal` (<span class="darija-script">قال</span> - to say) - Past Tense</h3>
+        <table class="verb-table">
+            <thead>
+                <tr>
+                    <th>Pronoun</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Meaning</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="pronoun">Ana (I)</td><td class="darija-script">قلت</td><td class="verb-form">qelt</td><td>I said</td><td><span class="play-button" onclick="alert('Audio: qelt')"></span></td></tr>
+                <tr><td class="pronoun">Nta/Nti (You s.)</td><td class="darija-script">قلتي</td><td class="verb-form">qelti</td><td>You said</td><td><span class="play-button" onclick="alert('Audio: qelti')"></span></td></tr>
+                <tr><td class="pronoun">Huwa (He)</td><td class="darija-script">قال</td><td class="verb-form">qal</td><td>He said</td><td><span class="play-button" onclick="alert('Audio: qal')"></span></td></tr>
+                <tr><td class="pronoun">Hiya (She)</td><td class="darija-script">قالت</td><td class="verb-form">qalet</td><td>She said</td><td><span class="play-button" onclick="alert('Audio: qalet')"></span></td></tr>
+                <tr><td class="pronoun">7na (We)</td><td class="darija-script">قلنا</td><td class="verb-form">qelna</td><td>We said</td><td><span class="play-button" onclick="alert('Audio: qelna')"></span></td></tr>
+                <tr><td class="pronoun">Ntuma (You pl.)</td><td class="darija-script">قلتو</td><td class="verb-form">qeltu</td><td>You (pl) said</td><td><span class="play-button" onclick="alert('Audio: qeltu')"></span></td></tr>
+                <tr><td class="pronoun">Huma (They)</td><td class="darija-script">قالو</td><td class="verb-form">qalu</td><td>They said</td><td><span class="play-button" onclick="alert('Audio: qalu')"></span></td></tr>
+            </tbody>
+        </table>
+        <div class="note">
+            <strong>Pattern for Hollow Verbs:</strong> Notice how the middle weak letter often becomes a short vowel (`e` in `qelt`) when suffixes starting with a consonant are added (`-t`, `-na`). For suffixes starting with a vowel or for Huwa/Huma, the long vowel of the root often remains (`qal`, `qalu`).
+        </div>
+
+        <h3>Another Hollow Verb: `ba3` (<span class="darija-script">باع</span> - to sell)</h3>
+        <ul>
+            <li>Ana `be3t` (<span class="darija-script">بعت</span>) - I sold</li>
+            <li>Huwa `ba3` (<span class="darija-script">باع</span>) - He sold</li>
+            <li>Huma `ba3u` (<span class="darija-script">باعو</span>) - They sold</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2>"Weak" Verbs (Verbs with a Final Weak Letter `alif` or `ya'`)</h2>
+        <p>"Weak" verbs end in a weak letter, usually <span class="darija-script">ى</span> (alif maqsura, sounds like 'a') or <span class="darija-script">ي</span> (ya', sounds like 'i'). `msha` (<span class="darija-script">مشى</span> - to go), which you saw in A2, is an example.</p>
+
+        <h3>Example: `nsa` (<span class="darija-script">نسى</span> - to forget) - Past Tense</h3>
+        <table class="verb-table">
+            <thead>
+                <tr>
+                    <th>Pronoun</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Meaning</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="pronoun">Ana</td><td class="darija-script">نسيت</td><td class="verb-form">nsit</td><td>I forgot</td><td><span class="play-button" onclick="alert('Audio: nsit')"></span></td></tr>
+                <tr><td class="pronoun">Nta/Nti</td><td class="darija-script">نسيتي</td><td class="verb-form">nsiti</td><td>You forgot</td><td><span class="play-button" onclick="alert('Audio: nsiti')"></span></td></tr>
+                <tr><td class="pronoun">Huwa</td><td class="darija-script">نسى</td><td class="verb-form">nsa</td><td>He forgot</td><td><span class="play-button" onclick="alert('Audio: nsa')"></span></td></tr>
+                <tr><td class="pronoun">Hiya</td><td class="darija-script">نسات</td><td class="verb-form">nsat</td><td>She forgot</td><td><span class="play-button" onclick="alert('Audio: nsat')"></span></td></tr>
+                <tr><td class="pronoun">7na</td><td class="darija-script">نسينا</td><td class="verb-form">nsina</td><td>We forgot</td><td><span class="play-button" onclick="alert('Audio: nsina')"></span></td></tr>
+                <tr><td class="pronoun">Ntuma</td><td class="darija-script">نسيتو</td><td class="verb-form">nsitu</td><td>You (pl) forgot</td><td><span class="play-button" onclick="alert('Audio: nsitu')"></span></td></tr>
+                <tr><td class="pronoun">Huma</td><td class="darija-script">نساو</td><td class="verb-form">nsaw</td><td>They forgot</td><td><span class="play-button" onclick="alert('Audio: nsaw')"></span></td></tr>
+            </tbody>
+        </table>
+        <div class="note">
+            <strong>Pattern for Weak Verbs (ending in -a sound):</strong> The final weak letter often changes to `-it` for "Ana", `-iti` for "Nta/Nti", `-at` for "Hiya", `-ina` for "7na", `-itu` for "Ntuma", and `-aw` for "Huma". The "Huwa" form is often just the root.
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Using Advanced Past Tense in Storytelling</h2>
+        <p>Now you can make your narratives more interesting by using a wider range of verbs.</p>
+        <p>Example: <span class="darija-script">البارح، قلت لصاحبي "يلاه نمشيو للقهوة." هو قال "واخا." مشينا و شربنا قهوة. نسيت الفلوس ديالي فالدار، ولكن هو خلص عليا.</span><br>
+        <span class="transcription">L-bare7, qelt l-sa7bi "Yallah nmshiw l l-qhwa." Huwa qal "wakha." Mshina u shrebna qhwa. Nsit l-flus dyali f d-dar, walakin huwa khelles 3liya.</span><br>
+        (Yesterday, I said to my friend, "Let's go to the café." He said, "Okay." We went and drank coffee. I forgot my money at home, but he paid for me.)</p>
+        <ul>
+            <li>`qelt` - I said (hollow verb)</li>
+            <li>`qal` - he said (hollow verb)</li>
+            <li>`mshina` - we went (weak verb)</li>
+            <li>`shrebna` - we drank (regular verb)</li>
+            <li>`nsit` - I forgot (weak verb)</li>
+            <li>`khelles 3liya` - he paid for me (`khelles` = to pay, `3liya` = for me/on me)</li>
+        </ul>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Conjugate Hollow Verbs</h3>
+      <p>Conjugate the verb `ba3` (<span class="darija-script">باع</span> - to sell) in the past tense for:</p>
+      <ol>
+          <li>Hiya (She): <span class="fill-blank">ba3et</span></li>
+          <li>7na (We): <span class="fill-blank">be3na</span></li>
+          <li>Ntuma (You pl.): <span class="fill-blank">be3tu</span></li>
+      </ol>
+
+      <h3>Exercise 2: Conjugate Weak Verbs</h3>
+      <p>Conjugate the verb `bqa` (<span class="darija-script">بقى</span> - to stay/remain) in the past tense for:</p>
+      <ol>
+          <li>Ana (I): <span class="fill-blank">bqit</span></li>
+          <li>Huwa (He): <span class="fill-blank">bqa</span></li>
+          <li>Huma (They): <span class="fill-blank">bqaw</span></li>
+      </ol>
+
+       <h3>Exercise 3: Translate to Darija</h3>
+      <p>Translate these sentences using the appropriate past tense forms:</p>
+      <ol>
+          <li>I said "Hello" to him. <span class="fill-blank">Qelt lih "Ssalām".</span></li>
+          <li>She forgot her keys. <span class="fill-blank">Nsat s-swaret dyalha.</span></li>
+          <li>They sold their house last year. <span class="fill-blank">Ba3u darhum l-3am lli fat.</span></li>
+          <li>We stayed at the hotel for two days. <span class="fill-blank">Bqina f l'otel yumayn.</span> (yumayn = two days)</li>
+      </ol>
+      <div class="note">
+          Mastering these "hollow" and "weak" verb patterns in the past tense is a big step in Darija fluency, as they are very common. Listen to the audio examples carefully and practice their forms!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

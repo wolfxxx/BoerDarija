@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | B1 Module 5: Obligation & Necessity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .obligation-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .obligation-table th, .obligation-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .obligation-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .obligation-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .obligation-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .obligation-table .structure { font-weight: bold; color: #fff; }
+    .obligation-table .example-phrase { color: #ccc; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 150px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .obligation-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 5: Expressing Obligation & Necessity</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>B1 Module 5: Expressing Obligation & Necessity</h1>
+    <p>Learn how to say what you "must" or "need to" do, and what is "necessary" or "obligatory" in Darija.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Expressing Obligation: `khass` (<span class="darija-script">خاص</span> - must / to need)</h2>
+      <p>The most common way to express obligation or need is using `khass` followed by a pronoun suffix (indicating who must/needs) and then usually a verb (often in its present stem form, with `n-/t-/y-` prefixes).</p>
+      <p>Structure: **`khass` + [Pronoun Suffix] + [Verb]**</p>
+      
+      <table class="obligation-table">
+        <thead>
+            <tr>
+                <th>Pronoun Suffix</th>
+                <th>Darija Form (e.g., with "to go" - `nmshi`)</th>
+                <th>Transcription</th>
+                <th>Meaning (I must go / I need to go)</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>-ni (me)</td>
+                <td><span class="darija-script">خاصني نمشي</span></td>
+                <td class="transcription"><span class="structure">khassni</span> nmshi</td>
+                <td>I must/need to go</td>
+                <td><span class="play-button" onclick="alert('Audio: khassni nmshi')"></span></td>
+            </tr>
+            <tr>
+                <td>-ek (you s.)</td>
+                <td><span class="darija-script">خاصك تمشي</span></td>
+                <td class="transcription"><span class="structure">khassk</span> tmshi</td>
+                <td>You must/need to go</td>
+                <td><span class="play-button" onclick="alert('Audio: khassk tmshi')"></span></td>
+            </tr>
+            <tr>
+                <td>-u (him)</td>
+                <td><span class="darija-script">خاصو يمشي</span></td>
+                <td class="transcription"><span class="structure">khassu</span> ymshi</td>
+                <td>He must/needs to go</td>
+                <td><span class="play-button" onclick="alert('Audio: khassu ymshi')"></span></td>
+            </tr>
+            <tr>
+                <td>-ha (her)</td>
+                <td><span class="darija-script">خاصها تمشي</span></td>
+                <td class="transcription"><span class="structure">khassha</span> tmshi</td>
+                <td>She must/needs to go</td>
+                <td><span class="play-button" onclick="alert('Audio: khassha tmshi')"></span></td>
+            </tr>
+            <tr>
+                <td>-na (us)</td>
+                <td><span class="darija-script">خاصنا نمشيو</span></td>
+                <td class="transcription"><span class="structure">khassna</span> nmshiw</td>
+                <td>We must/need to go</td>
+                <td><span class="play-button" onclick="alert('Audio: khassna nmshiw')"></span></td>
+            </tr>
+            <tr>
+                <td>-kum (you pl.)</td>
+                <td><span class="darija-script">خاصكم تمشيو</span></td>
+                <td class="transcription"><span class="structure">khasskum</span> tmshiw</td>
+                <td>You (pl) must/need to go</td>
+                <td><span class="play-button" onclick="alert('Audio: khasskum tmshiw')"></span></td>
+            </tr>
+            <tr>
+                <td>-hum (them)</td>
+                <td><span class="darija-script">خاصهُم يمشيو</span></td>
+                <td class="transcription"><span class="structure">khasshum</span> ymshiw</td>
+                <td>They must/need to go</td>
+                <td><span class="play-button" onclick="alert('Audio: khasshum ymshiw')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+      <p>`Khass` can also be used with nouns: <span class="darija-script">خاصني الفلوس.</span> (<span class="transcription">Khassni l-flus.</span>) - I need money.</p>
+       <div class="note">
+        <strong>Negation:</strong> To negate `khass`, you say `ma khassnish...` etc. (e.g., <span class="darija-script">ما خاصنيش نمشي.</span> `Ma khassnish nmshi.` - I don't have to go / I don't need to go.)
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Expressing Necessity: `Daruri` (<span class="darija-script">ضروري</span>) & `lazem` (<span class="darija-script">لازم</span>)</h2>
+        <p>`Daruri` means "necessary" or "it is necessary." `Lazem` (from Arabic) also means "it is necessary" or "must" and is often used similarly to `khass`.</p>
+
+        <h3>Using `Daruri` (Necessary)</h3>
+        <p>Often used with a verb (that usually starts with `n-/t-/y-` based on who should do it) or followed by `3la` + pronoun suffix.</p>
+        <p>Structure 1: **`Daruri` + [Verb (e.g., `nmshi` - I go/should go)]**</p>
+        <p>Structure 2: **`Daruri` + `3la` + [Pronoun Suffix] + [Verb]** (It is necessary for [someone] to...)</p>
+        <table class="obligation-table">
+             <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>It's necessary to go. / One must go.</td>
+                    <td><span class="darija-script">ضروري نمشيو. / ضروري الواحد يمشي.</span></td>
+                    <td class="transcription">Daruri nmshiw. / Daruri l-wa7ed ymshi.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Daruri nmshiw')"></span></td>
+                </tr>
+                <tr>
+                    <td>It's necessary for me to study.</td>
+                    <td><span class="darija-script">ضروري عليا نقرا.</span></td>
+                    <td class="transcription">Daruri 3liya nqra.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Daruri 3liya nqra')"></span></td>
+                </tr>
+                 <tr>
+                    <td>It's necessary that he comes early.</td>
+                    <td><span class="darija-script">ضروري يجي بكري.</span></td>
+                    <td class="transcription">Daruri yji bekri.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Daruri yji bekri')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Using `lazem` (It is necessary / Must)</h3>
+        <p>Often used similarly to `khass`, followed by a verb with the appropriate pronoun prefix.</p>
+         <p>Structure: **`lazem` + [Verb (e.g., `nmshi` - I go/should go)]** (The implied subject is in the verb)</p>
+         <table class="obligation-table">
+             <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I must (it's necessary for me to) sleep.</td>
+                    <td><span class="darija-script">لازم نعس.</span></td>
+                    <td class="transcription">Lazem n3es.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Lazem n3es')"></span></td>
+                </tr>
+                <tr>
+                    <td>You (s.) must (it's necessary for you to) eat.</td>
+                    <td><span class="darija-script">لازم تاكل.</span></td>
+                    <td class="transcription">Lazem takul.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Lazem takul')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">
+            Both `Daruri` and `lazem` express a strong sense of necessity or obligation, often interchangeable with `khass`. `Khass` + pronoun suffix is generally the most common for personal obligation.
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Giving Advice: "You should..."</h2>
+        <p>A common way to give advice ("You should...") is by using `khassk` (you must/need to - from above) or by phrasing it as "It's better for you to..."</p>
+        
+        <p>Using `khassk`:</p>
+        <ul>
+            <li>You (m.s.) should rest: <span class="darija-script">خاصك ترتاح.</span> (<span class="transcription">Khassk trta7.</span>) (`trta7` from `rta7` - to rest)</li>
+            <li>You (f.s.) should see a doctor: <span class="darija-script">خاصك تشوفي طبيب.</span> (<span class="transcription">Khassk tshufi tbib.</span>)</li>
+        </ul>
+
+        <p>Using "It's better for you..." - `mn l-a7san lik...` (<span class="darija-script">من الأحسن ليك</span>):</p>
+        <ul>
+            <li>It's better for you (m.s.) to sleep early: <span class="darija-script">من الأحسن ليك تنعس بكري.</span> (<span class="transcription">Mn l-a7san lik tn3es bekri.</span>)</li>
+        </ul>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Complete with `khass` + Suffix</h3>
+      <p>Fill in the blanks.</p>
+      <ol>
+          <li>(He needs to work) <span class="fill-blank">Khassu ykhdem.</span></li>
+          <li>(We need to buy bread) <span class="fill-blank">Khassna nshriw l-khobz.</span></li>
+          <li>(You (pl.) need to study) <span class="fill-blank">Khasskum tqraw.</span></li>
+          <li>(She doesn't need to go) <span class="fill-blank">Ma khasshash tmshi.</span></li>
+      </ol>
+
+      <h3>Exercise 2: `Daruri` or `Lazem`</h3>
+      <p>Translate using `Daruri` or `Lazem`.</p>
+      <ol>
+          <li>It's necessary for me to finish this today.
+              <br>Answer: <span class="fill-blank">Daruri nsali hadshi l-yum. / Lazem nsali hadshi l-yum.</span> (`nsali` - I finish)</li>
+          <li>It's necessary that they are here at 8.
+              <br>Answer: <span class="fill-blank">Daruri ykunu hna f t-tmnya. / Lazem ykunu hna f t-tmnya.</span> (`ykunu` - they be)</li>
+      </ol>
+
+       <h3>Exercise 3: Giving Advice</h3>
+      <p>How would you advise someone (m.s.) in these situations?</p>
+      <ol>
+          <li>Your friend is very tired. (Advise: rest)
+              <br>Answer: <span class="fill-blank">Khassk trta7. / Mn l-a7san lik trta7.</span></li>
+          <li>Your friend has an exam tomorrow. (Advise: study)
+              <br>Answer: <span class="fill-blank">Khassk tqra. / Lazem tqra.</span></li>
+      </ol>
+      <div class="note">
+          Expressing obligation, necessity, and giving advice are key functions for intermediate conversations. Try to think of situations where you'd use these phrases!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

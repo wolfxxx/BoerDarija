@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | A2 Module 11: Transportation & Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .vocab-table th, .vocab-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .vocab-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .vocab-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .vocab-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+
+     .dialogue-box {
+        background: rgba(255,255,255,0.08);
+        border-left: 4px solid #99ff99;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+    .dialogue-box .speakerA { color: #ff9999; font-weight: bold; } /* Traveler */
+    .dialogue-box .speakerB { color: #99ff99; font-weight: bold; } /* Ticket Agent/Driver */
+    .dialogue-box .darija-text { font-family: 'Amiri', serif; font-size: 1.2em; }
+    .dialogue-box .transcription-text { font-style: italic; color: #ffcc66; font-size: 0.95em;}
+    .dialogue-box .translation-text { color: #ccc; font-size: 0.9em; }
+    .dialogue-box p { margin-bottom: 10px; }
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 120px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .vocab-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a2.html">A2 Elementary</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 11: Transportation & Travel</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>A2 Module 11: Transportation & Travel</h1>
+    <p>Learn vocabulary for different types of transport, how to buy tickets, and describe simple journeys.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Types of Transportation</h2>
+      <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>English</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Car</td><td class="darija-script">طموبيل / سيارة</td><td class="transcription">ttomobil / siyara</td><td><span class="play-button" onclick="alert('Audio: ttomobil')"></span></td></tr>
+            <tr><td>Bus</td><td class="darija-script">طوبيس</td><td class="transcription">ttobis</td><td><span class="play-button" onclick="alert('Audio: ttobis')"></span></td></tr>
+            <tr><td>Train</td><td class="darija-script">تران</td><td class="transcription">tran</td><td><span class="play-button" onclick="alert('Audio: tran')"></span></td></tr>
+            <tr><td>Taxi (Small - Petit Taxi)</td><td class="darija-script">طاكسي صغير</td><td class="transcription">taxi sghir</td><td><span class="play-button" onclick="alert('Audio: taxi sghir')"></span></td></tr>
+            <tr><td>Taxi (Large - Grand Taxi)</td><td class="darija-script">طاكسي كبير</td><td class="transcription">taxi kbir</td><td><span class="play-button" onclick="alert('Audio: taxi kbir')"></span></td></tr>
+            <tr><td>Airplane</td><td class="darija-script">طيارة</td><td class="transcription">tiyyara</td><td><span class="play-button" onclick="alert('Audio: tiyyara')"></span></td></tr>
+            <tr><td>Bicycle</td><td class="darija-script">بشكليطة</td><td class="transcription">beshklita</td><td><span class="play-button" onclick="alert('Audio: beshklita')"></span></td></tr>
+            <tr><td>Motorcycle</td><td class="darija-script">موطور</td><td class="transcription">motor</td><td><span class="play-button" onclick="alert('Audio: motor')"></span></td></tr>
+            <tr><td>Boat / Ship</td><td class="darija-script">باطو / بابور</td><td class="transcription">bato / babor</td><td><span class="play-button" onclick="alert('Audio: bato / babor')"></span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Travel Related Vocabulary</h2>
+         <table class="vocab-table">
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>To travel</td><td class="darija-script">سافر</td><td class="transcription">safr (verb root)</td><td><span class="play-button" onclick="alert('Audio: safr')"></span></td></tr>
+                <tr><td>Ticket</td><td class="darija-script">ورقة / بيّي</td><td class="transcription">werqa / biyyi</td><td><span class="play-button" onclick="alert('Audio: werqa / biyyi')"></span></td></tr>
+                <tr><td>Station (train/bus)</td><td class="darija-script">محطة</td><td class="transcription">m7atta</td><td><span class="play-button" onclick="alert('Audio: m7atta')"></span></td></tr>
+                <tr><td>Airport</td><td class="darija-script">مطار</td><td class="transcription">matar</td><td><span class="play-button" onclick="alert('Audio: matar')"></span></td></tr>
+                <tr><td>Port / Harbor</td><td class="darija-script">مرسى</td><td class="transcription">mersa</td><td><span class="play-button" onclick="alert('Audio: mersa')"></span></td></tr>
+                <tr><td>Road / Way</td><td class="darija-script">طريق</td><td class="transcription">triq</td><td><span class="play-button" onclick="alert('Audio: triq')"></span></td></tr>
+                <tr><td>To arrive</td><td class="darija-script">وصل</td><td class="transcription">wsel (verb root)</td><td><span class="play-button" onclick="alert('Audio: wsel')"></span></td></tr>
+                <tr><td>To leave / depart</td><td class="darija-script">مشى / خرج</td><td class="transcription">msha / khrej (verb roots)</td><td><span class="play-button" onclick="alert('Audio: msha / khrej')"></span></td></tr>
+                <tr><td>Suitcase / Luggage</td><td class="darija-script">باليزة / شكارة</td><td class="transcription">baliza / shkara</td><td><span class="play-button" onclick="alert('Audio: baliza / shkara')"></span></td></tr>
+                <tr><td>Journey / Trip</td><td class="darija-script">سفر / رحلة</td><td class="transcription">safar / ri7la</td><td><span class="play-button" onclick="alert('Audio: safar / ri7la')"></span></td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Asking for and Buying Tickets</h2>
+        <p>Here are some phrases you might use at a ticket counter.</p>
+         <table class="vocab-table">
+            <thead>
+                <tr>
+                    <th>English Phrase</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I want a ticket to Rabat, please.</td>
+                    <td class="darija-script">بغيت واحد الورقة ل الرباط، عافاك.</td>
+                    <td>Bghit wa7ed l-werqa l Rbat, 3afak.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 1')"></span></td>
+                </tr>
+                <tr>
+                    <td>How much is a ticket to Marrakech?</td>
+                    <td class="darija-script">بشحال الورقة ل مراكش؟</td>
+                    <td>Bsh7al l-werqa l Mrraksh?</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 2')"></span></td>
+                </tr>
+                <tr>
+                    <td>When does the train/bus leave?</td>
+                    <td class="darija-script">إيمتى غادي يخرج التران/الطوبيس؟</td>
+                    <td>Imta ghadi ykhruj t-tran/t-tobis?</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 3')"></span></td>
+                </tr>
+                 <tr>
+                    <td>When does it arrive?</td>
+                    <td class="darija-script">إيمتى غادي يوصل؟</td>
+                    <td>Imta ghadi yiwsel?</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 4')"></span></td>
+                </tr>
+                <tr>
+                    <td>One way or round trip?</td>
+                    <td class="darija-script">ألي ولا ألي روتور؟</td>
+                    <td>Allez wella allez-retour?</td> <!-- From French -->
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 5')"></span></td>
+                </tr>
+                 <tr>
+                    <td>One way, please.</td>
+                    <td class="darija-script">غير ألي، عافاك.</td>
+                    <td>Ghir allez, 3afak.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 6')"></span></td>
+                </tr>
+                 <tr>
+                    <td>Is this the bus to Fes?</td>
+                    <td class="darija-script">واش هادا هو الطوبيس ديال فاس؟</td>
+                    <td>Wash hada huwa t-tobis dyal Fas?</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 7')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+         <div class="note">
+            <strong>`safr` (to travel):</strong>
+            <ul>
+                <li>Past: Ana `safert` (I traveled), Huwa `safer`, Hiya `safret`.</li>
+                <li>Present: Ana `kansafr`, Huwa `kaysafr`.</li>
+                <li>Future: Ana `ghadi nsafr`.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Describing a Simple Journey (Past Tense)</h2>
+        <div class="dialogue-box">
+            <p><span class="speakerA">Person A:</span> <span class="darija-text">فين مشيتي السيمانة اللي فاتت؟</span><br>
+            <span class="transcription-text">Fin mshiti s-simana lli fatet?</span><br>
+            <span class="translation-text">Where did you go last week?</span></p>
+
+            <p><span class="speakerB">Person B:</span> <span class="darija-text">مشيت ل مراكش.</span><br>
+            <span class="transcription-text">Mshit l Mrraksh.</span><br>
+            <span class="translation-text">I went to Marrakech.</span></p>
+
+            <p><span class="speakerA">Person A:</span> <span class="darija-text">بزاف! كيفاش مشيتي؟ بالتران؟</span><br>
+            <span class="transcription-text">Bzzaf! Kifash mshiti? B t-tran?</span><br>
+            <span class="translation-text">Great! How did you go? By train?</span></p>
+
+            <p><span class="speakerB">Person B:</span> <span class="darija-text">إييه، سافرت بالتران. كان زوين. و من بعد، خديت طاكسي صغير ل لوطيل.</span><br>
+            <span class="transcription-text">Iyyeh, safert b t-tran. Kan zwin. U mn ba3d, khdit taxi sghir l l'otel.</span><br>
+            <span class="translation-text">Yes, I traveled by train. It was nice. And after that, I took a petit taxi to the hotel.</span></p>
+            
+             <p><span class="speakerA">Person A:</span> <span class="darija-text">مزيان. شحال بقيتي تما؟</span><br>
+            <span class="transcription-text">Mzyan. Sh7al bqiti temma?</span><br>
+            <span class="translation-text">Good. How long did you stay there?</span></p>
+
+            <p><span class="speakerB">Person B:</span> <span class="darija-text">بقيت تلاتة ديال ليام.</span><br>
+            <span class="transcription-text">Bqit tlata dyal l-iyam.</span><br>
+            <span class="translation-text">I stayed three days.</span></p>
+        </div>
+        <div class="note">
+            <strong>Dialogue Vocab:</strong>
+            <ul>
+                <li>`khdit` (<span class="darija-script">خديت</span>): I took (from `khda` - to take)</li>
+                <li>`bqit` (<span class="darija-script">بقيت</span>): I stayed (from `bqa` - to stay)</li>
+                <li>`iyam` (<span class="darija-script">أيام</span>): days (plural of `yum` - day)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Means of Transport</h3>
+      <p>What is the Darija word (transcription) for:</p>
+      <ol>
+          <li>Airplane: <span class="fill-blank">tiyyara</span></li>
+          <li>Bus: <span class="fill-blank">ttobis</span></li>
+          <li>Large Taxi: <span class="fill-blank">taxi kbir</span></li>
+          <li>Bicycle: <span class="fill-blank">beshklita</span></li>
+      </ol>
+
+      <h3>Exercise 2: At the Station</h3>
+      <p>Translate these phrases to Darija:</p>
+      <ol>
+          <li>I want a ticket to Casablanca, please. <span class="fill-blank">Bghit werqa l Kaza, 3afak.</span></li>
+          <li>When does the train leave? <span class="fill-blank">Imta ghadi ykhruj t-tran?</span></li>
+          <li>How much is a round trip ticket? <span class="fill-blank">Bsh7al l-werqa allez-retour?</span></li>
+      </ol>
+
+       <h3>Exercise 3: Your Last Trip</h3>
+       <p class="prompt">Write 2-3 sentences in Darija about a trip you took (real or imaginary). Mention where you went, how you traveled, and maybe how long you stayed. Use past tense.</p>
+       <p>Your Sentences: <span class="fill-blank"></span></p>
+       <p><span class="fill-blank"></span></p>
+
+      <div class="note">
+          Traveling and using public transport are great opportunities to practice your Darija! Don't be afraid to try these phrases out.
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

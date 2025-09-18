@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | A2 Module 1: A1 Review & Intro to Past Tense</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+    .review-list {
+        list-style-type: '⭐ ';
+        padding-left: 30px;
+    }
+    .review-list li { font-size: 1rem; margin-bottom: 8px;}
+
+    .verb-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .verb-table th, .verb-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .verb-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .verb-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .verb-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .verb-table .pronoun { font-weight: bold; color: #fff; }
+    .verb-table .verb-form { font-weight: bold; color: #99ff99; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 100px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .verb-table { font-size: 0.9rem; }
+      .review-list { columns: 1; -webkit-columns: 1; -moz-columns: 1; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a2.html">A2 Elementary</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 1: A1 Review & Intro to Past Tense</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>A2 Module 1: A1 Review & Introduction to Past Tense</h1>
+    <p>Welcome to A2! Let's refresh key A1 concepts and dive into talking about the past.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Quick A1 Review</h2>
+      <p>Before we learn new things, let's briefly recall some important structures from A1:</p>
+      <ul class="review-list">
+          <li>**Greetings:** `Ssalām 3likum`, `Labas?`, `Shnu smitek?`</li>
+          <li>**`3ndi` (I have):** `3ndi ktab` (I have a book).</li>
+          <li>**`Bghit` (I want):** `Bghit l-ma` (I want water).</li>
+          <li>**Present Tense `ka-`:** `Kanakul l-khobz` (I eat bread).</li>
+          <li>**Negation:** `Ma kanakulsh` (I don't eat), `Hada mashi ktab` (This isn't a book), `Ma 3ndish flus` (I don't have money).</li>
+          <li>**Basic Questions:** `Wash...?`, `Shnu?`, `Fin?`, `Bsh7al?`</li>
+          <li>**Nouns & Adjectives:** Gender agreement, e.g., `dar kbira` (a big house).</li>
+      </ul>
+      <p>If any of these feel rusty, take a moment to revisit the relevant A1 modules.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Introduction to the Simple Past Tense (`l-madi l-basit`)</h2>
+      <p>The simple past tense is used to talk about actions or events that were completed in the past. In Darija, it's formed by changing the verb endings based on the person doing the action (the subject).</p>
+      <p>Unlike the `ka-` present tense, there's usually no prefix for the past tense with regular verbs.</p>
+      
+      <h3>Past Tense Suffixes (General Pattern)</h3>
+      <p>Here's a general idea of the suffixes you'll be adding to the verb root:</p>
+      <ul>
+          <li>**I:** `-t` (e.g., `shreb` → `shreb-t` - I drank)</li>
+          <li>**You (m.s.):** `-ti` (e.g., `shreb` → `shreb-ti` - You drank)</li>
+          <li>**You (f.s.):** `-ti` (e.g., `shreb` → `shreb-ti` - You drank)</li>
+          <li>**He:** (Often just the root, or root + `a`) (e.g., `shreb` → `shreb` - He drank)</li>
+          <li>**She:** `-at` (e.g., `shreb` → `shrb-at` - She drank)</li>
+          <li>**We:** `-na` (e.g., `shreb` → `shreb-na` - We drank)</li>
+          <li>**You (pl.):** `-tu` (e.g., `shreb` → `shreb-tu` - You (pl) drank)</li>
+          <li>**They:** `-u` (e.g., `shreb` → `shrb-u` - They drank)</li>
+      </ul>
+       <div class="note">
+        <strong>Vowel Changes:</strong> The vowels within the verb root can sometimes change when adding suffixes. This is especially true for verbs with "weak" middle or final letters. We'll start with more regular examples.
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Conjugating Regular Verbs in the Past Tense</h2>
+        <p>Let's look at a common regular verb: `kteb` (<span class="darija-script">كتب</span> - to write).</p>
+        
+        <table class="verb-table">
+            <thead>
+                <tr>
+                    <th>Pronoun</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Meaning</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="pronoun">Ana (I)</td><td class="darija-script">كتبت</td><td class="verb-form">ktebt</td><td>I wrote</td><td><span class="play-button" onclick="alert('Audio: ktebt')"></span></td></tr>
+                <tr><td class="pronoun">Nta (You m.s.)</td><td class="darija-script">كتبتي</td><td class="verb-form">ktebti</td><td>You wrote</td><td><span class="play-button" onclick="alert('Audio: ktebti (m)')"></span></td></tr>
+                <tr><td class="pronoun">Nti (You f.s.)</td><td class="darija-script">كتبتي</td><td class="verb-form">ktebti</td><td>You wrote</td><td><span class="play-button" onclick="alert('Audio: ktebti (f)')"></span></td></tr>
+                <tr><td class="pronoun">Huwa (He)</td><td class="darija-script">كتب</td><td class="verb-form">kteb</td><td>He wrote</td><td><span class="play-button" onclick="alert('Audio: kteb')"></span></td></tr>
+                <tr><td class="pronoun">Hiya (She)</td><td class="darija-script">كتبات</td><td class="verb-form">ketbat</td><td>She wrote</td><td><span class="play-button" onclick="alert('Audio: ketbat')"></span></td></tr>
+                <tr><td class="pronoun">7na (We)</td><td class="darija-script">كتبنا</td><td class="verb-form">ktebna</td><td>We wrote</td><td><span class="play-button" onclick="alert('Audio: ktebna')"></span></td></tr>
+                <tr><td class="pronoun">Ntuma (You pl.)</td><td class="darija-script">كتبتو</td><td class="verb-form">ktebtu</td><td>You (pl) wrote</td><td><span class="play-button" onclick="alert('Audio: ktebtu')"></span></td></tr>
+                <tr><td class="pronoun">Huma (They)</td><td class="darija-script">كتبو</td><td class="verb-form">ketbu</td><td>They wrote</td><td><span class="play-button" onclick="alert('Audio: ketbu')"></span></td></tr>
+            </tbody>
+        </table>
+
+        <h3>Another Example: `shrb` (<span class="darija-script">شرب</span> - to drink)</h3>
+         <table class="verb-table">
+            <thead>
+                <tr>
+                    <th>Pronoun</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Meaning</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+             <tbody>
+                <tr><td class="pronoun">Ana</td><td class="darija-script">شربت</td><td class="verb-form">shrebt</td><td>I drank</td><td><span class="play-button" onclick="alert('Audio: shrebt')"></span></td></tr>
+                <tr><td class="pronoun">Nta/Nti</td><td class="darija-script">شربتي</td><td class="verb-form">shrebti</td><td>You drank</td><td><span class="play-button" onclick="alert('Audio: shrebti')"></span></td></tr>
+                <tr><td class="pronoun">Huwa</td><td class="darija-script">شرب</td><td class="verb-form">shreb</td><td>He drank</td><td><span class="play-button" onclick="alert('Audio: shreb')"></span></td></tr>
+                <tr><td class="pronoun">Hiya</td><td class="darija-script">شربات</td><td class="verb-form">shrbat</td><td>She drank</td><td><span class="play-button" onclick="alert('Audio: shrbat')"></span></td></tr>
+                <tr><td class="pronoun">7na</td><td class="darija-script">شربنا</td><td class="verb-form">shrebna</td><td>We drank</td><td><span class="play-button" onclick="alert('Audio: shrebna')"></span></td></tr>
+                <tr><td class="pronoun">Ntuma</td><td class="darija-script">شربتو</td><td class="verb-form">shrebtu</td><td>You (pl) drank</td><td><span class="play-button" onclick="alert('Audio: shrebtu')"></span></td></tr>
+                <tr><td class="pronoun">Huma</td><td class="darija-script">شربو</td><td class="verb-form">shrbu</td><td>They drank</td><td><span class="play-button" onclick="alert('Audio: shrbu')"></span></td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Basic Past Time Expressions</h2>
+        <p>To talk about when something happened in the past, use these expressions:</p>
+        <table class="verb-table">
+             <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija Script</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+             <tbody>
+                <tr><td>Yesterday</td><td class="darija-script">البارح</td><td class="transcription">l-bare7</td><td><span class="play-button" onclick="alert('Audio: l-bare7')"></span></td></tr>
+                <tr><td>The day before yesterday</td><td class="darija-script">ول البارح</td><td class="transcription">wel l-bare7</td><td><span class="play-button" onclick="alert('Audio: wel l-bare7')"></span></td></tr>
+                <tr><td>Last week</td><td class="darija-script">السيمانة اللي فاتت</td><td class="transcription">s-simana lli fatet</td><td><span class="play-button" onclick="alert('Audio: s-simana lli fatet')"></span></td></tr>
+                <tr><td>Last month</td><td class="darija-script">الشهر اللي فات</td><td class="transcription">sh-shher lli fat</td><td><span class="play-button" onclick="alert('Audio: sh-shher lli fat')"></span></td></tr>
+                <tr><td>Last year</td><td class="darija-script">العام اللي فات</td><td class="transcription">l-3am lli fat</td><td><span class="play-button" onclick="alert('Audio: l-3am lli fat')"></span></td></tr>
+                 <tr><td>Before / Ago</td><td class="darija-script">قبل / هادي</td><td class="transcription">qbel / hadi</td><td class="notes">e.g., `qbel simana` (a week ago), `hadi telt yam` (three days ago)</td><td><span class="play-button" onclick="alert('Audio: qbel / hadi')"></span></td></tr>
+            </tbody>
+        </table>
+
+        <h3>Example Sentences:</h3>
+        <ul>
+            <li>I wrote a letter yesterday: <span class="darija-script">كتبت برا البارح.</span> (Ktebt bra l-bare7.) (bra = letter)</li>
+            <li>She drank tea last week: <span class="darija-script">شربات أتاي السيمانة اللي فاتت.</span> (Shrbat atay s-simana lli fatet.)</li>
+            <li>He ate couscous three days ago: <span class="darija-script">كلا كسكسو هادي تلت يام.</span> (Kla ksksu hadi telt yam.) (kla=he ate)</li>
+        </ul>
+         <div class="note">
+            <strong>Word Order:</strong> Time expressions can often go at the beginning or end of the sentence in Darija, similar to English.
+        </div>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Conjugate in Past Tense</h3>
+      <p>Conjugate the verb `fhm` (<span class="darija-script">فهم</span> - to understand) in the past tense for the following pronouns:</p>
+      <ol>
+          <li>Ana: <span class="fill-blank">fhemt</span></li>
+          <li>Huwa: <span class="fill-blank">fhem</span></li>
+          <li>Hiya: <span class="fill-blank">fhemat</span></li>
+          <li>7na: <span class="fill-blank">fhemna</span></li>
+          <li>Huma: <span class="fill-blank">fhemu</span></li>
+      </ol>
+
+      <h3>Exercise 2: Translate to Darija</h3>
+      <p>Translate these sentences using the past tense:</p>
+      <ol>
+          <li>I drank coffee yesterday. <span class="fill-blank">Shrebt l-qhwa l-bare7.</span></li>
+          <li>She wrote a book last year. <span class="fill-blank">Ketbat ktab l-3am lli fat.</span></li>
+          <li>Did you (m.s.) eat tagine? (Wash...) <span class="fill-blank">Wash klti ttajin?</span> (kliti from kla 'to eat')</li>
+          <li>They understood the lesson (d-ders). <span class="fill-blank">Fhemu d-ders.</span></li>
+      </ol>
+      <div class="note">
+          This is just the beginning of the past tense! In the next module, we'll look at more verbs, including common irregular ones. Keep practicing these patterns.
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

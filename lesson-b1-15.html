@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | B1 Module 15: Handling Problems & Complaints</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .phrase-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .phrase-table th, .phrase-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .phrase-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .phrase-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .phrase-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .phrase-table .explanation { font-size: 0.9em; color: #ccc;}
+
+     .dialogue-box {
+        background: rgba(255,255,255,0.08);
+        border-left: 4px solid #99ff99;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+    .dialogue-box .speakerA { color: #ff9999; font-weight: bold; } /* Customer/Person with problem */
+    .dialogue-box .speakerB { color: #99ff99; font-weight: bold; } /* Staff/Person helping */
+    .dialogue-box .darija-text { font-family: 'Amiri', serif; font-size: 1.2em; }
+    .dialogue-box .transcription-text { font-style: italic; color: #ffcc66; font-size: 0.95em;}
+    .dialogue-box .translation-text { color: #ccc; font-size: 0.9em; }
+    .dialogue-box p { margin-bottom: 10px; }
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 150px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+    .practice-section .scenario { font-style: italic; color: #ccc; margin-bottom: 10px;}
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .phrase-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 15: Handling Problems & Complaints</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>B1 Module 15: Handling Problems & Expressing Complaints (Simple)</h1>
+    <p>Learn how to politely express dissatisfaction, describe simple problems, and ask for solutions in everyday situations.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Identifying a Problem</h2>
+      <p>First, you need to be able to state that there is an issue.</p>
+      <table class="phrase-table">
+        <thead>
+            <tr>
+                <th>English Phrase</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Explanation</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>There is a problem.</td>
+                <td class="darija-script">كاين مشكل.</td>
+                <td class="transcription">Kayen mushkil.</td>
+                <td class="explanation">`mushkil` (m) - problem</td>
+                <td><span class="play-button" onclick="alert('Audio: Kayen mushkil.')"></span></td>
+            </tr>
+            <tr>
+                <td>I have a problem.</td>
+                <td class="darija-script">عندي مشكل.</td>
+                <td class="transcription">3ndi mushkil.</td>
+                <td></td>
+                <td><span class="play-button" onclick="alert('Audio: 3ndi mushkil.')"></span></td>
+            </tr>
+            <tr>
+                <td>This isn't working. / It's broken. (m./f.)</td>
+                <td class="darija-script">هادا ما خدامش. / هادي ما خداماش.</td>
+                <td class="transcription">Hada ma khddam-sh. / Hadi ma khddama-sh.</td>
+                <td class="explanation">`khddam` (working - adj.)</td>
+                <td><span class="play-button" onclick="alert('Audio: Hada ma khddamsh.')"></span></td>
+            </tr>
+             <tr>
+                <td>It's broken/damaged. (m./f.)</td>
+                <td class="darija-script">مهرس / مهرسة.</td>
+                <td class="transcription">mherres / mherrsa.</td>
+                <td class="explanation">Passive participle of `herres` (to break)</td>
+                <td><span class="play-button" onclick="alert('Audio: mherres.')"></span></td>
+            </tr>
+            <tr>
+                <td>This isn't what I ordered/wanted.</td>
+                <td class="darija-script">هادشي ماشي هو اللي بغيت.</td>
+                <td class="transcription">Hadshi mashi huwa lli bghit.</td>
+                <td class="explanation">`hadshi` - this thing</td>
+                <td><span class="play-button" onclick="alert('Audio: Hadshi mashi huwa lli bghit.')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Expressing Dissatisfaction Politely</h2>
+        <p>It's important to be polite even when complaining.</p>
+        <table class="phrase-table">
+            <thead>
+                <tr>
+                    <th>English Phrase</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Explanation</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Excuse me, but...</td>
+                    <td class="darija-script">سمح ليا، ولكن...</td>
+                    <td class="transcription">Sme7 li-ya, walakin...</td>
+                    <td class="explanation">Polite way to start a complaint.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sme7 liya, walakin...')"></span></td>
+                </tr>
+                <tr>
+                    <td>I am not happy with... / This doesn't please me...</td>
+                    <td class="darija-script">هادشي ما عجبنيش.</td>
+                    <td class="transcription">Hadshi ma 3jebni-sh.</td>
+                    <td class="explanation">Lit. "This thing didn't please me."</td>
+                    <td><span class="play-button" onclick="alert('Audio: Hadshi ma 3jebnish.')"></span></td>
+                </tr>
+                <tr>
+                    <td>It's not good. / It's not okay.</td>
+                    <td class="darija-script">ماشي مزيان.</td>
+                    <td class="transcription">Mashi mzyan.</td>
+                    <td></td>
+                    <td><span class="play-button" onclick="alert('Audio: Mashi mzyan.')"></span></td>
+                </tr>
+                <tr>
+                    <td>This is not normal.</td>
+                    <td class="darija-script">هادشي ماشي نورمال.</td>
+                    <td class="transcription">Hadshi mashi normal.</td>
+                    <td>`normal` (from French)</td>
+                    <td><span class="play-button" onclick="alert('Audio: Hadshi mashi normal.')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Asking for a Solution</h2>
+        <table class="phrase-table">
+            <thead>
+                <tr>
+                    <th>English Phrase</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Explanation</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>What can we do? / What's the solution?</td>
+                    <td class="darija-script">شنو نديرو؟ / شنو الحل؟</td>
+                    <td class="transcription">Shnu ndiru? / Shnu l-7ell?</td>
+                    <td class="explanation">`l-7ell` - the solution</td>
+                    <td><span class="play-button" onclick="alert('Audio: Shnu ndiru?')"></span></td>
+                </tr>
+                <tr>
+                    <td>Can you help me, please?</td>
+                    <td class="darija-script">واش يمكن ليك تعاوني، عافاك؟</td>
+                    <td class="transcription">Wash yemken lik t3awenni, 3afak?</td>
+                    <td>(Review from B1.4)</td>
+                    <td><span class="play-button" onclick="alert('Audio: Wash yemken lik t3awenni?')"></span></td>
+                </tr>
+                <tr>
+                    <td>I want to change this (m./f.).</td>
+                    <td class="darija-script">بغيت نبدّل هادا / هادي.</td>
+                    <td class="transcription">Bghit nbeddel hada / hadi.</td>
+                    <td class="explanation">`nbeddel` - I change (from `beddel` - to change)</td>
+                    <td><span class="play-button" onclick="alert('Audio: Bghit nbeddel hada.')"></span></td>
+                </tr>
+                <tr>
+                    <td>I want my money back, please.</td>
+                    <td class="darija-script">بغيت فلوسي، عافاك. / بغيت نرجع فلوسي.</td>
+                    <td class="transcription">Bghit flusi, 3afak. / Bghit nrejje3 flusi.</td>
+                    <td class="explanation">`nrejje3` - I return (Form II)</td>
+                    <td><span class="play-button" onclick="alert('Audio: Bghit flusi.')"></span></td>
+                </tr>
+                <tr>
+                    <td>Can you repair it? (m./f.)</td>
+                    <td class="darija-script">واش يمكن ليك تصلحو / تصلحها؟</td>
+                    <td class="transcription">Wash yemken lik tSele7-u / tSele7-ha?</td>
+                    <td class="explanation">`tSele7` - you repair (from `Sle7` Form I, but `SeLLe7` Form II is common for "to repair")</td>
+                    <td><span class="play-button" onclick="alert('Audio: Wash yemken lik tSele7u?')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+         <div class="note">
+            <strong>Being Understood:</strong> In situations where there's a problem, speaking clearly and calmly is important. Using polite phrases like `sme7 liya` and `3afak` can help.
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Dialogue: Problem with a Purchased Item</h2>
+        <div class="dialogue-box">
+            <p><span class="speakerA">Customer:</span> <span class="darija-text">السلام عليكم. سمح ليا، عندي واحد المشكل.</span><br>
+            <span class="transcription-text">Ssalām 3likum. Sme7 li-ya, 3ndi wa7ed l-mushkil.</span><br>
+            <span class="translation-text">Hello. Excuse me, I have a problem.</span></p>
+
+            <p><span class="speakerB">Shopkeeper:</span> <span class="darija-text">و عليكم السلام. مالك؟ شنو كاين؟</span><br>
+            <span class="transcription-text">Wa 3likum ssalam. Malek? Shnu kayen?</span><br>
+            <span class="translation-text">Hello. What's wrong with you? What is there?</span></p>
+
+            <p><span class="speakerA">Customer:</span> <span class="darija-text">شريت هاد التيليفون البارح من هنا، ولكن ما خدامش مزيان.</span><br>
+            <span class="transcription-text">Shrit had t-tilifun l-bare7 mn hna, walakin ma khddam-sh mzyan.</span><br>
+            <span class="translation-text">I bought this phone yesterday from here, but it's not working well.</span></p>
+
+            <p><span class="speakerB">Shopkeeper:</span> <span class="darija-text">آه، وريني نشوف. بصح، كاين مشكل.</span><br>
+            <span class="transcription-text">Ah, werrini nshuf. Bssa7, kayen mushkil.</span><br>
+            <span class="translation-text">Ah, show me let me see. True, there is a problem.</span></p>
+            
+             <p><span class="speakerA">Customer:</span> <span class="darija-text">واش يمكن ليك تبدلو ليا، عافاك؟</span><br>
+            <span class="transcription-text">Wash yemken lik tbeddel-u li-ya, 3afak?</span><br>
+            <span class="translation-text">Can you exchange it for me, please?</span></p>
+
+             <p><span class="speakerB">Shopkeeper:</span> <span class="darija-text">واخا، ماشي مشكل. خود واحد آخر.</span><br>
+            <span class="transcription-text">Wakha, mashi mushkil. Khud wa7ed akher.</span><br>
+            <span class="translation-text">Okay, no problem. Take another one.</span></p>
+             <p><span class="speakerA">Customer:</span> <span class="darija-text">شكراً بزاف!</span><br>
+            <span class="transcription-text">Shukran bzzaf!</span><br>
+            <span class="translation-text">Thank you very much!</span></p>
+        </div>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Stating the Problem</h3>
+      <p>How would you say these in Darija?</p>
+      <ol>
+          <li>This food (f.) is not good. <span class="fill-blank">Had l-makla mashi mzyana.</span></li>
+          <li>My watch (ساعة - sa3a, f.) is broken. <span class="fill-blank">Sa3ti mherrsa.</span></li>
+          <li>There is a problem with the internet. <span class="fill-blank">Kayen mushkil f l-internet.</span></li>
+      </ol>
+
+      <h3>Exercise 2: Asking for a Solution</h3>
+      <p>Translate these requests:</p>
+      <ol>
+          <li>I want to change these shoes (m. pl. `sbbat`). <span class="fill-blank">Bghit nbeddel had s-sbbat.</span></li>
+          <li>Can you repair this radio (m.), please? <span class="fill-blank">Wash yemken lik tSele7 had r-radio, 3afak?</span></li>
+          <li>I want my money back because this (m.) is not what I ordered. <br><span class="fill-blank">Bghit flusi 7it hadshi mashi huwa lli bghit / lli commandit.</span></li>
+      </ol>
+
+       <h3>Exercise 3: Mini-Scenario</h3>
+       <p class="scenario">You are at a restaurant. The soup (<span class="darija-script">الحريرة</span> - l-7rira, f.) is cold (<span class="darija-script">باردة</span> - barda). How do you politely tell the waiter and ask for a solution?</p>
+       <p>Your Darija: <span class="fill-blank">Sme7 liya, had l-7rira barda shwiya. Wash yemken lik tskhenha liya, 3afak? (tskhenha = you heat it (f.))</span></p>
+
+      <div class="note">
+          Handling problems politely is an important skill. Remember to use `sme7 liya` (excuse me) and `3afak` (please) to maintain a good tone.
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Simple script to ensure correct breadcrumb is shown
+    if (document.getElementById('b1-breadcrumb')) { 
+        let allBreadcrumbs = document.querySelectorAll('.breadcrumb');
+        let b1BreadcrumbExists = false;
+        allBreadcrumbs.forEach(bc => {
+            if (bc.innerHTML.includes("B1 Intermediate")) b1BreadcrumbExists = true;
+        });
+
+        if (b1BreadcrumbExists) { 
+            allBreadcrumbs.forEach(bc => {
+                if (!bc.innerHTML.includes("B1 Module 15")) { // Adjust module number
+                    bc.style.display = 'none';
+                } else {
+                    bc.style.display = 'block';
+                }
+            });
+        }
+    }
+  </script>
+</body>
+</html>

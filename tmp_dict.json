@@ -1,0 +1,4284 @@
+﻿{
+  "categories": [
+    {
+      "name": "Greetings & Basic Expressions",
+      "words": [
+        {
+          "term": "Salam",
+          "arabic": "Ø³Ù„Ø§Ù…",
+          "meaning": "Hello"
+        },
+        {
+          "term": "Salam Alikum",
+          "arabic": "Ø§Ù„Ø³Ù„Ø§Ù… Ø¹Ù„ÙŠÙƒÙ…",
+          "meaning": "Peace be upon you"
+        },
+        {
+          "term": "Labas?",
+          "arabic": "Ù„Ø§Ø¨Ø§Ø³ØŸ",
+          "meaning": "How are you?"
+        },
+        {
+          "term": "Mzyan",
+          "arabic": "Ù…Ø²ÙŠØ§Ù†",
+          "meaning": "Good"
+        },
+        {
+          "term": "Shukran",
+          "arabic": "Ø´ÙƒØ±Ø§",
+          "meaning": "Thank you"
+        },
+        {
+          "term": "Afak",
+          "arabic": "Ø¹ÙØ§Ùƒ",
+          "meaning": "Please"
+        },
+        {
+          "term": "Smehli",
+          "arabic": "Ø³Ù…Ø­ Ù„ÙŠ",
+          "meaning": "Excuse me/Sorry"
+        },
+        {
+          "term": "B'slama",
+          "arabic": "Ø¨Ø§Ù„Ø³Ù„Ø§Ù…Ø©",
+          "meaning": "Goodbye"
+        },
+        {
+          "term": "Msa Lkhir",
+          "arabic": "Ù…Ø³Ø§Ø¡ Ø§Ù„Ø®ÙŠØ±",
+          "meaning": "Good evening"
+        },
+        {
+          "term": "Sbah Lkhir",
+          "arabic": "ØµØ¨Ø§Ø­ Ø§Ù„Ø®ÙŠØ±",
+          "meaning": "Good morning"
+        },
+        {
+          "term": "Bssaha",
+          "arabic": "Ø¨Ø§Ù„ØµØ­Ø©",
+          "meaning": "Enjoy your meal"
+        },
+        {
+          "term": "Allah y3awen",
+          "arabic": "Ø§Ù„Ù„Ù‡ ÙŠØ¹Ø§ÙˆÙ†",
+          "meaning": "God help you"
+        }
+      ]
+    },
+    {
+      "name": "Common Questions",
+      "words": [
+        {
+          "term": "Fayn?",
+          "arabic": "ÙØ§ÙŠÙ†ØŸ",
+          "meaning": "Where?"
+        },
+        {
+          "term": "Kam?",
+          "arabic": "ÙƒÙ…ØŸ",
+          "meaning": "How much?"
+        },
+        {
+          "term": "Mata?",
+          "arabic": "Ù…ØªÙ‰ØŸ",
+          "meaning": "When?"
+        },
+        {
+          "term": "Ashno?",
+          "arabic": "Ø§Ø´Ù†ÙˆØŸ",
+          "meaning": "What?"
+        },
+        {
+          "term": "3lash?",
+          "arabic": "Ø¹Ù„Ø§Ø´ØŸ",
+          "meaning": "Why?"
+        },
+        {
+          "term": "Kifach?",
+          "arabic": "ÙƒÙŠÙØ§Ø´ØŸ",
+          "meaning": "How?"
+        },
+        {
+          "term": "Chno smitk?",
+          "arabic": "Ø´Ù†Ùˆ Ø³Ù…ÙŠØªÙƒØŸ",
+          "meaning": "What's your name?"
+        },
+        {
+          "term": "Fayn sknt?",
+          "arabic": "ÙØ§ÙŠÙ† Ø³ÙƒÙ†ØªØŸ",
+          "meaning": "Where do you live?"
+        }
+      ]
+    },
+    {
+      "name": "Common Responses",
+      "words": [
+        {
+          "term": "Iyeh",
+          "arabic": "Ø§ÙŠÙŠÙ‡",
+          "meaning": "Yes"
+        },
+        {
+          "term": "La",
+          "arabic": "Ù„Ø§",
+          "meaning": "No"
+        },
+        {
+          "term": "Mafhemtch",
+          "arabic": "Ù…Ø§ÙÙ‡Ù…ØªØ´",
+          "meaning": "I don't understand"
+        },
+        {
+          "term": "Ma3refch",
+          "arabic": "Ù…Ø§Ø¹Ø±ÙØ´",
+          "meaning": "I don't know"
+        },
+        {
+          "term": "Mashi",
+          "arabic": "Ù…Ø§Ø´ÙŠ",
+          "meaning": "Not/No (used for negation)"
+        },
+        {
+          "term": "Mzyan",
+          "arabic": "Ù…Ø²ÙŠØ§Ù†",
+          "meaning": "Good/Okay"
+        },
+        {
+          "term": "3afak",
+          "arabic": "Ø¹ÙØ§Ùƒ",
+          "meaning": "Please"
+        },
+        {
+          "term": "Hamdullah",
+          "arabic": "Ø§Ù„Ø­Ù…Ø¯ Ù„Ù„Ù‡",
+          "meaning": "Praise be to God"
+        },
+        {
+          "term": "Inshallah",
+          "arabic": "Ø§Ù†Ø´Ø§Ø¡ Ø§Ù„Ù„Ù‡",
+          "meaning": "God willing"
+        }
+      ]
+    },
+    {
+      "name": "Shopping & Money",
+      "words": [
+        {
+          "term": "Dirham",
+          "arabic": "Ø¯Ø±Ù‡Ù…",
+          "meaning": "Dirham (currency)"
+        },
+        {
+          "term": "Ghir",
+          "arabic": "ØºÙŠØ±",
+          "meaning": "Only"
+        },
+        {
+          "term": "Bzzaf",
+          "arabic": "Ø¨Ø²Ø§Ù",
+          "meaning": "A lot / Very much"
+        },
+        {
+          "term": "Rkhis",
+          "arabic": "Ø±Ø®ÙŠØµ",
+          "meaning": "Cheap"
+        },
+        {
+          "term": "Ghaly",
+          "arabic": "ØºØ§Ù„ÙŠ",
+          "meaning": "Expensive"
+        },
+        {
+          "term": "3ndek?",
+          "arabic": "Ø¹Ù†Ø¯ÙƒØŸ",
+          "meaning": "Do you have?"
+        },
+        {
+          "term": "Kam hada?",
+          "arabic": "ÙƒÙ… Ù‡Ø§Ø¯Ø§ØŸ",
+          "meaning": "How much is this?"
+        },
+        {
+          "term": "M3ndich",
+          "arabic": "Ù…Ø§Ø¹Ù†Ø¯ÙŠØ´",
+          "meaning": "I don't have"
+        }
+      ]
+    },
+    {
+      "name": "Directions & Location",
+      "words": [
+        {
+          "term": "Fayn?",
+          "arabic": "ÙØ§ÙŠÙ†ØŸ",
+          "meaning": "Where?"
+        },
+        {
+          "term": "Hna",
+          "arabic": "Ù‡Ù†Ø§",
+          "meaning": "Here"
+        },
+        {
+          "term": "Tani",
+          "arabic": "ØªØ§Ù†ÙŠ",
+          "meaning": "There"
+        },
+        {
+          "term": "Lissar",
+          "arabic": "Ù„ÙØ³Ø§Ø±",
+          "meaning": "Left"
+        },
+        {
+          "term": "Limin",
+          "arabic": "Ù„ÙŠÙ…ÙŠÙ†",
+          "meaning": "Right"
+        },
+        {
+          "term": "Fog",
+          "arabic": "ÙÙˆÙ‚",
+          "meaning": "Up/Above"
+        },
+        {
+          "term": "Taht",
+          "arabic": "ØªØ­Øª",
+          "meaning": "Down/Below"
+        },
+        {
+          "term": "Qbel",
+          "arabic": "Ù‚Ø¨Ù„",
+          "meaning": "Before"
+        },
+        {
+          "term": "Ba3d",
+          "arabic": "Ø¨Ø¹Ø¯",
+          "meaning": "After"
+        }
+      ]
+    },
+    {
+      "name": "Time & Days",
+      "words": [
+        {
+          "term": "Daba",
+          "arabic": "Ø¯Ø§Ø¨Ø§",
+          "meaning": "Now"
+        },
+        {
+          "term": "Gheda",
+          "arabic": "ØºØ¯Ø§",
+          "meaning": "Tomorrow"
+        },
+        {
+          "term": "Lbareh",
+          "arabic": "Ù„Ø¨Ø§Ø±Ø­",
+          "meaning": "Yesterday"
+        },
+        {
+          "term": "Lyum",
+          "arabic": "Ù„ÙŠÙˆÙ…",
+          "meaning": "Today"
+        },
+        {
+          "term": "L3chir",
+          "arabic": "Ù„Ø¹Ø´ÙŠØ±",
+          "meaning": "Evening"
+        },
+        {
+          "term": "Lfjer",
+          "arabic": "Ù„ÙØ¬Ø±",
+          "meaning": "Dawn"
+        },
+        {
+          "term": "L3sa",
+          "arabic": "Ù„Ø¹ØµØ§",
+          "meaning": "Afternoon"
+        },
+        {
+          "term": "Lil",
+          "arabic": "Ù„ÙŠÙ„",
+          "meaning": "Night"
+        }
+      ]
+    },
+    {
+      "name": "Common Adjectives",
+      "words": [
+        {
+          "term": "Kbir",
+          "arabic": "ÙƒØ¨ÙŠØ±",
+          "meaning": "Big"
+        },
+        {
+          "term": "Sghir",
+          "arabic": "ØµØºÙŠØ±",
+          "meaning": "Small"
+        },
+        {
+          "term": "Jdid",
+          "arabic": "Ø¬Ø¯ÙŠØ¯",
+          "meaning": "New"
+        },
+        {
+          "term": "Qdim",
+          "arabic": "Ù‚Ø¯ÙŠÙ…",
+          "meaning": "Old"
+        },
+        {
+          "term": "7mer",
+          "arabic": "Ø­Ù…Ø±",
+          "meaning": "Red"
+        },
+        {
+          "term": "Khdar",
+          "arabic": "Ø®Ø¶Ø±",
+          "meaning": "Green"
+        },
+        {
+          "term": "Zreq",
+          "arabic": "Ø²Ø±Ù‚",
+          "meaning": "Blue"
+        },
+        {
+          "term": "Byed",
+          "arabic": "Ø¨ÙŠØ¶",
+          "meaning": "White"
+        },
+        {
+          "term": "K7el",
+          "arabic": "ÙƒØ­Ù„",
+          "meaning": "Black"
+        }
+      ]
+    },
+    {
+      "name": "Family & Relationships",
+      "words": [
+        {
+          "term": "Baba",
+          "arabic": "Ø¨Ø§Ø¨Ø§",
+          "meaning": "Father"
+        },
+        {
+          "term": "Mama",
+          "arabic": "Ù…Ø§Ù…Ø§",
+          "meaning": "Mother"
+        },
+        {
+          "term": "Khouya",
+          "arabic": "Ø®ÙˆÙŠØ§",
+          "meaning": "Brother"
+        },
+        {
+          "term": "Khti",
+          "arabic": "Ø®ØªÙŠ",
+          "meaning": "Sister"
+        },
+        {
+          "term": "Jeddi",
+          "arabic": "Ø¬Ø¯ÙŠ",
+          "meaning": "Grandfather"
+        },
+        {
+          "term": "Jeddati",
+          "arabic": "Ø¬Ø¯ØªÙŠ",
+          "meaning": "Grandmother"
+        },
+        {
+          "term": "3mmi",
+          "arabic": "Ø¹Ù…ÙŠ",
+          "meaning": "Uncle"
+        },
+        {
+          "term": "Khalti",
+          "arabic": "Ø®Ø§Ù„ØªÙŠ",
+          "meaning": "Aunt"
+        }
+      ]
+    },
+    {
+      "name": "Food & Drinks",
+      "words": [
+        {
+          "term": "Khobz",
+          "arabic": "Ø®Ø¨Ø²",
+          "meaning": "Bread"
+        },
+        {
+          "term": "Atay",
+          "arabic": "Ø§ØªØ§ÙŠ",
+          "meaning": "Tea"
+        },
+        {
+          "term": "Qhwa",
+          "arabic": "Ù‚Ù‡ÙˆØ©",
+          "meaning": "Coffee"
+        },
+        {
+          "term": "Hlib",
+          "arabic": "Ø­Ù„ÙŠØ¨",
+          "meaning": "Milk"
+        },
+        {
+          "term": "Lhem",
+          "arabic": "Ù„Ø­Ù…",
+          "meaning": "Meat"
+        },
+        {
+          "term": "Djaj",
+          "arabic": "Ø¯Ø¬Ø§Ø¬",
+          "meaning": "Chicken"
+        },
+        {
+          "term": "Hout",
+          "arabic": "Ø­ÙˆØª",
+          "meaning": "Fish"
+        },
+        {
+          "term": "Khoudra",
+          "arabic": "Ø®Ø¶Ø±Ø©",
+          "meaning": "Vegetables"
+        },
+        {
+          "term": "Fakiha",
+          "arabic": "ÙØ§ÙƒÙ‡Ø©",
+          "meaning": "Fruit"
+        }
+      ]
+    },
+    {
+      "name": "Colors",
+      "words": [
+        {
+          "term": "Hmer",
+          "arabic": "Ø­Ù…Ø±",
+          "meaning": "Red"
+        },
+        {
+          "term": "Zreq",
+          "arabic": "Ø²Ø±Ù‚",
+          "meaning": "Blue"
+        },
+        {
+          "term": "Khder",
+          "arabic": "Ø®Ø¶Ø±",
+          "meaning": "Green"
+        },
+        {
+          "term": "Sfar",
+          "arabic": "ØµÙØ±",
+          "meaning": "Yellow"
+        },
+        {
+          "term": "Khal",
+          "arabic": "ÙƒØ­Ù„",
+          "meaning": "Black"
+        },
+        {
+          "term": "Byed",
+          "arabic": "Ø¨ÙŠØ¶",
+          "meaning": "White"
+        }
+      ]
+    },
+    {
+      "name": "Common Verbs",
+      "words": [
+        {
+          "term": "Mcha",
+          "arabic": "Ù…Ø´Ù‰",
+          "meaning": "To go"
+        },
+        {
+          "term": "Ja",
+          "arabic": "Ø¬Ø§",
+          "meaning": "To come"
+        },
+        {
+          "term": "Kla",
+          "arabic": "ÙƒÙ„Ø§",
+          "meaning": "To eat"
+        },
+        {
+          "term": "Chreb",
+          "arabic": "Ø´Ø±Ø¨",
+          "meaning": "To drink"
+        },
+        {
+          "term": "Khdem",
+          "arabic": "Ø®Ø¯Ù…",
+          "meaning": "To work"
+        },
+        {
+          "term": "N3es",
+          "arabic": "Ù†Ø¹Ø³",
+          "meaning": "To sleep"
+        },
+        {
+          "term": "Qra",
+          "arabic": "Ù‚Ø±Ø§",
+          "meaning": "To read/study"
+        },
+        {
+          "term": "Kteb",
+          "arabic": "ÙƒØªØ¨",
+          "meaning": "To write"
+        }
+      ]
+    },
+    {
+      "name": "Places",
+      "words": [
+        {
+          "term": "Souk",
+          "arabic": "Ø³ÙˆÙ‚",
+          "meaning": "Market"
+        },
+        {
+          "term": "Dar",
+          "arabic": "Ø¯Ø§Ø±",
+          "meaning": "House"
+        },
+        {
+          "term": "Madrasa",
+          "arabic": "Ù…Ø¯Ø±Ø³Ø©",
+          "meaning": "School"
+        },
+        {
+          "term": "Mektaba",
+          "arabic": "Ù…ÙƒØªØ¨Ø©",
+          "meaning": "Library"
+        },
+        {
+          "term": "Sbitar",
+          "arabic": "Ø³Ø¨ÙŠØ·Ø§Ø±",
+          "meaning": "Hospital"
+        },
+        {
+          "term": "Hanout",
+          "arabic": "Ø­Ø§Ù†ÙˆØª",
+          "meaning": "Shop"
+        }
+      ]
+    },
+    {
+      "name": "Numbers",
+      "words": [
+        {
+          "term": "Zero",
+          "arabic": "ØµÙØ±",
+          "meaning": "0"
+        },
+        {
+          "term": "Wahed",
+          "arabic": "ÙˆØ§Ø­Ø¯",
+          "meaning": "1"
+        },
+        {
+          "term": "Juj",
+          "arabic": "Ø¬ÙˆØ¬",
+          "meaning": "2"
+        },
+        {
+          "term": "Tlata",
+          "arabic": "ØªÙ„Ø§ØªØ©",
+          "meaning": "3"
+        },
+        {
+          "term": "Rb3a",
+          "arabic": "Ø±Ø¨Ø¹Ø©",
+          "meaning": "4"
+        },
+        {
+          "term": "Khmsa",
+          "arabic": "Ø®Ù…Ø³Ø©",
+          "meaning": "5"
+        },
+        {
+          "term": "Stta",
+          "arabic": "Ø³ØªØ©",
+          "meaning": "6"
+        },
+        {
+          "term": "Sb3a",
+          "arabic": "Ø³Ø¨Ø¹Ø©",
+          "meaning": "7"
+        },
+        {
+          "term": "Tmnya",
+          "arabic": "ØªÙ…Ù†ÙŠØ©",
+          "meaning": "8"
+        },
+        {
+          "term": "Ts3oud",
+          "arabic": "ØªØ³Ø¹ÙˆØ¯",
+          "meaning": "9"
+        },
+        {
+          "term": "3chra",
+          "arabic": "Ø¹Ø´Ø±Ø©",
+          "meaning": "10"
+        },
+        {
+          "term": "Hd3ch",
+          "arabic": "Ø­Ø¯Ø§Ø´",
+          "meaning": "11"
+        },
+        {
+          "term": "Tn3ch",
+          "arabic": "Ø·Ù†Ø§Ø´",
+          "meaning": "12"
+        },
+        {
+          "term": "Tlt3ch",
+          "arabic": "ØªÙ„Ø·Ø§Ø´",
+          "meaning": "13"
+        },
+        {
+          "term": "Rb3t3ch",
+          "arabic": "Ø±Ø¨Ø¹Ø·Ø§Ø´",
+          "meaning": "14"
+        },
+        {
+          "term": "Khmst3ch",
+          "arabic": "Ø®Ù…Ø³Ø·Ø§Ø´",
+          "meaning": "15"
+        },
+        {
+          "term": "3chrin",
+          "arabic": "Ø¹Ø´Ø±ÙŠÙ†",
+          "meaning": "20"
+        },
+        {
+          "term": "Tlatin",
+          "arabic": "ØªÙ„Ø§ØªÙŠÙ†",
+          "meaning": "30"
+        },
+        {
+          "term": "Rb3in",
+          "arabic": "Ø±Ø¨Ø¹ÙŠÙ†",
+          "meaning": "40"
+        },
+        {
+          "term": "Khmsin",
+          "arabic": "Ø®Ù…Ø³ÙŠÙ†",
+          "meaning": "50"
+        },
+        {
+          "term": "Mya",
+          "arabic": "Ù…ÙŠØ©",
+          "meaning": "100"
+        },
+        {
+          "term": "Alf",
+          "arabic": "Ø£Ù„Ù",
+          "meaning": "1000"
+        },
+        {
+          "term": "Mlyun",
+          "arabic": "Ù…Ù„ÙŠÙˆÙ†",
+          "meaning": "Million"
+        },
+        {
+          "term": "Wahed u 3chrin",
+          "arabic": "ÙˆØ§Ø­Ø¯ ÙˆØ¹Ø´Ø±ÙŠÙ†",
+          "meaning": "21 (one and twenty)"
+        },
+        {
+          "term": "Khmsa u tlatin",
+          "arabic": "Ø®Ù…Ø³Ø© ÙˆØªÙ„Ø§ØªÙŠÙ†",
+          "meaning": "35 (five and thirty)"
+        },
+        {
+          "term": "Mya u khmsin",
+          "arabic": "Ù…ÙŠØ© ÙˆØ®Ù…Ø³ÙŠÙ†",
+          "meaning": "150 (hundred and fifty)"
+        },
+        {
+          "term": "Alf u mya",
+          "arabic": "Ø£Ù„Ù ÙˆÙ…ÙŠØ©",
+          "meaning": "1100 (thousand and hundred)"
+        }
+      ]
+    },
+    {
+      "name": "Personal Items",
+      "words": [
+        {
+          "term": "Telefon",
+          "arabic": "ØªÙŠÙ„ÙŠÙÙˆÙ†",
+          "meaning": "Phone"
+        },
+        {
+          "term": "Muhfada",
+          "arabic": "Ù…Ø­ÙØ¸Ø©",
+          "meaning": "Wallet"
+        },
+        {
+          "term": "Meftah",
+          "arabic": "Ù…ÙØªØ§Ø­",
+          "meaning": "Key"
+        },
+        {
+          "term": "Naddara",
+          "arabic": "Ù†Ø¸Ø§Ø±Ø©",
+          "meaning": "Glasses"
+        },
+        {
+          "term": "Sa3a",
+          "arabic": "Ø³Ø§Ø¹Ø©",
+          "meaning": "Watch/Clock"
+        },
+        {
+          "term": "Hwayej",
+          "arabic": "Ø­ÙˆØ§ÙŠØ¬",
+          "meaning": "Clothes"
+        },
+        {
+          "term": "Serwel",
+          "arabic": "Ø³Ø±ÙˆØ§Ù„",
+          "meaning": "Pants"
+        },
+        {
+          "term": "Qamija",
+          "arabic": "Ù‚Ù…ÙŠØ¬Ø©",
+          "meaning": "Shirt"
+        },
+        {
+          "term": "Sabbat",
+          "arabic": "ØµØ¨Ø§Ø·",
+          "meaning": "Shoes"
+        },
+        {
+          "term": "Jeket",
+          "arabic": "Ø¬ÙŠÙƒÙŠØª",
+          "meaning": "Jacket"
+        }
+      ]
+    },
+    {
+      "name": "Household Items",
+      "words": [
+        {
+          "term": "Tabla",
+          "arabic": "Ø·Ø§Ø¨Ù„Ø©",
+          "meaning": "Table"
+        },
+        {
+          "term": "Kursi",
+          "arabic": "ÙƒØ±Ø³ÙŠ",
+          "meaning": "Chair"
+        },
+        {
+          "term": "Srir",
+          "arabic": "Ø³Ø±ÙŠØ±",
+          "meaning": "Bed"
+        },
+        {
+          "term": "Khzana",
+          "arabic": "Ø®Ø²Ø§Ù†Ø©",
+          "meaning": "Closet/Wardrobe"
+        },
+        {
+          "term": "Mri",
+          "arabic": "Ù…Ø±ÙŠ",
+          "meaning": "Mirror"
+        },
+        {
+          "term": "Telfaza",
+          "arabic": "ØªÙ„ÙØ§Ø²Ø©",
+          "meaning": "Television"
+        },
+        {
+          "term": "Berrad",
+          "arabic": "Ø¨Ø±Ø§Ø¯",
+          "meaning": "Teapot"
+        },
+        {
+          "term": "Kas",
+          "arabic": "ÙƒØ§Ø³",
+          "meaning": "Glass (drinking)"
+        },
+        {
+          "term": "Maghsel",
+          "arabic": "Ù…ØºØ³Ù„",
+          "meaning": "Sink"
+        },
+        {
+          "term": "Frach",
+          "arabic": "ÙØ±Ø§Ø´",
+          "meaning": "Mattress"
+        }
+      ]
+    },
+    {
+      "name": "Transportation",
+      "words": [
+        {
+          "term": "Tomobil",
+          "arabic": "Ø·ÙˆÙ…ÙˆØ¨ÙŠÙ„",
+          "meaning": "Car"
+        },
+        {
+          "term": "Tram",
+          "arabic": "Ø·Ø±Ø§Ù…",
+          "meaning": "Tram"
+        },
+        {
+          "term": "Tran",
+          "arabic": "ØªØ±Ø§Ù†",
+          "meaning": "Train"
+        },
+        {
+          "term": "Bis",
+          "arabic": "Ø¨ÙŠØ³",
+          "meaning": "Bus"
+        },
+        {
+          "term": "Taxi",
+          "arabic": "Ø·Ø§ÙƒØ³ÙŠ",
+          "meaning": "Taxi"
+        },
+        {
+          "term": "Biskleta",
+          "arabic": "Ø¨ÙŠØ³ÙƒÙ„ÙŠØ·Ø©",
+          "meaning": "Bicycle"
+        },
+        {
+          "term": "Moteur",
+          "arabic": "Ù…ÙˆØªÙˆØ±",
+          "meaning": "Motorcycle"
+        },
+        {
+          "term": "Tayara",
+          "arabic": "Ø·ÙŠØ§Ø±Ø©",
+          "meaning": "Airplane"
+        }
+      ]
+    },
+    {
+      "name": "Body Parts",
+      "words": [
+        {
+          "term": "Ras",
+          "arabic": "Ø±Ø§Ø³",
+          "meaning": "Head"
+        },
+        {
+          "term": "Wejh",
+          "arabic": "ÙˆØ¬Ù‡",
+          "meaning": "Face"
+        },
+        {
+          "term": "3in",
+          "arabic": "Ø¹ÙŠÙ†",
+          "meaning": "Eye"
+        },
+        {
+          "term": "Nif",
+          "arabic": "Ù†ÙŠÙ",
+          "meaning": "Nose"
+        },
+        {
+          "term": "Fom",
+          "arabic": "ÙÙ…",
+          "meaning": "Mouth"
+        },
+        {
+          "term": "Wden",
+          "arabic": "ÙˆØ¯Ù†",
+          "meaning": "Ear"
+        },
+        {
+          "term": "Yed",
+          "arabic": "ÙŠØ¯",
+          "meaning": "Hand"
+        },
+        {
+          "term": "Rejl",
+          "arabic": "Ø±Ø¬Ù„",
+          "meaning": "Leg/Foot"
+        },
+        {
+          "term": "Ktef",
+          "arabic": "ÙƒØªÙ",
+          "meaning": "Shoulder"
+        },
+        {
+          "term": "Kerch",
+          "arabic": "ÙƒØ±Ø´",
+          "meaning": "Stomach"
+        }
+      ]
+    },
+    {
+      "name": "Weather & Nature",
+      "words": [
+        {
+          "term": "Shems",
+          "arabic": "Ø´Ù…Ø³",
+          "meaning": "Sun"
+        },
+        {
+          "term": "Qmer",
+          "arabic": "Ù‚Ù…Ø±",
+          "meaning": "Moon"
+        },
+        {
+          "term": "Shta",
+          "arabic": "Ø´ØªØ§",
+          "meaning": "Rain"
+        },
+        {
+          "term": "Telj",
+          "arabic": "ØªÙ„Ø¬",
+          "meaning": "Snow"
+        },
+        {
+          "term": "Rih",
+          "arabic": "Ø±ÙŠØ­",
+          "meaning": "Wind"
+        },
+        {
+          "term": "Sma",
+          "arabic": "Ø³Ù…Ø§",
+          "meaning": "Sky"
+        },
+        {
+          "term": "Bhar",
+          "arabic": "Ø¨Ø­Ø±",
+          "meaning": "Sea"
+        },
+        {
+          "term": "Jbel",
+          "arabic": "Ø¬Ø¨Ù„",
+          "meaning": "Mountain"
+        },
+        {
+          "term": "Ghaba",
+          "arabic": "ØºØ§Ø¨Ø©",
+          "meaning": "Forest"
+        },
+        {
+          "term": "Wad",
+          "arabic": "ÙˆØ§Ø¯",
+          "meaning": "River"
+        }
+      ]
+    },
+    {
+      "name": "Professions",
+      "words": [
+        {
+          "term": "Tbib",
+          "arabic": "Ø·Ø¨ÙŠØ¨",
+          "meaning": "Doctor"
+        },
+        {
+          "term": "Ustad",
+          "arabic": "Ø£Ø³ØªØ§Ø°",
+          "meaning": "Teacher"
+        },
+        {
+          "term": "Bulis",
+          "arabic": "Ø¨ÙˆÙ„ÙŠØ³",
+          "meaning": "Police"
+        },
+        {
+          "term": "Kheddam",
+          "arabic": "Ø®Ø¯Ø§Ù…",
+          "meaning": "Worker"
+        },
+        {
+          "term": "Fellah",
+          "arabic": "ÙÙ„Ø§Ø­",
+          "meaning": "Farmer"
+        },
+        {
+          "term": "Kheddam",
+          "arabic": "Ø®Ø¯Ø§Ù…",
+          "meaning": "Employee"
+        },
+        {
+          "term": "Muhandis",
+          "arabic": "Ù…Ù‡Ù†Ø¯Ø³",
+          "meaning": "Engineer"
+        },
+        {
+          "term": "Tager",
+          "arabic": "ØªØ§Ø¬Ø±",
+          "meaning": "Merchant"
+        },
+        {
+          "term": "Khabbaz",
+          "arabic": "Ø®Ø¨Ø§Ø²",
+          "meaning": "Baker"
+        },
+        {
+          "term": "Nejjar",
+          "arabic": "Ù†Ø¬Ø§Ø±",
+          "meaning": "Carpenter"
+        }
+      ]
+    },
+    {
+      "name": "Technology",
+      "words": [
+        {
+          "term": "Ordinateur",
+          "arabic": "Ø£ÙˆØ±Ø¯ÙŠÙ†ØªÙˆØ±",
+          "meaning": "Computer"
+        },
+        {
+          "term": "Internet",
+          "arabic": "Ø¥Ù†ØªØ±Ù†Øª",
+          "meaning": "Internet"
+        },
+        {
+          "term": "Tablet",
+          "arabic": "Ø·Ø§Ø¨Ù„ÙŠØª",
+          "meaning": "Tablet"
+        },
+        {
+          "term": "Chargeur",
+          "arabic": "Ø´Ø§Ø±Ø¬ÙˆØ±",
+          "meaning": "Charger"
+        },
+        {
+          "term": "Batteria",
+          "arabic": "Ø¨Ø·Ø§Ø±ÙŠØ©",
+          "meaning": "Battery"
+        },
+        {
+          "term": "Camera",
+          "arabic": "ÙƒØ§Ù…ÙŠØ±Ø§",
+          "meaning": "Camera"
+        },
+        {
+          "term": "Wifi",
+          "arabic": "ÙˆØ§ÙŠÙÙŠ",
+          "meaning": "Wifi"
+        },
+        {
+          "term": "Application",
+          "arabic": "ØªØ·Ø¨ÙŠÙ‚",
+          "meaning": "App"
+        }
+      ]
+    },
+    {
+      "name": "Essential Phrases",
+      "words": [
+        {
+          "term": "Shno hada?",
+          "arabic": "Ø´Ù†Ùˆ Ù‡Ø¯Ø§ØŸ",
+          "meaning": "What is this?"
+        },
+        {
+          "term": "3ndek...?",
+          "arabic": "Ø¹Ù†Ø¯Ùƒ...ØŸ",
+          "meaning": "Do you have...?"
+        },
+        {
+          "term": "Kayn...?",
+          "arabic": "ÙƒØ§ÙŠÙ†...ØŸ",
+          "meaning": "Is there...?"
+        },
+        {
+          "term": "Khassni...",
+          "arabic": "Ø®ØµÙ†ÙŠ...",
+          "meaning": "I need..."
+        },
+        {
+          "term": "Bgheet...",
+          "arabic": "Ø¨ØºÙŠØª...",
+          "meaning": "I want..."
+        },
+        {
+          "term": "Kifash...?",
+          "arabic": "ÙƒÙŠÙØ§Ø´...ØŸ",
+          "meaning": "How do I...?"
+        },
+        {
+          "term": "Tkder t3aweni?",
+          "arabic": "ØªÙ‚Ø¯Ø± ØªØ¹Ø§ÙˆÙ†ÙŠØŸ",
+          "meaning": "Can you help me?"
+        }
+      ]
+    },
+    {
+      "name": "Health & Emergencies",
+      "words": [
+        {
+          "term": "Tbib",
+          "arabic": "Ø·Ø¨ÙŠØ¨",
+          "meaning": "Doctor"
+        },
+        {
+          "term": "Sbitar",
+          "arabic": "Ø³Ø¨ÙŠØ·Ø§Ø±",
+          "meaning": "Hospital"
+        },
+        {
+          "term": "Dwa",
+          "arabic": "Ø¯ÙˆØ§",
+          "meaning": "Medicine"
+        },
+        {
+          "term": "Mrid",
+          "arabic": "Ù…Ø±ÙŠØ¶",
+          "meaning": "Sick"
+        },
+        {
+          "term": "Wj3",
+          "arabic": "ÙˆØ¬Ø¹",
+          "meaning": "Pain"
+        },
+        {
+          "term": "Zkem",
+          "arabic": "Ø²ÙƒØ§Ù…",
+          "meaning": "Cold (illness)"
+        },
+        {
+          "term": "Skhana",
+          "arabic": "Ø³Ø®Ø§Ù†Ø©",
+          "meaning": "Fever"
+        },
+        {
+          "term": "3yan",
+          "arabic": "Ø¹ÙŠØ§Ù†",
+          "meaning": "Tired"
+        },
+        {
+          "term": "Tdarr",
+          "arabic": "ØªØ¶Ø±",
+          "meaning": "Hurt"
+        },
+        {
+          "term": "3awenni",
+          "arabic": "Ø¹Ø§ÙˆÙ†Ù‘ÙŠ",
+          "meaning": "Help me"
+        },
+        {
+          "term": "Farmasyan",
+          "arabic": "ÙØ±Ù…Ø§Ø³ÙŠØ§Ù†",
+          "meaning": "Pharmacy"
+        }
+      ]
+    },
+    {
+      "name": "Body Parts",
+      "words": [
+        {
+          "term": "Ras",
+          "arabic": "Ø±Ø§Ø³",
+          "meaning": "Head"
+        },
+        {
+          "term": "Sh3r",
+          "arabic": "Ø´Ø¹Ø±",
+          "meaning": "Hair"
+        },
+        {
+          "term": "3in",
+          "arabic": "Ø¹ÙŠÙ†",
+          "meaning": "Eye"
+        },
+        {
+          "term": "Wden",
+          "arabic": "ÙˆØ¯Ù†",
+          "meaning": "Ear"
+        },
+        {
+          "term": "Nif",
+          "arabic": "Ù†ÙŠÙ",
+          "meaning": "Nose"
+        },
+        {
+          "term": "Fom",
+          "arabic": "ÙÙ…",
+          "meaning": "Mouth"
+        },
+        {
+          "term": "Yed",
+          "arabic": "ÙŠØ¯",
+          "meaning": "Hand"
+        },
+        {
+          "term": "Dra3",
+          "arabic": "Ø¯Ø±Ø§Ø¹",
+          "meaning": "Arm"
+        },
+        {
+          "term": "Rjel",
+          "arabic": "Ø±Ø¬Ù„",
+          "meaning": "Leg"
+        },
+        {
+          "term": "Saq",
+          "arabic": "Ø³Ø§Ù‚",
+          "meaning": "Foot"
+        },
+        {
+          "term": "Qelb",
+          "arabic": "Ù‚Ù„Ø¨",
+          "meaning": "Heart"
+        },
+        {
+          "term": "Dher",
+          "arabic": "Ø¸Ù‡Ø±",
+          "meaning": "Back"
+        },
+        {
+          "term": "Kersh",
+          "arabic": "ÙƒØ±Ø´",
+          "meaning": "Stomach"
+        },
+        {
+          "term": "Snan",
+          "arabic": "Ø³Ù†Ø§Ù†",
+          "meaning": "Tooth"
+        }
+      ]
+    },
+    {
+      "name": "Common Objects",
+      "words": [
+        {
+          "term": "Dar",
+          "arabic": "Ø¯Ø§Ø±",
+          "meaning": "House"
+        },
+        {
+          "term": "Bit",
+          "arabic": "Ø¨ÙŠØª",
+          "meaning": "Room"
+        },
+        {
+          "term": "Bab",
+          "arabic": "Ø¨Ø§Ø¨",
+          "meaning": "Door"
+        },
+        {
+          "term": "Shrjem",
+          "arabic": "Ø´Ø±Ø¬Ù…",
+          "meaning": "Window"
+        },
+        {
+          "term": "Tabla",
+          "arabic": "Ø·Ø§Ø¨Ù„Ø©",
+          "meaning": "Table"
+        },
+        {
+          "term": "Kursi",
+          "arabic": "ÙƒØ±Ø³ÙŠ",
+          "meaning": "Chair"
+        },
+        {
+          "term": "Namusiya",
+          "arabic": "Ù†Ø§Ù…ÙˆØ³ÙŠØ©",
+          "meaning": "Bed"
+        },
+        {
+          "term": "Ktab",
+          "arabic": "ÙƒØªØ§Ø¨",
+          "meaning": "Book"
+        },
+        {
+          "term": "Stilou",
+          "arabic": "Ø³ØªÙŠÙ„Ùˆ",
+          "meaning": "Pen"
+        },
+        {
+          "term": "Wrqa",
+          "arabic": "ÙˆØ±Ù‚Ø©",
+          "meaning": "Paper"
+        },
+        {
+          "term": "Tilifun",
+          "arabic": "ØªÙŠÙ„ÙŠÙÙˆÙ†",
+          "meaning": "Phone"
+        },
+        {
+          "term": "Sarut",
+          "arabic": "Ø³Ø§Ø±ÙˆØª",
+          "meaning": "Key"
+        },
+        {
+          "term": "Shkara",
+          "arabic": "Ø´ÙƒØ§Ø±Ø©",
+          "meaning": "Bag"
+        }
+      ]
+    },
+    {
+      "name": "Kitchen Items",
+      "words": [
+        {
+          "term": "Qr3a dyal lma",
+          "arabic": "Ù‚Ø±Ø¹Ø© Ø¯ÙŠØ§Ù„ Ù„Ù…Ø§",
+          "meaning": "Water bottle"
+        },
+        {
+          "term": "Kas",
+          "arabic": "ÙƒØ§Ø³",
+          "meaning": "Glass"
+        },
+        {
+          "term": "Tbsil",
+          "arabic": "Ø·Ø¨Ø³ÙŠÙ„",
+          "meaning": "Plate"
+        },
+        {
+          "term": "Furchita",
+          "arabic": "ÙÙˆØ±Ø´ÙŠØ·Ø©",
+          "meaning": "Fork"
+        },
+        {
+          "term": "M3lqa",
+          "arabic": "Ù…Ø¹Ù„Ù‚Ø©",
+          "meaning": "Spoon"
+        },
+        {
+          "term": "Mus",
+          "arabic": "Ù…ÙˆØ³",
+          "meaning": "Knife"
+        }
+      ]
+    },
+    {
+      "name": "Electronics",
+      "words": [
+        {
+          "term": "Ordinateur",
+          "arabic": "Ø£ÙˆØ±Ø¯ÙŠÙ†ØªÙˆØ±",
+          "meaning": "Computer"
+        },
+        {
+          "term": "Tilifun",
+          "arabic": "ØªÙŠÙ„ÙŠÙÙˆÙ†",
+          "meaning": "Phone"
+        },
+        {
+          "term": "Tlfaza",
+          "arabic": "ØªÙ„ÙØ§Ø²Ø©",
+          "meaning": "Television"
+        },
+        {
+          "term": "Camera",
+          "arabic": "ÙƒØ§Ù…ÙŠØ±Ø§",
+          "meaning": "Camera"
+        },
+        {
+          "term": "Chargeur",
+          "arabic": "Ø´Ø§Ø±Ø¬ÙˆØ±",
+          "meaning": "Charger"
+        },
+        {
+          "term": "Ecran",
+          "arabic": "Ø¥ÙƒØ±Ø§Ù†",
+          "meaning": "Screen"
+        }
+      ]
+    },
+    {
+      "name": "Materials",
+      "words": [
+        {
+          "term": "Khsheb",
+          "arabic": "Ø®Ø´Ø¨",
+          "meaning": "Wood"
+        },
+        {
+          "term": "M3den",
+          "arabic": "Ù…Ø¹Ø¯Ù†",
+          "meaning": "Metal"
+        },
+        {
+          "term": "Plastik",
+          "arabic": "Ø¨Ù„Ø§Ø³ØªÙŠÙƒ",
+          "meaning": "Plastic"
+        },
+        {
+          "term": "Zjaj",
+          "arabic": "Ø²Ø¬Ø§Ø¬",
+          "meaning": "Glass"
+        },
+        {
+          "term": "Wraq",
+          "arabic": "ÙˆØ±Ø§Ù‚",
+          "meaning": "Paper"
+        },
+        {
+          "term": "Qmash",
+          "arabic": "Ù‚Ù…Ø§Ø´",
+          "meaning": "Cloth"
+        }
+      ]
+    },
+    {
+      "name": "Math & Measurements",
+      "words": [
+        {
+          "term": "Mitr",
+          "arabic": "Ù…ØªØ±",
+          "meaning": "Meter"
+        },
+        {
+          "term": "Kilo",
+          "arabic": "ÙƒÙŠÙ„Ùˆ",
+          "meaning": "Kilogram"
+        },
+        {
+          "term": "Litr",
+          "arabic": "Ù„ÙŠØªØ±",
+          "meaning": "Liter"
+        },
+        {
+          "term": "Santimistr",
+          "arabic": "Ø³Ù†ØªÙŠÙ…ØªØ±",
+          "meaning": "Centimeter"
+        },
+        {
+          "term": "Rqm",
+          "arabic": "Ø±Ù‚Ù…",
+          "meaning": "Number"
+        },
+        {
+          "term": "Qyas",
+          "arabic": "Ù‚ÙŠØ§Ø³",
+          "meaning": "Size"
+        }
+      ]
+    },
+    {
+      "name": "Weather",
+      "words": [
+        {
+          "term": "Shems",
+          "arabic": "Ø´Ù…Ø³",
+          "meaning": "Sun"
+        },
+        {
+          "term": "Shta",
+          "arabic": "Ø´ØªØ§",
+          "meaning": "Rain"
+        },
+        {
+          "term": "Telj",
+          "arabic": "ØªÙ„Ø¬",
+          "meaning": "Snow"
+        },
+        {
+          "term": "Rih",
+          "arabic": "Ø±ÙŠØ­",
+          "meaning": "Wind"
+        },
+        {
+          "term": "Shab",
+          "arabic": "Ø³Ø­Ø§Ø¨",
+          "meaning": "Cloud"
+        },
+        {
+          "term": "Skhan",
+          "arabic": "Ø³Ø®Ø§Ù†",
+          "meaning": "Hot"
+        },
+        {
+          "term": "Bard",
+          "arabic": "Ø¨Ø±Ø¯",
+          "meaning": "Cold"
+        },
+        {
+          "term": "Dafi",
+          "arabic": "Ø¯Ø§ÙÙŠ",
+          "meaning": "Warm"
+        },
+        {
+          "term": "Rteb",
+          "arabic": "Ø±Ø·Ø¨",
+          "meaning": "Wet"
+        },
+        {
+          "term": "Nashef",
+          "arabic": "Ù†Ø§Ø´Ù",
+          "meaning": "Dry"
+        },
+        {
+          "term": "Tqs",
+          "arabic": "Ø·Ù‚Ø³",
+          "meaning": "Weather"
+        },
+        {
+          "term": "Kifash tqs?",
+          "arabic": "ÙƒÙŠÙØ§Ø´ Ø·Ù‚Ø³ØŸ",
+          "meaning": "What's the weather like?"
+        }
+      ]
+    },
+    {
+      "name": "Common Verbs",
+      "words": [
+        {
+          "term": "Kan",
+          "arabic": "ÙƒØ§Ù†",
+          "meaning": "To be"
+        },
+        {
+          "term": "3ndo",
+          "arabic": "Ø¹Ù†Ø¯Ùˆ",
+          "meaning": "To have"
+        },
+        {
+          "term": "Dir",
+          "arabic": "Ø¯ÙŠØ±",
+          "meaning": "To do"
+        },
+        {
+          "term": "Msha",
+          "arabic": "Ù…Ø´Ù‰",
+          "meaning": "To go"
+        },
+        {
+          "term": "Ja",
+          "arabic": "Ø¬Ø§",
+          "meaning": "To come"
+        },
+        {
+          "term": "Shaf",
+          "arabic": "Ø´Ø§Ù",
+          "meaning": "To see"
+        },
+        {
+          "term": "Sm3",
+          "arabic": "Ø³Ù…Ø¹",
+          "meaning": "To hear"
+        },
+        {
+          "term": "Hdar",
+          "arabic": "Ù‡Ø¶Ø±",
+          "meaning": "To speak"
+        },
+        {
+          "term": "Gal",
+          "arabic": "Ú¯Ø§Ù„",
+          "meaning": "To say"
+        },
+        {
+          "term": "Kla",
+          "arabic": "ÙƒÙ„Ø§",
+          "meaning": "To eat"
+        },
+        {
+          "term": "Shreb",
+          "arabic": "Ø´Ø±Ø¨",
+          "meaning": "To drink"
+        },
+        {
+          "term": "N3es",
+          "arabic": "Ù†Ø¹Ø³",
+          "meaning": "To sleep"
+        },
+        {
+          "term": "Faq",
+          "arabic": "ÙØ§Ù‚",
+          "meaning": "To wake up"
+        },
+        {
+          "term": "Msha",
+          "arabic": "Ù…Ø´Ù‰",
+          "meaning": "To walk"
+        },
+        {
+          "term": "Jra",
+          "arabic": "Ø¬Ø±Ù‰",
+          "meaning": "To run"
+        },
+        {
+          "term": "Shra",
+          "arabic": "Ø´Ø±Ù‰",
+          "meaning": "To buy"
+        },
+        {
+          "term": "Bra",
+          "arabic": "Ø¨Ø±Ø§",
+          "meaning": "To want"
+        },
+        {
+          "term": "3ref",
+          "arabic": "Ø¹Ø±Ù",
+          "meaning": "To know"
+        },
+        {
+          "term": "Fhem",
+          "arabic": "ÙÙ‡Ù…",
+          "meaning": "To understand"
+        },
+        {
+          "term": "3awen",
+          "arabic": "Ø¹Ø§ÙˆÙ†",
+          "meaning": "To help"
+        }
+      ]
+    },
+    {
+      "name": "Art & Music",
+      "words": [
+        {
+          "term": "Musiqa",
+          "arabic": "Ù…ÙˆØ³ÙŠÙ‚Ù‰",
+          "meaning": "Music"
+        },
+        {
+          "term": "Ughnia",
+          "arabic": "Ø£ØºÙ†ÙŠØ©",
+          "meaning": "Song"
+        },
+        {
+          "term": "Firqa",
+          "arabic": "ÙØ±Ù‚Ø©",
+          "meaning": "Band"
+        },
+        {
+          "term": "Ala",
+          "arabic": "Ø¢Ù„Ø©",
+          "meaning": "Instrument"
+        },
+        {
+          "term": "Rqs",
+          "arabic": "Ø±Ù‚Øµ",
+          "meaning": "Dance"
+        },
+        {
+          "term": "Film",
+          "arabic": "ÙÙŠÙ„Ù…",
+          "meaning": "Movie"
+        },
+        {
+          "term": "Rsem",
+          "arabic": "Ø±Ø³Ù…",
+          "meaning": "Drawing/Painting"
+        },
+        {
+          "term": "Masrah",
+          "arabic": "Ù…Ø³Ø±Ø­",
+          "meaning": "Theater"
+        },
+        {
+          "term": "Fnaan",
+          "arabic": "ÙÙ†Ø§Ù†",
+          "meaning": "Artist"
+        },
+        {
+          "term": "Mughanni",
+          "arabic": "Ù…ØºÙ†ÙŠ",
+          "meaning": "Singer"
+        }
+      ]
+    },
+    {
+      "name": "Business & Work",
+      "words": [
+        {
+          "term": "Khedma",
+          "arabic": "Ø®Ø¯Ù…Ø©",
+          "meaning": "Work/Job"
+        },
+        {
+          "term": "Chrika",
+          "arabic": "Ø´Ø±ÙŠÙƒØ©",
+          "meaning": "Company"
+        },
+        {
+          "term": "Mekteb",
+          "arabic": "Ù…ÙƒØªØ¨",
+          "meaning": "Office"
+        },
+        {
+          "term": "Mudeer",
+          "arabic": "Ù…Ø¯ÙŠØ±",
+          "meaning": "Manager"
+        },
+        {
+          "term": "Muwaddaf",
+          "arabic": "Ù…ÙˆØ¸Ù",
+          "meaning": "Employee"
+        },
+        {
+          "term": "Flus",
+          "arabic": "ÙÙ„ÙˆØ³",
+          "meaning": "Money"
+        },
+        {
+          "term": "Rateb",
+          "arabic": "Ø±Ø§ØªØ¨",
+          "meaning": "Salary"
+        },
+        {
+          "term": "Ijtima3",
+          "arabic": "Ø§Ø¬ØªÙ…Ø§Ø¹",
+          "meaning": "Meeting"
+        },
+        {
+          "term": "Zbayn",
+          "arabic": "Ø²Ø¨ÙˆÙ†",
+          "meaning": "Customer"
+        },
+        {
+          "term": "Tijara",
+          "arabic": "ØªØ¬Ø§Ø±Ø©",
+          "meaning": "Business/Trade"
+        }
+      ]
+    },
+    {
+      "name": "Emotions & Feelings",
+      "words": [
+        {
+          "term": "Ferhan",
+          "arabic": "ÙØ±Ø­Ø§Ù†",
+          "meaning": "Happy"
+        },
+        {
+          "term": "Hazin",
+          "arabic": "Ø­Ø²ÙŠÙ†",
+          "meaning": "Sad"
+        },
+        {
+          "term": "Za3fan",
+          "arabic": "Ø²Ø¹ÙØ§Ù†",
+          "meaning": "Angry"
+        },
+        {
+          "term": "Khayef",
+          "arabic": "Ø®Ø§ÙŠÙ",
+          "meaning": "Scared"
+        },
+        {
+          "term": "Mertah",
+          "arabic": "Ù…Ø±ØªØ§Ø­",
+          "meaning": "Comfortable/Relaxed"
+        },
+        {
+          "term": "T3ban",
+          "arabic": "ØªØ¹Ø¨Ø§Ù†",
+          "meaning": "Tired"
+        },
+        {
+          "term": "Mqleq",
+          "arabic": "Ù…Ù‚Ù„Ù‚",
+          "meaning": "Worried"
+        },
+        {
+          "term": "Mhemmes",
+          "arabic": "Ù…Ø­Ù…Ø³",
+          "meaning": "Excited"
+        },
+        {
+          "term": "Mdemmer",
+          "arabic": "Ù…Ø¯Ù…Ø±",
+          "meaning": "Frustrated"
+        },
+        {
+          "term": "Mabsut",
+          "arabic": "Ù…Ø¨Ø³ÙˆØ·",
+          "meaning": "Pleased"
+        }
+      ]
+    },
+    {
+      "name": "Animals",
+      "words": [
+        {
+          "term": "Kelb",
+          "arabic": "ÙƒÙ„Ø¨",
+          "meaning": "Dog"
+        },
+        {
+          "term": "Qet",
+          "arabic": "Ù‚Ø·",
+          "meaning": "Cat"
+        },
+        {
+          "term": "Hut",
+          "arabic": "Ø­ÙˆØª",
+          "meaning": "Fish"
+        },
+        {
+          "term": "3asfur",
+          "arabic": "Ø¹ØµÙÙˆØ±",
+          "meaning": "Bird"
+        },
+        {
+          "term": "3awed",
+          "arabic": "Ø¹ÙˆØ¯",
+          "meaning": "Horse"
+        },
+        {
+          "term": "Begra",
+          "arabic": "Ø¨Ù‚Ø±Ø©",
+          "meaning": "Cow"
+        },
+        {
+          "term": "Jmel",
+          "arabic": "Ø¬Ù…Ù„",
+          "meaning": "Camel"
+        },
+        {
+          "term": "Hmar",
+          "arabic": "Ø­Ù…Ø§Ø±",
+          "meaning": "Donkey"
+        },
+        {
+          "term": "Dib",
+          "arabic": "Ø¯ÙŠØ¨",
+          "meaning": "Wolf"
+        },
+        {
+          "term": "Qerd",
+          "arabic": "Ù‚Ø±Ø¯",
+          "meaning": "Monkey"
+        }
+      ]
+    },
+    {
+      "name": "Sports & Hobbies",
+      "words": [
+        {
+          "term": "Kura",
+          "arabic": "ÙƒÙˆØ±Ø©",
+          "meaning": "Football"
+        },
+        {
+          "term": "Sbaha",
+          "arabic": "Ø³Ø¨Ø§Ø­Ø©",
+          "meaning": "Swimming"
+        },
+        {
+          "term": "Jri",
+          "arabic": "Ø¬Ø±ÙŠ",
+          "meaning": "Running"
+        },
+        {
+          "term": "Tennis",
+          "arabic": "ØªÙ†Ø³",
+          "meaning": "Tennis"
+        },
+        {
+          "term": "Basket",
+          "arabic": "Ø¨Ø§Ø³ÙƒÙŠØª",
+          "meaning": "Basketball"
+        },
+        {
+          "term": "Qira2a",
+          "arabic": "Ù‚Ø±Ø§Ø¡Ø©",
+          "meaning": "Reading"
+        },
+        {
+          "term": "Safar",
+          "arabic": "Ø³ÙØ±",
+          "meaning": "Traveling"
+        },
+        {
+          "term": "Tebkh",
+          "arabic": "Ø·Ø¨Ø®",
+          "meaning": "Cooking"
+        },
+        {
+          "term": "Taswir",
+          "arabic": "ØªØµÙˆÙŠØ±",
+          "meaning": "Photography"
+        },
+        {
+          "term": "Jardinage",
+          "arabic": "Ø¬Ø§Ø±Ø¯ÙŠÙ†Ø§Ø¬",
+          "meaning": "Gardening"
+        }
+      ]
+    },
+    {
+      "name": "Transportation",
+      "words": [
+        {
+          "term": "Tomobil",
+          "arabic": "Ø·ÙˆÙ…ÙˆØ¨ÙŠÙ„",
+          "meaning": "Car"
+        },
+        {
+          "term": "Tram",
+          "arabic": "Ø·Ø±Ø§Ù…",
+          "meaning": "Tram"
+        },
+        {
+          "term": "Qitar",
+          "arabic": "Ù‚Ø·Ø§Ø±",
+          "meaning": "Train"
+        },
+        {
+          "term": "Bis",
+          "arabic": "Ø¨ÙŠØ³",
+          "meaning": "Bus"
+        },
+        {
+          "term": "Taxi",
+          "arabic": "Ø·Ø§ÙƒØ³ÙŠ",
+          "meaning": "Taxi"
+        },
+        {
+          "term": "Biskleta",
+          "arabic": "Ø¨ÙŠØ³ÙƒÙ„ÙŠØ·Ø©",
+          "meaning": "Bicycle"
+        },
+        {
+          "term": "Moteur",
+          "arabic": "Ù…ÙˆØªÙˆØ±",
+          "meaning": "Motorcycle"
+        },
+        {
+          "term": "Tayara",
+          "arabic": "Ø·ÙŠØ§Ø±Ø©",
+          "meaning": "Airplane"
+        }
+      ]
+    },
+    {
+      "name": "Nature & Environment",
+      "words": [
+        {
+          "term": "Shems",
+          "arabic": "Ø´Ù…Ø³",
+          "meaning": "Sun"
+        },
+        {
+          "term": "Qmer",
+          "arabic": "Ù‚Ù…Ø±",
+          "meaning": "Moon"
+        },
+        {
+          "term": "Njum",
+          "arabic": "Ù†Ø¬ÙˆÙ…",
+          "meaning": "Stars"
+        },
+        {
+          "term": "Sma",
+          "arabic": "Ø³Ù…Ø§",
+          "meaning": "Sky"
+        },
+        {
+          "term": "Bhar",
+          "arabic": "Ø¨Ø­Ø±",
+          "meaning": "Sea"
+        },
+        {
+          "term": "Jbel",
+          "arabic": "Ø¬Ø¨Ù„",
+          "meaning": "Mountain"
+        },
+        {
+          "term": "Ghaba",
+          "arabic": "ØºØ§Ø¨Ø©",
+          "meaning": "Forest"
+        },
+        {
+          "term": "Wad",
+          "arabic": "ÙˆØ§Ø¯",
+          "meaning": "River"
+        },
+        {
+          "term": "Sahara",
+          "arabic": "ØµØ­Ø±Ø§Ø¡",
+          "meaning": "Desert"
+        },
+        {
+          "term": "Shjer",
+          "arabic": "Ø´Ø¬Ø±",
+          "meaning": "Trees"
+        },
+        {
+          "term": "Ward",
+          "arabic": "ÙˆØ±Ø¯",
+          "meaning": "Flowers"
+        },
+        {
+          "term": "3sheb",
+          "arabic": "Ø¹Ø´Ø¨",
+          "meaning": "Grass"
+        }
+      ]
+    },
+    {
+      "name": "Time Expressions",
+      "words": [
+        {
+          "term": "Daba",
+          "arabic": "Ø¯Ø§Ø¨Ø§",
+          "meaning": "Now"
+        },
+        {
+          "term": "Gheda",
+          "arabic": "ØºØ¯Ø§",
+          "meaning": "Tomorrow"
+        },
+        {
+          "term": "Lbareh",
+          "arabic": "Ù„Ø¨Ø§Ø±Ø­",
+          "meaning": "Yesterday"
+        },
+        {
+          "term": "Lyum",
+          "arabic": "Ù„ÙŠÙˆÙ…",
+          "meaning": "Today"
+        },
+        {
+          "term": "Bekri",
+          "arabic": "Ø¨ÙƒØ±ÙŠ",
+          "meaning": "Early"
+        },
+        {
+          "term": "M3a tal",
+          "arabic": "Ù…Ø¹Ø§ Ø·Ø§Ù„",
+          "meaning": "Late"
+        },
+        {
+          "term": "Simana",
+          "arabic": "Ø³ÙŠÙ…Ø§Ù†Ø©",
+          "meaning": "Week"
+        },
+        {
+          "term": "Shher",
+          "arabic": "Ø´Ù‡Ø±",
+          "meaning": "Month"
+        },
+        {
+          "term": "3am",
+          "arabic": "Ø¹Ø§Ù…",
+          "meaning": "Year"
+        },
+        {
+          "term": "Sa3a",
+          "arabic": "Ø³Ø§Ø¹Ø©",
+          "meaning": "Hour"
+        },
+        {
+          "term": "Dqiqa",
+          "arabic": "Ø¯Ù‚ÙŠÙ‚Ø©",
+          "meaning": "Minute"
+        },
+        {
+          "term": "Thnin",
+          "arabic": "ØªÙ†ÙŠÙ†",
+          "meaning": "Monday"
+        },
+        {
+          "term": "Tlat",
+          "arabic": "ØªÙ„Ø§Øª",
+          "meaning": "Tuesday"
+        },
+        {
+          "term": "Larb3",
+          "arabic": "Ù„Ø§Ø±Ø¨Ø¹",
+          "meaning": "Wednesday"
+        },
+        {
+          "term": "Lkhmis",
+          "arabic": "Ù„Ø®Ù…ÙŠØ³",
+          "meaning": "Thursday"
+        },
+        {
+          "term": "Jm3a",
+          "arabic": "Ø¬Ù…Ø¹Ø©",
+          "meaning": "Friday"
+        },
+        {
+          "term": "Sebt",
+          "arabic": "Ø³Ø¨Øª",
+          "meaning": "Saturday"
+        },
+        {
+          "term": "Lhedd",
+          "arabic": "Ù„Ø­Ø¯",
+          "meaning": "Sunday"
+        }
+      ]
+    },
+    {
+      "name": "Education & School",
+      "words": [
+        {
+          "term": "Medrasa",
+          "arabic": "Ù…Ø¯Ø±Ø³Ø©",
+          "meaning": "School"
+        },
+        {
+          "term": "Jami3a",
+          "arabic": "Ø¬Ø§Ù…Ø¹Ø©",
+          "meaning": "University"
+        },
+        {
+          "term": "Ustad",
+          "arabic": "Ø£Ø³ØªØ§Ø°",
+          "meaning": "Teacher/Professor"
+        },
+        {
+          "term": "Tilmid",
+          "arabic": "ØªÙ„Ù…ÙŠØ°",
+          "meaning": "Student"
+        },
+        {
+          "term": "Qism",
+          "arabic": "Ù‚Ø³Ù…",
+          "meaning": "Classroom"
+        },
+        {
+          "term": "Ktab",
+          "arabic": "ÙƒØªØ§Ø¨",
+          "meaning": "Book"
+        },
+        {
+          "term": "Defter",
+          "arabic": "Ø¯ÙØªØ±",
+          "meaning": "Notebook"
+        },
+        {
+          "term": "Qelm",
+          "arabic": "Ù‚Ù„Ù…",
+          "meaning": "Pen"
+        },
+        {
+          "term": "Imtihan",
+          "arabic": "Ø§Ù…ØªØ­Ø§Ù†",
+          "meaning": "Exam"
+        },
+        {
+          "term": "Wajib",
+          "arabic": "ÙˆØ§Ø¬Ø¨",
+          "meaning": "Homework"
+        },
+        {
+          "term": "Qraya",
+          "arabic": "Ù‚Ø±Ø§ÙŠØ©",
+          "meaning": "Studies"
+        },
+        {
+          "term": "Mektaba",
+          "arabic": "Ù…ÙƒØªØ¨Ø©",
+          "meaning": "Library"
+        }
+      ]
+    },
+    {
+      "name": "Technology & Internet",
+      "words": [
+        {
+          "term": "Internet",
+          "arabic": "Ø¥Ù†ØªØ±Ù†Øª",
+          "meaning": "Internet"
+        },
+        {
+          "term": "Wifi",
+          "arabic": "ÙˆØ§ÙŠÙØ§ÙŠ",
+          "meaning": "Wifi"
+        },
+        {
+          "term": "Password",
+          "arabic": "Ø¨Ø§Ø³ÙˆÙˆØ±Ø¯",
+          "meaning": "Password"
+        },
+        {
+          "term": "Email",
+          "arabic": "Ø¥ÙŠÙ…ÙŠÙ„",
+          "meaning": "Email"
+        },
+        {
+          "term": "Website",
+          "arabic": "ÙˆÙŠØ¨Ø³Ø§ÙŠØª",
+          "meaning": "Website"
+        },
+        {
+          "term": "Application",
+          "arabic": "ØªØ·Ø¨ÙŠÙ‚",
+          "meaning": "App"
+        },
+        {
+          "term": "Download",
+          "arabic": "ØªØ­Ù…ÙŠÙ„",
+          "meaning": "Download"
+        },
+        {
+          "term": "Upload",
+          "arabic": "Ø±ÙØ¹",
+          "meaning": "Upload (borrowed from English; Arabic root 'rafaÊ¿' means 'to lift/raise')"
+        },
+        {
+          "term": "Click",
+          "arabic": "ÙƒÙ„ÙŠÙƒ",
+          "meaning": "Click"
+        },
+        {
+          "term": "Share",
+          "arabic": "Ø´ÙŠØ±",
+          "meaning": "Share"
+        },
+        {
+          "term": "Battarya",
+          "arabic": "Ø¨Ø·Ø§Ø±ÙŠØ©",
+          "meaning": "Battery"
+        },
+        {
+          "term": "Chargeur",
+          "arabic": "Ø´Ø§Ø±Ø¬ÙˆØ±",
+          "meaning": "Charger"
+        }
+      ]
+    },
+    {
+      "name": "Religious & Cultural Terms",
+      "words": [
+        {
+          "term": "Allah",
+          "arabic": "Ø§Ù„Ù„Ù‡",
+          "meaning": "God"
+        },
+        {
+          "term": "Masjid",
+          "arabic": "Ù…Ø³Ø¬Ø¯",
+          "meaning": "Mosque"
+        },
+        {
+          "term": "Salat",
+          "arabic": "ØµÙ„Ø§Ø©",
+          "meaning": "Prayer"
+        },
+        {
+          "term": "Ramadan",
+          "arabic": "Ø±Ù…Ø¶Ø§Ù†",
+          "meaning": "Ramadan"
+        },
+        {
+          "term": "3id",
+          "arabic": "Ø¹ÙŠØ¯",
+          "meaning": "Festival/Holiday"
+        },
+        {
+          "term": "Hajj",
+          "arabic": "Ø­Ø¬",
+          "meaning": "Pilgrimage"
+        },
+        {
+          "term": "Imam",
+          "arabic": "Ø¥Ù…Ø§Ù…",
+          "meaning": "Imam"
+        },
+        {
+          "term": "Baraka",
+          "arabic": "Ø¨Ø±ÙƒØ©",
+          "meaning": "Blessing"
+        },
+        {
+          "term": "Sadaqa",
+          "arabic": "ØµØ¯Ù‚Ø©",
+          "meaning": "Charity"
+        },
+        {
+          "term": "Halal",
+          "arabic": "Ø­Ù„Ø§Ù„",
+          "meaning": "Permissible"
+        },
+        {
+          "term": "Haram",
+          "arabic": "Ø­Ø±Ø§Ù…",
+          "meaning": "Forbidden"
+        },
+        {
+          "term": "Du3a",
+          "arabic": "Ø¯Ø¹Ø§Ø¡",
+          "meaning": "Supplication"
+        }
+      ]
+    },
+    {
+      "name": "Social Media & Communication",
+      "words": [
+        {
+          "term": "Facebook",
+          "arabic": "ÙÙŠØ³Ø¨ÙˆÙƒ",
+          "meaning": "Facebook"
+        },
+        {
+          "term": "Instagram",
+          "arabic": "Ø¥Ù†Ø³ØªØºØ±Ø§Ù…",
+          "meaning": "Instagram"
+        },
+        {
+          "term": "WhatsApp",
+          "arabic": "ÙˆØ§ØªØ³Ø§Ø¨",
+          "meaning": "WhatsApp"
+        },
+        {
+          "term": "Message",
+          "arabic": "Ù…ÙŠØ³Ø§Ø¬",
+          "meaning": "Message"
+        },
+        {
+          "term": "Post",
+          "arabic": "Ø¨ÙˆØ³Øª",
+          "meaning": "Post"
+        },
+        {
+          "term": "Story",
+          "arabic": "Ø³ØªÙˆØ±ÙŠ",
+          "meaning": "Story"
+        },
+        {
+          "term": "Like",
+          "arabic": "Ù„Ø§ÙŠÙƒ",
+          "meaning": "Like"
+        },
+        {
+          "term": "Comment",
+          "arabic": "ÙƒÙˆÙ…Ù†Øª",
+          "meaning": "Comment"
+        },
+        {
+          "term": "Chat",
+          "arabic": "Ø´Ø§Øª",
+          "meaning": "Chat"
+        },
+        {
+          "term": "Video Call",
+          "arabic": "ÙÙŠØ¯ÙŠÙˆ ÙƒÙˆÙ„",
+          "meaning": "Video Call"
+        }
+      ]
+    },
+    {
+      "name": "Government & Politics",
+      "words": [
+        {
+          "term": "Hukuma",
+          "arabic": "Ø­ÙƒÙˆÙ…Ø©",
+          "meaning": "Government"
+        },
+        {
+          "term": "Malik",
+          "arabic": "Ù…Ù„Ùƒ",
+          "meaning": "King"
+        },
+        {
+          "term": "Wazir",
+          "arabic": "ÙˆØ²ÙŠØ±",
+          "meaning": "Minister"
+        },
+        {
+          "term": "Barlaman",
+          "arabic": "Ø¨Ø±Ù„Ù…Ø§Ù†",
+          "meaning": "Parliament"
+        },
+        {
+          "term": "Ra2is",
+          "arabic": "Ø±Ø¦ÙŠØ³",
+          "meaning": "President"
+        },
+        {
+          "term": "Intikhab",
+          "arabic": "Ø§Ù†ØªØ®Ø§Ø¨",
+          "meaning": "Election"
+        },
+        {
+          "term": "Qanun",
+          "arabic": "Ù‚Ø§Ù†ÙˆÙ†",
+          "meaning": "Law"
+        },
+        {
+          "term": "Siyasa",
+          "arabic": "Ø³ÙŠØ§Ø³Ø©",
+          "meaning": "Politics"
+        },
+        {
+          "term": "Watan",
+          "arabic": "ÙˆØ·Ù†",
+          "meaning": "Nation"
+        },
+        {
+          "term": "Dawla",
+          "arabic": "Ø¯ÙˆÙ„Ø©",
+          "meaning": "State/Country"
+        }
+      ]
+    },
+    {
+      "name": "Legal Terms",
+      "words": [
+        {
+          "term": "Mahkama",
+          "arabic": "Ù…Ø­ÙƒÙ…Ø©",
+          "meaning": "Court"
+        },
+        {
+          "term": "Qadi",
+          "arabic": "Ù‚Ø§Ø¶ÙŠ",
+          "meaning": "Judge"
+        },
+        {
+          "term": "Muhami",
+          "arabic": "Ù…Ø­Ø§Ù…ÙŠ",
+          "meaning": "Lawyer"
+        },
+        {
+          "term": "Shahada",
+          "arabic": "Ø´Ù‡Ø§Ø¯Ø©",
+          "meaning": "Testimony"
+        },
+        {
+          "term": "3qd",
+          "arabic": "Ø¹Ù‚Ø¯",
+          "meaning": "Contract"
+        },
+        {
+          "term": "Hukm",
+          "arabic": "Ø­ÙƒÙ…",
+          "meaning": "Verdict"
+        },
+        {
+          "term": "Jarima",
+          "arabic": "Ø¬Ø±ÙŠÙ…Ø©",
+          "meaning": "Crime"
+        },
+        {
+          "term": "Bulis",
+          "arabic": "Ø¨ÙˆÙ„ÙŠØ³",
+          "meaning": "Police"
+        },
+        {
+          "term": "Sijjil",
+          "arabic": "Ø³Ø¬Ù„",
+          "meaning": "Record"
+        },
+        {
+          "term": "Watiqa",
+          "arabic": "ÙˆØ«ÙŠÙ‚Ø©",
+          "meaning": "Document"
+        }
+      ]
+    },
+    {
+      "name": "Scientific Terms",
+      "words": [
+        {
+          "term": "3ilm",
+          "arabic": "Ø¹Ù„Ù…",
+          "meaning": "Science"
+        },
+        {
+          "term": "Tajriba",
+          "arabic": "ØªØ¬Ø±Ø¨Ø©",
+          "meaning": "Experiment"
+        },
+        {
+          "term": "Kimya",
+          "arabic": "ÙƒÙŠÙ…ÙŠØ§Ø¡",
+          "meaning": "Chemistry"
+        },
+        {
+          "term": "Fizya",
+          "arabic": "ÙÙŠØ²ÙŠØ§Ø¡",
+          "meaning": "Physics"
+        },
+        {
+          "term": "Biologia",
+          "arabic": "Ø¨ÙŠÙˆÙ„ÙˆØ¬ÙŠØ§",
+          "meaning": "Biology"
+        },
+        {
+          "term": "Ryadiyat",
+          "arabic": "Ø±ÙŠØ§Ø¶ÙŠØ§Øª",
+          "meaning": "Mathematics"
+        },
+        {
+          "term": "Mohtabar",
+          "arabic": "Ù…Ø®ØªØ¨Ø±",
+          "meaning": "Laboratory"
+        },
+        {
+          "term": "Microscope",
+          "arabic": "Ù…ÙŠÙƒØ±ÙˆØ³ÙƒÙˆØ¨",
+          "meaning": "Microscope"
+        },
+        {
+          "term": "Formula",
+          "arabic": "ÙÙˆØ±Ù…ÙˆÙ„Ø§",
+          "meaning": "Formula"
+        },
+        {
+          "term": "Nadhariya",
+          "arabic": "Ù†Ø¸Ø±ÙŠØ©",
+          "meaning": "Theory"
+        }
+      ]
+    },
+    {
+      "name": "Medical Terms",
+      "words": [
+        {
+          "term": "Tbib",
+          "arabic": "Ø·Ø¨ÙŠØ¨",
+          "meaning": "Doctor"
+        },
+        {
+          "term": "Mrid",
+          "arabic": "Ù…Ø±ÙŠØ¶",
+          "meaning": "Patient"
+        },
+        {
+          "term": "Mmrrd",
+          "arabic": "Ù…Ù…Ø±Ø¶",
+          "meaning": "Nurse"
+        },
+        {
+          "term": "Dwa",
+          "arabic": "Ø¯ÙˆØ§Ø¡",
+          "meaning": "Medicine"
+        },
+        {
+          "term": "3maliya",
+          "arabic": "Ø¹Ù…Ù„ÙŠØ©",
+          "meaning": "Surgery"
+        },
+        {
+          "term": "Fhes",
+          "arabic": "ÙØ­Øµ",
+          "meaning": "Examination"
+        },
+        {
+          "term": "Wj3",
+          "arabic": "ÙˆØ¬Ø¹",
+          "meaning": "Pain"
+        },
+        {
+          "term": "Sda3",
+          "arabic": "ØµØ¯Ø§Ø¹",
+          "meaning": "Headache"
+        },
+        {
+          "term": "Zkem",
+          "arabic": "Ø²ÙƒØ§Ù…",
+          "meaning": "Cold"
+        },
+        {
+          "term": "Hssasiya",
+          "arabic": "Ø­Ø³Ø§Ø³ÙŠØ©",
+          "meaning": "Allergy"
+        },
+        {
+          "term": "Sukkar",
+          "arabic": "Ø³ÙƒØ±",
+          "meaning": "Diabetes"
+        },
+        {
+          "term": "Daght",
+          "arabic": "Ø¶ØºØ·",
+          "meaning": "Blood Pressure"
+        },
+        {
+          "term": "Qelb",
+          "arabic": "Ù‚Ù„Ø¨",
+          "meaning": "Heart"
+        },
+        {
+          "term": "Riya",
+          "arabic": "Ø±Ø¦Ø©",
+          "meaning": "Lung"
+        },
+        {
+          "term": "M3da",
+          "arabic": "Ù…Ø¹Ø¯Ø©",
+          "meaning": "Stomach"
+        },
+        {
+          "term": "Iltihab",
+          "arabic": "Ø§Ù„ØªÙ‡Ø§Ø¨",
+          "meaning": "Inflammation"
+        },
+        {
+          "term": "Tahlil",
+          "arabic": "ØªØ­Ù„ÙŠÙ„",
+          "meaning": "Analysis/Test"
+        },
+        {
+          "term": "Ash3a",
+          "arabic": "Ø£Ø´Ø¹Ø©",
+          "meaning": "X-ray"
+        }
+      ]
+    },
+    {
+      "name": "Financial & Banking",
+      "words": [
+        {
+          "term": "Bank",
+          "arabic": "Ø¨Ù†Ùƒ",
+          "meaning": "Bank"
+        },
+        {
+          "term": "Flus",
+          "arabic": "ÙÙ„ÙˆØ³",
+          "meaning": "Money"
+        },
+        {
+          "term": "Hssab",
+          "arabic": "Ø­Ø³Ø§Ø¨",
+          "meaning": "Account"
+        },
+        {
+          "term": "Carte",
+          "arabic": "ÙƒØ§Ø±Ø·",
+          "meaning": "Card"
+        },
+        {
+          "term": "Credit",
+          "arabic": "ÙƒØ±ÙŠØ¯ÙŠ",
+          "meaning": "Credit"
+        },
+        {
+          "term": "Debit",
+          "arabic": "Ø¯ÙŠØ¨ÙŠ",
+          "meaning": "Debit"
+        },
+        {
+          "term": "Fa2ida",
+          "arabic": "ÙØ§Ø¦Ø¯Ø©",
+          "meaning": "Interest"
+        },
+        {
+          "term": "Qerd",
+          "arabic": "Ù‚Ø±Ø¶",
+          "meaning": "Loan"
+        },
+        {
+          "term": "Tawfir",
+          "arabic": "ØªÙˆÙÙŠØ±",
+          "meaning": "Savings"
+        },
+        {
+          "term": "Sarraf",
+          "arabic": "ØµØ±Ø§Ù",
+          "meaning": "ATM"
+        },
+        {
+          "term": "Tahwil",
+          "arabic": "ØªØ­ÙˆÙŠÙ„",
+          "meaning": "Transfer"
+        },
+        {
+          "term": "Fatura",
+          "arabic": "ÙØ§ØªÙˆØ±Ø©",
+          "meaning": "Bill/Invoice"
+        }
+      ]
+    },
+    {
+      "name": "Fashion & Clothing",
+      "words": [
+        {
+          "term": "Hwayj",
+          "arabic": "Ø­ÙˆØ§ÙŠØ¬",
+          "meaning": "Clothes"
+        },
+        {
+          "term": "Qamija",
+          "arabic": "Ù‚Ù…ÙŠØ¬Ø©",
+          "meaning": "Shirt"
+        },
+        {
+          "term": "Srwal",
+          "arabic": "Ø³Ø±ÙˆØ§Ù„",
+          "meaning": "Pants"
+        },
+        {
+          "term": "Jeket",
+          "arabic": "Ø¬ÙŠÙƒÙŠØª",
+          "meaning": "Jacket"
+        },
+        {
+          "term": "Jellaba",
+          "arabic": "Ø¬Ù„Ø§Ø¨Ø©",
+          "meaning": "Traditional Robe"
+        },
+        {
+          "term": "Hijab",
+          "arabic": "Ø­Ø¬Ø§Ø¨",
+          "meaning": "Headscarf"
+        },
+        {
+          "term": "Sabbat",
+          "arabic": "ØµØ¨Ø§Ø·",
+          "meaning": "Shoes"
+        },
+        {
+          "term": "Sandal",
+          "arabic": "ØµÙ†Ø¯Ù„",
+          "meaning": "Sandals"
+        },
+        {
+          "term": "Jild",
+          "arabic": "Ø¬Ù„Ø¯",
+          "meaning": "Leather"
+        },
+        {
+          "term": "Khyata",
+          "arabic": "Ø®ÙŠØ§Ø·Ø©",
+          "meaning": "Sewing"
+        },
+        {
+          "term": "Moda",
+          "arabic": "Ù…ÙˆØ¯Ø§",
+          "meaning": "Fashion"
+        },
+        {
+          "term": "Tqchira",
+          "arabic": "ØªÙ‚Ø´ÙŠØ±Ø©",
+          "meaning": "Traditional Dress"
+        }
+      ]
+    },
+    {
+      "name": "Home & Furniture",
+      "words": [
+        {
+          "term": "Dar",
+          "arabic": "Ø¯Ø§Ø±",
+          "meaning": "House"
+        },
+        {
+          "term": "Bit",
+          "arabic": "Ø¨ÙŠØª",
+          "meaning": "Room"
+        },
+        {
+          "term": "Salon",
+          "arabic": "ØµØ§Ù„ÙˆÙ†",
+          "meaning": "Living Room"
+        },
+        {
+          "term": "Cusina",
+          "arabic": "ÙƒÙˆØ²ÙŠÙ†Ø©",
+          "meaning": "Kitchen"
+        },
+        {
+          "term": "Hammam",
+          "arabic": "Ø­Ù…Ø§Ù…",
+          "meaning": "Bathroom"
+        },
+        {
+          "term": "Bit Nnas",
+          "arabic": "Ø¨ÙŠØª Ø§Ù„Ù†Ø¹Ø§Ø³",
+          "meaning": "Bedroom"
+        },
+        {
+          "term": "Khzana",
+          "arabic": "Ø®Ø²Ø§Ù†Ø©",
+          "meaning": "Closet"
+        },
+        {
+          "term": "Tabla",
+          "arabic": "Ø·Ø§Ø¨Ù„Ø©",
+          "meaning": "Table"
+        },
+        {
+          "term": "Kursi",
+          "arabic": "ÙƒØ±Ø³ÙŠ",
+          "meaning": "Chair"
+        },
+        {
+          "term": "Sdari",
+          "arabic": "ØµØ¯Ø§Ø±ÙŠ",
+          "meaning": "Sofa"
+        },
+        {
+          "term": "Maryo",
+          "arabic": "Ù…Ø§Ø±ÙŠÙˆ",
+          "meaning": "Cabinet"
+        },
+        {
+          "term": "Mri",
+          "arabic": "Ù…Ø±ÙŠ",
+          "meaning": "Mirror"
+        },
+        {
+          "term": "Tapis",
+          "arabic": "ØªØ§Ø¨ÙŠ",
+          "meaning": "Carpet"
+        },
+        {
+          "term": "Sbitriya",
+          "arabic": "Ø³Ø¨ÙŠØ·Ø±ÙŠØ©",
+          "meaning": "Curtains"
+        }
+      ]
+    },
+    {
+      "name": "Emotions & Personality",
+      "words": [
+        {
+          "term": "Ferhan",
+          "arabic": "ÙØ±Ø­Ø§Ù†",
+          "meaning": "Happy"
+        },
+        {
+          "term": "Hazin",
+          "arabic": "Ø­Ø²ÙŠÙ†",
+          "meaning": "Sad"
+        },
+        {
+          "term": "Za3fan",
+          "arabic": "Ø²Ø¹ÙØ§Ù†",
+          "meaning": "Angry"
+        },
+        {
+          "term": "Khayef",
+          "arabic": "Ø®Ø§ÙŠÙ",
+          "meaning": "Scared"
+        },
+        {
+          "term": "Mertah",
+          "arabic": "Ù…Ø±ØªØ§Ø­",
+          "meaning": "Relaxed"
+        },
+        {
+          "term": "Mqleq",
+          "arabic": "Ù…Ù‚Ù„Ù‚",
+          "meaning": "Worried"
+        },
+        {
+          "term": "Deki",
+          "arabic": "Ø°ÙƒÙŠ",
+          "meaning": "Smart"
+        },
+        {
+          "term": "Latif",
+          "arabic": "Ù„Ø·ÙŠÙ",
+          "meaning": "Kind"
+        },
+        {
+          "term": "Qwi",
+          "arabic": "Ù‚ÙˆÙŠ",
+          "meaning": "Strong"
+        },
+        {
+          "term": "D3if",
+          "arabic": "Ø¶Ø¹ÙŠÙ",
+          "meaning": "Weak"
+        },
+        {
+          "term": "Mzyan",
+          "arabic": "Ù…Ø²ÙŠØ§Ù†",
+          "meaning": "Good/Nice"
+        },
+        {
+          "term": "Khayb",
+          "arabic": "Ø®Ø§ÙŠØ¨",
+          "meaning": "Bad"
+        }
+      ]
+    },
+    {
+      "name": "Sports Equipment & Rules",
+      "words": [
+        {
+          "term": "Kura",
+          "arabic": "ÙƒÙˆØ±Ø©",
+          "meaning": "Ball"
+        },
+        {
+          "term": "Mla3b",
+          "arabic": "Ù…Ù„Ø¹Ø¨",
+          "meaning": "Field/Court"
+        },
+        {
+          "term": "Goal",
+          "arabic": "Ú¯ÙˆÙ„",
+          "meaning": "Goal"
+        },
+        {
+          "term": "Hakem",
+          "arabic": "Ø­ÙƒÙ…",
+          "meaning": "Referee"
+        },
+        {
+          "term": "La3ib",
+          "arabic": "Ù„Ø§Ø¹Ø¨",
+          "meaning": "Player"
+        },
+        {
+          "term": "Fariq",
+          "arabic": "ÙØ±ÙŠÙ‚",
+          "meaning": "Team"
+        },
+        {
+          "term": "Match",
+          "arabic": "Ù…Ø§ØªØ´",
+          "meaning": "Match"
+        },
+        {
+          "term": "Raqm",
+          "arabic": "Ø±Ù‚Ù…",
+          "meaning": "Score"
+        },
+        {
+          "term": "Tqniya",
+          "arabic": "ØªÙ‚Ù†ÙŠØ©",
+          "meaning": "Technique"
+        },
+        {
+          "term": "Tamrin",
+          "arabic": "ØªÙ…Ø±ÙŠÙ†",
+          "meaning": "Exercise"
+        }
+      ]
+    },
+    {
+      "name": "Music & Instruments",
+      "words": [
+        {
+          "term": "Musiqa",
+          "arabic": "Ù…ÙˆØ³ÙŠÙ‚Ù‰",
+          "meaning": "Music"
+        },
+        {
+          "term": "Ughnia",
+          "arabic": "Ø£ØºÙ†ÙŠØ©",
+          "meaning": "Song"
+        },
+        {
+          "term": "3oud",
+          "arabic": "Ø¹ÙˆØ¯",
+          "meaning": "Oud"
+        },
+        {
+          "term": "Derbouka",
+          "arabic": "Ø¯Ø±Ø¨ÙˆÙƒØ©",
+          "meaning": "Drum"
+        },
+        {
+          "term": "Qanun",
+          "arabic": "Ù‚Ø§Ù†ÙˆÙ†",
+          "meaning": "Qanun"
+        },
+        {
+          "term": "Violin",
+          "arabic": "ÙÙŠÙˆÙ„ÙŠÙ†",
+          "meaning": "Violin"
+        },
+        {
+          "term": "Piano",
+          "arabic": "Ø¨ÙŠØ§Ù†Ùˆ",
+          "meaning": "Piano"
+        },
+        {
+          "term": "Nay",
+          "arabic": "Ù†Ø§ÙŠ",
+          "meaning": "Flute"
+        },
+        {
+          "term": "Bendir",
+          "arabic": "Ø¨Ù†Ø¯ÙŠØ±",
+          "meaning": "Frame Drum"
+        },
+        {
+          "term": "Rqs",
+          "arabic": "Ø±Ù‚Øµ",
+          "meaning": "Dance"
+        }
+      ]
+    },
+    {
+      "name": "Food Preparation & Cooking",
+      "words": [
+        {
+          "term": "Tiyab",
+          "arabic": "Ø·ÙŠØ§Ø¨",
+          "meaning": "Cooking"
+        },
+        {
+          "term": "Tenjra",
+          "arabic": "Ø·Ù†Ø¬Ø±Ø©",
+          "meaning": "Pot"
+        },
+        {
+          "term": "Mqla",
+          "arabic": "Ù…Ù‚Ù„Ù‰",
+          "meaning": "Pan"
+        },
+        {
+          "term": "Fourn",
+          "arabic": "ÙØ±Ù†",
+          "meaning": "Oven"
+        },
+        {
+          "term": "Mus",
+          "arabic": "Ù…ÙˆØ³",
+          "meaning": "Knife"
+        },
+        {
+          "term": "M3lqa",
+          "arabic": "Ù…Ø¹Ù„Ù‚Ø©",
+          "meaning": "Spoon"
+        },
+        {
+          "term": "Furchita",
+          "arabic": "ÙØ±Ø´ÙŠØ·Ø©",
+          "meaning": "Fork"
+        },
+        {
+          "term": "Tbsil",
+          "arabic": "Ø·Ø¨Ø³ÙŠÙ„",
+          "meaning": "Plate"
+        },
+        {
+          "term": "Tajin",
+          "arabic": "Ø·Ø§Ø¬ÙŠÙ†",
+          "meaning": "Tagine"
+        },
+        {
+          "term": "Bhar",
+          "arabic": "Ø¨Ù‡Ø§Ø±",
+          "meaning": "Spices"
+        },
+        {
+          "term": "Zit",
+          "arabic": "Ø²ÙŠØª",
+          "meaning": "Oil"
+        },
+        {
+          "term": "Tqtia3",
+          "arabic": "ØªÙ‚Ø·ÙŠØ¹",
+          "meaning": "Cutting"
+        }
+      ]
+    },
+    {
+      "name": "Travel & Tourism",
+      "words": [
+        {
+          "term": "Safar",
+          "arabic": "Ø³ÙØ±",
+          "meaning": "Travel"
+        },
+        {
+          "term": "Passport",
+          "arabic": "Ø¨Ø§Ø³Ø¨ÙˆØ±",
+          "meaning": "Passport"
+        },
+        {
+          "term": "Visa",
+          "arabic": "ÙÙŠØ²Ø§",
+          "meaning": "Visa"
+        },
+        {
+          "term": "Hotel",
+          "arabic": "Ø£ÙˆØªÙŠÙ„",
+          "meaning": "Hotel"
+        },
+        {
+          "term": "Riad",
+          "arabic": "Ø±ÙŠØ§Ø¶",
+          "meaning": "Traditional House"
+        },
+        {
+          "term": "Reservation",
+          "arabic": "Ø±ÙŠØ²ÙŠØ±ÙØ§Ø³ÙŠÙˆÙ†",
+          "meaning": "Reservation"
+        },
+        {
+          "term": "Guide",
+          "arabic": "Ú¯ÙŠØ¯",
+          "meaning": "Guide"
+        },
+        {
+          "term": "Souk",
+          "arabic": "Ø³ÙˆÙ‚",
+          "meaning": "Market"
+        },
+        {
+          "term": "Medina",
+          "arabic": "Ù…Ø¯ÙŠÙ†Ø©",
+          "meaning": "Old City"
+        },
+        {
+          "term": "Plage",
+          "arabic": "Ø¨Ù„Ø§Ø¬",
+          "meaning": "Beach"
+        },
+        {
+          "term": "Matar",
+          "arabic": "Ù…Ø·Ø§Ø±",
+          "meaning": "Airport"
+        },
+        {
+          "term": "Mahatta",
+          "arabic": "Ù…Ø­Ø·Ø©",
+          "meaning": "Station"
+        }
+      ]
+    },
+    {
+      "name": "Plants & Agriculture",
+      "words": [
+        {
+          "term": "Shjer",
+          "arabic": "Ø´Ø¬Ø±",
+          "meaning": "Tree"
+        },
+        {
+          "term": "Werd",
+          "arabic": "ÙˆØ±Ø¯",
+          "meaning": "Flower"
+        },
+        {
+          "term": "Zra3",
+          "arabic": "Ø²Ø±Ø¹",
+          "meaning": "Plant/Crop"
+        },
+        {
+          "term": "Fellah",
+          "arabic": "ÙÙ„Ø§Ø­",
+          "meaning": "Farmer"
+        },
+        {
+          "term": "Ard",
+          "arabic": "Ø£Ø±Ø¶",
+          "meaning": "Land/Soil"
+        },
+        {
+          "term": "Zitun",
+          "arabic": "Ø²ÙŠØªÙˆÙ†",
+          "meaning": "Olive"
+        },
+        {
+          "term": "Khudra",
+          "arabic": "Ø®Ø¶Ø±Ø©",
+          "meaning": "Vegetables"
+        },
+        {
+          "term": "Fakiha",
+          "arabic": "ÙØ§ÙƒÙ‡Ø©",
+          "meaning": "Fruit"
+        },
+        {
+          "term": "Sqi",
+          "arabic": "Ø³Ù‚ÙŠ",
+          "meaning": "Irrigation"
+        },
+        {
+          "term": "Jnina",
+          "arabic": "Ø¬Ù†ÙŠÙ†Ø©",
+          "meaning": "Garden"
+        },
+        {
+          "term": "Hsad",
+          "arabic": "Ø­ØµØ§Ø¯",
+          "meaning": "Harvest"
+        },
+        {
+          "term": "Bstan",
+          "arabic": "Ø¨Ø³ØªØ§Ù†",
+          "meaning": "Orchard"
+        }
+      ]
+    },
+    {
+      "name": "Business Communication",
+      "words": [
+        {
+          "term": "Ijtima3",
+          "arabic": "Ø¥Ø¬ØªÙ…Ø§Ø¹",
+          "meaning": "Meeting"
+        },
+        {
+          "term": "Chrika",
+          "arabic": "Ø´Ø±ÙŠÙƒØ©",
+          "meaning": "Company"
+        },
+        {
+          "term": "Mudir",
+          "arabic": "Ù…Ø¯ÙŠØ±",
+          "meaning": "Manager"
+        },
+        {
+          "term": "Muw3id",
+          "arabic": "Ù…ÙˆØ¹Ø¯",
+          "meaning": "Appointment"
+        },
+        {
+          "term": "3qd",
+          "arabic": "Ø¹Ù‚Ø¯",
+          "meaning": "Contract"
+        },
+        {
+          "term": "Maktab",
+          "arabic": "Ù…ÙƒØªØ¨",
+          "meaning": "Office"
+        },
+        {
+          "term": "Muw6af",
+          "arabic": "Ù…ÙˆØ¸Ù",
+          "meaning": "Employee"
+        },
+        {
+          "term": "Tawqit",
+          "arabic": "ØªÙˆÙ‚ÙŠØª",
+          "meaning": "Schedule"
+        },
+        {
+          "term": "Mushru3",
+          "arabic": "Ù…Ø´Ø±ÙˆØ¹",
+          "meaning": "Project"
+        },
+        {
+          "term": "Taqrir",
+          "arabic": "ØªÙ‚Ø±ÙŠØ±",
+          "meaning": "Report"
+        },
+        {
+          "term": "Zbuun",
+          "arabic": "Ø²Ø¨ÙˆÙ†",
+          "meaning": "Client"
+        },
+        {
+          "term": "Rbeh",
+          "arabic": "Ø±Ø¨Ø­",
+          "meaning": "Profit"
+        }
+      ]
+    },
+    {
+      "name": "School Subjects",
+      "words": [
+        {
+          "term": "Ryadiyat",
+          "arabic": "Ø±ÙŠØ§Ø¶ÙŠØ§Øª",
+          "meaning": "Mathematics"
+        },
+        {
+          "term": "3ulum",
+          "arabic": "Ø¹Ù„ÙˆÙ…",
+          "meaning": "Science"
+        },
+        {
+          "term": "Tarikh",
+          "arabic": "ØªØ§Ø±ÙŠØ®",
+          "meaning": "History"
+        },
+        {
+          "term": "Jughrafya",
+          "arabic": "Ø¬ØºØ±Ø§ÙÙŠØ©",
+          "meaning": "Geography"
+        },
+        {
+          "term": "Lugha",
+          "arabic": "Ù„ØºØ©",
+          "meaning": "Language"
+        },
+        {
+          "term": "Adab",
+          "arabic": "Ø£Ø¯Ø¨",
+          "meaning": "Literature"
+        },
+        {
+          "term": "Fann",
+          "arabic": "ÙÙ†",
+          "meaning": "Art"
+        },
+        {
+          "term": "Riada",
+          "arabic": "Ø±ÙŠØ§Ø¶Ø©",
+          "meaning": "Physical Education"
+        },
+        {
+          "term": "Fizya2",
+          "arabic": "ÙÙŠØ²ÙŠØ§Ø¡",
+          "meaning": "Physics"
+        },
+        {
+          "term": "Kimya2",
+          "arabic": "ÙƒÙŠÙ…ÙŠØ§Ø¡",
+          "meaning": "Chemistry"
+        },
+        {
+          "term": "Islamiyat",
+          "arabic": "Ø¥Ø³Ù„Ø§Ù…ÙŠØ§Øª",
+          "meaning": "Islamic Studies"
+        },
+        {
+          "term": "Informatik",
+          "arabic": "Ø¥Ù†ÙÙˆØ±Ù…Ø§ØªÙŠÙƒ",
+          "meaning": "Computer Science"
+        }
+      ]
+    },
+    {
+      "name": "Colors & Patterns",
+      "words": [
+        {
+          "term": "Hmer",
+          "arabic": "Ø­Ù…Ø±",
+          "meaning": "Red"
+        },
+        {
+          "term": "Zreq",
+          "arabic": "Ø²Ø±Ù‚",
+          "meaning": "Blue"
+        },
+        {
+          "term": "Khder",
+          "arabic": "Ø®Ø¶Ø±",
+          "meaning": "Green"
+        },
+        {
+          "term": "Sfer",
+          "arabic": "ØµÙØ±",
+          "meaning": "Yellow"
+        },
+        {
+          "term": "Byed",
+          "arabic": "Ø¨ÙŠØ¶",
+          "meaning": "White"
+        },
+        {
+          "term": "Khel",
+          "arabic": "ÙƒØ­Ù„",
+          "meaning": "Black"
+        },
+        {
+          "term": "Qhwi",
+          "arabic": "Ù‚Ù‡ÙˆÙŠ",
+          "meaning": "Brown"
+        },
+        {
+          "term": "Rmadi",
+          "arabic": "Ø±Ù…Ø§Ø¯ÙŠ",
+          "meaning": "Gray"
+        },
+        {
+          "term": "Mnaqesh",
+          "arabic": "Ù…Ù†Ù‚Ø´",
+          "meaning": "Patterned"
+        },
+        {
+          "term": "Mkhtet",
+          "arabic": "Ù…Ø®Ø·Ø·",
+          "meaning": "Striped"
+        },
+        {
+          "term": "Mbeqe3",
+          "arabic": "Ù…Ø¨Ù‚Ø¹",
+          "meaning": "Spotted"
+        },
+        {
+          "term": "Mzyen",
+          "arabic": "Ù…Ø²ÙŠÙ†",
+          "meaning": "Decorated"
+        }
+      ]
+    },
+    {
+      "name": "Celebrations & Events",
+      "words": [
+        {
+          "term": "3id",
+          "arabic": "Ø¹ÙŠØ¯",
+          "meaning": "Holiday/Festival"
+        },
+        {
+          "term": "3ers",
+          "arabic": "Ø¹Ø±Ø³",
+          "meaning": "Wedding"
+        },
+        {
+          "term": "Zfaf",
+          "arabic": "Ø²ÙØ§Ù",
+          "meaning": "Marriage Ceremony"
+        },
+        {
+          "term": "Hafla",
+          "arabic": "Ø­ÙÙ„Ø©",
+          "meaning": "Party"
+        },
+        {
+          "term": "Ramadan",
+          "arabic": "Ø±Ù…Ø¶Ø§Ù†",
+          "meaning": "Ramadan"
+        },
+        {
+          "term": "3id Lkbir",
+          "arabic": "Ø¹ÙŠØ¯ Ø§Ù„ÙƒØ¨ÙŠØ±",
+          "meaning": "Eid Al-Adha"
+        },
+        {
+          "term": "3id Sghir",
+          "arabic": "Ø¹ÙŠØ¯ Ø§Ù„ØµØºÙŠØ±",
+          "meaning": "Eid Al-Fitr"
+        },
+        {
+          "term": "Milad",
+          "arabic": "Ù…ÙŠÙ„Ø§Ø¯",
+          "meaning": "Birthday"
+        },
+        {
+          "term": "Mubarka",
+          "arabic": "Ù…Ø¨Ø§Ø±ÙƒØ©",
+          "meaning": "Congratulations"
+        },
+        {
+          "term": "Hdiya",
+          "arabic": "Ù‡Ø¯ÙŠØ©",
+          "meaning": "Gift"
+        },
+        {
+          "term": "Da3wa",
+          "arabic": "Ø¯Ø¹ÙˆØ©",
+          "meaning": "Invitation"
+        },
+        {
+          "term": "Ihtifal",
+          "arabic": "Ø¥Ø­ØªÙØ§Ù„",
+          "meaning": "Celebration"
+        }
+      ]
+    },
+    {
+      "name": "Extended Family Relations",
+      "words": [
+        {
+          "term": "Jedd",
+          "arabic": "Ø¬Ø¯",
+          "meaning": "Grandfather"
+        },
+        {
+          "term": "Jedda",
+          "arabic": "Ø¬Ø¯Ø©",
+          "meaning": "Grandmother"
+        },
+        {
+          "term": "3emm",
+          "arabic": "Ø¹Ù…",
+          "meaning": "Paternal Uncle"
+        },
+        {
+          "term": "3emma",
+          "arabic": "Ø¹Ù…Ø©",
+          "meaning": "Paternal Aunt"
+        },
+        {
+          "term": "Khal",
+          "arabic": "Ø®Ø§Ù„",
+          "meaning": "Maternal Uncle"
+        },
+        {
+          "term": "Khala",
+          "arabic": "Ø®Ø§Ù„Ø©",
+          "meaning": "Maternal Aunt"
+        },
+        {
+          "term": "Weld L3emm",
+          "arabic": "ÙˆÙ„Ø¯ Ø§Ù„Ø¹Ù…",
+          "meaning": "Male Cousin (Paternal)"
+        },
+        {
+          "term": "Bent L3emm",
+          "arabic": "Ø¨Ù†Øª Ø§Ù„Ø¹Ù…",
+          "meaning": "Female Cousin (Paternal)"
+        },
+        {
+          "term": "Weld Lkhal",
+          "arabic": "ÙˆÙ„Ø¯ Ø§Ù„Ø®Ø§Ù„",
+          "meaning": "Male Cousin (Maternal)"
+        },
+        {
+          "term": "Bent Lkhal",
+          "arabic": "Ø¨Ù†Øª Ø§Ù„Ø®Ø§Ù„",
+          "meaning": "Female Cousin (Maternal)"
+        },
+        {
+          "term": "Nsib",
+          "arabic": "Ù†Ø³ÙŠØ¨",
+          "meaning": "Brother-in-law"
+        },
+        {
+          "term": "Nsiba",
+          "arabic": "Ù†Ø³ÙŠØ¨Ø©",
+          "meaning": "Sister-in-law"
+        }
+      ]
+    },
+    {
+      "name": "Numbers & Math",
+      "words": [
+        {
+          "term": "Sifr",
+          "arabic": "ØµÙØ±",
+          "meaning": "Zero"
+        },
+        {
+          "term": "Wahd",
+          "arabic": "ÙˆØ§Ø­Ø¯",
+          "meaning": "One"
+        },
+        {
+          "term": "Juj",
+          "arabic": "Ø¬ÙˆØ¬",
+          "meaning": "Two"
+        },
+        {
+          "term": "Tlata",
+          "arabic": "ØªÙ„Ø§ØªØ©",
+          "meaning": "Three"
+        },
+        {
+          "term": "Rb3a",
+          "arabic": "Ø±Ø¨Ø¹Ø©",
+          "meaning": "Four"
+        },
+        {
+          "term": "Khmsa",
+          "arabic": "Ø®Ù…Ø³Ø©",
+          "meaning": "Five"
+        },
+        {
+          "term": "Mya",
+          "arabic": "Ù…ÙŠØ©",
+          "meaning": "Hundred"
+        },
+        {
+          "term": "Alf",
+          "arabic": "Ø£Ù„Ù",
+          "meaning": "Thousand"
+        },
+        {
+          "term": "Zayed",
+          "arabic": "Ø²Ø§ÙŠØ¯",
+          "meaning": "Plus"
+        },
+        {
+          "term": "Naqes",
+          "arabic": "Ù†Ø§Ù‚Øµ",
+          "meaning": "Minus"
+        },
+        {
+          "term": "Fi",
+          "arabic": "ÙÙŠ",
+          "meaning": "Multiply"
+        },
+        {
+          "term": "3la",
+          "arabic": "Ø¹Ù„Ù‰",
+          "meaning": "Divide"
+        }
+      ]
+    },
+    {
+      "name": "Professions & Careers",
+      "words": [
+        {
+          "term": "Tbib",
+          "arabic": "Ø·Ø¨ÙŠØ¨",
+          "meaning": "Doctor"
+        },
+        {
+          "term": "Ustad",
+          "arabic": "Ø£Ø³ØªØ§Ø°",
+          "meaning": "Teacher"
+        },
+        {
+          "term": "Muhami",
+          "arabic": "Ù…Ø­Ø§Ù…ÙŠ",
+          "meaning": "Lawyer"
+        },
+        {
+          "term": "Muhandis",
+          "arabic": "Ù…Ù‡Ù†Ø¯Ø³",
+          "meaning": "Engineer"
+        },
+        {
+          "term": "Fellah",
+          "arabic": "ÙÙ„Ø§Ø­",
+          "meaning": "Farmer"
+        },
+        {
+          "term": "Tager",
+          "arabic": "ØªØ§Ø¬Ø±",
+          "meaning": "Merchant"
+        },
+        {
+          "term": "Khbaz",
+          "arabic": "Ø®Ø¨Ø§Ø²",
+          "meaning": "Baker"
+        },
+        {
+          "term": "Nejjar",
+          "arabic": "Ù†Ø¬Ø§Ø±",
+          "meaning": "Carpenter"
+        },
+        {
+          "term": "Bulis",
+          "arabic": "Ø¨ÙˆÙ„ÙŠØ³",
+          "meaning": "Police Officer"
+        },
+        {
+          "term": "Kheddam",
+          "arabic": "Ø®Ø¯Ø§Ù…",
+          "meaning": "Worker"
+        },
+        {
+          "term": "Mualim",
+          "arabic": "Ù…Ø¹Ù„Ù…",
+          "meaning": "Master/Expert"
+        },
+        {
+          "term": "Sayiq",
+          "arabic": "Ø³Ø§Ø¦Ù‚",
+          "meaning": "Driver"
+        }
+      ]
+    },
+    {
+      "name": "Technology & Digital Terms",
+      "words": [
+        {
+          "term": "Ordinateur",
+          "arabic": "Ø£ÙˆØ±Ø¯ÙŠÙ†Ø§ØªÙˆØ±",
+          "meaning": "Computer"
+        },
+        {
+          "term": "Tilifun",
+          "arabic": "ØªÙ„ÙŠÙÙˆÙ†",
+          "meaning": "Phone"
+        },
+        {
+          "term": "Tlfaza",
+          "arabic": "ØªÙ„ÙØ§Ø²Ø©",
+          "meaning": "Television"
+        },
+        {
+          "term": "Internet",
+          "arabic": "Ø¥Ù†ØªØ±Ù†Øª",
+          "meaning": "Internet"
+        },
+        {
+          "term": "WiFi",
+          "arabic": "ÙˆØ§ÙŠ ÙØ§ÙŠ",
+          "meaning": "WiFi"
+        },
+        {
+          "term": "Kamera",
+          "arabic": "ÙƒØ§Ù…ÙŠØ±Ø§",
+          "meaning": "Camera"
+        },
+        {
+          "term": "Charger",
+          "arabic": "Ø´Ø§Ø±Ø¬Ø±",
+          "meaning": "Charger"
+        },
+        {
+          "term": "Battery",
+          "arabic": "Ø¨Ø§ØªØ±ÙŠ",
+          "meaning": "Battery"
+        },
+        {
+          "term": "Screen",
+          "arabic": "Ø³ÙƒØ±ÙŠÙ†",
+          "meaning": "Screen"
+        },
+        {
+          "term": "Keyboard",
+          "arabic": "ÙƒÙŠØ¨ÙˆØ±Ø¯",
+          "meaning": "Keyboard"
+        },
+        {
+          "term": "Mouse",
+          "arabic": "Ù…Ø§ÙˆØ³",
+          "meaning": "Mouse"
+        },
+        {
+          "term": "Printer",
+          "arabic": "Ø¨Ø±Ø§Ù†ØªØ±",
+          "meaning": "Printer"
+        },
+        {
+          "term": "Download",
+          "arabic": "Ø¯Ø§ÙˆÙ†Ù„ÙˆØ¯",
+          "meaning": "Download"
+        },
+        {
+          "term": "Upload",
+          "arabic": "Ø±ÙØ¹",
+          "meaning": "Upload (borrowed from English; Arabic root 'rafaÊ¿' means 'to lift/raise')"
+        },
+        {
+          "term": "Email",
+          "arabic": "Ø¥ÙŠÙ…ÙŠÙ„",
+          "meaning": "Email"
+        }
+      ]
+    },
+    {
+      "name": "Weather & Climate",
+      "words": [
+        {
+          "term": "Shems",
+          "arabic": "Ø´Ù…Ø³",
+          "meaning": "Sun"
+        },
+        {
+          "term": "Qmer",
+          "arabic": "Ù‚Ù…Ø±",
+          "meaning": "Moon"
+        },
+        {
+          "term": "Njoum",
+          "arabic": "Ù†Ø¬ÙˆÙ…",
+          "meaning": "Stars"
+        },
+        {
+          "term": "Shta",
+          "arabic": "Ø´ØªØ§",
+          "meaning": "Rain"
+        },
+        {
+          "term": "Telj",
+          "arabic": "ØªÙ„Ø¬",
+          "meaning": "Snow"
+        },
+        {
+          "term": "Rih",
+          "arabic": "Ø±ÙŠØ­",
+          "meaning": "Wind"
+        },
+        {
+          "term": "Ghama",
+          "arabic": "ØºÙŠÙ…Ø©",
+          "meaning": "Cloud"
+        },
+        {
+          "term": "Ra3d",
+          "arabic": "Ø±Ø¹Ø¯",
+          "meaning": "Thunder"
+        },
+        {
+          "term": "Barq",
+          "arabic": "Ø¨Ø±Ù‚",
+          "meaning": "Lightning"
+        },
+        {
+          "term": "Skhun",
+          "arabic": "Ø³Ø®ÙˆÙ†",
+          "meaning": "Hot"
+        },
+        {
+          "term": "Bred",
+          "arabic": "Ø¨Ø±Ø¯",
+          "meaning": "Cold"
+        },
+        {
+          "term": "M3ttar",
+          "arabic": "Ù…Ø§Ø·Ø±",
+          "meaning": "Rainy"
+        },
+        {
+          "term": "Mshmsh",
+          "arabic": "Ù…Ø´Ù…Ø´",
+          "meaning": "Sunny"
+        },
+        {
+          "term": "Mghim",
+          "arabic": "Ù…ØºÙŠÙ…",
+          "meaning": "Cloudy"
+        }
+      ]
+    },
+    {
+      "name": "Personal Care & Hygiene",
+      "words": [
+        {
+          "term": "Sabun",
+          "arabic": "ØµØ§Ø¨ÙˆÙ†",
+          "meaning": "Soap"
+        },
+        {
+          "term": "Shampo",
+          "arabic": "Ø´Ø§Ù…Ø¨Ùˆ",
+          "meaning": "Shampoo"
+        },
+        {
+          "term": "Krim",
+          "arabic": "ÙƒØ±ÙŠÙ…",
+          "meaning": "Cream"
+        },
+        {
+          "term": "M3sun",
+          "arabic": "Ù…Ø¹ØµÙˆÙ†",
+          "meaning": "Toothpaste"
+        },
+        {
+          "term": "Forsha",
+          "arabic": "ÙØ±Ø´Ø©",
+          "meaning": "Brush"
+        },
+        {
+          "term": "M3suna",
+          "arabic": "Ù…Ø¹ØµÙˆÙ†Ø©",
+          "meaning": "Toothbrush"
+        },
+        {
+          "term": "Mghsel",
+          "arabic": "Ù…ØºØ³Ù„",
+          "meaning": "Washbasin"
+        },
+        {
+          "term": "Dush",
+          "arabic": "Ø¯ÙˆØ´",
+          "meaning": "Shower"
+        },
+        {
+          "term": "Hammam",
+          "arabic": "Ø­Ù…Ø§Ù…",
+          "meaning": "Bathroom"
+        },
+        {
+          "term": "Mnafel",
+          "arabic": "Ù…Ù†ÙØ§Ù„",
+          "meaning": "Towel"
+        },
+        {
+          "term": "3tr",
+          "arabic": "Ø¹Ø·Ø±",
+          "meaning": "Perfume"
+        },
+        {
+          "term": "M3dil",
+          "arabic": "Ù…Ø¹Ø§Ø¯Ù„",
+          "meaning": "Deodorant"
+        },
+        {
+          "term": "Kli",
+          "arabic": "ÙƒÙ„ÙŠ",
+          "meaning": "Comb"
+        },
+        {
+          "term": "M3s",
+          "arabic": "Ù…Ø¹Øµ",
+          "meaning": "Wash"
+        }
+      ]
+    },
+    {
+      "name": "Medical & Health Terms",
+      "words": [
+        {
+          "term": "Tbib",
+          "arabic": "Ø·Ø¨ÙŠØ¨",
+          "meaning": "Doctor"
+        },
+        {
+          "term": "Sbitar",
+          "arabic": "Ø³Ø¨ÙŠØ·Ø§Ø±",
+          "meaning": "Hospital"
+        },
+        {
+          "term": "Dwa",
+          "arabic": "Ø¯ÙˆØ§",
+          "meaning": "Medicine"
+        },
+        {
+          "term": "Pharmacy",
+          "arabic": "ÙØ§Ø±Ù…Ø§Ø³ÙŠ",
+          "meaning": "Pharmacy"
+        },
+        {
+          "term": "Mrid",
+          "arabic": "Ù…Ø±ÙŠØ¶",
+          "meaning": "Sick"
+        },
+        {
+          "term": "Wj3",
+          "arabic": "ÙˆØ¬Ø¹",
+          "meaning": "Pain"
+        },
+        {
+          "term": "Hma",
+          "arabic": "Ø­Ù…Ù‰",
+          "meaning": "Fever"
+        },
+        {
+          "term": "K3s",
+          "arabic": "ÙƒØ¹Ø³",
+          "meaning": "Cough"
+        },
+        {
+          "term": "Zlam",
+          "arabic": "Ø²Ù„Ø§Ù…",
+          "meaning": "Cold"
+        },
+        {
+          "term": "M3da",
+          "arabic": "Ù…Ø¹Ø¯Ø©",
+          "meaning": "Stomach"
+        },
+        {
+          "term": "Qlb",
+          "arabic": "Ù‚Ù„Ø¨",
+          "meaning": "Heart"
+        },
+        {
+          "term": "Dm",
+          "arabic": "Ø¯Ù…",
+          "meaning": "Blood"
+        },
+        {
+          "term": "3sab",
+          "arabic": "Ø¹ØµØ§Ø¨",
+          "meaning": "Nerves"
+        },
+        {
+          "term": "3dam",
+          "arabic": "Ø¹Ø¸Ø§Ù…",
+          "meaning": "Bones"
+        },
+        {
+          "term": "Jrd",
+          "arabic": "Ø¬Ø±Ø¯",
+          "meaning": "Skin"
+        }
+      ]
+    },
+    {
+      "name": "Legal & Government Terms",
+      "words": [
+        {
+          "term": "Hkuma",
+          "arabic": "Ø­ÙƒÙˆÙ…Ø©",
+          "meaning": "Government"
+        },
+        {
+          "term": "Qanun",
+          "arabic": "Ù‚Ø§Ù†ÙˆÙ†",
+          "meaning": "Law"
+        },
+        {
+          "term": "Mahkma",
+          "arabic": "Ù…Ø­ÙƒÙ…Ø©",
+          "meaning": "Court"
+        },
+        {
+          "term": "Qadi",
+          "arabic": "Ù‚Ø§Ø¶ÙŠ",
+          "meaning": "Judge"
+        },
+        {
+          "term": "Muhami",
+          "arabic": "Ù…Ø­Ø§Ù…ÙŠ",
+          "meaning": "Lawyer"
+        },
+        {
+          "term": "Jrm",
+          "arabic": "Ø¬Ø±Ù…",
+          "meaning": "Crime"
+        },
+        {
+          "term": "3qba",
+          "arabic": "Ø¹Ù‚Ø¨Ø©",
+          "meaning": "Punishment"
+        },
+        {
+          "term": "Haq",
+          "arabic": "Ø­Ù‚",
+          "meaning": "Right"
+        },
+        {
+          "term": "Wajib",
+          "arabic": "ÙˆØ§Ø¬Ø¨",
+          "meaning": "Duty"
+        },
+        {
+          "term": "Shahada",
+          "arabic": "Ø´Ù‡Ø§Ø¯Ø©",
+          "meaning": "Testimony"
+        },
+        {
+          "term": "3hd",
+          "arabic": "Ø¹Ù‡Ø¯",
+          "meaning": "Oath"
+        },
+        {
+          "term": "Mlkya",
+          "arabic": "Ù…Ù„ÙƒÙŠØ©",
+          "meaning": "Property"
+        },
+        {
+          "term": "Wasiya",
+          "arabic": "ÙˆØµÙŠØ©",
+          "meaning": "Will"
+        },
+        {
+          "term": "Ta3wid",
+          "arabic": "ØªØ¹ÙˆÙŠØ¶",
+          "meaning": "Compensation"
+        }
+      ]
+    },
+    {
+      "name": "Transportation & Directions (Expanded)",
+      "words": [
+        {
+          "term": "Tomobil",
+          "arabic": "ØªÙˆÙ…ÙˆØ¨ÙŠÙ„",
+          "meaning": "Car"
+        },
+        {
+          "term": "Qitar",
+          "arabic": "Ù‚Ø·Ø§Ø±",
+          "meaning": "Train"
+        },
+        {
+          "term": "Bis",
+          "arabic": "Ø¨ÙŠØ³",
+          "meaning": "Bus"
+        },
+        {
+          "term": "Taxi",
+          "arabic": "ØªØ§ÙƒØ³ÙŠ",
+          "meaning": "Taxi"
+        },
+        {
+          "term": "Tram",
+          "arabic": "ØªØ±Ø§Ù…",
+          "meaning": "Tram"
+        },
+        {
+          "term": "Bisiklit",
+          "arabic": "Ø¨ÙŠØ³ÙƒÙ„ÙŠØª",
+          "meaning": "Bicycle"
+        },
+        {
+          "term": "Moto",
+          "arabic": "Ù…ÙˆØªÙˆ",
+          "meaning": "Motorcycle"
+        },
+        {
+          "term": "Sayiq",
+          "arabic": "Ø³Ø§Ø¦Ù‚",
+          "meaning": "Driver"
+        },
+        {
+          "term": "Rakib",
+          "arabic": "Ø±Ø§ÙƒØ¨",
+          "meaning": "Passenger"
+        },
+        {
+          "term": "Mahatta",
+          "arabic": "Ù…Ø­Ø·Ø©",
+          "meaning": "Station"
+        },
+        {
+          "term": "Matar",
+          "arabic": "Ù…Ø·Ø§Ø±",
+          "meaning": "Airport"
+        },
+        {
+          "term": "Port",
+          "arabic": "Ø¨ÙˆØ±Ø·",
+          "meaning": "Port"
+        },
+        {
+          "term": "Lissar",
+          "arabic": "Ù„ÙŠØ³Ø§Ø±",
+          "meaning": "Left"
+        },
+        {
+          "term": "Limin",
+          "arabic": "Ù„ÙŠÙ…ÙŠÙ†",
+          "meaning": "Right"
+        },
+        {
+          "term": "Mstraight",
+          "arabic": "Ù…Ø³ØªØ±ÙŠØª",
+          "meaning": "Straight"
+        },
+        {
+          "term": "Dawr",
+          "arabic": "Ø¯ÙˆØ±",
+          "meaning": "Turn"
+        },
+        {
+          "term": "Qrib",
+          "arabic": "Ù‚Ø±ÙŠØ¨",
+          "meaning": "Near"
+        },
+        {
+          "term": "B3id",
+          "arabic": "Ø¨Ø¹ÙŠØ¯",
+          "meaning": "Far"
+        }
+      ]
+    },
+    {
+      "name": "Religious & Spiritual Terms",
+      "words": [
+        {
+          "term": "Allah",
+          "arabic": "Ø§Ù„Ù„Ù‡",
+          "meaning": "God"
+        },
+        {
+          "term": "Din",
+          "arabic": "Ø¯ÙŠÙ†",
+          "meaning": "Religion"
+        },
+        {
+          "term": "Islam",
+          "arabic": "Ø¥Ø³Ù„Ø§Ù…",
+          "meaning": "Islam"
+        },
+        {
+          "term": "Muslim",
+          "arabic": "Ù…Ø³Ù„Ù…",
+          "meaning": "Muslim"
+        },
+        {
+          "term": "Quran",
+          "arabic": "Ù‚Ø±Ø¢Ù†",
+          "meaning": "Quran"
+        },
+        {
+          "term": "Hadith",
+          "arabic": "Ø­Ø¯ÙŠØ«",
+          "meaning": "Hadith"
+        },
+        {
+          "term": "Masjid",
+          "arabic": "Ù…Ø³Ø¬Ø¯",
+          "meaning": "Mosque"
+        },
+        {
+          "term": "Imam",
+          "arabic": "Ø¥Ù…Ø§Ù…",
+          "meaning": "Imam"
+        },
+        {
+          "term": "Salat",
+          "arabic": "ØµÙ„Ø§Ø©",
+          "meaning": "Prayer"
+        },
+        {
+          "term": "Sawm",
+          "arabic": "ØµÙˆÙ…",
+          "meaning": "Fasting"
+        },
+        {
+          "term": "Zakat",
+          "arabic": "Ø²ÙƒØ§Ø©",
+          "meaning": "Charity"
+        },
+        {
+          "term": "Hajj",
+          "arabic": "Ø­Ø¬",
+          "meaning": "Pilgrimage"
+        },
+        {
+          "term": "Dua",
+          "arabic": "Ø¯Ø¹Ø§Ø¡",
+          "meaning": "Supplication"
+        },
+        {
+          "term": "Baraka",
+          "arabic": "Ø¨Ø±ÙƒØ©",
+          "meaning": "Blessing"
+        },
+        {
+          "term": "Rahma",
+          "arabic": "Ø±Ø­Ù…Ø©",
+          "meaning": "Mercy"
+        }
+      ]
+    },
+    {
+      "name": "Social Media & Modern Communication",
+      "words": [
+        {
+          "term": "Facebook",
+          "arabic": "ÙÙŠØ³Ø¨ÙˆÙƒ",
+          "meaning": "Facebook"
+        },
+        {
+          "term": "Instagram",
+          "arabic": "Ø¥Ù†Ø³ØªØºØ±Ø§Ù…",
+          "meaning": "Instagram"
+        },
+        {
+          "term": "Twitter",
+          "arabic": "ØªÙˆÙŠØªØ±",
+          "meaning": "Twitter"
+        },
+        {
+          "term": "WhatsApp",
+          "arabic": "ÙˆØ§ØªØ³Ø§Ø¨",
+          "meaning": "WhatsApp"
+        },
+        {
+          "term": "Snapchat",
+          "arabic": "Ø³Ù†Ø§Ø¨ Ø´Ø§Øª",
+          "meaning": "Snapchat"
+        },
+        {
+          "term": "TikTok",
+          "arabic": "ØªÙŠÙƒ ØªÙˆÙƒ",
+          "meaning": "TikTok"
+        },
+        {
+          "term": "Post",
+          "arabic": "Ø¨ÙˆØ³Øª",
+          "meaning": "Post"
+        },
+        {
+          "term": "Like",
+          "arabic": "Ù„Ø§ÙŠÙƒ",
+          "meaning": "Like"
+        },
+        {
+          "term": "Comment",
+          "arabic": "ÙƒÙˆÙ…ÙˆÙ†",
+          "meaning": "Comment"
+        },
+        {
+          "term": "Share",
+          "arabic": "Ø´Ø§Ø±",
+          "meaning": "Share"
+        },
+        {
+          "term": "Story",
+          "arabic": "Ø³ØªÙˆØ±ÙŠ",
+          "meaning": "Story"
+        },
+        {
+          "term": "Live",
+          "arabic": "Ù„Ø§ÙŠÙ",
+          "meaning": "Live"
+        },
+        {
+          "term": "Filter",
+          "arabic": "ÙÙŠÙ„ØªØ±",
+          "meaning": "Filter"
+        },
+        {
+          "term": "Hashtag",
+          "arabic": "Ù‡Ø§Ø´ØªØ§Øº",
+          "meaning": "Hashtag"
+        },
+        {
+          "term": "Profile",
+          "arabic": "Ø¨Ø±ÙˆÙØ§ÙŠÙ„",
+          "meaning": "Profile"
+        }
+      ]
+    }
+  ]
+}

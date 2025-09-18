@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | A2 Module 12: Larger Numbers & Quantities</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .number-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .number-table th, .number-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .number-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .number-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .number-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 120px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .number-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a2.html">A2 Elementary</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 12: Larger Numbers & Quantities</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>A2 Module 12: Larger Numbers & More Complex Quantities</h1>
+    <p>Expand your numerical skills by learning hundreds, thousands, and ways to express various quantities.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Review: Numbers 1-100</h2>
+      <p>Quickly recall from A1 (Module 4) how to form numbers up to 100. Remember the pattern for 21-99 is [Unit] + `u` + [Ten].</p>
+      <ul>
+          <li>10: `3shra` (<span class="darija-script">عشرة</span>)</li>
+          <li>19: `ts3tash` (<span class="darija-script">تسعطاش</span>)</li>
+          <li>20: `3shrin` (<span class="darija-script">عشرين</span>)</li>
+          <li>57: `sb3a u khmsin` (<span class="darija-script">سبعة و خمسين</span>)</li>
+          <li>100: `mya` (<span class="darija-script">مية</span>)</li>
+      </ul>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Hundreds (`myat`)</h2>
+      <p>To form hundreds, you use `mya` for 100. For 200, it's `myatayn`. For 300-900, you use the number (3-9) followed by `myat` (or `miyya` depending on region/speaker, `myat` is common).</p>
+      <table class="number-table">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>100</td><td class="darija-script">مية</td><td class="transcription">mya</td><td><span class="play-button" onclick="alert('Audio: mya')"></span></td></tr>
+            <tr><td>200</td><td class="darija-script">ميتين</td><td class="transcription">myatayn</td><td><span class="play-button" onclick="alert('Audio: myatayn')"></span></td></tr>
+            <tr><td>300</td><td class="darija-script">تلت مية</td><td class="transcription">telt mya</td><td><span class="play-button" onclick="alert('Audio: telt mya')"></span></td></tr>
+            <tr><td>400</td><td class="darija-script">ربع مية</td><td class="transcription">rbe3 mya</td><td><span class="play-button" onclick="alert('Audio: rbe3 mya')"></span></td></tr>
+            <tr><td>500</td><td class="darija-script">خمس مية</td><td class="transcription">khms mya</td><td><span class="play-button" onclick="alert('Audio: khms mya')"></span></td></tr>
+            <tr><td>600</td><td class="darija-script">ست مية</td><td class="transcription">sett mya</td><td><span class="play-button" onclick="alert('Audio: sett mya')"></span></td></tr>
+            <tr><td>700</td><td class="darija-script">سبع مية</td><td class="transcription">sb3 mya</td><td><span class="play-button" onclick="alert('Audio: sb3 mya')"></span></td></tr>
+            <tr><td>800</td><td class="darija-script">تمن مية</td><td class="transcription">tmen mya</td><td><span class="play-button" onclick="alert('Audio: tmen mya')"></span></td></tr>
+            <tr><td>900</td><td class="darija-script">تسع مية</td><td class="transcription">ts3 mya</td><td><span class="play-button" onclick="alert('Audio: ts3 mya')"></span></td></tr>
+        </tbody>
+      </table>
+      <h3>Combining Hundreds with Other Numbers:</h3>
+      <p>Pattern: **[Hundred] + `u` + [Number from 1-99]**</p>
+      <ul>
+          <li>101: `mya u wa7ed` (<span class="darija-script">مية و واحد</span>)</li>
+          <li>250: `myatayn u khmsin` (<span class="darija-script">ميتين و خمسين</span>)</li>
+          <li>325: `telt mya u khmsa u 3shrin` (<span class="darija-script">تلت مية و خمسة و عشرين</span>)</li>
+          <li>789: `sb3 mya u ts3ud u tmanin` (<span class="darija-script">سبع مية و تسعود و تمانين</span>)</li>
+      </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Thousands (`alaf`)</h2>
+        <p>1000 is `alf` (<span class="darija-script">ألف</span>). 2000 is `alfeen` (<span class="darija-script">ألفين</span>). For 3000-10,000, use the number (3-10) + `alaf` (<span class="darija-script">آلاف</span>).</p>
+        <table class="number-table">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1,000</td><td class="darija-script">ألف</td><td class="transcription">alf</td><td><span class="play-button" onclick="alert('Audio: alf')"></span></td></tr>
+                <tr><td>2,000</td><td class="darija-script">ألفين</td><td class="transcription">alfayn</td><td><span class="play-button" onclick="alert('Audio: alfayn')"></span></td></tr>
+                <tr><td>3,000</td><td class="darija-script">تلات آلاف</td><td class="transcription">tlata alaf</td><td><span class="play-button" onclick="alert('Audio: tlata alaf')"></span></td></tr>
+                <tr><td>10,000</td><td class="darija-script">عشرة آلاف</td><td class="transcription">3shra alaf</td><td><span class="play-button" onclick="alert('Audio: 3shra alaf')"></span></td></tr>
+            </tbody>
+        </table>
+        <h3>Combining Thousands with Other Numbers:</h3>
+        <p>Pattern: **[Thousand] + `u` + [Number from 1-999]**</p>
+        <ul>
+            <li>1,500: `alf u khms mya` (<span class="darija-script">ألف و خمس مية</span>)</li>
+            <li>2,023: `alfayn u tlata u 3shrin` (<span class="darija-script">ألفين و تلاتة و عشرين</span>)</li>
+            <li>5,150: `khmsa alaf u mya u khmsin` (<span class="darija-script">خمسة آلاف و مية و خمسين</span>)</li>
+        </ul>
+        <div class="note">
+            <strong>Reading Large Numbers:</strong> For very large numbers, Darija follows a similar pattern to English: say the thousands, then hundreds, then tens and units, connecting with `u` (and).
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Fractions & Basic Measurements</h2>
+        <table class="number-table">
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Half</td><td class="darija-script">نص</td><td class="transcription">nuss</td><td><span class="play-button" onclick="alert('Audio: nuss')"></span></td></tr>
+                <tr><td>Quarter</td><td class="darija-script">ربع</td><td class="transcription">rbe3</td><td><span class="play-button" onclick="alert('Audio: rbe3')"></span></td></tr>
+                <tr><td>Third</td><td class="darija-script">تولت</td><td class="transcription">tulut</td><td><span class="play-button" onclick="alert('Audio: tulut')"></span></td></tr>
+                <tr><td>Kilo (Kilogram)</td><td class="darija-script">كيلو</td><td class="transcription">kilo</td><td><span class="play-button" onclick="alert('Audio: kilo')"></span></td></tr>
+                <tr><td>Liter</td><td class="darija-script">إيترو</td><td class="transcription">itru</td><td><span class="play-button" onclick="alert('Audio: itru')"></span></td></tr>
+                <tr><td>Meter</td><td class="darija-script">ميترو</td><td class="transcription">mitru</td><td><span class="play-button" onclick="alert('Audio: mitru')"></span></td></tr>
+            </tbody>
+        </table>
+        <p>Example: `nuss kilo dyal tffa7` (<span class="darija-script">نص كيلو ديال التفاح</span>) - half a kilo of apples.</p>
+        <p>Example: `rbe3 itru dyal l-7lib` (<span class="darija-script">ربع إيترو ديال الحليب</span>) - a quarter liter of milk.</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Expressions of Quantity</h2>
+         <table class="number-table">
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Notes</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A lot / Many / Very much</td>
+                    <td class="darija-script">بزاف</td>
+                    <td class="transcription">bzzaf</td>
+                    <td>e.g., `flus bzzaf` (a lot of money)</td>
+                    <td><span class="play-button" onclick="alert('Audio: bzzaf')"></span></td>
+                </tr>
+                <tr>
+                    <td>A lot of...</td>
+                    <td class="darija-script">بزاف ديال...</td>
+                    <td class="transcription">bzzaf dyal...</td>
+                    <td>e.g., `bzzaf dyal n-nas` (a lot of people)</td>
+                    <td><span class="play-button" onclick="alert('Audio: bzzaf dyal')"></span></td>
+                </tr>
+                <tr>
+                    <td>A little / A bit / Some</td>
+                    <td class="darija-script">شوية</td>
+                    <td class="transcription">shwiya</td>
+                    <td>e.g., `shwiya dyal l-ma` (a little water)</td>
+                    <td><span class="play-button" onclick="alert('Audio: shwiya')"></span></td>
+                </tr>
+                <tr>
+                    <td>Some (of)</td>
+                    <td class="darija-script">شي</td>
+                    <td class="transcription">shi</td>
+                    <td>e.g., `shi nas` (some people), `shi 7aja` (something)</td>
+                    <td><span class="play-button" onclick="alert('Audio: shi')"></span></td>
+                </tr>
+                <tr>
+                    <td>All / Every</td>
+                    <td class="darija-script">كلشي / كل</td>
+                    <td class="transcription">kulshi / kul</td>
+                    <td>`kulshi` (everything), `kul nhar` (every day)</td>
+                    <td><span class="play-button" onclick="alert('Audio: kulshi / kul')"></span></td>
+                </tr>
+                 <tr>
+                    <td>Enough</td>
+                    <td class="darija-script">كافي / باراكا</td>
+                    <td class="transcription">kafi / baraka</td>
+                    <td>`baraka` often means "enough, stop!"</td>
+                    <td><span class="play-button" onclick="alert('Audio: kafi / baraka')"></span></td>
+                </tr>
+                 <tr>
+                    <td>Nothing</td>
+                    <td class="darija-script">والو / تا حاجة</td>
+                    <td class="transcription">walu / ta 7aja</td>
+                    <td>Often used with negation: `ma kayn walu` (there is nothing)</td>
+                    <td><span class="play-button" onclick="alert('Audio: walu / ta 7aja')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Write the Number (Transcription)</h3>
+      <p>Write the Darija transcription for these numbers:</p>
+      <ol>
+          <li>150: <span class="fill-blank">mya u khmsin</span></li>
+          <li>675: <span class="fill-blank">sett mya u khmsa u sb3in</span></li>
+          <li>1,200: <span class="fill-blank">alf u myatayn</span></li>
+          <li>3,040: <span class="fill-blank">tlata alaf u rb3in</span></li>
+          <li>Half a kilo: <span class="fill-blank">nuss kilo</span></li>
+      </ol>
+
+      <h3>Exercise 2: Quantities</h3>
+      <p>Translate these phrases/sentences into Darija:</p>
+      <ol>
+          <li>A lot of people. <span class="fill-blank">Bzzaf dyal n-nas.</span></li>
+          <li>A little bit of sugar. <span class="fill-blank">Shwiya dyal s-skkar.</span></li>
+          <li>I want some books. <span class="fill-blank">Bghit shi ktub.</span></li>
+          <li>Is this enough water? (water is masc. or often unspecified fem.) <span class="fill-blank">Wash had l-ma kafi? / Wash hadi l-ma kafya?</span></li>
+          <li>There is nothing in the house. <span class="fill-blank">Ma kayn walu f d-dar.</span></li>
+      </ol>
+      <div class="note">
+          Larger numbers and quantities are essential for shopping, understanding prices, and many other daily interactions. Keep practicing them!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

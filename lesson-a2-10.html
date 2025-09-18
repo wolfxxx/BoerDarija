@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | A2 Module 10: Daily Routines & Hobbies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .vocab-table th, .vocab-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .vocab-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .vocab-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .vocab-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+     .vocab-table .verb { font-weight: bold; color: #99ff99; }
+
+     .story-box {
+        background: rgba(255,255,255,0.08);
+        border-left: 4px solid #99ff99;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+    .story-box .darija-text { font-family: 'Amiri', serif; font-size: 1.3em; line-height: 1.8; }
+    .story-box .transcription-text { font-style: italic; color: #ffcc66; font-size: 1em; line-height: 1.8;}
+    .story-box .translation-text { color: #ccc; font-size: 0.95em; line-height: 1.8; margin-top: 10px; display: block;}
+    .story-box p { margin-bottom: 10px; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 120px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .vocab-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a2.html">A2 Elementary</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 10: Daily Routines & Hobbies</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>A2 Module 10: Daily Routines & Hobbies</h1>
+    <p>Learn to describe your daily activities in more detail, discuss hobbies, and use adverbs of frequency.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Review: Present Tense (`ka-`) and Time</h2>
+      <p>Remember from A1, you use the `ka-` prefix for habitual actions (e.g., `kanfiq` - I wake up, `kanakul` - I eat). You also learned basic time expressions like `f s-sba7` (in the morning), `kul nhar` (every day).</p>
+      <p>We'll build on this to describe a more complete daily routine.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Verbs for Daily Activities</h2>
+      <p>Here are more verbs commonly used when talking about daily routines. The "I" form with `ka-` is given as an example.</p>
+      <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>English Activity</th>
+                <th>Darija Infinitive (Root)</th>
+                <th>Example (Ana kan-)</th>
+                <th>Transcription (Ana kan-)</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>To wake up</td><td class="darija-script">فاق</td><td class="verb darija-script">كانفيق</td><td class="transcription">kanfiq</td><td><span class="play-button" onclick="alert('Audio: kanfiq')"></span></td></tr>
+            <tr><td>To get up</td><td class="darija-script">ناض</td><td class="verb darija-script">كانوض</td><td class="transcription">kanuD</td><td><span class="play-button" onclick="alert('Audio: kanuD')"></span></td></tr>
+            <tr><td>To wash (face/hands)</td><td class="darija-script">غسل</td><td class="verb darija-script">كانغسل</td><td class="transcription">kanghsel (wejhi/yddiya)</td><td><span class="play-button" onclick="alert('Audio: kanghsel')"></span></td></tr>
+            <tr><td>To get dressed</td><td class="darija-script">لبس</td><td class="verb darija-script">كانلبس</td><td class="transcription">kanlbes (7wayji)</td><td><span class="play-button" onclick="alert('Audio: kanlbes')"></span></td></tr>
+            <tr><td>To have breakfast</td><td class="darija-script">فطر</td><td class="verb darija-script">كانفطر</td><td class="transcription">kanfter</td><td><span class="play-button" onclick="alert('Audio: kanfter')"></span></td></tr>
+            <tr><td>To go (to work/school)</td><td class="darija-script">مشى</td><td class="verb darija-script">كانمشي</td><td class="transcription">kanmshi (l l-khedma/l l-mdrasa)</td><td><span class="play-button" onclick="alert('Audio: kanmshi')"></span></td></tr>
+            <tr><td>To work</td><td class="darija-script">خدم</td><td class="verb darija-script">كانخدم</td><td class="transcription">kankhdem</td><td><span class="play-button" onclick="alert('Audio: kankhdem')"></span></td></tr>
+            <tr><td>To study</td><td class="darija-script">قرا</td><td class="verb darija-script">كانقرا</td><td class="transcription">kanqra</td><td><span class="play-button" onclick="alert('Audio: kanqra')"></span></td></tr>
+            <tr><td>To return (home)</td><td class="darija-script">رجع</td><td class="verb darija-script">كانرجع</td><td class="transcription">kanrje3 (l d-dar)</td><td><span class="play-button" onclick="alert('Audio: kanrje3')"></span></td></tr>
+            <tr><td>To have lunch</td><td class="darija-script">تغدى</td><td class="verb darija-script">كانتغدى</td><td class="transcription">kantghedda</td><td><span class="play-button" onclick="alert('Audio: kantghedda')"></span></td></tr>
+            <tr><td>To watch (TV)</td><td class="darija-script">تفرج</td><td class="verb darija-script">كانتفرج</td><td class="transcription">kantferrej (f t-telfaza)</td><td><span class="play-button" onclick="alert('Audio: kantferrej')"></span></td></tr>
+            <tr><td>To have dinner</td><td class="darija-script">تعشى</td><td class="verb darija-script">كانتعشى</td><td class="transcription">kant3esha</td><td><span class="play-button" onclick="alert('Audio: kant3esha')"></span></td></tr>
+            <tr><td>To sleep</td><td class="darija-script">نعس</td><td class="verb darija-script">كانعس</td><td class="transcription">kan3es</td><td><span class="play-button" onclick="alert('Audio: kan3es')"></span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Adverbs of Frequency</h2>
+        <p>These words tell you how often something happens. They usually come before the main verb or at the beginning of the sentence.</p>
+         <table class="vocab-table">
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Always</td><td class="darija-script">ديما</td><td class="transcription">dima</td><td><span class="play-button" onclick="alert('Audio: dima')"></span></td></tr>
+                <tr><td>Usually / Often</td><td class="darija-script">غالباً</td><td class="transcription">ghaliban</td><td><span class="play-button" onclick="alert('Audio: ghaliban')"></span></td></tr>
+                <tr><td>Sometimes</td><td class="darija-script">مرة مرة / بعض المرات</td><td class="transcription">mrra mrra / ba3d l-mrrat</td><td><span class="play-button" onclick="alert('Audio: mrra mrra')"></span></td></tr>
+                <tr><td>Rarely / Seldom</td><td class="darija-script">قليل فين</td><td class="transcription">qlil fin</td><td><span class="play-button" onclick="alert('Audio: qlil fin')"></span></td></tr>
+                <tr><td>Never</td><td class="darija-script">جامي / ما... عمر</td><td class="transcription">jamais / ma ... 3ommer-</td><td>`jamais` (from French) or `ma` + verb + `sh 3ommer` + suffix. E.g., `Ma kanshrbsh atay 3omri` (I never drink tea - عمر + i)</td><td><span class="play-button" onclick="alert('Audio: jamais')"></span></td></tr>
+                <tr><td>Every day</td><td class="darija-script">كل نهار</td><td class="transcription">kul nhar</td><td>(A1 review)</td><td><span class="play-button" onclick="alert('Audio: kul nhar')"></span></td></tr>
+                <tr><td>Every week</td><td class="darija-script">كل سيمانة</td><td class="transcription">kul simana</td><td>(A1 review)</td><td><span class="play-button" onclick="alert('Audio: kul simana')"></span></td></tr>
+            </tbody>
+        </table>
+        <p>Example: <span class="darija-script">أنا ديما كانفيق بكري.</span> (Ana dima kanfiq bekri.) - I always wake up early.</p>
+        <p>Example: <span class="darija-script">هو قليل فين كايخرج.</span> (Huwa qlil fin kaykhruj.) - He rarely goes out.</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Talking About Hobbies & Free Time</h2>
+        <p>How to say you like doing certain activities (review from A1 Module 17 `kay3jbni`) and vocabulary for common hobbies.</p>
+        <p>Structure: `kay3jbni` (it pleases me / I like) + `n-` + Verb Stem</p>
+        <p>Example: <span class="darija-script">كايعجبني نقرا.</span> (Kay3jbni nqra.) - I like to read.</p>
+
+        <h3>Common Hobbies Vocabulary:</h3>
+        <table class="vocab-table">
+             <thead>
+                <tr>
+                    <th>English Hobby</th>
+                    <th>Darija Verb (Root/Activity)</th>
+                    <th>Transcription</th>
+                    <th>Example: I like to... (Ana kay3jbni n-)</th>
+                    <th>Audio (Hobby)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Reading</td><td class="verb darija-script">قرا</td><td>qra (to read)</td><td>Kay3jbni nqra l-ktub.</td><td><span class="play-button" onclick="alert('Audio: qra')"></span></td></tr>
+                <tr><td>Watching films/TV</td><td class="verb darija-script">تفرج</td><td>tferrej (to watch)</td><td>Kay3jbni ntferrej f l-aflam.</td><td><span class="play-button" onclick="alert('Audio: tferrej')"></span></td></tr>
+                <tr><td>Sports / Playing</td><td class="verb darija-script">لعب</td><td>l3eb (to play)</td><td>Kay3jbni nl3eb l-kura. (football)</td><td><span class="play-button" onclick="alert('Audio: l3eb')"></span></td></tr>
+                <tr><td>Cooking</td><td class="verb darija-script">طيب</td><td>tiyyeb (to cook)</td><td>Kay3jbni ntiyyeb.</td><td><span class="play-button" onclick="alert('Audio: tiyyeb')"></span></td></tr>
+                <tr><td>Traveling</td><td class="verb darija-script">سافر</td><td>safr (to travel)</td><td>Kay3jbni nsafr.</td><td><span class="play-button" onclick="alert('Audio: safr')"></span></td></tr>
+                <tr><td>Listening to music</td><td class="verb darija-script">سمع للموسيقى</td><td>sma3 l l-musiqa</td><td>Kay3jbni nsme3 l l-musiqa.</td><td><span class="play-button" onclick="alert('Audio: sma3 l l-musiqa')"></span></td></tr>
+                <tr><td>Going out (with friends)</td><td class="verb darija-script">خرج</td><td>khruj (to go out)</td><td>Kay3jbni nkhruj m3a s7abi.</td><td><span class="play-button" onclick="alert('Audio: khruj')"></span></td></tr>
+            </tbody>
+        </table>
+         <div class="note">
+            <strong>Asking about hobbies:</strong> `Shnu kay3jbek tdir f weqt l-faragh dyalek?` (<span class="darija-script">شنو كايعجبك تدير ف وقت الفراغ ديالك؟</span>) - What do you like to do in your free time? (`weqt l-faragh` = free time)
+        </div>
+    </section>
+
+     <section class="lesson-section">
+        <h2>Example Daily Routine Narrative</h2>
+        <div class="story-box">
+            <p><span class="darija-text">كل نهار، كانفيق ف السبعة د الصباح. كانغسل وجهي و كانلبس حوايجي. من بعد، كانفطر. ديما كانشرب قهوة. ف التمنية، كانمشي للخدمة. كانخدم حتى للخمسة د العشية. ملي كانرجع للدار، مرة مرة كانتفرج ف التلفزة و لا كانقرا شي كتاب. ف السبعة، كانتعشى مع عائلتي. و ف العشرة د الليل، كانعس.</span>
+            <span class="play-button" onclick="alert('Audio for full routine')"></span></p>
+            <p><span class="transcription-text">Kul nhar, kanfiq f s-sb3a d s-sba7. Kanghsel wejhi u kanlbes 7wayji. Mn ba3d, kanfter. Dima kanshrb qhwa. F t-tmnya, kanmshi l l-khedma. Kankhdem 7tta l l-khmsa d l-3shiya. Melli kanrje3 l d-dar, mrra mrra kantferrej f t-telfaza wella kanqra shi ktab. F s-sb3a, kant3esha m3a 3a'ilti. U f l-3shra d l-lil, kan3es.</span></p>
+            <p class="translation-text">Every day, I wake up at 7 in the morning. I wash my face and I get dressed (my clothes). After that, I have breakfast. I always drink coffee. At 8, I go to work. I work until 5 in the evening. When I return home, sometimes I watch TV or I read a book. At 7, I have dinner with my family. And at 10 at night, I sleep.</p>
+        </div>
+         <div class="note">
+            <strong>Vocabulary from Routine:</strong>
+            <ul>
+                <li>`wejhi` (<span class="darija-script">وجهي</span>) - my face</li>
+                <li>`7wayji` (<span class="darija-script">حوايجي</span>) - my clothes</li>
+                <li>`melli` (<span class="darija-script">ملي</span>) - when (conjunction)</li>
+                <li>`shi ktab` (<span class="darija-script">شي كتاب</span>) - a book / some book</li>
+                <li>`3a'ilti` (<span class="darija-script">عائلتي</span>) - my family</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: My Routine</h3>
+      <p class="prompt">Write 3-4 sentences in Darija about your typical morning routine using the `ka-` present tense and at least one adverb of frequency.</p>
+      <p>Your Sentences: <span class="fill-blank"></span></p>
+      <p><span class="fill-blank"></span></p>
+      <p><span class="fill-blank"></span></p>
+
+      <h3>Exercise 2: Hobbies</h3>
+      <p>Translate these sentences into Darija:</p>
+      <ol>
+          <li>I always like to travel. <span class="fill-blank">Dima kay3jbni nsafr.</span></li>
+          <li>She sometimes likes to cook. <span class="fill-blank">Mrra mrra kay3jbha tiyyeb.</span></li>
+          <li>He never likes to read. (Use `jamais`) <span class="fill-blank">Jamais kay3jbu yqra. / Ma kay3jbush yqra jamais.</span></li>
+          <li>Do you (m.s.) like to play football? <span class="fill-blank">Wash kay3jbek tl3eb l-kura?</span></li>
+      </ol>
+      <div class="note">
+          Try to describe your own daily routine and talk about your hobbies in Darija. The more you personalize the language, the better it will stick!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

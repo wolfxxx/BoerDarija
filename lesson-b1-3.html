@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | B1 Module 3: Active & Passive Participles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .particle-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .particle-table th, .particle-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .particle-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .particle-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .particle-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .particle-table .verb-root { font-style: italic; color: #ccc; }
+    .particle-table .particle-form { font-weight: bold; color: #99ff99; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 100px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .particle-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 3: Active & Passive Participles</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>B1 Module 3: Active & Passive Participles</h1>
+    <p>Learn how to form and use active and passive participles, which can function as adjectives or parts of verb phrases.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>What are Participles?</h2>
+      <p>Participles are verb forms that can act like adjectives (describing nouns) or be used to form certain verb tenses or voices (like the passive voice).</p>
+      <ul>
+          <li>**Active Participle:** Describes something or someone *doing* the action of the verb (e.g., "a *writing* man," "the *running* boy").</li>
+          <li>**Passive Participle:** Describes something or someone that *has had the action of the verb done to it* (e.g., "a *written* letter," "a *broken* chair").</li>
+      </ul>
+      <p>In Darija, participles are often formed based on specific patterns from the verb root.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Active Participles (Pattern: `fa3el` <span class="darija-script">فاعل</span>)</h2>
+      <p>For many basic three-letter verbs (Form I), the active participle often follows the pattern `CaCeC` (where C represents a root consonant). The feminine form adds an `-a`.</p>
+      
+      <table class="particle-table">
+        <thead>
+            <tr>
+                <th>Verb Root (Meaning)</th>
+                <th>Active Participle (Masc. - Script/Trans.)</th>
+                <th>Active Participle (Fem. - Script/Trans.)</th>
+                <th>Meaning</th>
+                <th>Audio (Masc/Fem)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="verb-root">kteb</span> (to write)</td>
+                <td><span class="particle-form darija-script">كاتب</span> / kateb</td>
+                <td><span class="particle-form darija-script">كاتبة</span> / katba</td>
+                <td>writing (one who writes)</td>
+                <td><span class="play-button" onclick="alert('Audio: kateb / katba')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="verb-root">khdem</span> (to work)</td>
+                <td><span class="particle-form darija-script">خدام</span> / khddam</td>
+                <td><span class="particle-form darija-script">خدامة</span> / khddama</td>
+                <td>working (one who works)</td>
+                <td><span class="play-button" onclick="alert('Audio: khddam / khddama')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="verb-root">jles</span> (to sit)</td>
+                <td><span class="particle-form darija-script">جالس</span> / gales</td>
+                <td><span class="particle-form darija-script">گالسة</span> / galsa</td>
+                <td>sitting (one who is sitting)</td>
+                <td><span class="play-button" onclick="alert('Audio: gales / galsa')"></span></td>
+            </tr>
+             <tr>
+                <td><span class="verb-root">wqef</span> (to stand)</td>
+                <td><span class="particle-form darija-script">واقف</span> / waqef</td>
+                <td><span class="particle-form darija-script">واقفة</span> / waqfa</td>
+                <td>standing (one who is standing)</td>
+                <td><span class="play-button" onclick="alert('Audio: waqef / waqfa')"></span></td>
+            </tr>
+             <tr>
+                <td><span class="verb-root">na3es</span> (to sleep)</td>
+                <td><span class="particle-form darija-script">ناعس</span> / na3es</td>
+                <td><span class="particle-form darija-script">ناعسة</span> / na3sa</td>
+                <td>sleeping (one who is sleeping)</td>
+                <td><span class="play-button" onclick="alert('Audio: na3es / na3sa')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+       <p>Example: <span class="darija-script">الراجل الكاتب.</span> (<span class="transcription">R-rajl l-kateb.</span>) - The writing man / The writer.</p>
+       <p>Example: <span class="darija-script">هي خدامة مزيان.</span> (<span class="transcription">Hiya khddama mzyan.</span>) - She is working well / She is a good worker.</p>
+       <p>Example: <span class="darija-script">لقيتو ناعس.</span> (<span class="transcription">Lqitu na3es.</span>) - I found him sleeping. (`lqitu` = I found him)</p>
+        <div class="note">
+            Active participles often describe a state resulting from an action or someone who habitually does an action. They function very much like adjectives and must agree in gender and number. Plural is often formed by adding `-in` (e.g., `katbin`, `khddamin`).
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Passive Participles (Pattern: `mf3ul` <span class="darija-script">مفعول</span>)</h2>
+        <p>For many basic three-letter verbs, the passive participle often follows the pattern `m-C-CuC`. This describes something that has had the action done to it. The feminine form adds an `-a`.</p>
+        <table class="particle-table">
+            <thead>
+                <tr>
+                    <th>Verb Root (Meaning)</th>
+                    <th>Passive Participle (Masc. - Script/Trans.)</th>
+                    <th>Passive Participle (Fem. - Script/Trans.)</th>
+                    <th>Meaning</th>
+                    <th>Audio (Masc/Fem)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="verb-root">kteb</span> (to write)</td>
+                    <td><span class="particle-form darija-script">مكتوب</span> / mektub</td>
+                    <td><span class="particle-form darija-script">مكتوبة</span> / mektuba</td>
+                    <td>written</td>
+                    <td><span class="play-button" onclick="alert('Audio: mektub / mektuba')"></span></td>
+                </tr>
+                <tr>
+                    <td><span class="verb-root">fhem</span> (to understand)</td>
+                    <td><span class="particle-form darija-script">مفهوم</span> / mfhum</td>
+                    <td><span class="particle-form darija-script">مفهومة</span> / mfhuma</td>
+                    <td>understood</td>
+                    <td><span class="play-button" onclick="alert('Audio: mfhum / mfhuma')"></span></td>
+                </tr>
+                <tr>
+                    <td><span class="verb-root">feta7</span> (to open)</td>
+                    <td><span class="particle-form darija-script">مفتوح</span> / meftu7</td>
+                    <td><span class="particle-form darija-script">مفتوحة</span> / meftu7a</td>
+                    <td>opened</td>
+                    <td><span class="play-button" onclick="alert('Audio: meftu7 / meftu7a')"></span></td>
+                </tr>
+                <tr>
+                    <td><span class="verb-root">shedd</span> (to close)</td>
+                    <td><span class="particle-form darija-script">مسدود</span> / mesdud</td>
+                    <td><span class="particle-form darija-script">مسدودة</span> / mesduda</td>
+                    <td>closed</td>
+                    <td><span class="play-button" onclick="alert('Audio: mesdud / mesduda')"></span></td>
+                </tr>
+                <tr>
+                    <td><span class="verb-root">hres</span> (to break)</td>
+                    <td><span class="particle-form darija-script">مهزوز</span> / mherres (common) or <span class="particle-form darija-script">مهرس</span></td>
+                    <td><span class="particle-form darija-script">مهروزة</span> / mherrsa</td>
+                    <td>broken</td>
+                    <td><span class="play-button" onclick="alert('Audio: mherres / mherrsa')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Example: <span class="darija-script">الباب مفتوح.</span> (<span class="transcription">L-bab meftu7.</span>) - The door is open(ed).</p>
+        <p>Example: <span class="darija-script">الرسالة مكتوبة بالدارجة.</span> (<span class="transcription">R-risala mektuba b d-darija.</span>) - The letter is written in Darija.</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Using Passive Participles for Simple Passive Voice</h2>
+        <p>Passive participles are key to forming simple passive voice sentences. This is where the subject of the sentence receives the action, rather than doing it.</p>
+        <p>Structure: **[Noun (receiver of action)] + [Conjugated `kan` (to be) - often omitted in present] + [Passive Participle (agrees with noun)]**</p>
+        
+        <h3>Present Passive (often without `kan`):</h3>
+        <ul>
+            <li>The door is closed: <span class="darija-script">الباب مسدود.</span> (L-bab mesdud.)</li>
+            <li>The food (f.) is cooked: <span class="darija-script">الماكلة مطيوبة.</span> (L-makla mtiyyba.) (from `tiyyeb` - to cook)</li>
+            <li>The lesson (m.) is understood: <span class="darija-script">الدرس مفهوم.</span> (D-ders mfhum.)</li>
+        </ul>
+
+        <h3>Past Passive (with `kan` in past tense):</h3>
+        <ul>
+            <li>The door was closed: <span class="darija-script">الباب كان مسدود.</span> (L-bab kan mesdud.)</li>
+            <li>The letter (f.) was written: <span class="darija-script">البرا كانت مكتوبة.</span> (L-bra kanet mektuba.)</li>
+        </ul>
+        <div class="note">
+            This is a simple way to form the passive. More complex passive constructions exist but this is a great starting point for B1. The participle acts like an adjective describing the state of the noun.
+        </div>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Form the Participle</h3>
+      <p>Give the masculine singular active participle for these verbs:</p>
+      <ol>
+          <li>`shrb` (to drink): <span class="fill-blank">shareb</span></li>
+          <li>`rje3` (to return): <span class="fill-blank">raje3</span></li>
+          <li>`dkhel` (to enter): <span class="fill-blank">dakhel</span></li>
+      </ol>
+      <p>Give the masculine singular passive participle for these verbs:</p>
+      <ol>
+          <li>`sema3` (to hear): <span class="fill-blank">mesmu3</span> (heard)</li>
+          <li>`kla` (to eat - root 'kul'): <span class="fill-blank">mukul / mkal</span> (eaten)</li>
+          <li>`shel` (to light/turn on): <span class="fill-blank">mesh3ul</span> (lit/turned on)</li>
+      </ol>
+
+      <h3>Exercise 2: Active or Passive?</h3>
+      <p>Translate these sentences to Darija, using the correct participle form.</p>
+      <ol>
+          <li>The man is standing near the door. (waqef)
+              <br>Answer: <span class="fill-blank">R-rajl waqef 7da l-bab.</span></li>
+          <li>The window (shrjem - m.) is broken. (mherres)
+              <br>Answer: <span class="fill-blank">Sh-shrjem mherres.</span></li>
+          <li>She is sleeping in the room. (na3sa)
+              <br>Answer: <span class="fill-blank">Hiya na3sa f l-bit.</span></li>
+          <li>This lesson (ders - m.) is written well. (mektub)
+              <br>Answer: <span class="fill-blank">Had d-ders mektub mzyan.</span></li>
+      </ol>
+      <div class="note">
+          Participles are very useful for describing states and forming passive sentences. Listen for the `CaCeC` (active) and `m-C-CuC` (passive) patterns in everyday speech!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

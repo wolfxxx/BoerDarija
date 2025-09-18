@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | A2 Module 14: Simple Conditional 'If'</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .conditional-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .conditional-table th, .conditional-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .conditional-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .conditional-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .conditional-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .conditional-table .condition-marker { color: #ffcc99; font-weight: bold; }
+    .conditional-table .verb-phrase { color: #fff; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 100px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .conditional-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a2.html">A2 Elementary</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 14: Simple Conditional 'If'</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>A2 Module 14: Simple Conditional "If" with `Ila` / `Ida`</h1>
+    <p>Learn how to express conditions and possible outcomes using "if" in Darija.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Introducing Conditional Sentences</h2>
+      <p>Conditional sentences talk about a condition (the "if" part) and a result or consequence (the "then" part, which is often implied). We use them to discuss possibilities, hypothetical situations, or cause and effect.</p>
+      <p>In Darija, the most common word for "if" is `ila` (<span class="darija-script">إلى</span>) or `ida` (<span class="darija-script">إذا</span>). `Ila` is generally more common in everyday speech.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Structure 1: `Ila` + Past Tense, Result in Future Tense</h2>
+      <p>This is a very common structure for talking about real, possible future conditions and their likely results.</p>
+      <p>Pattern: **`Ila` + [Verb in Past Tense], `ghadi` + [Verb in Present Stem/Form]**</p>
+      <p>(If [condition happened/is met], then [result will happen])</p>
+      
+      <table class="conditional-table">
+        <thead>
+            <tr>
+                <th>English</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Breakdown</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>If I go to the market, I will buy vegetables.</td>
+                <td><span class="condition-marker darija-script">إلى</span> <span class="verb-phrase darija-script">مشيت للسوق،</span> <span class="verb-phrase darija-script">غادي نشري الخضرة.</span></td>
+                <td class="transcription"><span class="condition-marker">Ila</span> <span class="verb-phrase">mshit l s-souq,</span> <span class="verb-phrase">ghadi nshri l-khdra.</span></td>
+                <td>If I went (past), I will buy (future)</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 1')"></span></td>
+            </tr>
+            <tr>
+                <td>If she studies, she will pass the exam.</td>
+                <td><span class="condition-marker darija-script">إلى</span> <span class="verb-phrase darija-script">قرات،</span> <span class="verb-phrase darija-script">غادي تنجح ف الامتحان.</span></td>
+                <td class="transcription"><span class="condition-marker">Ila</span> <span class="verb-phrase">qrat,</span> <span class="verb-phrase">ghadi tnje7 f l-imti7an.</span></td>
+                <td>If she read/studied (past), she will pass (future)</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 2')"></span></td>
+            </tr>
+            <tr>
+                <td>If you (m.s.) have time, we will go to the cinema.</td>
+                <td><span class="condition-marker darija-script">إلى</span> <span class="verb-phrase darija-script">كان عندك الوقت،</span> <span class="verb-phrase darija-script">غادي نمشيو للسينما.</span></td>
+                <td class="transcription"><span class="condition-marker">Ila</span> <span class="verb-phrase">kan 3ndek l-weqt,</span> <span class="verb-phrase">ghadi nmshiw l s-sinima.</span></td>
+                <td>If you had (past) time, we will go (future)</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 3')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+       <div class="note">
+        <strong>"Past" Tense for Future Condition:</strong> It might seem strange to use the past tense in the "if" clause for a future possibility. This is a common feature in many languages for this type of conditional (sometimes called "first conditional" or "real future conditional"). Think of it as "If [this condition *were to be* met]..."
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Structure 2: `Ila` + Present Tense (`ka-`), Result in Present/Future</h2>
+        <p>This structure can be used for general truths, habitual conditions, or sometimes also for future possibilities, similar to Structure 1.</p>
+        <p>Pattern: **`Ila` + [Verb with `ka-`], [Result with `ka-` (habitual) or `ghadi` (future)]**</p>
+
+        <table class="conditional-table">
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Breakdown</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>If I eat a lot, I get tired. (Habitual)</td>
+                    <td><span class="condition-marker darija-script">إلى</span> <span class="verb-phrase darija-script">كاناكل بزاف،</span> <span class="verb-phrase darija-script">كانعيا.</span></td>
+                    <td class="transcription"><span class="condition-marker">Ila</span> <span class="verb-phrase">kanakul bzzaf,</span> <span class="verb-phrase">kan3ya.</span></td>
+                    <td>If I eat (present `ka-`), I get tired (present `ka-`)</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 4')"></span></td>
+                </tr>
+                <tr>
+                    <td>If you (f.s.) study, you will understand. (Future possibility)</td>
+                    <td><span class="condition-marker darija-script">إلى</span> <span class="verb-phrase darija-script">كاتقراي،</span> <span class="verb-phrase darija-script">غادي تفهمي.</span></td>
+                    <td class="transcription"><span class="condition-marker">Ila</span> <span class="verb-phrase">katqray,</span> <span class="verb-phrase">ghadi tfhmi.</span></td>
+                    <td>If you study (present `ka-`), you will understand (future)</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 5')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+         <div class="note">
+            For A2, the **`Ila` + Past Tense, Future Tense** structure (Structure 1) is often the most straightforward and commonly taught for future possibilities. Structure 2 is also valid but can have more nuances.
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Order of Clauses</h2>
+        <p>The "if" clause (`ila` clause) can come before or after the main result clause. If it comes after, you typically don't need a comma (or pause in speech).</p>
+        
+        <p>Example: <span class="darija-script">غادي نشري الخضرة إلى مشيت للسوق.</span><br>
+        <span class="transcription">Ghadi nshri l-khdra ila mshit l s-souq.</span><br>
+        (I will buy vegetables if I go to the market.)</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Negative Conditions</h2>
+        <p>To say "If... not...", you negate the verb in the `ila` clause.</p>
+        <p>Example: If I don't study, I will not pass.<br>
+        <span class="darija-script">إلى ما قريتش، ما غاديش ننجح.</span><br>
+        <span class="transcription">Ila ma qrit-sh, ma ghadi-sh nnje7.</span><br>
+        (Here `qrit-sh` is "I did not study" - past tense negation)</p>
+
+        <p>Example: If it doesn't rain (<span class="darija-script">الشتا ما طاحتش</span> - shta ma ta7tsh - rain didn't fall) tomorrow, we will go out.<br>
+        <span class="darija-script">إلى الشتا ما طاحتش غدا، غادي نخرجو.</span><br>
+        <span class="transcription">Ila sh-shta ma ta7tsh ghdda, ghadi nkhurju.</span></p>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Complete the Conditional</h3>
+      <p>Fill in the blanks to complete the conditional sentences. Use Structure 1 (`Ila` + Past, Result with `ghadi`).</p>
+      <ol>
+          <li><span class="condition-marker darija-script">إلى</span> <span class="fill-blank">dert</span> (dert - I did) الرياضة (riyada - sports)، <span class="fill-blank">ghadi nkun</span> (nkun - I will be) مزيان.</li>
+          <li><span class="condition-marker darija-script">إلى</span> <span class="fill-blank">kan</span> (kan - he was) البرد (l-berd - cold)، <span class="fill-blank">ghadi nlbs</span> (nlbs - I will wear) جاكيطة (jakita - jacket).</li>
+          <li><span class="condition-marker darija-script">إلى</span> <span class="fill-blank">shrebti</span> (shrebti - you drank) بزاف د القهوة، <span class="fill-blank">ma ghadi-sh tn3s</span> (ma ghadi-sh tn3s - you will not sleep) مزيان.</li>
+      </ol>
+
+      <h3>Exercise 2: Translate to Darija</h3>
+      <p>Translate these sentences using simple conditionals.</p>
+      <ol>
+          <li>If I have money, I will travel to Fes.
+              <br>Answer: <span class="fill-blank">Ila kan 3ndi l-flus, ghadi nsafr l Fas.</span></li>
+          <li>If she comes early, she will find us here. (to find: `lqa`)
+              <br>Answer: <span class="fill-blank">Ila jat bekri, ghadi tlqana hna.</span> (jat = she came; tlqana = she will find us)</li>
+          <li>We will eat tagine if you (m.s.) cook it.
+              <br>Answer: <span class="fill-blank">Ghadi naklu ttajin ila tiyyebtih.</span> (tiyyebtih = you cooked it)</li>
+      </ol>
+      <div class="note">
+          Conditional sentences are very useful for planning and discussing possibilities. Try making up some "if... then..." scenarios about your day!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

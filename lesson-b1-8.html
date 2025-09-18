@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | B1 Module 8: Derived Verb Forms I (Form II)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .verb-pattern-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .verb-pattern-table th, .verb-pattern-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .verb-pattern-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .verb-pattern-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .verb-pattern-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .verb-pattern-table .verb-form { font-weight: bold; color: #99ff99; }
+    .verb-pattern-table .root-verb { font-style: italic; color: #ccc; }
+    .verb-pattern-table .meaning-change { color: #fff; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 120px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .verb-pattern-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 8: Derived Verb Forms I (Form II)</span>
+    </div>
+  </div>
+  <!-- Corrected Breadcrumb for B1 -->
+  <div class="breadcrumb" style="display:none;" id="b1-breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 8: Derived Verb Forms I (Form II)</span>
+    </div>
+  </div>
+  <script>
+    // Simple script to show the correct breadcrumb
+    document.getElementById('b1-breadcrumb').style.display = 'block';
+    // And hide the A2 one if it was a copy-paste error from a template
+    // document.querySelector('.breadcrumb:not(#b1-breadcrumb)').style.display = 'none';
+  </script>
+
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>B1 Module 8: Derived Verb Forms I (Form II - Causative/Intensive)</h1>
+    <p>Unlock a new layer of Darija by understanding derived verb forms, starting with Form II, which often adds a causative or intensive meaning.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Introduction to Derived Verb Forms (`l-awzan`)</h2>
+      <p>In Arabic and its dialects like Darija, most verbs are derived from a three-consonant root (e.g., K-T-B for "write"). By adding prefixes, suffixes, or changing the vowel patterns and doubling consonants, new verbs with related meanings can be formed. These patterns are called `awzan` (<span class="darija-script">أوزان</span> - measures/patterns).</p>
+      <p>Understanding these patterns can help you guess the meaning of new verbs and expand your vocabulary significantly. We start with one of the most common: Form II.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Form II: The `fe33el` (<span class="darija-script">فعّــل</span>) Pattern</h2>
+      <p>Form II is typically characterized by the **doubling of the middle root consonant**. It often imparts one of these meanings to the basic Form I verb:</p>
+      <ul>
+          <li><strong>Causative:</strong> To make someone/something do the action of the Form I verb (e.g., to make understand, to make enter).</li>
+          <li><strong>Intensive:</strong> To do the action of the Form I verb with intensity or repetition (e.g., to break into pieces vs. to break).</li>
+          <li>Sometimes it creates a new verb with a related but distinct meaning.</li>
+      </ul>
+      <p>The present tense prefix often becomes `kay-` for "he" (instead of just `ka-y-`).</p>
+      
+      <h3>Examples of Form II Verbs:</h3>
+      <table class="verb-pattern-table">
+        <thead>
+            <tr>
+                <th>Form I Verb (Root/Meaning)</th>
+                <th>Form II Verb (Script/Trans.)</th>
+                <th>Meaning Change</th>
+                <th>Example Sentence (Form II)</th>
+                <th>Audio (Form II)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="root-verb">فهم (fhem)</span> - to understand</td>
+                <td><span class="verb-form darija-script">فهّــم</span> / <span class="verb-form transcription">fhhem</span></td>
+                <td class="meaning-change">Causative: To make understand, to explain</td>
+                <td class="example-sentence"><span class="darija-script">الأستاذ كايفهّــم الدرس.</span> (L-ustad kayfhhem d-ders.) - The teacher explains the lesson.</td>
+                <td><span class="play-button" onclick="alert('Audio: fhhem')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="root-verb">دخل (dkhel)</span> - to enter</td>
+                <td><span class="verb-form darija-script">دخّــل</span> / <span class="verb-form transcription">dekhkhel</span></td>
+                <td class="meaning-change">Causative: To make enter, to bring in, to insert</td>
+                <td class="example-sentence"><span class="darija-script">دخّــلت الطموبيل للݣــاراج.</span> (Dekhkhlt t-tomobil l l-garaj.) - I put the car in the garage.</td>
+                <td><span class="play-button" onclick="alert('Audio: dekhkhel')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="root-verb">خرج (khrej)</span> - to exit/go out</td>
+                <td><span class="verb-form darija-script">خرّج</span> / <span class="verb-form transcription">kherrej</span></td>
+                <td class="meaning-change">Causative: To make go out, to take out, to fire (from job)</td>
+                <td class="example-sentence"><span class="darija-script">خرّجت ستيلو من الصاك.</span> (Kherrejt stilo mn s-sak.) - I took a pen out of the bag.</td>
+                <td><span class="play-button" onclick="alert('Audio: kherrej')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="root-verb">رجع (rje3)</span> - to return</td>
+                <td><span class="verb-form darija-script">رجّــع</span> / <span class="verb-form transcription">rejje3</span></td>
+                <td class="meaning-change">Causative: To make return, to give back</td>
+                <td class="example-sentence"><span class="darija-script">خاصني نرجّــع ليك كتابك.</span> (Khassni nrejje3 lik ktabek.) - I need to give you back your book.</td>
+                <td><span class="play-button" onclick="alert('Audio: rejje3')"></span></td>
+            </tr>
+             <tr>
+                <td><span class="root-verb">كبر (kber)</span> - to grow up/become big</td>
+                <td><span class="verb-form darija-script">كبّــر</span> / <span class="verb-form transcription">kebber</span></td>
+                <td class="meaning-change">Causative/Intensive: To make big, to enlarge, to raise (children)</td>
+                <td class="example-sentence"><span class="darija-script">كبّــرت الصورة.</span> (Kebbert s-sura.) - I enlarged the picture.</td>
+                <td><span class="play-button" onclick="alert('Audio: kebber')"></span></td>
+            </tr>
+             <tr>
+                <td><span class="root-verb">هرس (hres)</span> - to break</td>
+                <td><span class="verb-form darija-script">هرّس</span> / <span class="verb-form transcription">herres</span></td>
+                <td class="meaning-change">Intensive: To smash, break into pieces</td>
+                <td class="example-sentence"><span class="darija-script">الولد هرّس الزاجة.</span> (L-weld herres z-zaja.) - The boy smashed the glass.</td>
+                <td><span class="play-button" onclick="alert('Audio: herres')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Conjugating Form II Verbs</h2>
+        <p>Form II verbs generally conjugate like regular verbs in the past, present (`ka-`), and future (`ghadi`), keeping the doubled middle consonant.</p>
+        <h3>Example: `fhhem` (<span class="darija-script">فهّــم</span> - to explain)</h3>
+        <ul>
+            <li>**Past:** Ana `fhhemt`, Nta `fhhemti`, Huwa `fhhem`, Hiya `fhhemet`, 7na `fhhemna`, Huma `fhhemu`</li>
+            <li>**Present (`ka-`):** Ana `kanfhhem`, Nta `katfhhem`, Huwa `kayfhhem`</li>
+            <li>**Future (`ghadi`):** Ana `ghadi nfhhem`, Nta `ghadi tfhhem`, Huwa `ghadi yfhhem`</li>
+        </ul>
+        <div class="note">
+            <strong>Listen for the Shadda:</strong> The doubled middle consonant (marked by a "shadda" ّ in Arabic script) is important for pronunciation and distinguishes Form II from Form I.
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Identifying Form II Verbs</h2>
+        <p>When you encounter a new verb in Darija:</p>
+        <ul>
+            <li>Listen for a doubled middle consonant sound.</li>
+            <li>If you know the Form I meaning, consider if the new verb has a causative ("to make someone do X") or intensive ("to do X a lot/strongly") meaning.</li>
+            <li>Over time and with exposure, you'll start to recognize the patterns.</li>
+        </ul>
+        <p>Not all verbs have a common Form II, and sometimes a Form II verb exists without an obvious Form I counterpart in everyday use.</p>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Meaning Match</h3>
+      <p class="prompt">Match the Form I verb with its likely Form II meaning.</p>
+      <ol>
+          <li>`wsel` (to arrive)</li>
+          <li>`khrej` (to go out)</li>
+          <li>`qra` (to read)</li>
+      </ol>
+      <ul>
+          <li>A. To make read / to teach</li>
+          <li>B. To make arrive / to deliver</li>
+          <li>C. To make go out / to take out</li>
+      </ul>
+      <p><em>Answers: 1-B (`wssel`), 2-C (`kherrej`), 3-A (`qerra`)</em></p>
+
+      <h3>Exercise 2: Form the Sentence</h3>
+      <p class="prompt">Use the Form II verb in parentheses to complete the sentence.</p>
+      <ol>
+          <li>الأستاذة <span class="fill-blank">كاتفهّــم</span> مزيان. (`fhhem` - Hiya, present) - The teacher explains well.</li>
+          <li>أنا <span class="fill-blank">رجّــعت</span> الكتاب للمكتبة البارح. (`rejje3` - Ana, past) - I returned the book to the library yesterday.</li>
+          <li>غدا، هو <span class="fill-blank">غادي يوصّــل</span> الأمانة. (`wssel` - Huwa, future) - Tomorrow, he will deliver the package. (`l-amana` = package/trust)</li>
+      </ol>
+
+       <h3>Exercise 3: Translate to Darija</h3>
+      <ol>
+          <li>My mother taught me how to cook. (to teach - `3llem`, Form II of `3lem` - to know)
+              <br>Answer: <span class="fill-blank">ماما علّماتني كيفاش نطيب.</span> (Mama 3ellmatni kifash ntiyyeb.)</li>
+          <li>The company employed many people last year. (to employ/make work - `kheddem`)
+              <br>Answer: <span class="fill-blank">الشركة خدّمات بزاف د الناس العام اللي فات.</span> (Sh-sharika kheddmat bzzaf d n-nas l-3am lli fat.)</li>
+      </ol>
+      <div class="note">
+          Recognizing Form II verbs is a powerful tool for expanding your vocabulary. Pay attention to that doubled middle consonant!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Simple script to ensure correct breadcrumb is shown (if copy-pasting template)
+    if (document.getElementById('b1-breadcrumb')) {
+        let allBreadcrumbs = document.querySelectorAll('.breadcrumb');
+        allBreadcrumbs.forEach(bc => bc.style.display = 'none');
+        document.getElementById('b1-breadcrumb').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

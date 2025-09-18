@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | Module 10: Days, Months & Time</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .time-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .time-table th, .time-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .time-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .time-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .time-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 100px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .time-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a1.html">A1 Beginner</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 10: Days, Months & Time</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>Module 10: Days, Months & Time</h1>
+    <p>Learn to navigate the calendar and the clock in Darija, discussing days, months, and specific times.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Days of the Week</h2>
+      <p>The week in Morocco typically starts on Monday.</p>
+      <table class="time-table">
+        <thead>
+            <tr>
+                <th>English</th>
+                <th>Darija Script</th>
+                <th>Transcription</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Monday</td><td class="darija-script">التنين</td><td class="transcription">t-tnin</td><td><span class="play-button" onclick="alert('Audio: t-tnin')"></span></td></tr>
+            <tr><td>Tuesday</td><td class="darija-script">التلات</td><td class="transcription">t-tlat</td><td><span class="play-button" onclick="alert('Audio: t-tlat')"></span></td></tr>
+            <tr><td>Wednesday</td><td class="darija-script">الأربع</td><td class="transcription">l-arb3</td><td><span class="play-button" onclick="alert('Audio: l-arb3')"></span></td></tr>
+            <tr><td>Thursday</td><td class="darija-script">الخميس</td><td class="transcription">l-khmis</td><td><span class="play-button" onclick="alert('Audio: l-khmis')"></span></td></tr>
+            <tr><td>Friday</td><td class="darija-script">الجمعة</td><td class="transcription">j-jem3a</td><td><span class="play-button" onclick="alert('Audio: j-jem3a')"></span></td></tr>
+            <tr><td>Saturday</td><td class="darija-script">السبت</td><td class="transcription">s-sebt</td><td><span class="play-button" onclick="alert('Audio: s-sebt')"></span></td></tr>
+            <tr><td>Sunday</td><td class="darija-script">الحد</td><td class="transcription">l-7edd</td><td><span class="play-button" onclick="alert('Audio: l-7edd')"></span></td></tr>
+        </tbody>
+      </table>
+      <div class="note">
+        <strong>Usage:</strong> To say "on Monday," you often use `nhar t-tnin` (<span class="darija-script">نهار التنين</span> - day Monday) or simply `t-tnin`. The definite article `l-/t-/j-/s-` is usually included when referring to a specific day.
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Months of the Year</h2>
+        <p>The Gregorian calendar months are commonly used, often with names derived from French/Arabic.</p>
+        <table class="time-table">
+          <thead>
+              <tr>
+                  <th>English</th>
+                  <th>Darija Script</th>
+                  <th>Transcription</th>
+                  <th>Audio</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr><td>January</td><td class="darija-script">يناير</td><td class="transcription">yanayr</td><td><span class="play-button" onclick="alert('Audio: yanayr')"></span></td></tr>
+              <tr><td>February</td><td class="darija-script">فبراير</td><td class="transcription">febrayr</td><td><span class="play-button" onclick="alert('Audio: febrayr')"></span></td></tr>
+              <tr><td>March</td><td class="darija-script">مارس</td><td class="transcription">mars</td><td><span class="play-button" onclick="alert('Audio: mars')"></span></td></tr>
+              <tr><td>April</td><td class="darija-script">أبريل</td><td class="transcription">abril</td><td><span class="play-button" onclick="alert('Audio: abril')"></span></td></tr>
+              <tr><td>May</td><td class="darija-script">ماي</td><td class="transcription">may</td><td><span class="play-button" onclick="alert('Audio: may')"></span></td></tr>
+              <tr><td>June</td><td class="darija-script">يونيو</td><td class="transcription">yunyu</td><td><span class="play-button" onclick="alert('Audio: yunyu')"></span></td></tr>
+              <tr><td>July</td><td class="darija-script">يوليوز</td><td class="transcription">yulyuz</td><td><span class="play-button" onclick="alert('Audio: yulyuz')"></span></td></tr>
+              <tr><td>August</td><td class="darija-script">غشت</td><td class="transcription">ghusht</td><td><span class="play-button" onclick="alert('Audio: ghusht')"></span></td></tr>
+              <tr><td>September</td><td class="darija-script">شتنبر</td><td class="transcription">shutanbir</td><td><span class="play-button" onclick="alert('Audio: shutanbir')"></span></td></tr>
+              <tr><td>October</td><td class="darija-script">أكتوبر</td><td class="transcription">oktobr</td><td><span class="play-button" onclick="alert('Audio: oktobr')"></span></td></tr>
+              <tr><td>November</td><td class="darija-script">نونبر</td><td class="transcription">nuwanbir</td><td><span class="play-button" onclick="alert('Audio: nuwanbir')"></span></td></tr>
+              <tr><td>December</td><td class="darija-script">دجنبر</td><td class="transcription">dujanbir</td><td><span class="play-button" onclick="alert('Audio: dujanbir')"></span></td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          <strong>Usage:</strong> To say "in March," use `f mars` (<span class="darija-script">ف مارس</span>).
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Telling Time</h2>
+        <p>Time is expressed using `s-sa3a` (<span class="darija-script">الساعة</span> - the hour) followed by the number.</p>
+
+        <h3>Basic Time Expressions:</h3>
+         <table class="time-table">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Darija Script</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1:00</td><td class="darija-script">الوحدة</td><td class="transcription">(s-sa3a) l-we7da</td><td><span class="play-button" onclick="alert('Audio: l-we7da')"></span></td></tr>
+                <tr><td>2:00</td><td class="darija-script">الجوج</td><td class="transcription">(s-sa3a) j-juj</td><td><span class="play-button" onclick="alert('Audio: j-juj')"></span></td></tr>
+                <tr><td>3:00</td><td class="darija-script">التلاتة</td><td class="transcription">(s-sa3a) t-tlata</td><td><span class="play-button" onclick="alert('Audio: t-tlata')"></span></td></tr>
+                <tr><td>4:00</td><td class="darija-script">الربعة</td><td class="transcription">(s-sa3a) r-rb3a</td><td><span class="play-button" onclick="alert('Audio: r-rb3a')"></span></td></tr>
+                <tr><td>5:00</td><td class="darija-script">الخمسة</td><td class="transcription">(s-sa3a) l-khmsa</td><td><span class="play-button" onclick="alert('Audio: l-khmsa')"></span></td></tr>
+                 <tr><td>6:00</td><td class="darija-script">الستة</td><td class="transcription">(s-sa3a) s-setta</td><td><span class="play-button" onclick="alert('Audio: s-setta')"></span></td></tr>
+                <!-- ...and so on up to 12 -->
+                <tr><td>12:00</td><td class="darija-script">الطناش</td><td class="transcription">(s-sa3a) t-tnash</td><td><span class="play-button" onclick="alert('Audio: t-tnash')"></span></td></tr>
+                <tr><td>_ :15 (Quarter past)</td><td class="darija-script">... و ربع</td><td class="transcription">... u rbe3</td><td><span class="play-button" onclick="alert('Audio: u rbe3')"></span></td></tr>
+                <tr><td>_ :30 (Half past)</td><td class="darija-script">... و نص</td><td class="transcription">... u nus</td><td><span class="play-button" onclick="alert('Audio: u nus')"></span></td></tr>
+                <tr><td>_ :45 (Quarter to)</td><td class="darija-script">... إلا ربع / ... قل ربع</td><td class="transcription">... illa rbe3 / ... qell rbe3</td><td><span class="play-button" onclick="alert('Audio: illa rbe3')"></span></td></tr>
+            </tbody>
+          </table>
+           <div class="note">
+            <strong>`l-we7da` (One):</strong> Note that "one o'clock" uses the feminine form `l-we7da`. For other hours, use the standard number names (often with `l-` prefix).
+           </div>
+
+        <h3>Examples:</h3>
+        <ul>
+            <li>3:15 → <span class="darija-script">التلاتة و ربع</span> (t-tlata u rbe3)</li>
+            <li>7:30 → <span class="darija-script">السبعة و نص</span> (s-sb3a u nus)</li>
+            <li>1:45 → <span class="darija-script">الجوج إلا ربع</span> (j-juj illa rbe3) - Literally "Two except a quarter"</li>
+            <li>5 minutes past 4 → <span class="darija-script">الربعة و خمسة دقايق</span> (r-rb3a u khmsa dqayeq)</li>
+            <li>10 minutes to 9 → <span class="darija-script">التسعود قل عشرة دقايق</span> (t-ts3ud qell 3shra dqayeq) (dqayeq = minutes)</li>
+        </ul>
+        <div class="note">
+            <strong>AM/PM:</strong> To specify morning or evening, you can add:
+            <ul>
+                <li>`dyal s-sba7` (<span class="darija-script">ديال الصباح</span>) - of the morning (AM)</li>
+                <li>`dyal l-3shiya` (<span class="darija-script">ديال العشية</span>) - of the afternoon/evening (PM)</li>
+                <li>`dyal l-lil` (<span class="darija-script">ديال الليل</span>) - of the night (late PM)</li>
+            </ul>
+            Example: 9:00 AM → <span class="darija-script">التسعود ديال الصباح</span> (t-ts3ud dyal s-sba7)
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Common Time Expressions</h2>
+        <table class="time-table">
+             <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija Script</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+             <tbody>
+                <tr><td>Today</td><td class="darija-script">اليوم</td><td class="transcription">l-yum</td><td><span class="play-button" onclick="alert('Audio: l-yum')"></span></td></tr>
+                <tr><td>Tomorrow</td><td class="darija-script">غدا</td><td class="transcription">ghdda</td><td><span class="play-button" onclick="alert('Audio: ghdda')"></span></td></tr>
+                <tr><td>Yesterday</td><td class="darija-script">البارح</td><td class="transcription">l-bare7</td><td><span class="play-button" onclick="alert('Audio: l-bare7')"></span></td></tr>
+                <tr><td>Now</td><td class="darija-script">دابا</td><td class="transcription">daba</td><td><span class="play-button" onclick="alert('Audio: daba')"></span></td></tr>
+                <tr><td>Later</td><td class="darija-script">من بعد</td><td class="transcription">mn ba3d</td><td><span class="play-button" onclick="alert('Audio: mn ba3d')"></span></td></tr>
+                <tr><td>Week</td><td class="darija-script">سيمانة</td><td class="transcription">simana</td><td><span class="play-button" onclick="alert('Audio: simana')"></span></td></tr>
+                <tr><td>Month</td><td class="darija-script">شهر</td><td class="transcription">shher</td><td><span class="play-button" onclick="alert('Audio: shher')"></span></td></tr>
+                <tr><td>Year</td><td class="darija-script">عام</td><td class="transcription">3am</td><td><span class="play-button" onclick="alert('Audio: 3am')"></span></td></tr>
+                <tr><td>Morning</td><td class="darija-script">صباح</td><td class="transcription">sba7</td><td><span class="play-button" onclick="alert('Audio: sba7')"></span></td></tr>
+                <tr><td>Afternoon/Evening</td><td class="darija-script">عشية</td><td class="transcription">3shiya</td><td><span class="play-button" onclick="alert('Audio: 3shiya')"></span></td></tr>
+                <tr><td>Night</td><td class="darija-script">ليل</td><td class="transcription">lil</td><td><span class="play-button" onclick="alert('Audio: lil')"></span></td></tr>
+            </tbody>
+        </table>
+        <h3>Combining Expressions:</h3>
+        <ul>
+            <li>This week: `had s-simana`</li>
+            <li>Next month: `sh-shher j-jay` (the coming month)</li>
+            <li>Last year: `l-3am lli fat` (the year that passed)</li>
+        </ul>
+    </section>
+
+     <section class="lesson-section">
+        <h2>Asking About Time & Dates</h2>
+         <table class="time-table">
+            <thead>
+                <tr>
+                    <th>English Question</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>What time is it?</td>
+                    <td class="darija-script">شحال هادي ف الساعة؟ / شحال ف الساعة؟</td>
+                    <td>Sh7al hadi f s-sa3a? / Sh7al f s-sa3a?</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sh7al hadi f s-sa3a?')"></span></td>
+                </tr>
+                <tr>
+                    <td>What day is it today?</td>
+                    <td class="darija-script">أشمن نهار اليوم؟</td>
+                    <td>Ashmn nhar l-yum?</td>
+                    <td><span class="play-button" onclick="alert('Audio: Ashmn nhar l-yum?')"></span></td>
+                </tr>
+                 <tr>
+                    <td>When?</td>
+                    <td class="darija-script">إيمتى؟ / فوقاش؟</td>
+                    <td>Imta? / Foqash?</td>
+                    <td><span class="play-button" onclick="alert('Audio: Imta? / Foqash?')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: What Day/Month?</h3>
+      <p>Write the Darija transcription for:</p>
+      <ol>
+          <li>Friday: <span class="fill-blank">j-jem3a</span></li>
+          <li>August: <span class="fill-blank">ghusht</span></li>
+          <li>Tuesday: <span class="fill-blank">t-tlat</span></li>
+          <li>January: <span class="fill-blank">yanayr</span></li>
+      </ol>
+
+      <h3>Exercise 2: Tell the Time</h3>
+      <p>Write the time in Darija transcription:</p>
+      <ol>
+          <li>8:00 → <span class="fill-blank">t-tmnya</span></li>
+          <li>4:30 → <span class="fill-blank">r-rb3a u nus</span></li>
+          <li>10:15 → <span class="fill-blank">l-3shra u rbe3</span></li>
+          <li>6:45 PM → <span class="fill-blank">s-sb3a illa rbe3 dyal l-3shiya</span></li>
+      </ol>
+
+       <h3>Exercise 3: Complete the Sentence</h3>
+      <p>Use the time expressions.</p>
+      <ol>
+          <li>I will go tomorrow: Ana ghadi nmshi <span class="fill-blank">ghdda</span>.</li>
+          <li>We drink coffee in the morning: 7na kanshrbu l-qhwa f <span class="fill-blank">s-sba7</span>.</li>
+          <li>He was here yesterday: Huwa kan hna <span class="fill-blank">l-bare7</span>.</li>
+          <li>What time is it now? Sh7al f s-sa3a <span class="fill-blank">daba</span>?</li>
+      </ol>
+
+      <div class="note">
+          <strong>Real-World Practice:</strong> Try asking a friend (or yourself!) "Sh7al hadi f s-sa3a?" throughout the day and answering in Darija.
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

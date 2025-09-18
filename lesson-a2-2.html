@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | A2 Module 2: Past Tense (Irregular Verbs)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .verb-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .verb-table th, .verb-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .verb-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .verb-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .verb-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .verb-table .pronoun { font-weight: bold; color: #fff; }
+    .verb-table .verb-form { font-weight: bold; color: #99ff99; }
+    .verb-table .infinitive { font-style: italic; color: #ccc; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 100px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .verb-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a2.html">A2 Elementary</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 2: Past Tense (Irregular Verbs)</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>A2 Module 2: Past Tense (Common Irregular Verbs & Full Conjugation)</h1>
+    <p>Continue mastering the past tense by learning key irregular verbs and practicing full conjugations.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Irregular Verbs in the Past Tense</h2>
+      <p>While many Darija verbs follow a somewhat regular pattern in the past tense (as seen in A2 Module 1), some of the most common verbs are irregular. This means their stems or endings change in ways that don't perfectly fit the standard pattern. These need to be memorized.</p>
+      <p>We'll focus on the full conjugation (all pronouns) for these important verbs.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h3>Verb: "to be" - `kan` (<span class="darija-script">كان</span>)</h3>
+      <p>The verb "to be" in the past tense is highly irregular and very important for saying "I was," "you were," etc.</p>
+      <table class="verb-table">
+        <thead>
+            <tr>
+                <th>Pronoun</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Meaning</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td class="pronoun">Ana (I)</td><td class="darija-script">كنت</td><td class="verb-form">kunt</td><td>I was</td><td><span class="play-button" onclick="alert('Audio: kunt')"></span></td></tr>
+            <tr><td class="pronoun">Nta (You m.s.)</td><td class="darija-script">كنتي</td><td class="verb-form">kunti</td><td>You were</td><td><span class="play-button" onclick="alert('Audio: kunti (m)')"></span></td></tr>
+            <tr><td class="pronoun">Nti (You f.s.)</td><td class="darija-script">كنتي</td><td class="verb-form">kunti</td><td>You were</td><td><span class="play-button" onclick="alert('Audio: kunti (f)')"></span></td></tr>
+            <tr><td class="pronoun">Huwa (He)</td><td class="darija-script">كان</td><td class="verb-form">kan</td><td>He was</td><td><span class="play-button" onclick="alert('Audio: kan')"></span></td></tr>
+            <tr><td class="pronoun">Hiya (She)</td><td class="darija-script">كانت</td><td class="verb-form">kanet</td><td>She was</td><td><span class="play-button" onclick="alert('Audio: kanet')"></span></td></tr>
+            <tr><td class="pronoun">7na (We)</td><td class="darija-script">كنا</td><td class="verb-form">kunna</td><td>We were</td><td><span class="play-button" onclick="alert('Audio: kunna')"></span></td></tr>
+            <tr><td class="pronoun">Ntuma (You pl.)</td><td class="darija-script">كنتو</td><td class="verb-form">kuntu</td><td>You (pl) were</td><td><span class="play-button" onclick="alert('Audio: kuntu')"></span></td></tr>
+            <tr><td class="pronoun">Huma (They)</td><td class="darija-script">كانو</td><td class="verb-form">kanu</td><td>They were</td><td><span class="play-button" onclick="alert('Audio: kanu')"></span></td></tr>
+        </tbody>
+      </table>
+      <p>Example: <span class="darija-script">البارح كنت ف السوق.</span> (L-bare7 kunt f s-souq.) - Yesterday I was in the market.</p>
+      <p>Example: <span class="darija-script">هو كان مريض.</span> (Huwa kan mrid.) - He was sick.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h3>Verb: "to have" (in the past) - `kan 3nd-` (<span class="darija-script">كان عند</span>)</h3>
+      <p>To say "I had," "you had," etc., you combine the past tense of "to be" (`kan`) with the `3nd-` + suffix structure.</p>
+      <table class="verb-table">
+        <thead>
+            <tr>
+                <th>Pronoun</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Meaning</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td class="pronoun">Ana</td><td class="darija-script">كان عندي</td><td class="verb-form">kan 3ndi</td><td>I had</td><td><span class="play-button" onclick="alert('Audio: kan 3ndi')"></span></td></tr>
+            <tr><td class="pronoun">Nta/Nti</td><td class="darija-script">كان عندك</td><td class="verb-form">kan 3ndek</td><td>You had</td><td><span class="play-button" onclick="alert('Audio: kan 3ndek')"></span></td></tr>
+            <tr><td class="pronoun">Huwa</td><td class="darija-script">كان عندو</td><td class="verb-form">kan 3ndu</td><td>He had</td><td><span class="play-button" onclick="alert('Audio: kan 3ndu')"></span></td></tr>
+            <tr><td class="pronoun">Hiya</td><td class="darija-script">كان عندها</td><td class="verb-form">kan 3ndha</td><td>She had</td><td><span class="play-button" onclick="alert('Audio: kan 3ndha')"></span></td></tr>
+            <tr><td class="pronoun">7na</td><td class="darija-script">كان عندنا</td><td class="verb-form">kan 3ndna</td><td>We had</td><td><span class="play-button" onclick="alert('Audio: kan 3ndna')"></span></td></tr>
+            <tr><td class="pronoun">Ntuma</td><td class="darija-script">كان عندكم</td><td class="verb-form">kan 3ndkum</td><td>You (pl) had</td><td><span class="play-button" onclick="alert('Audio: kan 3ndkum')"></span></td></tr>
+            <tr><td class="pronoun">Huma</td><td class="darija-script">كان عندهم</td><td class="verb-form">kan 3ndhum</td><td>They had</td><td><span class="play-button" onclick="alert('Audio: kan 3ndhum')"></span></td></tr>
+        </tbody>
+      </table>
+      <p>Example: <span class="darija-script">العام اللي فات كان عندي طموبيل زوينة.</span> (L-3am lli fat kan 3ndi ttomobil zwina.) - Last year I had a nice car.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h3>Verb: "to go" - `msha` (<span class="darija-script">مشى</span>)</h3>
+      <p>The verb "to go" is irregular in the past tense. Note the stem change for some pronouns.</p>
+      <table class="verb-table">
+        <thead>
+            <tr>
+                <th>Pronoun</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Meaning</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td class="pronoun">Ana</td><td class="darija-script">مشيت</td><td class="verb-form">mshit</td><td>I went</td><td><span class="play-button" onclick="alert('Audio: mshit')"></span></td></tr>
+            <tr><td class="pronoun">Nta/Nti</td><td class="darija-script">مشيتي</td><td class="verb-form">mshiti</td><td>You went</td><td><span class="play-button" onclick="alert('Audio: mshiti')"></span></td></tr>
+            <tr><td class="pronoun">Huwa</td><td class="darija-script">مشى</td><td class="verb-form">msha</td><td>He went</td><td><span class="play-button" onclick="alert('Audio: msha')"></span></td></tr>
+            <tr><td class="pronoun">Hiya</td><td class="darija-script">مشات</td><td class="verb-form">mshat</td><td>She went</td><td><span class="play-button" onclick="alert('Audio: mshat')"></span></td></tr>
+            <tr><td class="pronoun">7na</td><td class="darija-script">مشينا</td><td class="verb-form">mshina</td><td>We went</td><td><span class="play-button" onclick="alert('Audio: mshina')"></span></td></tr>
+            <tr><td class="pronoun">Ntuma</td><td class="darija-script">مشيتو</td><td class="verb-form">mshitu</td><td>You (pl) went</td><td><span class="play-button" onclick="alert('Audio: mshitu')"></span></td></tr>
+            <tr><td class="pronoun">Huma</td><td class="darija-script">مشاو</td><td class="verb-form">mshaw</td><td>They went</td><td><span class="play-button" onclick="alert('Audio: mshaw')"></span></td></tr>
+        </tbody>
+      </table>
+      <p>Example: <span class="darija-script">البارح مشينا للسينما.</span> (L-bare7 mshina l s-sinima.) - Yesterday we went to the cinema.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h3>Verb: "to see" - `shaf` (<span class="darija-script">شاف</span>)</h3>
+       <p>The verb "to see" also has some irregularities.</p>
+      <table class="verb-table">
+        <thead>
+            <tr>
+                <th>Pronoun</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Meaning</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td class="pronoun">Ana</td><td class="darija-script">شفت</td><td class="verb-form">sheft</td><td>I saw</td><td><span class="play-button" onclick="alert('Audio: sheft')"></span></td></tr>
+            <tr><td class="pronoun">Nta/Nti</td><td class="darija-script">شفتي</td><td class="verb-form">shefti</td><td>You saw</td><td><span class="play-button" onclick="alert('Audio: shefti')"></span></td></tr>
+            <tr><td class="pronoun">Huwa</td><td class="darija-script">شاف</td><td class="verb-form">shaf</td><td>He saw</td><td><span class="play-button" onclick="alert('Audio: shaf')"></span></td></tr>
+            <tr><td class="pronoun">Hiya</td><td class="darija-script">شافات</td><td class="verb-form">shafet</td><td>She saw</td><td><span class="play-button" onclick="alert('Audio: shafet')"></span></td></tr>
+            <tr><td class="pronoun">7na</td><td class="darija-script">شفنا</td><td class="verb-form">shefna</td><td>We saw</td><td><span class="play-button" onclick="alert('Audio: shefna')"></span></td></tr>
+            <tr><td class="pronoun">Ntuma</td><td class="darija-script">شفتو</td><td class="verb-form">sheftu</td><td>You (pl) saw</td><td><span class="play-button" onclick="alert('Audio: sheftu')"></span></td></tr>
+            <tr><td class="pronoun">Huma</td><td class="darija-script">شافو</td><td class="verb-form">shafu</td><td>They saw</td><td><span class="play-button" onclick="alert('Audio: shafu')"></span></td></tr>
+        </tbody>
+      </table>
+      <p>Example: <span class="darija-script">شفت واحد الفيلم زوين البارح.</span> (Sheft wa7ed l-film zwin l-bare7.) - I saw a nice film yesterday.</p>
+         <div class="note">
+            <strong>Memorization & Patterns:</strong> While these are "irregular," you'll start to see sub-patterns within irregular verbs too. The key is lots of exposure and practice.
+        </div>
+    </section>
+
+    <section class="lesson-section">
+      <h3>Verb: "to do / to make" - `dar` (<span class="darija-script">دار</span>)</h3>
+       <p>This is a very versatile and common irregular verb.</p>
+      <table class="verb-table">
+        <thead>
+            <tr>
+                <th>Pronoun</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Meaning</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td class="pronoun">Ana</td><td class="darija-script">درت</td><td class="verb-form">dert</td><td>I did/made</td><td><span class="play-button" onclick="alert('Audio: dert')"></span></td></tr>
+            <tr><td class="pronoun">Nta/Nti</td><td class="darija-script">درتي</td><td class="verb-form">derti</td><td>You did/made</td><td><span class="play-button" onclick="alert('Audio: derti')"></span></td></tr>
+            <tr><td class="pronoun">Huwa</td><td class="darija-script">دار</td><td class="verb-form">dar</td><td>He did/made</td><td><span class="play-button" onclick="alert('Audio: dar (he)')"></span></td></tr>
+            <tr><td class="pronoun">Hiya</td><td class="darija-script">دارت</td><td class="verb-form">daret</td><td>She did/made</td><td><span class="play-button" onclick="alert('Audio: daret')"></span></td></tr>
+            <tr><td class="pronoun">7na</td><td class="darija-script">درنا</td><td class="verb-form">derna</td><td>We did/made</td><td><span class="play-button" onclick="alert('Audio: derna')"></span></td></tr>
+            <tr><td class="pronoun">Ntuma</td><td class="darija-script">درتو</td><td class="verb-form">dertu</td><td>You (pl) did/made</td><td><span class="play-button" onclick="alert('Audio: dertu')"></span></td></tr>
+            <tr><td class="pronoun">Huma</td><td class="darija-script">دارو</td><td class="verb-form">daru</td><td>They did/made</td><td><span class="play-button" onclick="alert('Audio: daru')"></span></td></tr>
+        </tbody>
+      </table>
+      <p>Example: <span class="darija-script">شنو درتي البارح؟</span> (Shnu derti l-bare7?) - What did you (m/f) do yesterday?</p>
+      <p>Example: <span class="darija-script">درت واحد الكيكة.</span> (Dert wa7ed l-kika.) - I made a cake.</p>
+    </section>
+
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Fill in the Past Tense Verb</h3>
+      <p>Use the correct past tense form of the verb in parentheses.</p>
+      <ol>
+          <li>Ana <span class="fill-blank">kunt</span> ف مراكش السيمانة اللي فاتت. (`kan` - to be)</li>
+          <li>Huwa <span class="fill-blank">msha</span> للسوق البارح. (`msha` - to go)</li>
+          <li>Hiya <span class="fill-blank">shafet</span> واحد الطموبيل حمرا. (`shaf` - to see)</li>
+          <li>7na <span class="fill-blank">kan 3ndna</span> بزاف د الشغل. (`kan 3nd-` - to have)</li>
+          <li>Ntuma <span class="fill-blank">dertu</span> تمارين مزيان. (`dar` - to do)</li>
+      </ol>
+
+      <h3>Exercise 2: Translate to Darija</h3>
+      <p>Translate these sentences using the past tense:</p>
+      <ol>
+          <li>She was at home. <span class="fill-blank">Kanet f d-dar.</span></li>
+          <li>I went to the bank. <span class="fill-blank">Mshit l l-banka.</span></li>
+          <li>What did he see? <span class="fill-blank">Shnu shaf?</span></li>
+          <li>We had many books. <span class="fill-blank">Kan 3ndna bzzaf d l-ktub.</span></li>
+          <li>They made tagine. <span class="fill-blank">Daru ttajin.</span></li>
+      </ol>
+      <div class="note">
+          Irregular verbs are learned through practice and repetition. Try to make your own sentences about what you or others did yesterday or last week!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

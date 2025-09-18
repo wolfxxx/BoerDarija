@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | Module 11: Family Members</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .family-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .family-table th, .family-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .family-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .family-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .family-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+     .family-table .notes {
+        font-size: 0.9em;
+        color: #ccc;
+     }
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 100px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .family-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a1.html">A1 Beginner</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 11: Family Members</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>Module 11: Family Members</h1>
+    <p>Learn the Darija words for common family members and how to talk about your family.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Immediate Family</h2>
+      <p>Let's start with the closest family members.</p>
+      <table class="family-table">
+        <thead>
+            <tr>
+                <th>English</th>
+                <th>Darija Script</th>
+                <th>Transcription</th>
+                <th>Notes</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Family</td><td class="darija-script">عائلة</td><td class="transcription">3a'ila</td><td>General term</td><td><span class="play-button" onclick="alert('Audio: 3a\'ila')"></span></td></tr>
+            <tr><td>Parents</td><td class="darija-script">والدين</td><td class="transcription">walidin</td><td></td><td><span class="play-button" onclick="alert('Audio: walidin')"></span></td></tr>
+            <tr><td>Father</td><td class="darija-script">أب / بابا</td><td class="transcription">ab / baba</td><td class="notes">`ab` is more formal, `baba` is common.</td><td><span class="play-button" onclick="alert('Audio: ab / baba')"></span></td></tr>
+            <tr><td>Mother</td><td class="darija-script">أم / ماما</td><td class="transcription">omm / mama</td><td class="notes">`omm` is more formal, `mama` is common.</td><td><span class="play-button" onclick="alert('Audio: omm / mama')"></span></td></tr>
+            <tr><td>Brother</td><td class="darija-script">أخ / خو</td><td class="transcription">akh / khu</td><td class="notes">`khu` is more common in Darija.</td><td><span class="play-button" onclick="alert('Audio: akh / khu')"></span></td></tr>
+            <tr><td>Sister</td><td class="darija-script">أخت / خت</td><td class="transcription">ukht / kht</td><td class="notes">`kht` is more common in Darija.</td><td><span class="play-button" onclick="alert('Audio: ukht / kht')"></span></td></tr>
+            <tr><td>Siblings</td><td class="darija-script">خوت</td><td class="transcription">khut</td><td>Can mean brothers, or brothers & sisters.</td><td><span class="play-button" onclick="alert('Audio: khut')"></span></td></tr>
+            <tr><td>Son</td><td class="darija-script">ولد</td><td class="transcription">weld</td><td>Also means "boy".</td><td><span class="play-button" onclick="alert('Audio: weld')"></span></td></tr>
+            <tr><td>Daughter</td><td class="darija-script">بنت</td><td class="transcription">bent</td><td>Also means "girl".</td><td><span class="play-button" onclick="alert('Audio: bent')"></span></td></tr>
+            <tr><td>Children</td><td class="darija-script">ولاد / دراري</td><td class="transcription">wlad / drari</td><td class="notes">`wlad` is more general, `drari` often means kids/boys.</td><td><span class="play-button" onclick="alert('Audio: wlad / drari')"></span></td></tr>
+            <tr><td>Husband</td><td class="darija-script">راجل</td><td class="transcription">rajl</td><td>Also means "man".</td><td><span class="play-button" onclick="alert('Audio: rajl')"></span></td></tr>
+            <tr><td>Wife</td><td class="darija-script">مرا</td><td class="transcription">mra</td><td>Also means "woman".</td><td><span class="play-button" onclick="alert('Audio: mra')"></span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Talking About *Your* Family (Possessives)</h2>
+        <p>Remember possessive suffixes from Module 3? They are very commonly attached directly to family member terms.</p>
+
+        <h3>Using Direct Suffixes (Common)</h3>
+        <table class="family-table">
+             <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija Script</th>
+                    <th>Transcription</th>
+                    <th>Breakdown</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>My father</td>
+                    <td class="darija-script">بابا / أبي</td>
+                    <td class="transcription">baba / ab-i</td>
+                    <td>`baba` (no suffix needed) / `ab` + `-i`</td>
+                    <td><span class="play-button" onclick="alert('Audio: baba / ab-i')"></span></td>
+                </tr>
+                 <tr>
+                    <td>My mother</td>
+                    <td class="darija-script">ماما / أمي</td>
+                    <td class="transcription">mama / omm-i</td>
+                    <td>`mama` (no suffix needed) / `omm` + `-i`</td>
+                    <td><span class="play-button" onclick="alert('Audio: mama / omm-i')"></span></td>
+                </tr>
+                <tr>
+                    <td>My brother</td>
+                    <td class="darija-script">خويا</td>
+                    <td class="transcription">khu-ya</td>
+                    <td>`khu` + `-ya` (slight change for "my")</td>
+                     <td><span class="play-button" onclick="alert('Audio: khu-ya')"></span></td>
+                </tr>
+                 <tr>
+                    <td>My sister</td>
+                    <td class="darija-script">ختي</td>
+                    <td class="transcription">kh-ti</td> <!-- Shortened from kht -->
+                    <td>`kht` + `-i` (shortened stem)</td>
+                     <td><span class="play-button" onclick="alert('Audio: kh-ti')"></span></td>
+                </tr>
+                <tr>
+                    <td>Your (m.s.) brother</td>
+                    <td class="darija-script">خوك</td>
+                    <td class="transcription">khu-k</td>
+                     <td>`khu` + `-k`</td>
+                    <td><span class="play-button" onclick="alert('Audio: khu-k')"></span></td>
+                </tr>
+                <tr>
+                    <td>His wife</td>
+                    <td class="darija-script">مراتو</td>
+                    <td class="transcription">mra-tu</td>
+                    <td>`mra` + `-t-` + `-u` (feminine noun rule)</td>
+                    <td><span class="play-button" onclick="alert('Audio: mra-tu')"></span></td>
+                </tr>
+                 <tr>
+                    <td>Her husband</td>
+                    <td class="darija-script">راجلها</td>
+                    <td class="transcription">rajl-ha</td>
+                     <td>`rajl` + `-ha`</td>
+                    <td><span class="play-button" onclick="alert('Audio: rajl-ha')"></span></td>
+                </tr>
+                 <tr>
+                    <td>Our children</td>
+                    <td class="darija-script">ولادنا</td>
+                    <td class="transcription">wlad-na</td>
+                     <td>`wlad` + `-na`</td>
+                    <td><span class="play-button" onclick="alert('Audio: wlad-na')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+         <div class="note">
+            <strong>`Baba` / `Mama`:</strong> These common terms already imply "my dad" / "my mom" for many speakers, so the `-i` suffix isn't usually added to them. For other people's parents, you'd use suffixes or `dyal`: `babak` (your dad), `mamak` (your mom), `baba-h` (his dad), `mama-ha` (her mom), or `l-ab dyalu` (his father), `l-omm dyalha` (her mother).
+            <br><strong>`Khu-ya` / `Kh-ti`:</strong> Note the common forms for "my brother" and "my sister" use slightly modified stems.
+        </div>
+
+        <h3>Using `dyal` (Also Possible)</h3>
+        <p>While direct suffixes are very common with family, you can also use `dyal`. Structure: **[Family Member] + `dyal` + [Possessor]**</p>
+        <ul>
+            <li>My father: <span class="darija-script">الأب ديالي</span> (l-ab dyali) - More formal</li>
+            <li>Your (m.s.) brother: <span class="darija-script">الخو ديالك</span> (l-khu dyalek)</li>
+            <li>Her husband: <span class="darija-script">الراجل ديالها</span> (r-rajl dyalha)</li>
+            <li>Fatima's sister: <span class="darija-script">الخت ديال فاطمة</span> (l-kht dyal Fatima)</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Extended Family (Brief Overview)</h2>
+        <p>Here are a few terms for extended family members. Don't worry about memorizing all of these immediately for A1.</p>
+        <table class="family-table">
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija Script</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+             <tbody>
+                 <tr><td>Grandfather</td><td class="darija-script">جد</td><td class="transcription">jedd</td><td><span class="play-button" onclick="alert('Audio: jedd')"></span></td></tr>
+                 <tr><td>Grandmother</td><td class="darija-script">جدة</td><td class="transcription">jedda</td><td><span class="play-button" onclick="alert('Audio: jedda')"></span></td></tr>
+                 <tr><td>Uncle (Paternal)</td><td class="darija-script">عم</td><td class="transcription">3emm</td><td><span class="play-button" onclick="alert('Audio: 3emm')"></span></td></tr>
+                 <tr><td>Aunt (Paternal)</td><td class="darija-script">عمة</td><td class="transcription">3emma</td><td><span class="play-button" onclick="alert('Audio: 3emma')"></span></td></tr>
+                 <tr><td>Uncle (Maternal)</td><td class="darija-script">خال</td><td class="transcription">khal</td><td><span class="play-button" onclick="alert('Audio: khal')"></span></td></tr>
+                 <tr><td>Aunt (Maternal)</td><td class="darija-script">خالة</td><td class="transcription">khala</td><td><span class="play-button" onclick="alert('Audio: khala')"></span></td></tr>
+                 <tr><td>Cousin (Male, son of paternal uncle)</td><td class="darija-script">ولد العم</td><td class="transcription">weld l-3emm</td><td><span class="play-button" onclick="alert('Audio: weld l-3emm')"></span></td></tr>
+                 <tr><td>Cousin (Female, daughter of maternal aunt)</td><td class="darija-script">بنت الخالة</td><td class="transcription">bent l-khala</td><td><span class="play-button" onclick="alert('Audio: bent l-khala')"></span></td></tr>
+             </tbody>
+        </table>
+        <div class="note">
+            <strong>Complexity:</strong> Arabic-based languages often have specific terms depending on whether the relative is from the mother's or father's side (e.g., `3emm` vs. `khal` for uncle). Cousins are described by relationship (e.g., "son of the uncle"). For A1, focus on the immediate family first.
+        </div>
+    </section>
+
+     <section class="lesson-section">
+        <h2>Asking About Family</h2>
+         <table class="family-table">
+            <thead>
+                <tr>
+                    <th>English Question</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Do you have siblings?</td>
+                    <td class="darija-script">واش عندك خوت؟</td>
+                    <td>Wash 3ndek khut?</td>
+                    <td><span class="play-button" onclick="alert('Audio: Wash 3ndek khut?')"></span></td>
+                </tr>
+                <tr>
+                    <td>How many brothers do you have?</td>
+                    <td class="darija-script">شحال عندك د الخوت (دراري)؟</td>
+                    <td>Sh7al 3ndek d l-khut (drari)?</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sh7al 3ndek d l-khut?')"></span></td>
+                </tr>
+                 <tr>
+                    <td>What's your father's name?</td>
+                    <td class="darija-script">شنو سميت باك؟ / شنو سميت الأب ديالك؟</td>
+                    <td>Shnu smit bak? / Shnu smit l-ab dyalek?</td>
+                    <td><span class="play-button" onclick="alert('Audio: Shnu smit bak?')"></span></td>
+                </tr>
+                 <tr>
+                    <td>Are you married? (to m.s)</td>
+                    <td class="darija-script">واش مزوج؟</td>
+                    <td>Wash mzewwej?</td>
+                    <td><span class="play-button" onclick="alert('Audio: Wash mzewwej?')"></span></td>
+                </tr>
+                <tr>
+                    <td>Are you married? (to f.s)</td>
+                    <td class="darija-script">واش مزوجة؟</td>
+                    <td>Wash mzewwja?</td>
+                    <td><span class="play-button" onclick="alert('Audio: Wash mzewwja?')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Family Vocabulary</h3>
+      <p>Write the Darija transcription for:</p>
+      <ol>
+          <li>Mother: <span class="fill-blank">mama / omm</span></li>
+          <li>Brother: <span class="fill-blank">khu</span></li>
+          <li>Son: <span class="fill-blank">weld</span></li>
+          <li>Wife: <span class="fill-blank">mra</span></li>
+      </ol>
+
+      <h3>Exercise 2: Possessives</h3>
+      <p>Translate these into Darija using direct suffixes where common, otherwise `dyal`.</p>
+      <ol>
+          <li>My sister: <span class="fill-blank">kh-ti</span></li>
+          <li>His father: <span class="fill-blank">baba-h / l-ab dyalu</span></li>
+          <li>Your (f.s.) mother: <span class="fill-blank">mama-k / l-omm dyalek</span></li>
+          <li>Their children: <span class="fill-blank">wlad-hum / l-wlad dyalhum</span></li>
+          <li>Ahmed's brother: <span class="fill-blank">khu Ahmed / l-khu dyal Ahmed</span></li>
+      </ol>
+
+       <h3>Exercise 3: Answering Questions</h3>
+      <p>Answer these questions simply in Darija (imagine your own family):</p>
+      <ol>
+          <li>Wash 3ndek khut? (Answer: Iyyeh, 3ndi... / La, ma 3ndish.)</li>
+          <li>Shnu smit mamak? (Answer: Smitha [Name].)</li>
+          <li>Wash nta/nti mzewwej/mzewwja? (Answer: Iyyeh / La.)</li>
+      </ol>
+
+      <div class="note">
+          Talking about family is a great way to practice possessives and basic vocabulary. Try describing your own family!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BOERDARIJA | Vocabulary Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator">&rsaquo;</span>
+            <span class="breadcrumb-current">Vocabulary Game</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Darija Vocabulary Game</h1>
+            <p>Test your knowledge of Moroccan Darija vocabulary. Select categories and start playing!</p>
+        </header>
+
+        <div class="category-controls">
+            <button id="selectAll">Select All Categories</button>
+            <button id="deselectAll">Deselect All</button>
+        </div>
+
+        <div id="categoryList"></div>
+        <button id="startGame" disabled>Start Game</button>
+
+        <div id="gameArea">
+            <div id="question"></div>
+            <div id="arabicText"></div>
+            <div id="options"></div>
+            <div id="score">Score: 0/0</div>
+            <button id="nextQuestion">Next Question</button>
+            <button id="endGame">End Game</button>
+        </div>
+    </div>
+    <script src="js/navigation.js"></script>
+    <script src="vocabulary-game.js"></script>
+</body>
+</html> 

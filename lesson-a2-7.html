@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | A2 Module 7: Advanced Adjectives & Descriptions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .adj-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .adj-table th, .adj-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .adj-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .adj-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .adj-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+     .adj-table .notes {
+        font-size: 0.9em;
+        color: #ccc;
+     }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 100px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .adj-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a2.html">A2 Elementary</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 7: Advanced Adjectives & Descriptions</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>A2 Module 7: Advanced Adjectives & Descriptions</h1>
+    <p>Expand your descriptive skills with more adjectives for personality and appearance, learn about intensifiers, and practice using multiple adjectives.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Review: Adjective Agreement</h2>
+      <p>Remember from A1 (Module 6), adjectives in Darija generally come <strong>after</strong> the noun and must agree in <strong>gender</strong> (masculine/feminine) and <strong>number</strong> (singular/plural).</p>
+      <ul>
+          <li>Masculine singular: e.g., `ktab kbir` (big book)</li>
+          <li>Feminine singular (often add `-a`): e.g., `dar kbira` (big house)</li>
+          <li>Plural (often add `-in` or irregular): e.g., `wlad fr7anin` (happy children), `ktub kbar` (big books - irregular adj. plural)</li>
+      </ul>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Adjectives for Personality</h2>
+      <p>Here are some common adjectives to describe personality traits.</p>
+      <table class="adj-table">
+        <thead>
+            <tr>
+                <th>English</th>
+                <th>Masculine (Script/Trans.)</th>
+                <th>Feminine (Script/Trans.)</th>
+                <th>Plural (Trans.)</th>
+                <th>Audio (Masc/Fem)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Kind / Nice</td>
+                <td><span class="darija-script">ضريف</span> / Drif</td>
+                <td><span class="darija-script">ضريفة</span> / Drifa</td>
+                <td>Drifin</td>
+                <td><span class="play-button" onclick="alert('Audio: Drif / Drifa')"></span></td>
+            </tr>
+            <tr>
+                <td>Funny / Humorous</td>
+                <td><span class="darija-script">مضحك</span> / mDe77ek</td>
+                <td><span class="darija-script">مضحكة</span> / mDe77ka</td>
+                <td>mDe77kin</td>
+                <td><span class="play-button" onclick="alert('Audio: mDe77ek / mDe77ka')"></span></td>
+            </tr>
+            <tr>
+                <td>Serious</td>
+                <td><span class="darija-script">معقول</span> / m3qul</td>
+                <td><span class="darija-script">معقولة</span> / m3qula</td>
+                <td>m3qulin</td>
+                <td><span class="play-button" onclick="alert('Audio: m3qul / m3qula')"></span></td>
+            </tr>
+            <tr>
+                <td>Intelligent / Smart</td>
+                <td><span class="darija-script">ذكي</span> / dki</td>
+                <td><span class="darija-script">ذكية</span> / dkiya</td>
+                <td>dkiyin</td>
+                <td><span class="play-button" onclick="alert('Audio: dki / dkiya')"></span></td>
+            </tr>
+             <tr>
+                <td>Stupid / Foolish</td>
+                <td><span class="darija-script">مكلخ</span> / mkellekh</td>
+                <td><span class="darija-script">مكلخة</span> / mkellkha</td>
+                <td>mkellkhin</td>
+                <td><span class="play-button" onclick="alert('Audio: mkellekh / mkellkha')"></span></td>
+            </tr>
+            <tr>
+                <td>Shy</td>
+                <td><span class="darija-script">حشومي</span> / 7shumi</td>
+                <td><span class="darija-script">حشومية</span> / 7shumiya</td>
+                <td>7shumiyin</td>
+                <td><span class="play-button" onclick="alert('Audio: 7shumi / 7shumiya')"></span></td>
+            </tr>
+             <tr>
+                <td>Angry / Upset</td>
+                <td><span class="darija-script">معصب</span> / m3esseb</td>
+                <td><span class="darija-script">معصبة</span> / m3essba</td>
+                <td>m3essbin</td>
+                <td><span class="play-button" onclick="alert('Audio: m3esseb / m3essba')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+      <p>Example: <span class="darija-script">صاحبي ضريف بزاف.</span> (Sa7bi drif bzzaf.) - My friend (m.) is very kind.</p>
+      <p>Example: <span class="darija-script">هي ماشي مضحكة.</span> (Hiya mashi mDe77ka.) - She is not funny.</p>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Adjectives for Physical Appearance</h2>
+        <p>Some adjectives to describe how someone or something looks.</p>
+         <table class="adj-table">
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Masculine (Script/Trans.)</th>
+                    <th>Feminine (Script/Trans.)</th>
+                    <th>Plural (Trans.)</th>
+                    <th>Audio (Masc/Fem)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tall</td>
+                    <td><span class="darija-script">طويل</span> / twil</td>
+                    <td><span class="darija-script">طويلة</span> / twila</td>
+                    <td>twal (irregular)</td>
+                    <td><span class="play-button" onclick="alert('Audio: twil / twila')"></span></td>
+                </tr>
+                <tr>
+                    <td>Short (height)</td>
+                    <td><span class="darija-script">قصير</span> / qsir</td>
+                    <td><span class="darija-script">قصيرة</span> / qsira</td>
+                    <td>qsar (irregular)</td>
+                    <td><span class="play-button" onclick="alert('Audio: qsir / qsira')"></span></td>
+                </tr>
+                <tr>
+                    <td>Fat / Big (person)</td>
+                    <td><span class="darija-script">غليض</span> / ghlid</td>
+                    <td><span class="darija-script">غليضة</span> / ghlida</td>
+                    <td>ghlad (irregular)</td>
+                    <td><span class="play-button" onclick="alert('Audio: ghlid / ghlida')"></span></td>
+                </tr>
+                <tr>
+                    <td>Thin / Slim</td>
+                    <td><span class="darija-script">رقيق</span> / rqiq</td>
+                    <td><span class="darija-script">رقيقة</span> / rqiqa</td>
+                    <td>rqiqin / rqqaq (irregular)</td>
+                    <td><span class="play-button" onclick="alert('Audio: rqiq / rqiqa')"></span></td>
+                </tr>
+                <tr>
+                    <td>Beautiful / Handsome</td>
+                    <td><span class="darija-script">زوين</span> / zwin</td>
+                    <td><span class="darija-script">زوينة</span> / zwina</td>
+                    <td>zwinin</td>
+                    <td><span class="play-button" onclick="alert('Audio: zwin / zwina')"></span></td>
+                </tr>
+                <tr>
+                    <td>Ugly</td>
+                    <td><span class="darija-script">خايب</span> / khayb</td>
+                    <td><span class="darija-script">خايبة</span> / khayba</td>
+                    <td>khaybin</td>
+                    <td><span class="play-button" onclick="alert('Audio: khayb / khayba')"></span></td>
+                </tr>
+                 <tr>
+                    <td>Old (person)</td>
+                    <td><span class="darija-script">كبير ف السن</span> / kbir f s-sinn</td>
+                    <td><span class="darija-script">كبيرة ف السن</span> / kbira f s-sinn</td>
+                    <td class="notes">Lit. "big in age"</td>
+                    <td><span class="play-button" onclick="alert('Audio: kbir f s-sinn')"></span></td>
+                </tr>
+                 <tr>
+                    <td>Young (person)</td>
+                    <td><span class="darija-script">صغير ف السن</span> / sghir f s-sinn</td>
+                    <td><span class="darija-script">صغيرة ف السن</span> / sghira f s-sinn</td>
+                    <td class="notes">Lit. "small in age"</td>
+                    <td><span class="play-button" onclick="alert('Audio: sghir f s-sinn')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">
+            <strong>Hair & Eyes:</strong> Describing hair and eye color often uses phrases.
+            <ul>
+                <li>Hair: `sh3r-u k7el` (his hair is black), `sh3r-ha twil` (her hair is long). (`sh3r` = hair)</li>
+                <li>Eyes: `3in-ih zrqin` (his eyes are blue - plural adj.), `3in-iha kbar` (her eyes are big). (`3in`=eye, `3inin`=eyes)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Using Multiple Adjectives</h2>
+        <p>When using more than one adjective to describe a noun, you usually connect them with `u` (<span class="darija-script">و</span> - and). All adjectives must agree with the noun.</p>
+        <p>Example: A big and new house (Fem. Sing.)<br>
+        <span class="darija-script">دار كبيرة و جديدة.</span><br>
+        <span class="transcription">Dar kbira u jdida.</span></p>
+
+        <p>Example: A tall and kind man (Masc. Sing.)<br>
+        <span class="darija-script">راجل طويل و ضريف.</span><br>
+        <span class="transcription">Rajl twil u drif.</span></p>
+
+        <p>Example: Happy and smart children (Plural)<br>
+        <span class="darija-script">ولاد فرحانين و ذكيين.</span><br>
+        <span class="transcription">Wlad fr7anin u dkiyin.</span></p>
+    </section>
+
+     <section class="lesson-section">
+        <h2>Intensifiers: Making Adjectives Stronger or Weaker</h2>
+        <p>These words modify the strength of an adjective.</p>
+         <table class="adj-table">
+            <thead>
+                <tr>
+                    <th>English Intensifier</th>
+                    <th>Darija (Script/Trans.)</th>
+                    <th>Example (Darija Transcription)</th>
+                    <th>Meaning of Example</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Very</td>
+                    <td><span class="darija-script">بزاف</span> / bzzaf</td>
+                    <td>Dar kbira bzzaf.</td>
+                    <td>A very big house.</td>
+                    <td><span class="play-button" onclick="alert('Audio: bzzaf')"></span></td>
+                </tr>
+                <tr>
+                    <td>A little / A bit</td>
+                    <td><span class="darija-script">شوية</span> / shwiya</td>
+                    <td>Huwa twil shwiya.</td>
+                    <td>He is a little tall.</td>
+                    <td><span class="play-button" onclick="alert('Audio: shwiya')"></span></td>
+                </tr>
+                <tr>
+                    <td>Too (much)</td>
+                    <td><span class="darija-script">بزاف</span> / bzzaf (can also mean "too much")</td>
+                    <td>Had l-film twil bzzaf.</td>
+                    <td>This film is too long.</td>
+                    <td><span class="play-button" onclick="alert('Audio: bzzaf (too)')"></span></td>
+                </tr>
+                <tr>
+                    <td>Really / Truly</td>
+                    <td><span class="darija-script">بصح</span> / bssa7</td>
+                    <td>Hiya dkiya bssa7.</td>
+                    <td>She is truly smart.</td>
+                    <td><span class="play-button" onclick="alert('Audio: bssa7')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+         <div class="note">
+            <strong>Placement of `bzzaf` and `shwiya`:</strong> These usually come *after* the adjective they modify.
+        </div>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Choose the Right Form</h3>
+      <p>Select the correct adjective form to complete the sentence.</p>
+      <ol>
+          <li>L-bent (<span class="darija-script">طويل / طويلة</span>) → <span class="fill-blank">twila</span> (The girl is tall.)</li>
+          <li>R-rajl (<span class="darija-script">ضريف / ضريفة</span>) → <span class="fill-blank">drif</span> (The man is kind.)</li>
+          <li>L-ktub (<span class="darija-script">جديد / جداد</span>) → <span class="fill-blank">jdad</span> (The books are new.)</li>
+          <li>Had l-qhwa (<span class="darija-script">سخون / سخونة</span>) → <span class="fill-blank">skhuna</span> (This coffee (f.) is hot.) (skhun=hot)</li>
+      </ol>
+
+      <h3>Exercise 2: Describe People/Things</h3>
+      <p>Translate these descriptions into Darija:</p>
+      <ol>
+          <li>A funny and smart boy. <span class="fill-blank">Weld mDe77ek u dki.</span></li>
+          <li>A very old car (fem.). <span class="fill-blank">Tomobil qdima bzzaf.</span></li>
+          <li>The shy girls are kind. <span class="fill-blank">L-bnat l-7shumiyin drifat.</span> (Note: plural adjective agreement)</li>
+          <li>This food is a little cold. (food: <span class="darija-script">ماكلة</span> makla (f.); cold: <span class="darija-script">بارد</span> bard (m) / <span class="darija-script">باردة</span> barda (f)) <br> <span class="fill-blank">Had l-makla barda shwiya.</span></li>
+      </ol>
+      <div class="note">
+          Try describing people you know or things around you using these new adjectives and intensifiers. Pay close attention to gender and number agreement!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

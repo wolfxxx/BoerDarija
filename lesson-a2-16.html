@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | A2 Module 16: Verb Tense Review</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .tense-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .tense-table th, .tense-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .tense-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .tense-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .tense-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .tense-table .tense-name { font-weight: bold; color: #fff; }
+    .tense-table .verb-example { font-weight: bold; color: #99ff99; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+     .story-box {
+        background: rgba(255,255,255,0.08);
+        border-left: 4px solid #99ff99;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+    .story-box .darija-text { font-family: 'Amiri', serif; font-size: 1.3em; line-height: 1.8; }
+    .story-box .transcription-text { font-style: italic; color: #ffcc66; font-size: 1em; line-height: 1.8;}
+    .story-box .translation-text { color: #ccc; font-size: 0.95em; line-height: 1.8; margin-top: 10px; display: block;}
+    .story-box p { margin-bottom: 10px; }
+
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 120px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .tense-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a2.html">A2 Elementary</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 16: Verb Tense Review</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>A2 Module 16: Review of Verb Tenses (Present, Past, Future)</h1>
+    <p>Consolidate your understanding of the main verb tenses and practice using them in different contexts.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Verb Tense Overview</h2>
+      <p>At the A2 level, you've learned how to talk about:</p>
+      <ul>
+          <li>**Present Habitual Actions:** Using the `ka-` prefix (A1 Module 8).</li>
+          <li>**Past Completed Actions:** Using past tense suffixes (A2 Modules 1 & 2).</li>
+          <li>**Future Plans/Intentions:** Using `ghadi` + verb (A2 Module 5).</li>
+      </ul>
+      <p>This module will help you distinguish between them and use them correctly.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Side-by-Side Comparison (Example: "to write" - `kteb`)</h2>
+      <p>Let's compare the "Ana" (I) form for the verb `kteb` (<span class="darija-script">كتب</span> - to write) in all three tenses.</p>
+      <table class="tense-table">
+        <thead>
+            <tr>
+                <th>Tense</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Meaning</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tense-name">Present (`ka-`)</td>
+                <td class="darija-script">كانكتب</td>
+                <td class="verb-example transcription">kankteb</td>
+                <td>I write (habitually) / I am writing</td>
+                <td><span class="play-button" onclick="alert('Audio: kankteb')"></span></td>
+            </tr>
+            <tr>
+                <td class="tense-name">Past (Simple)</td>
+                <td class="darija-script">كتبت</td>
+                <td class="verb-example transcription">ktebt</td>
+                <td>I wrote</td>
+                <td><span class="play-button" onclick="alert('Audio: ktebt')"></span></td>
+            </tr>
+            <tr>
+                <td class="tense-name">Future (`ghadi`)</td>
+                <td class="darija-script">غادي نكتب</td>
+                <td class="verb-example transcription">ghadi nkteb</td>
+                <td>I will write / I am going to write</td>
+                <td><span class="play-button" onclick="alert('Audio: ghadi nkteb')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+      
+      <h3>Key Indicators:</h3>
+      <ul>
+          <li>**Present `ka-`:** The `ka-` prefix is the main signal.</li>
+          <li>**Past Simple:** Characterized by suffixes like `-t`, `-ti`, `-u`, `-at`, `-na`, `-tu`. No prefix for regular verbs.</li>
+          <li>**Future `ghadi`:** The word `ghadi` (or `gha`) before the verb stem (which often has `n-`, `t-`, `y-` prefixes).</li>
+      </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Context Clues: Time Expressions</h2>
+        <p>Time expressions are crucial for understanding which tense is being used or which tense you should use.</p>
+        <table class="tense-table">
+            <thead>
+                <tr>
+                    <th>Time Expression (Darija/Trans.)</th>
+                    <th>Typically Used With...</th>
+                    <th>Example Sentence (English)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="darija-script">كل نهار</span> / kul nhar (every day)</td>
+                    <td class="tense-name">Present (`ka-`)</td>
+                    <td>I drink tea every day.</td>
+                </tr>
+                <tr>
+                    <td><span class="darija-script">ديما</span> / dima (always)</td>
+                    <td class="tense-name">Present (`ka-`)</td>
+                    <td>He always studies.</td>
+                </tr>
+                <tr>
+                    <td><span class="darija-script">البارح</span> / l-bare7 (yesterday)</td>
+                    <td class="tense-name">Past</td>
+                    <td>She went to the market yesterday.</td>
+                </tr>
+                 <tr>
+                    <td><span class="darija-script">السيمانة اللي فاتت</span> / s-simana lli fatet (last week)</td>
+                    <td class="tense-name">Past</td>
+                    <td>We visited our family last week.</td>
+                </tr>
+                <tr>
+                    <td><span class="darija-script">غدا</span> / ghdda (tomorrow)</td>
+                    <td class="tense-name">Future (`ghadi`)</td>
+                    <td>They will travel tomorrow.</td>
+                </tr>
+                <tr>
+                    <td><span class="darija-script">من بعد</span> / mn ba3d (later / after)</td>
+                    <td class="tense-name">Future (`ghadi`) / Past (as sequencer)</td>
+                    <td>I will call you later. / After that, I slept.</td>
+                </tr>
+                 <tr>
+                    <td><span class="darija-script">دابا</span> / daba (now)</td>
+                    <td class="tense-name">Present (`ka-` for ongoing/general)</td>
+                    <td>What are you doing now? (Shnu katdir daba?)</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">
+            While `daba` (now) is present, Darija often uses the `ka-` form for actions happening "around now" or generally, rather than a distinct present continuous form like English "am/is/are -ing" for all situations.
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Narrating a Simple Story (Mixed Tenses)</h2>
+        <p>Let's try to use different tenses in a short narrative.</p>
+        <div class="story-box">
+            <p><span class="darija-text">البارح، مشيت للسوق. شريت الخضرة و الفاكية. ملي رجعت للدار، طيبت واحد الطاجين بنين. كل نهار، كانفيق بكري و كانفطر مزيان. غدا، غادي نمشي عند صاحبي و غادي نتفرجو ف شي فيلم.</span>
+            <span class="play-button" onclick="alert('Audio for full story')"></span></p>
+            <p><span class="transcription-text">L-bare7, mshit l s-souq. Shrit l-khdra u l-fakiya. Melli rje3t l d-dar, tiyyebt wa7ed t-tajin bnin. Kul nhar, kanfiq bekri u kanfter mzyan. Ghdda, ghadi nmshi 3nd sa7bi u ghadi ntferrju f shi film.</span></p>
+            <p class="translation-text">Yesterday, I went to the market. I bought vegetables and fruit. When I returned home, I cooked a delicious tagine. Every day, I wake up early and I have a good breakfast. Tomorrow, I will go to my friend's place and we will watch a film.</p>
+        </div>
+        
+        <h3>Breakdown:</h3>
+        <ul>
+            <li>`mshit` (I went), `shrit` (I bought), `rje3t` (I returned), `tiyyebt` (I cooked) - **Past Tense**</li>
+            <li>`kanfiq` (I wake up), `kanfter` (I have breakfast) - **Present Tense (`ka-`)** for habitual actions (`kul nhar`)</li>
+            <li>`ghadi nmshi` (I will go), `ghadi ntferrju` (we will watch) - **Future Tense (`ghadi`)** for `ghdda` (tomorrow)</li>
+        </ul>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Identify the Tense</h3>
+      <p class="prompt">For each Darija sentence, identify if it's Present (`ka-`), Past, or Future (`ghadi`).</p>
+      <ol>
+          <li><span class="darija-script">كايقرا كتاب كل ليلة.</span> (Kayqra ktab kul lila.) - Tense: <span class="fill-blank">Present (ka-)</span></li>
+          <li><span class="darija-script">سافرت لفرنسا العام اللي فات.</span> (Safert l Fransa l-3am lli fat.) - Tense: <span class="fill-blank">Past</span></li>
+          <li><span class="darija-script">غادي نتعشاو ف الريسطورة اليوم.</span> (Ghadi nt3eshaw f r-restora l-yum.) - Tense: <span class="fill-blank">Future (ghadi)</span></li>
+          <li><span class="darija-script">ما شفتوش البارح.</span> (Ma sheftush l-bare7.) - Tense: <span class="fill-blank">Past (negated)</span></li>
+          <li><span class="darija-script">ديما كانمشي للخدمة بكري.</span> (Dima kanmshi l l-khedma bekri.) - Tense: <span class="fill-blank">Present (ka-)</span></li>
+      </ol>
+
+      <h3>Exercise 2: Choose the Correct Verb Form</h3>
+      <p class="prompt">Fill in the blank with the correct form of the verb in parentheses, based on the time expression.</p>
+      <ol>
+          <li>Ghdda, ana <span class="fill-blank">ghadi nkteb</span> برا. (kteb - to write)</li>
+          <li>L-bare7, huwa <span class="fill-blank">kla</span> بيتزا. (kla - to eat)</li>
+          <li>Kul sbah, hiya <span class="fill-blank">katshrb</span> l-qhwa. (shrb - to drink)</li>
+          <li>S-simana lli fatet, 7na <span class="fill-blank">derna</span> واحد الحفلة (7fla - party). (dar - to do/make)</li>
+          <li>Mn ba3d, huma <span class="fill-blank">ghadi yl3bu</span> كورة. (l3eb - to play)</li>
+      </ol>
+
+       <h3>Exercise 3: Your Day - Past, Present, Future</h3>
+       <p class="prompt">Write one sentence about what you did yesterday, one about what you do every day, and one about what you will do tomorrow.</p>
+       <ol>
+           <li>Yesterday: <span class="fill-blank"></span></li>
+           <li>Every day: <span class="fill-blank"></span></li>
+           <li>Tomorrow: <span class="fill-blank"></span></li>
+       </ol>
+
+      <div class="note">
+          Understanding the context and time expressions is key to choosing the correct verb tense. Keep practicing transforming sentences from one tense to another!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

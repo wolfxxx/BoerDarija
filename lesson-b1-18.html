@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | B1 Module 18: B1 Consolidation & Moving to B2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+    .topic-list {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        list-style-type: '🏆 '; /* Trophy icon */
+        padding-left: 30px;
+    }
+     .topic-list li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+     }
+
+     .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 25px;
+        border-radius: 8px;
+        margin-top: 30px;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+    .practice-section h4 {
+        color: #ffcc99;
+        font-size: 1.3rem;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    .practice-section p.instruction {
+        font-style: italic;
+        color: #ccc;
+        margin-bottom: 10px;
+    }
+    .practice-section ol li, .practice-section ul li {
+        margin-bottom: 15px; 
+    }
+    .practice-section .fill-blank, .practice-section textarea {
+        display: block; 
+        width: 100%;
+        min-height: 40px;
+        border-bottom: 1px dotted #fff; 
+        margin: 5px 0 15px 0;
+        padding: 8px;
+        text-align: left; 
+        color: #99ff99;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 4px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .practice-section textarea {
+        min-height: 120px; /* Larger for story/description */
+     }
+    .practice-section .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .practice-section .transcription {
+        font-style: italic;
+        color: #ffcc66;
+        font-size: 0.95em;
+    }
+    
+    .next-steps {
+        text-align: center;
+        margin-top: 40px;
+    }
+    .next-steps a {
+        display: inline-block;
+        background: #ff0066;
+        color: #fff;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        margin: 5px;
+    }
+    .next-steps a:hover {
+        background: #cc0052;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+       .topic-list { columns: 1; -webkit-columns: 1; -moz-columns: 1; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 18: B1 Consolidation & Moving to B2</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>B1 Module 18: B1 Consolidation & Moving to B2</h1>
+    <p>Mabrouk kbir! A huge congratulations on completing the B1 Intermediate level! Let's review your achievements and look ahead.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>B1 Level Recap: Your Intermediate Darija Skills!</h2>
+      <p>By completing the B1 Intermediate course, you've significantly advanced your Darija abilities. You should now be able to:</p>
+      <ul class="topic-list">
+          <li>Master **advanced past tense** forms, including "hollow" and "weak" verbs.</li>
+          <li>Use the **imperfect tense** (`kan` + `ka-verb`) for past habits and ongoing actions.</li>
+          <li>Understand and use **active and passive participles**.</li>
+          <li>Express **ability, possibility, and permission** (`qder`, `yemken`).</li>
+          <li>Talk about **obligation and necessity** (`khass`, `Daruri`, `lazem`).</li>
+          <li>Form **complex conditional sentences** (hypotheticals).</li>
+          <li>Use **advanced relative clauses** and `ashmn` (which).</li>
+          <li>Understand and begin to use basic **derived verb forms** (e.g., Form II causative).</li>
+          <li>Employ a wider range of **connectors and discourse markers** for fluency.</li>
+          <li>Report simple **statements and questions**.</li>
+          <li>**Describe people, places, and things in greater detail**.</li>
+          <li>Express a broader range of **emotions and feelings**.</li>
+          <li>Discuss simple **social and cultural topics**.</li>
+          <li>Handle simple **problems and complaints**.</li>
+          <li>Recognize different **language registers** (briefly).</li>
+          <li>Construct **extended narratives and stories**.</li>
+      </ul>
+      <p>You are now an "independent user" of Darija, capable of handling most everyday situations and expressing yourself on familiar topics with more complexity.</p>
+    </section>
+
+    <section class="practice-section">
+        <h3>Comprehensive B1 Review Exercises</h3>
+
+        <h4>Exercise 1: Mixed Grammar Application</h4>
+        <p class="instruction">Translate the following sentences into Darija, trying to use grammar learned in B1.</p>
+        <ol>
+            <li>If I had known (B1.M6 - past unreal) you were sick (A2.M9), I would have visited you (B1.M1 - `zar`).
+                <br>Darija: <span class="fill-blank">Kun 3reft belli kunti mrid(a), kun rani zrtek.</span></li>
+            <li>The book that was written (B1.M3 - passive participle) by that author (كاتب - kateb, A2.M2) is very interesting (B1.M7 - advanced adj.).
+                <br>Darija: <span class="fill-blank">L-ktab lli tkteb mn dak l-kateb mumti3 bzzaf.</span> (tkteb = was written)</li>
+            <li>We used to play (B1.M2 - imperfect) outside every day when we were young (A2.M4 - past 'kan').
+                <br>Darija: <span class="fill-blank">Kunna kanl3bu berra kul nhar melli kunna sghar.</span></li>
+            <li>You (m.s.) must explain (B1.M8 - Form II `fhhem`) this lesson to me because it is difficult (A1.M6).
+                <br>Darija: <span class="fill-blank">Khassk tfhhemni had d-ders 7it s3ib.</span></li>
+        </ol>
+
+        <h4>Exercise 2: Narrative Prompt</h4>
+        <p class="instruction">Write a short paragraph (4-5 sentences) in Darija about a challenge you faced and how you overcame it, or a plan you have that depends on certain conditions. Try to use at least one conditional sentence, one derived verb (if comfortable), and varied tenses.</p>
+        <textarea placeholder="اكتب قصتك أو خطتك هنا... (Write your story or plan here...)"></textarea>
+        
+        <h4>Exercise 3: Responding to Situations</h4>
+        <p class="instruction">How would you respond in Darija in the following situations?</p>
+        <ol>
+            <li>Your friend suggests going to a very expensive restaurant, but you don't have much money. (Express opinion, suggest alternative using B1.M15)
+                <br>Response: <span class="fill-blank">F rray-i, dak r-restora ghali bzzaf. Ashnu ban lik nmshiw l wa7ed akher rkhes shwiya?</span></li>
+            <li>Someone asks you: "<span class="darija-script">واش تقدر تعاوني فهاد المشكل؟</span>" (Wash tqder t3awenni f had l-mushkil? - Can you help me with this problem?) You are busy. (Politely decline using B1.M4/M5)
+                <br>Response: <span class="fill-blank">Sme7 liya, daba meshghul shwiya. Ma yemkenlish n3awnek daba.</span> (meshghul = busy)</li>
+        </ol>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Moving Forward: The Journey to B2 (Upper Intermediate)</h2>
+        <p>Mabrouk again! Your B1 skills provide a strong platform for reaching even greater fluency.</p>
+        <h3>To continue improving and prepare for B2:</h3>
+        <ul>
+            <li><strong>Immersion:</strong> Increase your exposure to authentic Darija as much as possible (music, films with Darija subtitles if available, podcasts, conversations).</li>
+            <li><strong>Active Usage:</strong> Seek opportunities to speak and write in Darija regularly. Don't be afraid of making mistakes.</li>
+            <li><strong>Vocabulary Building:</strong> Continue to actively learn new vocabulary, focusing on different themes and more abstract concepts. Use a dictionary and create your own flashcards or lists.</li>
+            <li><strong>Focus on Fluency & Cohesion:</strong> Practice connecting your ideas smoothly using a wider range of discourse markers.</li>
+            <li><strong>Understanding Nuance:</strong> Pay attention to the subtle differences in meaning that different grammatical structures or vocabulary choices can convey.</li>
+        </ul>
+        <h3>What to Expect in B2 (Upper Intermediate Darija):</h3>
+        <ul>
+            <li>Mastery of all common verb tenses and their nuanced uses (e.g., different shades of past, present, future).</li>
+            <li>Confident use of more derived verb forms and understanding their semantic contributions.</li>
+            <li>More complex sentence structures, including various types of subordinate clauses.</li>
+            <li>Ability to discuss abstract topics, current events, and express detailed opinions and arguments.</li>
+            <li>Greater understanding of idiomatic expressions, proverbs, and cultural references.</li>
+            <li>Improved listening comprehension of faster, more natural speech, including different accents.</li>
+            <li>Increased spontaneity and fluency in conversation.</li>
+        </ul>
+        <div class="note">
+            <strong>Keep Going! `Shwiya b shwiya!` (Little by little!)</strong> Your dedication will pay off. The more you use Darija, the more natural and intuitive it will become.
+        </div>
+        <div class="next-steps">
+            <!-- Link to B2 course page or homepage/courses page -->
+            <a href="courses-b2.html">Explore B2 Upper Intermediate (Coming Soon!)</a>
+            <span style="margin: 0 10px;">or</span>
+            <a href="courses-b1.html">Review B1 Modules</a>
+        </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Simple script to ensure correct breadcrumb is shown
+    if (document.getElementById('b1-breadcrumb')) { 
+        let allBreadcrumbs = document.querySelectorAll('.breadcrumb');
+        let b1BreadcrumbExists = false;
+        allBreadcrumbs.forEach(bc => {
+            if (bc.innerHTML.includes("B1 Intermediate")) b1BreadcrumbExists = true;
+        });
+
+        if (b1BreadcrumbExists) { 
+            allBreadcrumbs.forEach(bc => {
+                if (!bc.innerHTML.includes("B1 Module 18")) { // Adjust module number
+                    bc.style.display = 'none';
+                } else {
+                    bc.style.display = 'block';
+                }
+            });
+        }
+    }
+  </script>
+</body>
+</html>

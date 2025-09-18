@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BOERDARIJA | Learn Moroccan Darija</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-logo floating">BOERDARIJA</h1>
+            <p class="hero-subtitle" lang="ar" dir="rtl">تعلّم الدارجة المغربية بسهولة</p>
+            <p class="hero-description">
+                Master Moroccan Darija with interactive courses, vocabulary games, and comprehensive learning resources. 
+                Start your journey to fluency in the most spoken Arabic dialect in Morocco.
+            </p>
+            <div class="action-buttons">
+                <a href="courses.html" class="btn btn-primary glow">Start Learning</a>
+                <a href="vocabulary-game.html" class="btn btn-secondary">Play Vocabulary Game</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">📚</div>
+                <h3 class="feature-title">Structured Courses</h3>
+                <p class="feature-description">
+                    Learn Darija through carefully designed courses from beginner to advanced levels, 
+                    with practical examples and cultural context.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🎮</div>
+                <h3 class="feature-title">Interactive Games</h3>
+                <p class="feature-description">
+                    Test your knowledge with our vocabulary game. Practice makes perfect - 
+                    have fun while learning essential Darija words and phrases.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">📖</div>
+                <h3 class="feature-title">Comprehensive Dictionary</h3>
+                <p class="feature-description">
+                    Access a complete dictionary with thousands of words, phrases, and expressions 
+                    commonly used in Moroccan daily life.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🗣️</div>
+                <h3 class="feature-title">Practical Focus</h3>
+                <p class="feature-description">
+                    Learn real-world Darija that you'll actually use in conversations, 
+                    shopping, dining, and everyday situations in Morocco.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🌍</div>
+                <h3 class="feature-title">Cultural Context</h3>
+                <p class="feature-description">
+                    Understand the cultural nuances and context behind Darija expressions, 
+                    making your learning more meaningful and authentic.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">📱</div>
+                <h3 class="feature-title">Learn Anywhere</h3>
+                <p class="feature-description">
+                    Access your lessons and practice materials on any device, 
+                    anytime, anywhere. Your learning journey never stops.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">BOERDARIJA</div>
+            <p class="footer-text">
+                Your gateway to mastering Moroccan Darija. Start your language journey today!
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(15, 32, 39, 0.95)';
+            } else {
+                nav.style.background = 'rgba(15, 32, 39, 0.9)';
+            }
+        });
+
+        // Add hover effects to feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+</body>
+</html>

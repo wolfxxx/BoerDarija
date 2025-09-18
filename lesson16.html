@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | Module 16: Locations & Directions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .location-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .location-table th, .location-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .location-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .location-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .location-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+     .dialogue-box {
+        background: rgba(255,255,255,0.08);
+        border-left: 4px solid #99ff99;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+    .dialogue-box .speakerA { color: #ff9999; font-weight: bold; } /* Person Asking */
+    .dialogue-box .speakerB { color: #99ff99; font-weight: bold; } /* Person Answering */
+    .dialogue-box .darija-text { font-family: 'Amiri', serif; font-size: 1.2em; }
+    .dialogue-box .transcription-text { font-style: italic; color: #ffcc66; font-size: 0.95em;}
+    .dialogue-box .translation-text { color: #ccc; font-size: 0.9em; }
+    .dialogue-box p { margin-bottom: 10px; }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 80px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .location-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a1.html">A1 Beginner</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 16: Locations & Directions</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>Module 16: Talking about Locations & Basic Directions</h1>
+    <p>Learn vocabulary for common places and how to ask for and give simple directions in Darija.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Vocabulary: Common Places</h2>
+      <p>Here are some useful words for places you might need to find or talk about.</p>
+      <table class="location-table">
+        <thead>
+            <tr>
+                <th>English</th>
+                <th>Darija Script</th>
+                <th>Transcription</th>
+                <th>Gender</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Market (traditional)</td><td class="darija-script">السوق</td><td class="transcription">s-souq</td><td>M</td><td><span class="play-button" onclick="alert('Audio: s-souq')"></span></td></tr>
+            <tr><td>Shop / Store</td><td class="darija-script">الحانوت</td><td class="transcription">l-7anut</td><td>M</td><td><span class="play-button" onclick="alert('Audio: l-7anut')"></span></td></tr>
+            <tr><td>House</td><td class="darija-script">الدار</td><td class="transcription">d-dar</td><td>F</td><td><span class="play-button" onclick="alert('Audio: d-dar')"></span></td></tr>
+            <tr><td>Café / Coffee Shop</td><td class="darija-script">القهوة</td><td class="transcription">l-qhwa</td><td>F</td><td><span class="play-button" onclick="alert('Audio: l-qhwa')"></span></td></tr>
+            <tr><td>Restaurant</td><td class="darija-script">الريسطورة</td><td class="transcription">r-restora</td><td>F</td><td><span class="play-button" onclick="alert('Audio: r-restora')"></span></td></tr>
+            <tr><td>Station (Train/Bus)</td><td class="darija-script">المحطة</td><td class="transcription">l-m7atta</td><td>F</td><td><span class="play-button" onclick="alert('Audio: l-m7atta')"></span></td></tr>
+            <tr><td>Bank</td><td class="darija-script">البانكة</td><td class="transcription">l-banka</td><td>F</td><td><span class="play-button" onclick="alert('Audio: l-banka')"></span></td></tr>
+            <tr><td>Pharmacy</td><td class="darija-script">الفارماسيان</td><td class="transcription">l-farmasiyan</td><td>M</td><td><span class="play-button" onclick="alert('Audio: l-farmasiyan')"></span></td></tr>
+            <tr><td>Mosque</td><td class="darija-script">الجامع</td><td class="transcription">j-jam3</td><td>M</td><td><span class="play-button" onclick="alert('Audio: j-jam3')"></span></td></tr>
+            <tr><td>School</td><td class="darija-script">المدرسة</td><td class="transcription">l-mdrasa</td><td>F</td><td><span class="play-button" onclick="alert('Audio: l-mdrasa')"></span></td></tr>
+             <tr><td>Hotel</td><td class="darija-script">لوطيل</td><td class="transcription">l'otel</td><td>M</td><td><span class="play-button" onclick="alert('Audio: l\'otel')"></span></td></tr>
+        </tbody>
+      </table>
+       <div class="note">
+            <strong>Gender Reminder:</strong> Knowing the gender helps when asking "Where is...?" using `kayen/kayna` (Module 11 was existential `kayen/kayna` in original plan, let's assume it's known or introduce it here).
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Asking for Locations</h2>
+        <p>The most common way to ask "Where is...?" uses the question word `Fin` (Where?). You can combine this with `kayen` (masculine) or `kayna` (feminine) for "Where is there...?" or often just use `Fin` + [The Place].</p>
+
+         <table class="location-table">
+            <thead>
+                <tr>
+                    <th>English Question</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Notes</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Where is the market?</td>
+                    <td class="darija-script">فين السوق؟ / فين كاين السوق؟</td>
+                    <td>Fin s-souq? / Fin kayen s-souq?</td>
+                    <td>Souq is Masc.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Fin s-souq?')"></span></td>
+                </tr>
+                <tr>
+                    <td>Where is the pharmacy?</td>
+                    <td class="darija-script">فين الفارماسيان؟ / فين كاين الفارماسيان؟</td>
+                    <td>Fin l-farmasiyan? / Fin kayen l-farmasiyan?</td>
+                    <td>Farmasiyan is Masc.</td>
+                     <td><span class="play-button" onclick="alert('Audio: Fin l-farmasiyan?')"></span></td>
+                </tr>
+                <tr>
+                    <td>Where is the station?</td>
+                    <td class="darija-script">فين المحطة؟ / فين كاينة المحطة؟</td>
+                    <td>Fin l-m7atta? / Fin kayna l-m7atta?</td>
+                    <td>M7atta is Fem.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Fin l-m7atta?')"></span></td>
+                </tr>
+                <tr>
+                    <td>How do I go to the bank?</td>
+                    <td class="darija-script">كيفاش نمشي للبانكة؟</td>
+                    <td>Kifash nmshi l l-banka?</td>
+                    <td>Kifash = How, nmshi = I go, l = to</td>
+                     <td><span class="play-button" onclick="alert('Audio: Kifash nmshi l l-banka?')"></span></td>
+                </tr>
+                 <tr>
+                    <td>Is it near?</td>
+                    <td class="darija-script">واش قريب؟</td>
+                    <td>Wash qrib?</td>
+                    <td>Qrib (M) / Qriba (F)</td>
+                     <td><span class="play-button" onclick="alert('Audio: Wash qrib?')"></span></td>
+                </tr>
+                 <tr>
+                    <td>Is it far?</td>
+                    <td class="darija-script">واش بعيد؟</td>
+                    <td>Wash b3id?</td>
+                     <td>B3id (M) / B3ida (F)</td>
+                     <td><span class="play-button" onclick="alert('Audio: Wash b3id?')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">
+            Remember to use `3afak` (please) when asking strangers for directions: `3afak, fin s-souq?`
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Giving Basic Directions</h2>
+        <p>Here are the essential words and phrases for giving simple directions.</p>
+        <h3>Direction Words:</h3>
+         <table class="location-table">
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija Script</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Right</td><td class="darija-script">اليمين</td><td class="transcription">limen</td><td><span class="play-button" onclick="alert('Audio: limen')"></span></td></tr>
+                <tr><td>Left</td><td class="darija-script">اليسر</td><td class="transcription">lisr</td><td><span class="play-button" onclick="alert('Audio: lisr')"></span></td></tr>
+                <tr><td>Straight ahead</td><td class="darija-script">نيشان</td><td class="transcription">nishan</td><td><span class="play-button" onclick="alert('Audio: nishan')"></span></td></tr>
+                <tr><td>Here</td><td class="darija-script">هنا</td><td class="transcription">hna</td><td><span class="play-button" onclick="alert('Audio: hna')"></span></td></tr>
+                <tr><td>There</td><td class="darija-script">تما / لهيه</td><td class="transcription">temma / lhih</td><td><span class="play-button" onclick="alert('Audio: temma / lhih')"></span></td></tr>
+            </tbody>
+        </table>
+        <h3>Direction Phrases:</h3>
+        <table class="location-table">
+            <thead>
+                <tr>
+                    <th>English Phrase</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Go straight ahead.</td><td class="darija-script">سير نيشان.</td><td>Sir nishan.</td><td><span class="play-button" onclick="alert('Audio: Sir nishan.')"></span></td></tr>
+                <tr><td>Turn right.</td><td class="darija-script">دور على اليمين.</td><td>Dur 3la limen.</td><td><span class="play-button" onclick="alert('Audio: Dur 3la limen.')"></span></td></tr>
+                <tr><td>Turn left.</td><td class="darija-script">دور على اليسر.</td><td>Dur 3la lisr.</td><td><span class="play-button" onclick="alert('Audio: Dur 3la lisr.')"></span></td></tr>
+                <tr><td>It's on the right.</td><td class="darija-script">كاين(ة) على اليمين.</td><td>Kayen(a) 3la limen.</td><td><span class="play-button" onclick="alert('Audio: Kayen 3la limen.')"></span></td></tr>
+                <tr><td>It's on the left.</td><td class="darija-script">كاين(ة) على اليسر.</td><td>Kayen(a) 3la lisr.</td><td><span class="play-button" onclick="alert('Audio: Kayen 3la lisr.')"></span></td></tr>
+                <tr><td>It's near here.</td><td class="darija-script">قريب(ة) من هنا.</td><td>Qrib(a) mn hna.</td><td><span class="play-button" onclick="alert('Audio: Qrib mn hna.')"></span></td></tr>
+                <tr><td>It's far from here.</td><td class="darija-script">بعيد(ة) من هنا.</td><td>B3id(a) mn hna.</td><td><span class="play-button" onclick="alert('Audio: B3id mn hna.')"></span></td></tr>
+                 <tr><td>It's next to the...</td><td class="darija-script">حدا ال...</td><td>7da l-...</td><td><span class="play-button" onclick="alert('Audio: 7da l-...')"></span></td></tr>
+            </tbody>
+        </table>
+        <div class="note">
+            <strong>Verb Forms:</strong> `Sir` is the command "Go!" (to m.s.). `Dur` is the command "Turn!" (to m.s.). Remember these change for f.s. (`siri`, `duri`) and plural (`siru`, `duru`). Use `Kayen` or `Kayna` depending on the gender of the place you're describing. `Qrib/B3id` also change for gender (`qriba/b3ida`).
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Dialogue: Asking for Directions</h2>
+        <div class="dialogue-box">
+            <p><span class="speakerA">Person A:</span> <span class="darija-text">السلام عليكم. عافاك، فين كاينة البانكة؟</span> <span class="play-button" onclick="alert('Audio A1')"></span><br>
+            <span class="transcription-text">Ssalām 3likum. 3afak, fin kayna l-banka?</span><br>
+            <span class="translation-text">Hello. Please, where is the bank?</span></p>
+
+            <p><span class="speakerB">Person B:</span> <span class="darija-text">و عليكم السلام. سير نيشان، و من بعد دور على ليسر. البانكة كاينة حدا الفارماسيان.</span> <span class="play-button" onclick="alert('Audio B1')"></span><br>
+            <span class="transcription-text">Wa 3likum ssalam. Sir nishan, u mn ba3d dur 3la lisr. L-banka kayna 7da l-farmasiyan.</span><br>
+            <span class="translation-text">Hello. Go straight ahead, and after turn left. The bank is next to the pharmacy.</span></p>
+
+            <p><span class="speakerA">Person A:</span> <span class="darija-text">واش بعيدة من هنا؟</span> <span class="play-button" onclick="alert('Audio A2')"></span><br>
+            <span class="transcription-text">Wash b3ida mn hna?</span><br>
+            <span class="translation-text">Is it far from here?</span></p>
+
+            <p><span class="speakerB">Person B:</span> <span class="darija-text">لا، ماشي بعيدة بزاف. قريبة.</span> <span class="play-button" onclick="alert('Audio B2')"></span><br>
+            <span class="transcription-text">La, mashi b3ida bzzaf. Qriba.</span><br>
+            <span class="translation-text">No, not very far. It's near.</span></p>
+
+            <p><span class="speakerA">Person A:</span> <span class="darija-text">شكراً بزاف!</span> <span class="play-button" onclick="alert('Audio A3')"></span><br>
+            <span class="transcription-text">Shukran bzzaf!</span><br>
+            <span class="translation-text">Thank you very much!</span></p>
+
+            <p><span class="speakerB">Person B:</span> <span class="darija-text">العفو.</span> <span class="play-button" onclick="alert('Audio B3')"></span><br>
+            <span class="transcription-text">L-3fu.</span><br>
+            <span class="translation-text">You're welcome.</span></p>
+        </div>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Name the Place</h3>
+      <p>What is the Darija transcription for:</p>
+      <ol>
+          <li>Restaurant: <span class="fill-blank">restora</span></li>
+          <li>Market: <span class="fill-blank">souq</span></li>
+          <li>Hotel: <span class="fill-blank">otel</span></li>
+          <li>Mosque: <span class="fill-blank">jam3</span></li>
+      </ol>
+
+      <h3>Exercise 2: Asking the Way</h3>
+      <p>Translate these questions into Darija:</p>
+      <ol>
+          <li>Where is the school (f.)? <span class="fill-blank">Fin l-mdrasa? / Fin kayna l-mdrasa?</span></li>
+          <li>Is the shop (m.) near? <span class="fill-blank">Wash l-7anut qrib?</span></li>
+          <li>How do I go to the station (f.)? <span class="fill-blank">Kifash nmshi l l-m7atta?</span></li>
+      </ol>
+
+       <h3>Exercise 3: Giving Directions</h3>
+      <p>Translate these instructions into Darija:</p>
+      <ol>
+          <li>Go straight ahead. <span class="fill-blank">Sir nishan.</span></li>
+          <li>Turn left. <span class="fill-blank">Dur 3la lisr.</span></li>
+          <li>The restaurant (f.) is on the right. <span class="fill-blank">R-restora kayna 3la limen.</span></li>
+          <li>The market (m.) is far from here. <span class="fill-blank">S-souq b3id mn hna.</span></li>
+      </ol>
+
+      <div class="note">
+          Practice asking for and giving directions for places in your own neighbourhood or city using the vocabulary you know.
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

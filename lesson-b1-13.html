@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | B1 Module 13: Expressing Emotions & Feelings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .emotion-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .emotion-table th, .emotion-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .emotion-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .emotion-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .emotion-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .emotion-table .example-sentence { color: #fff; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 120px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .emotion-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 13: Expressing Emotions & Feelings</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>B1 Module 13: Expressing Emotions & Feelings</h1>
+    <p>Learn vocabulary and common phrases to talk about your emotions and understand how others are feeling.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Basic Ways to Express Feelings</h2>
+      <p>There are several common structures to talk about how you feel:</p>
+      <ul>
+          <li>**Using Adjectives:** "Ana + [Adjective]" (I am [emotion]). E.g., `Ana fr7an.` (I am happy.)</li>
+          <li>**"Fiya..." (In me is...):** Used for certain sensations or strong feelings. E.g., `Fiya jou3.` (I am hungry. Lit: In me is hunger.)</li>
+          <li>**"Kan7ess b..." (I feel...):** `kan7ess b` (<span class="darija-script">كانحس ب</span>) + [Noun/Adjective]. E.g., `Kan7ess b l-fr7.` (I feel happiness.)</li>
+      </ul>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Common Emotions & Feelings Vocabulary</h2>
+      <p>Here are some key adjectives and nouns related to emotions. Remember adjectives will agree in gender.</p>
+      <table class="emotion-table">
+        <thead>
+            <tr>
+                <th>English</th>
+                <th>Darija (Masc. Adj. / Noun)</th>
+                <th>Transcription (Masc. Adj. / Noun)</th>
+                <th>Feminine Adjective</th>
+                <th>Audio (Masc/Fem)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Happy / Happiness</td>
+                <td><span class="darija-script">فرحان / الفرح</span></td>
+                <td class="transcription">fr7an / l-fre7</td>
+                <td>fr7ana</td>
+                <td><span class="play-button" onclick="alert('Audio: fr7an / fr7ana')"></span></td>
+            </tr>
+            <tr>
+                <td>Sad / Sadness</td>
+                <td><span class="darija-script">حزين / الحزن</span> (also <span class="darija-script">مقلق</span> mqelleq - upset/worried)</td>
+                <td class="transcription">7azin / l-7uzn (also mqelleq)</td>
+                <td>7azina / mqellqa</td>
+                <td><span class="play-button" onclick="alert('Audio: 7azin / mqelleq')"></span></td>
+            </tr>
+            <tr>
+                <td>Angry / Anger</td>
+                <td><span class="darija-script">معصب / الغضب</span> (also <span class="darija-script">غضبان</span> ghDban)</td>
+                <td class="transcription">m3esseb / l-ghaDab (also ghDban)</td>
+                <td>m3essba / ghDbana</td>
+                <td><span class="play-button" onclick="alert('Audio: m3esseb / ghDban')"></span></td>
+            </tr>
+            <tr>
+                <td>Scared / Fear</td>
+                <td><span class="darija-script">خايف / الخوف</span></td>
+                <td class="transcription">khayf / l-khuf</td>
+                <td>khayfa</td>
+                <td><span class="play-button" onclick="alert('Audio: khayf / khayfa')"></span></td>
+            </tr>
+            <tr>
+                <td>Surprised / Surprise</td>
+                <td><span class="darija-script">مندهش / الدهشة</span> (also <span class="darija-script">متفاجئ</span> mtfaje')</td>
+                <td class="transcription">mndehesh / d-dehsha (also mtfaje')</td>
+                <td>mndehesha / mtfaj'a</td>
+                <td><span class="play-button" onclick="alert('Audio: mndehesh / mtfaje\'')"></span></td>
+            </tr>
+             <tr>
+                <td>Worried / Worry</td>
+                <td><span class="darija-script">مقلق / القلق</span> (also <span class="darija-script">مهموم</span> mhmum)</td>
+                <td class="transcription">mqelleq / l-qalaq (also mhmum)</td>
+                <td>mqellqa / mhmuma</td>
+                <td><span class="play-button" onclick="alert('Audio: mqelleq / mhmum')"></span></td>
+            </tr>
+            <tr>
+                <td>Tired / Tiredness</td>
+                <td><span class="darija-script">عيان / العيا</span></td>
+                <td class="transcription">3iyyan / l-3ya</td>
+                <td>3iyyana</td>
+                <td><span class="play-button" onclick="alert('Audio: 3iyyan / 3iyyana')"></span></td>
+            </tr>
+            <tr>
+                <td>Hungry / Hunger</td>
+                <td><span class="darija-script">جيعان / الجوع</span></td>
+                <td class="transcription">ji3an / j-jou3</td>
+                <td>ji3ana</td>
+                <td><span class="play-button" onclick="alert('Audio: ji3an / ji3ana')"></span></td>
+            </tr>
+            <tr>
+                <td>Thirsty / Thirst</td>
+                <td><span class="darija-script">عطشان / العطش</span></td>
+                <td class="transcription">3tshan / l-3tesh</td>
+                <td>3tshana</td>
+                <td><span class="play-button" onclick="alert('Audio: 3tshan / 3tshana')"></span></td>
+            </tr>
+             <tr>
+                <td>Cold (feeling)</td>
+                <td><span class="darija-script">فيا البرد</span> (Lit: in me is the cold)</td>
+                <td class="transcription">(Ana) fiya l-berd</td>
+                <td>N/A (sensation)</td>
+                <td><span class="play-button" onclick="alert('Audio: fiya l-berd')"></span></td>
+            </tr>
+             <tr>
+                <td>Hot (feeling)</td>
+                <td><span class="darija-script">فيا الصهد</span> (Lit: in me is the heat)</td>
+                <td class="transcription">(Ana) fiya s-sehd</td>
+                <td>N/A (sensation)</td>
+                <td><span class="play-button" onclick="alert('Audio: fiya s-sehd')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Using "Fiya..." (In me is...) for Sensations/Strong Feelings</h2>
+        <p>This structure is very common for physical sensations and some strong emotions.</p>
+        <p>Structure: **`Fi-` + [Pronoun Suffix] + [Noun (the feeling/sensation)]**</p>
+        <ul>
+            <li>`Fiya jou3.` (<span class="darija-script">فيا الجوع.</span>) - I am hungry.</li>
+            <li>`Fik l-3tesh?` (<span class="darija-script">فيك العطش؟</span>) - Are you (s.) thirsty?</li>
+            <li>`Fih s-skhana.` (<span class="darija-script">فيه السخانة.</span>) - He has a fever.</li>
+            <li>`Fiha l-khl3a.` (<span class="darija-script">فيها الخلعة.</span>) - She is scared/startled. (`l-khl3a` = fright/shock)</li>
+            <li>`Fina n-n3as.` (<span class="darija-script">فينا النعاس.</span>) - We are sleepy. (`n-n3as` = sleepiness)</li>
+        </ul>
+         <div class="note">
+            Notice the pronoun suffixes: `fi-ya` (in me), `fi-k` (in you s.), `fi-h` (in him), `fi-ha` (in her), `fi-na` (in us), `fi-kum` (in you pl.), `fi-hum` (in them).
+        </div>
+    </section>
+
+     <section class="lesson-section">
+        <h2>Using "Kan7ess b..." (I feel...)</h2>
+        <p>The verb `7ess b-` (<span class="darija-script">حس ب</span> - to feel) is conjugated normally (e.g., `kan7ess`, `kat7ess`, `kay7ess`) and is followed by the preposition `b-` and then the feeling (often a noun).</p>
+        
+        <table class="emotion-table">
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I feel happiness.</td>
+                    <td class="darija-script">كانحس بالفرح.</td>
+                    <td class="transcription">Kan7ess b l-fre7.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 1')"></span></td>
+                </tr>
+                <tr>
+                    <td>She feels tired.</td>
+                    <td class="darija-script">كاتحس بالعيا.</td>
+                    <td class="transcription">Kat7ess b l-3ya.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 2')"></span></td>
+                </tr>
+                 <tr>
+                    <td>He feels a little pain. (`l-7riq` - pain)</td>
+                    <td class="darija-script">كايحس بشوية د الحريق.</td>
+                    <td class="transcription">Kay7ess b shwiya d l-7riq.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 3')"></span></td>
+                </tr>
+                <tr>
+                    <td>How do you (m.s.) feel?</td>
+                    <td class="darija-script">باش كاتحس؟ / كيفاش كاتحس؟</td>
+                    <td class="transcription">Bash kat7ess? / Kifash kat7ess?</td>
+                    <td><span class="play-button" onclick="alert('Audio: Sentence 4')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Dialogue: Checking In</h2>
+        <div class="dialogue-box">
+            <p><span class="speakerA">Youssef:</span> <span class="darija-text">السلام فاطمة، لاباس؟ كايبان ليا ماشي هي هاديك.</span><br>
+            <span class="transcription-text">Ssalām Fatima, labas? Kayban li-ya mashi hiya hadik.</span><br>
+            <span class="translation-text">Hello Fatima, how are you? You don't seem yourself. (Lit: It seems to me not she is that one)</span></p>
+
+            <p><span class="speakerB">Fatima:</span> <span class="darija-text">و عليكم السلام يوسف. شوية، أنا عيانة بزاف اليوم.</span><br>
+            <span class="transcription-text">Wa 3likum ssalam Youssef. Shwiya, ana 3iyyana bzzaf l-yum.</span><br>
+            <span class="translation-text">Hello Youssef. A little (so-so), I am very tired today.</span></p>
+
+            <p><span class="speakerA">Youssef:</span> <span class="darija-text">أواه، مالك؟ واش فيك شي حاجة؟</span><br>
+            <span class="transcription-text">Awah, malek? Wash fik shi 7aja?</span><br>
+            <span class="translation-text">Oh dear, what's wrong with you? Is something wrong? (Lit: Is in you some thing?)</span></p>
+
+            <p><span class="speakerB">Fatima:</span> <span class="darija-text">ما عرفتش، كانحس براسي ماشي مزيان. يمكن ضاربني البرد.</span><br>
+            <span class="transcription-text">Ma 3reftsh, kan7ess b rasi mashi mzyan. Yemken Darbni l-berd.</span><br>
+            <span class="translation-text">I don't know, I feel not well. (Lit: I feel by my head not good). Maybe I caught a cold.</span></p>
+            
+             <p><span class="speakerA">Youssef:</span> <span class="darija-text">الله يشافيك. خاصك ترتاحي.</span><br>
+            <span class="transcription-text">Allah yshafik. Khassk trta7i.</span><br>
+            <span class="translation-text">May God heal you. You need to rest.</span></p>
+        </div>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: How Do They Feel?</h3>
+      <p class="prompt">Complete the sentences using the adjective form or "fiya..." structure.</p>
+      <ol>
+          <li>Huwa (happy): Huwa <span class="fill-blank">fr7an</span>.</li>
+          <li>Ana (hungry): <span class="fill-blank">Fiya jou3</span>. / Ana <span class="fill-blank">ji3an(a)</span>.</li>
+          <li>Hiya (sad/upset): Hiya <span class="fill-blank">mqellqa / 7azina</span>.</li>
+          <li>Huma (scared): Huma <span class="fill-blank">khayfin</span>. (Plural of khayf) / <span class="fill-blank">Fihum l-khl3a</span>.</li>
+          <li>Nta (thirsty): <span class="fill-blank">Fik l-3tesh</span>. / Nta <span class="fill-blank">3tshan</span>.</li>
+      </ol>
+
+      <h3>Exercise 2: Translate to Darija</h3>
+      <p>Translate these sentences:</p>
+      <ol>
+          <li>I feel very tired today. <span class="fill-blank">Kan7ess b l-3ya bzzaf l-yum. / Ana 3iyyan(a) bzzaf l-yum.</span></li>
+          <li>She said that she is angry. <span class="fill-blank">Qalet belli hiya m3essba.</span></li>
+          <li>Are you (m.s.) surprised? <span class="fill-blank">Wash nta mndehesh/mtfaje'?</span></li>
+          <li>We don't feel fear. <span class="fill-blank">Ma kan7essush b l-khuf. / Ma fina-sh l-khl3a.</span></li>
+      </ol>
+      <div class="note">
+          Being able to express and understand emotions is key to deeper connections. Practice talking about how you feel using these different structures.
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Simple script to ensure correct breadcrumb is shown
+    if (document.getElementById('b1-breadcrumb')) { 
+        let allBreadcrumbs = document.querySelectorAll('.breadcrumb');
+        let b1BreadcrumbExists = false;
+        allBreadcrumbs.forEach(bc => {
+            if (bc.innerHTML.includes("B1 Intermediate")) b1BreadcrumbExists = true;
+        });
+
+        if (b1BreadcrumbExists) { 
+            allBreadcrumbs.forEach(bc => {
+                if (!bc.innerHTML.includes("B1 Module 13")) { // Adjust module number
+                    bc.style.display = 'none';
+                } else {
+                    bc.style.display = 'block';
+                }
+            });
+        }
+    }
+  </script>
+</body>
+</html>

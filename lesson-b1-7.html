@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | B1 Module 7: Advanced Relative Clauses & 'ashmn'</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .relative-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .relative-table th, .relative-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .relative-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .relative-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .relative-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .relative-table .noun { color: #fff; font-weight: bold; }
+    .relative-table .relative-pronoun { color: #ffcc99; font-weight: bold; }
+    .relative-table .preposition { color: #ff9999; }
+    .relative-table .resumptive-pronoun { color: #ffcc66; font-style: italic; }
+    .relative-table .clause { color: #ccc; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 100px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .relative-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 7: Advanced Relative Clauses & 'ashmn'</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>B1 Module 7: Advanced Relative Clauses & `ashmn` (Which)</h1>
+    <p>Build more complex descriptive sentences using `lli` with prepositions, and learn to use `ashmn` to specify "which" item.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Review: Simple Relative Clauses with `lli`</h2>
+      <p>In A2 (Module 13), you learned to use `lli` (<span class="darija-script">اللي</span>) to mean "that/which/who" when referring to a definite noun:</p>
+      <ul>
+          <li><span class="darija-script">الراجل اللي جا.</span> (<span class="transcription">R-rajl lli ja.</span>) - The man who came.</li>
+          <li><span class="darija-script">الكتاب اللي قريت.</span> (<span class="transcription">L-ktab lli qrit.</span>) - The book that I read. (Sometimes `qritu` with resumptive pronoun)</li>
+      </ul>
+      <p>Now we'll explore more complex uses.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Relative Clauses with Prepositions</h2>
+      <p>When the noun being described by the `lli` clause is the object of a preposition within that clause, the preposition often comes *before* `lli`, and a resumptive pronoun suffix (referring back to the noun) is attached to the preposition.</p>
+      <p>Structure: **[Noun] + [Preposition + `lli` + Resumptive Pronoun Suffix] + [Rest of Clause]**</p>
+      <p>This can be a bit tricky, so let's look at examples. The resumptive pronoun matches the noun `lli` refers to.</p>
+      
+      <table class="relative-table">
+        <thead>
+            <tr>
+                <th>English</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Breakdown</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>The house in which I live.</td>
+                <td><span class="noun darija-script">الدار</span> <span class="preposition darija-script">ف</span><span class="relative-pronoun darija-script">اللي</span> <span class="clause darija-script">كانسكن <span class="resumptive-pronoun darija-script">فيها</span>.</span></td>
+                <td class="transcription"><span class="noun">D-dar</span> <span class="preposition">f</span><span class="relative-pronoun">elli</span> <span class="clause">kanskun <span class="resumptive-pronoun">fiha</span>.</span></td>
+                <td>The house + in which + I live in it. (`fiha` = in her/it (fem.))</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 1')"></span></td>
+            </tr>
+            <tr>
+                <td>The man with whom I traveled.</td>
+                <td><span class="noun darija-script">الراجل</span> <span class="preposition darija-script">م</span><span class="relative-pronoun darija-script">اللي</span> <span class="clause darija-script">سافرت <span class="resumptive-pronoun darija-script">معاه</span>.</span></td>
+                <td class="transcription"><span class="noun">R-rajl</span> <span class="preposition">m</span><span class="relative-pronoun">elli</span> <span class="clause">safert <span class="resumptive-pronoun">m3ah</span>.</span></td> <!-- m3a lli -> melli -->
+                <td>The man + with whom + I traveled with him. (`m3ah` = with him)</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 2')"></span></td>
+            </tr>
+            <tr>
+                <td>The city to which we went.</td>
+                <td><span class="noun darija-script">المدينة</span> <span class="preposition darija-script">ل</span><span class="relative-pronoun darija-script">لي</span> <span class="clause darija-script">مشينا <span class="resumptive-pronoun darija-script">ليها</span>.</span></td>
+                <td class="transcription"><span class="noun">L-mdina</span> <span class="preposition">l</span><span class="relative-pronoun">li</span> <span class="clause">mshina <span class="resumptive-pronoun">liha</span>.</span></td>
+                <td>The city + to which + we went to it. (`liha` = to her/it (fem.))</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 3')"></span></td>
+            </tr>
+             <tr>
+                <td>The pen with which I write.</td>
+                <td><span class="noun darija-script">الستيلو</span> <span class="preposition darija-script">ب</span><span class="relative-pronoun darija-script">اش</span> <span class="clause darija-script">كانكتب <span class="resumptive-pronoun darija-script">بيه</span>.</span></td>
+                <td class="transcription"><span class="noun">S-stilo</span> <span class="preposition">b</span><span class="relative-pronoun">ash</span> <span class="clause">kankteb <span class="resumptive-pronoun">bih</span>.</span></td> <!-- b + ash + lli often contracts -->
+                <td>The pen + with which + I write with it. (`bih` = with it (masc.)) `bash lli -> bash` or `b'ash`</td>
+                <td><span class="play-button" onclick="alert('Audio: Sentence 4')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+       <div class="note">
+        <strong>Contractions:</strong> Prepositions often contract with `lli`.
+        <ul>
+            <li>`f` + `lli` → `felli` (<span class="darija-script">فاللي</span>) or sometimes just `f lli`</li>
+            <li>`m3a` + `lli` → `melli` (<span class="darija-script">مللي</span>) (can also mean "when") or `m3a lli`</li>
+            <li>`l` + `lli` → `lli` (the `l` can be absorbed) or `l lli`</li>
+            <li>`b` + `lli` can become `belli` (<span class="darija-script">باللي</span>), but for "with which," `b'ash` (<span class="darija-script">باش</span>) is more common where `ash` means "what/which thing."</li>
+        </ul>
+        The resumptive pronoun suffix on the preposition at the end of the clause (e.g., `fiha`, `m3ah`, `liha`, `bih`) is very important for clarity.
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Using `ashmn` (<span class="darija-script">أشمن</span> - Which)</h2>
+        <p>`ashmn` is a determiner used before a noun to ask "which [noun]...?" or to specify "which [noun]..." in a statement when there are multiple options.</p>
+
+        <h3>`ashmn` in Questions:</h3>
+        <table class="relative-table">
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Which book do you want?</td>
+                    <td><span class="relative-pronoun darija-script">أشمن كتاب</span> <span class="clause darija-script">بغيتي؟</span></td>
+                    <td class="transcription"><span class="relative-pronoun">Ashmn ktab</span> <span class="clause">bghiti?</span></td>
+                    <td><span class="play-button" onclick="alert('Audio: Question 1')"></span></td>
+                </tr>
+                <tr>
+                    <td>Which car is yours (m.s.)?</td>
+                    <td><span class="relative-pronoun darija-script">أشمن طموبيل</span> <span class="clause darija-script">ديالك؟</span></td>
+                    <td class="transcription"><span class="relative-pronoun">Ashmn ttomobil</span> <span class="clause">dyalek?</span></td>
+                    <td><span class="play-button" onclick="alert('Audio: Question 2')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>`ashmn` in Statements (often combined with `lli`):</h3>
+        <p>To specify "the one which..." from a set of options.</p>
+         <table class="relative-table">
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I don't know which man came.</td>
+                    <td><span class="darija-script">ما عرفتش</span> <span class="relative-pronoun darija-script">أشمن راجل</span> <span class="relative-pronoun darija-script">اللي</span> <span class="clause darija-script">جا.</span></td>
+                    <td class="transcription">Ma 3reftsh <span class="relative-pronoun">ashmn rajl</span> <span class="relative-pronoun">lli</span> <span class="clause">ja.</span></td>
+                    <td><span class="play-button" onclick="alert('Audio: Statement 1')"></span></td>
+                </tr>
+                <tr>
+                    <td>Show me which house you bought. (Show me: `werrini`)</td>
+                    <td><span class="darija-script">وريني</span> <span class="relative-pronoun darija-script">أشمن دار</span> <span class="relative-pronoun darija-script">اللي</span> <span class="clause darija-script">شريتي.</span></td>
+                    <td class="transcription">Werrini <span class="relative-pronoun">ashmn dar</span> <span class="relative-pronoun">lli</span> <span class="clause">shriti.</span></td>
+                    <td><span class="play-button" onclick="alert('Audio: Statement 2')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">
+            `ashmn` helps narrow down choices. It's like saying "which one of these...?"
+        </div>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Relative Clauses with Prepositions</h3>
+      <p class="instruction">Combine the sentences using a preposition + `lli` + resumptive pronoun.</p>
+      <ol>
+          <li>This is the pen. I write with the pen. (`b` - with)
+              <br>Darija: <span class="fill-blank">Hada s-stilo b'ash kankteb bih. / Hada s-stilo lli kankteb bih.</span></li>
+          <li>Where is the café? We met at the café. (`f` - at/in)
+              <br>Darija: <span class="fill-blank">Fin l-qhwa felli tlaqina fiha? / Fin l-qhwa lli tlaqina fiha?</span> (`tlaqina`=we met)</li>
+          <li>The friend with whom I traveled is nice. (`m3a` - with)
+              <br>Darija: <span class="fill-blank">S-sa7b melli safert m3ah drif. / S-sa7b lli safert m3ah drif.</span></li>
+      </ol>
+
+      <h3>Exercise 2: Using `ashmn`</h3>
+      <p class="instruction">Translate these questions/statements to Darija using `ashmn`.</p>
+      <ol>
+          <li>Which color do you like? (Color: <span class="darija-script">لون</span> lun)
+              <br>Answer: <span class="fill-blank">Ashmn lun kay3jbek?</span></li>
+          <li>I want to know which train goes to Rabat. (Train: <span class="darija-script">تران</span> tran)
+              <br>Answer: <span class="fill-blank">Bghit n3ref ashmn tran lli kaymshi l Rbat.</span> (`n3ref`=I know)</li>
+          <li>Which food (f.) did she cook? (Food: <span class="darija-script">ماكلة</span> makla)
+              <br>Answer: <span class="fill-blank">Ashmn makla lli tiyybat?</span></li>
+      </ol>
+      <div class="note">
+          These advanced relative clauses can be challenging but are key to forming more natural and complex Darija sentences. Pay close attention to the resumptive pronouns!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

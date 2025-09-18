@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | Module 14: Imperatives (Commands)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .command-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .command-table th, .command-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .command-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .command-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .command-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+     .command-table .verb-infinitive {
+        color: #fff;
+        font-style: italic;
+     }
+     .command-table .negative { color: #ff9999; font-weight: bold; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 80px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+    .practice-section .fill-blank.negative { color: #ff9999; }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .command-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a1.html">A1 Beginner</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 14: Imperatives (Commands)</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>Module 14: Imperatives (Commands)</h1>
+    <p>Learn how to give instructions and make requests by telling people to do (or not do) things in Darija.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Affirmative Commands (Telling Someone TO Do Something)</h2>
+      <p>The imperative form is used to give commands. It changes depending on whether you're talking to one male (m.s.), one female (f.s.), or a group of people (plural).</p>
+      <p>Often, the masculine singular command is the simplest form, sometimes just the verb root.</p>
+      
+      <table class="command-table">
+        <thead>
+            <tr>
+                <th>Verb (Meaning)</th>
+                <th>Command (to m.s.)</th>
+                <th>Command (to f.s.)</th>
+                <th>Command (to Plural)</th>
+                <th>Audio (m.s/f.s/pl)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="verb-infinitive">shrb</span> (to drink)</td>
+                <td><span class="darija-script">شرَب</span> <span class="transcription">(shrb)</span></td>
+                <td><span class="darija-script">شرَبي</span> <span class="transcription">(shrbi)</span></td>
+                <td><span class="darija-script">شرَبو</span> <span class="transcription">(shrbu)</span></td>
+                <td><span class="play-button" onclick="alert('Audio: shrb / shrbi / shrbu')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="verb-infinitive">kul</span> (to eat)</td>
+                <td><span class="darija-script">كول</span> <span class="transcription">(kul)</span></td>
+                <td><span class="darija-script">كولي</span> <span class="transcription">(kuli)</span></td>
+                <td><span class="darija-script">كولو</span> <span class="transcription">(kulu)</span></td>
+                <td><span class="play-button" onclick="alert('Audio: kul / kuli / kulu')"></span></td>
+            </tr>
+             <tr>
+                <td><span class="verb-infinitive">msha</span> (to go)</td>
+                <td><span class="darija-script">سير</span> <span class="transcription">(sir)</span></td> <!-- Irregular -->
+                <td><span class="darija-script">سيري</span> <span class="transcription">(siri)</span></td>
+                <td><span class="darija-script">سيرو</span> <span class="transcription">(siru)</span></td>
+                <td><span class="play-button" onclick="alert('Audio: sir / siri / siru')"></span></td>
+            </tr>
+             <tr>
+                <td><span class="verb-infinitive">ja</span> (to come)</td>
+                <td><span class="darija-script">أجي</span> <span class="transcription">(aji)</span></td> <!-- Irregular, same for m/f -->
+                <td><span class="darija-script">أجي</span> <span class="transcription">(aji)</span></td>
+                <td><span class="darija-script">أجيو</span> <span class="transcription">(ajiw)</span></td>
+                <td><span class="play-button" onclick="alert('Audio: aji / aji / ajiw')"></span></td>
+            </tr>
+             <tr>
+                <td><span class="verb-infinitive">shaf</span> (to see/look)</td>
+                <td><span class="darija-script">شوف</span> <span class="transcription">(shuf)</span></td>
+                <td><span class="darija-script">شوفي</span> <span class="transcription">(shufi)</span></td>
+                <td><span class="darija-script">شوفو</span> <span class="transcription">(shufu)</span></td>
+                <td><span class="play-button" onclick="alert('Audio: shuf / shufi / shufu')"></span></td>
+            </tr>
+             <tr>
+                <td><span class="verb-infinitive">kteb</span> (to write)</td>
+                <td><span class="darija-script">كتَب</span> <span class="transcription">(kteb)</span></td>
+                <td><span class="darija-script">كتَبي</span> <span class="transcription">(ketbi)</span></td>
+                <td><span class="darija-script">كتَبو</span> <span class="transcription">(ketbu)</span></td>
+                <td><span class="play-button" onclick="alert('Audio: kteb / ketbi / ketbu')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="verb-infinitive">qra</span> (to read)</td>
+                <td><span class="darija-script">قرا</span> <span class="transcription">(qra)</span></td>
+                <td><span class="darija-script">قراي</span> <span class="transcription">(qray)</span></td>
+                <td><span class="darija-script">قراو</span> <span class="transcription">(qraw)</span></td>
+                <td><span class="play-button" onclick="alert('Audio: qra / qray / qraw')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+       <div class="note">
+        <strong>Pattern Spotting:</strong>
+        <ul>
+            <li>Often, the command to a female (f.s.) adds an `-i` ending.</li>
+            <li>Often, the command to a plural group adds an `-u` ending.</li>
+            <li>Some verbs are irregular (like "go" and "come") and must be memorized.</li>
+        </ul>
+      </div>
+      <h3>Adding Politeness: `3afak`</h3>
+      <p>To make a command polite (like adding "please"), simply add `3afak` (<span class="darija-script">عافاك</span>) either before or after the command.</p>
+      <ul>
+          <li>Drink water, please (to m.s.): <span class="darija-script">شرَب الما، عافاك.</span> (Shrb l-ma, 3afak.)</li>
+          <li>Come here, please (to f.s.): <span class="darija-script">عافاك أجي لهنا.</span> (3afak aji l-hna.) (lhna = here)</li>
+      </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Negative Commands (Telling Someone NOT To Do Something)</h2>
+        <p>To tell someone not to do something, you use the `ma-...-sh` structure learned in Module 13, usually applied to the *present tense 'you' form* of the verb (e.g., `katshrb` - you drink becomes `ma tshrbs_h_`).</p>
+        <p>Pattern: **`ma` + [Present Tense "You" Stem] + `sh`**</p>
+
+        <table class="command-table">
+            <thead>
+                <tr>
+                    <th>Verb (Meaning)</th>
+                    <th>Negative Command (to m.s./f.s.)</th> <!-- Often same form -->
+                    <th>Negative Command (to Plural)</th>
+                    <th>Audio (m.s./pl)</th>
+                </tr>
+            </thead>
+             <tbody>
+                <tr>
+                    <td><span class="verb-infinitive">shrb</span> (to drink)</td>
+                    <td><span class="negative darija-script">ما تشرَبش</span> <span class="negative transcription">(ma tshrbs_h_)</span></td>
+                    <td><span class="negative darija-script">ما تشرَبوش</span> <span class="negative transcription">(ma tshrbu_sh_)</span></td>
+                    <td><span class="play-button" onclick="alert('Audio: ma tshrbs_h_ / ma tshrbu_sh_')"></span></td>
+                </tr>
+                 <tr>
+                    <td><span class="verb-infinitive">kul</span> (to eat)</td>
+                    <td><span class="negative darija-script">ما تاكُلش</span> <span class="negative transcription">(ma takul_sh_)</span></td>
+                    <td><span class="negative darija-script">ما تاكُلوش</span> <span class="negative transcription">(ma takulu_sh_)</span></td>
+                    <td><span class="play-button" onclick="alert('Audio: ma takul_sh_ / ma takulu_sh_')"></span></td>
+                </tr>
+                <tr>
+                    <td><span class="verb-infinitive">msha</span> (to go)</td>
+                    <td><span class="negative darija-script">ما تمشيش</span> <span class="negative transcription">(ma tmshi_sh_)</span></td>
+                    <td><span class="negative darija-script">ما تمشيوش</span> <span class="negative transcription">(ma tmshiw_sh_)</span></td>
+                    <td><span class="play-button" onclick="alert('Audio: ma tmshi_sh_ / ma tmshiw_sh_')"></span></td>
+                </tr>
+                 <tr>
+                    <td><span class="verb-infinitive">ja</span> (to come)</td>
+                    <td><span class="negative darija-script">ما تجيش</span> <span class="negative transcription">(ma tji_sh_)</span></td>
+                    <td><span class="negative darija-script">ما تجيوش</span> <span class="negative transcription">(ma tjiw_sh_)</span></td>
+                    <td><span class="play-button" onclick="alert('Audio: ma tji_sh_ / ma tjiw_sh_')"></span></td>
+                </tr>
+                <tr>
+                    <td><span class="verb-infinitive">kteb</span> (to write)</td>
+                    <td><span class="negative darija-script">ما تكتَبش</span> <span class="negative transcription">(ma tkteb_sh_)</span></td>
+                    <td><span class="negative darija-script">ما تكتَبوش</span> <span class="negative transcription">(ma tktebu_sh_)</span></td>
+                    <td><span class="play-button" onclick="alert('Audio: ma tkteb_sh_ / ma tktebu_sh_')"></span></td>
+                </tr>
+             </tbody>
+        </table>
+         <div class="note">
+            <strong>Singular Forms (m.s. vs f.s.):</strong> While the transcription often looks the same for `ma tshrbs_h_` (don't drink - m.s./f.s.), there can be subtle differences in the vowel sounds or emphasis depending on who you're speaking to. For A1, using the base `ma t-...-sh` form for singular is usually understood. The plural `ma t-...-ush` is distinct.
+        </div>
+         <h3>Examples:</h3>
+        <ul>
+            <li>Don't eat that! (to plural): <span class="negative darija-script">ما تاكلوش هاداك!</span> (Ma takulush hadak!)</li>
+            <li>Don't go to the market! (to f.s.): <span class="negative darija-script">ما تمشيش للسوق!</span> (Ma tmshish l s-souq!)</li>
+        </ul>
+    </section>
+
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Give Affirmative Commands</h3>
+      <p>Write the correct affirmative command form:</p>
+      <ol>
+          <li>(To m.s.) Look! <span class="fill-blank">Shuf!</span></li>
+          <li>(To f.s.) Drink! <span class="fill-blank">Shrbi!</span></li>
+          <li>(To Plural) Eat! <span class="fill-blank">Kulu!</span></li>
+          <li>(To m.s.) Go! <span class="fill-blank">Sir!</span></li>
+          <li>(To f.s.) Write! <span class="fill-blank">Ketbi!</span></li>
+      </ol>
+
+      <h3>Exercise 2: Give Negative Commands</h3>
+      <p>Write the correct negative command form:</p>
+      <ol>
+          <li>(To m.s.) Don't go! <span class="fill-blank negative">Ma tmshish!</span></li>
+          <li>(To Plural) Don't drink! <span class="fill-blank negative">Ma tshr bush!</span></li>
+          <li>(To f.s.) Don't eat! <span class="fill-blank negative">Ma takulish!</span> (or ma takulsh)</li>
+          <li>(To m.s./f.s.) Don't look! <span class="fill-blank negative">Ma tshufsh!</span></li>
+      </ol>
+
+       <h3>Exercise 3: Translate the Command</h3>
+      <p>Translate these commands into Darija:</p>
+      <ol>
+          <li>(To f.s.) Come here, please. <span class="fill-blank">Aji l-hna, 3afak.</span></li>
+          <li>(To Plural) Don't write on the table! <span class="fill-blank negative">Ma tktebush 3la t-tbla!</span></li>
+          <li>(To m.s.) Read the book! <span class="fill-blank">Qra l-ktab!</span></li>
+      </ol>
+
+      <div class="note">
+          Giving commands is direct. Always remember to use `3afak` (please) to be polite, especially when asking someone to do something for you.
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | B1 Module 17: Extended Narratives & Storytelling</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+     .story-box {
+        background: rgba(255,255,255,0.08);
+        border-left: 4px solid #99ff99;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+    .story-box .darija-text { font-family: 'Amiri', serif; font-size: 1.3em; line-height: 1.8; }
+    .story-box .transcription-text { font-style: italic; color: #ffcc66; font-size: 1em; line-height: 1.8;}
+    .story-box .translation-text { color: #ccc; font-size: 0.95em; line-height: 1.8; margin-top: 10px; display: block;}
+    .story-box p { margin-bottom: 10px; }
+    .story-box .vocab-highlight { color: #ff9999; font-weight: bold; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section .prompt { font-style: italic; color: #ccc; margin-bottom: 10px;}
+    .practice-section textarea {
+        width: 100%;
+        min-height: 150px;
+        background: rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.2);
+        color: #fff;
+        padding: 10px;
+        border-radius: 4px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 17: Extended Narratives & Storytelling</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>B1 Module 17: Extended Narratives & Storytelling</h1>
+    <p>Practice combining verb tenses, connectors, and descriptive language to tell more detailed stories about past experiences.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Building a Narrative</h2>
+      <p>Storytelling involves more than just listing events. Good narratives often include:</p>
+      <ul>
+          <li><strong>Setting the Scene:</strong> When and where did it happen? Who was involved?</li>
+          <li><strong>Sequence of Events:</strong> What happened first, next, then, finally? (Using connectors from B1.M10)</li>
+          <li><strong>Details & Descriptions:</strong> Using adjectives, relative clauses (`lli`), and adverbs to make the story more vivid.</li>
+          <li><strong>Feelings & Reactions:</strong> How did you or others feel? (Using language from B1.M13)</li>
+          <li><strong>A Climax or Main Point:</strong> What was the most important or interesting part?</li>
+          <li><strong>A Conclusion or Resolution:</strong> How did it end?</li>
+      </ul>
+      <p>At the B1 level, your narratives will be simpler, but you can start incorporating these elements.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Key Elements for Storytelling (Review)</h2>
+      <h3>1. Past Tenses:</h3>
+      <ul>
+          <li>**Simple Past:** For completed actions (e.g., `mshit` - I went, `kla` - he ate, `shafet` - she saw). (A2.M1, A2.M2, B1.M1)</li>
+          <li>**Imperfect (Habitual/Ongoing Past):** For background actions or "used to" scenarios (e.g., `kunt kanl3eb` - I used to play / I was playing). (B1.M2)</li>
+      </ul>
+      <h3>2. Sequencing Words & Connectors:</h3>
+      <ul>
+          <li>`f l-luwel` (first), `mn ba3d` (after that/then), `u` (and), `walakin` (but), `7it` (because), `dakshi 3lash` (that's why), `f l-lekher` (finally). (A2.M12, B1.M10)</li>
+          <li>`melli` (when - conjunction, e.g., `melli kunt sghir` - when I was young).</li>
+      </ul>
+      <h3>3. Descriptive Language:</h3>
+      <ul>
+          <li>Adjectives + agreement (A1.M6, A2.M7).</li>
+          <li>Relative clauses with `lli` (A2.M13, B1.M7).</li>
+      </ul>
+      <h3>4. Expressing Feelings:</h3>
+      <ul>
+          <li>`Ana fr7an/mqelleq...` (I am happy/worried...).</li>
+          <li>`Fiya l-khl3a` (I am scared).</li>
+          <li>`Kan7ess b...` (I feel...). (B1.M13)</li>
+      </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Example Extended Narrative: A Memorable Trip</h2>
+        <p>Listen to or read the following story about a trip, paying attention to how different tenses and connectors are used.</p>
+        <div class="story-box">
+            <p><span class="darija-text">
+                العام اللي فات، <span class="vocab-highlight">سافرت</span> أنا و عائلتي لمدينة إفران. <span class="vocab-highlight">ف اللول</span>، كنا فرحانين بزاف حيت <span class="vocab-highlight">كانت</span> أول مرة كانمشيو لتماك. <span class="vocab-highlight">مللي وصلنا</span>، الجو <span class="vocab-highlight">كان</span> بارد و <span class="vocab-highlight">كانت</span> الشتا كاتصب شوية. <span class="vocab-highlight">ولكن</span>، المدينة <span class="vocab-highlight">كانت</span> زوينة بزاف، و الديور ديالها <span class="vocab-highlight">اللي</span> بالسطوحة حمرين <span class="vocab-highlight">كانو</span> كايحمقو.
+                <br><br>
+                <span class="vocab-highlight">من بعد</span>، مشينا لواحد الغابة قريبة سميتها عين ڤيتل. <span class="vocab-highlight">تماك شفنا</span> القرودة و <span class="vocab-highlight">عطيناهم</span> ياكلو. <span class="vocab-highlight">كانت</span> واحد التجربة واعرة. <span class="vocab-highlight">ف العشية</span>، رجعنا ل لوطيل و <span class="vocab-highlight">تعشينا</span> ماكلة بنينة.
+                <br><br>
+                <span class="vocab-highlight">ف الصراحة</span>، <span class="vocab-highlight">دوزنا</span> وقت زوين بزاف و <span class="vocab-highlight">كانتمنى</span> نرجع ل إفران مرة خرى إن شاء الله.
+            </span>
+            <span class="play-button" onclick="alert('Audio for full story')"></span></p>
+            <p><span class="transcription-text">
+                L-3am lli fat, <span class="vocab-highlight">safert</span> ana u 3a'ilti l mdinet Ifran. <span class="vocab-highlight">F l-luwel</span>, kunna fr7anin bzzaf 7it <span class="vocab-highlight">kanet</span> uwel mrra kanmshiw l temmak. <span class="vocab-highlight">Melli wselna</span>, l-jeww <span class="vocab-highlight">kan</span> bard u <span class="vocab-highlight">kanet</span> sh-shta katSubb shwiya. <span class="vocab-highlight">Walakin</span>, l-mdina <span class="vocab-highlight">kanet</span> zwina bzzaf, u d-dyur dyalha <span class="vocab-highlight">lli</span> b s-stu7a 7emrin <span class="vocab-highlight">kanu</span> kay7emqu.
+                <br><br>
+                <span class="vocab-highlight">Mn ba3d</span>, mshina l wa7ed l-ghaba qriba smitha Ain Vitel. <span class="vocab-highlight">Temmak shefna</span> l-qruda u <span class="vocab-highlight">3tinahum</span> yaklu. <span class="vocab-highlight">Kanet</span> wa7ed t-tejriba wa3ra. <span class="vocab-highlight">F l-3shiya</span>, rje3na l l'otel u <span class="vocab-highlight">t3eshina</span> makla bnina.
+                <br><br>
+                <span class="vocab-highlight">F s-sara7a</span>, <span class="vocab-highlight">dewwezna</span> weqt zwin bzzaf u <span class="vocab-highlight">kantmenna</span> nerje3 l Ifran mrra khra Insha'Allah.
+            </span></p>
+            <p class="translation-text">
+                Last year, my family and I traveled to the city of Ifrane. At first, we were very happy because it was the first time we were going there. When we arrived, the weather was cold and it was raining a little. But, the city was very beautiful, and its houses which have red roofs were amazing.
+                <br><br>
+                After that, we went to a nearby forest called Ain Vitel. There we saw monkeys and we gave them (food) to eat. It was an awesome experience. In the evening, we returned to the hotel and had a delicious dinner.
+                <br><br>
+                Honestly, we had a very good time and I hope to return to Ifrane another time, God willing.
+            </p>
+        </div>
+        
+        <h3>Key Narrative Elements Used:</h3>
+        <ul>
+            <li>**Time Setting:** `L-3am lli fat` (Last year)</li>
+            <li>**Sequencing:** `F l-luwel` (At first), `Melli wselna` (When we arrived), `Mn ba3d` (After that), `F l-3shiya` (In the evening), `F s-sara7a` (Honestly - for concluding thought).</li>
+            <li>**Past Tenses:** `safert` (I traveled), `kunna fr7anin` (we were happy - imperfect), `kanet uwel mrra` (it was the first time), `kanmshiw` (we go - imperfect for habitual context of "first time we *were going*"), `wselna` (we arrived), `kan bard` (it was cold), `kanet sh-shta katSubb` (it was raining - imperfect), `mshina` (we went), `shefna` (we saw), `3tinahum` (we gave them), `kanet tejriba` (it was an experience), `rje3na` (we returned), `t3eshina` (we had dinner), `dewwezna` (we spent/had time).</li>
+            <li>**Description:** `zwina bzzaf` (very beautiful), `dyur dyalha lli b s-stu7a 7emrin` (its houses which have red roofs), `ghaba qriba` (nearby forest), `tejriba wa3ra` (awesome experience), `makla bnina` (delicious food).</li>
+            <li>**Feelings/Hopes:** `kunna fr7anin` (we were happy), `kantmenna nerje3` (I hope to return).</li>
+        </ul>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time: Your Story</h2>
+      <h3>Prompt: A Memorable Day</h3>
+      <p class="prompt">Think about a memorable day you had recently or in the past (e.g., a birthday, a trip, an interesting encounter, a funny incident). Try to write a short story (4-6 sentences) in Darija describing it.</p>
+      <p class="prompt">Try to include:</p>
+      <ul>
+          <li>When it happened (e.g., `l-bare7`, `s-simana lli fatet`, `sh7al hadi`).</li>
+          <li>At least 2-3 different past tense verbs.</li>
+          <li>At least 2 sequencing words (e.g., `f l-luwel`, `mn ba3d`, `f l-lekher`).</li>
+          <li>At least one descriptive adjective or a simple relative clause with `lli`.</li>
+          <li>Optionally, how you felt.</li>
+      </ul>
+      <textarea placeholder="اكتب قصتك هنا... (Write your story here...)"></textarea>
+
+      <h3>Tips for Your Story:</h3>
+      <ul>
+          <li>Keep sentences relatively simple at first.</li>
+          <li>Focus on clear sequencing of events.</li>
+          <li>Use vocabulary you are comfortable with, then try to add one or two new words if you can.</li>
+          <li>Don't worry about perfection! The goal is practice and communication.</li>
+      </ul>
+      <div class="note">
+          The more you practice telling simple stories, the more comfortable you'll become with linking ideas and using different tenses. You can even try telling the story out loud to yourself or a language partner.
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Simple script to ensure correct breadcrumb is shown
+    if (document.getElementById('b1-breadcrumb')) { 
+        let allBreadcrumbs = document.querySelectorAll('.breadcrumb');
+        let b1BreadcrumbExists = false;
+        allBreadcrumbs.forEach(bc => {
+            if (bc.innerHTML.includes("B1 Intermediate")) b1BreadcrumbExists = true;
+        });
+
+        if (b1BreadcrumbExists) { 
+            allBreadcrumbs.forEach(bc => {
+                if (!bc.innerHTML.includes("B1 Module 17")) { // Adjust module number
+                    bc.style.display = 'none';
+                } else {
+                    bc.style.display = 'block';
+                }
+            });
+        }
+    }
+  </script>
+</body>
+</html>

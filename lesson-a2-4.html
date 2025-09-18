@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | A2 Module 4: Past Events & Simple Narratives</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .vocab-table th, .vocab-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .vocab-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .vocab-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .vocab-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .vocab-table .word { font-weight: bold; color: #99ff99; }
+
+     .story-box {
+        background: rgba(255,255,255,0.08);
+        border-left: 4px solid #99ff99;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+    .story-box .darija-text { font-family: 'Amiri', serif; font-size: 1.3em; line-height: 1.8; }
+    .story-box .transcription-text { font-style: italic; color: #ffcc66; font-size: 1em; line-height: 1.8;}
+    .story-box .translation-text { color: #ccc; font-size: 0.95em; line-height: 1.8; margin-top: 10px; display: block;}
+    .story-box p { margin-bottom: 10px; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 100px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+    .practice-section .prompt { color: #ccc; font-style: italic; }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .vocab-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a2.html">A2 Elementary</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 4: Past Events & Simple Narratives</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>A2 Module 4: Talking About Past Events & Simple Narratives</h1>
+    <p>Learn how to sequence past actions and tell simple stories about what happened.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Recap: Past Tense & Object Pronouns</h2>
+      <p>In the previous modules, you learned:</p>
+      <ul>
+          <li>How to form the past tense for regular and common irregular verbs (e.g., `ktebt` - I wrote, `kan` - he was, `mshit` - I went, `sheftu` - I saw him).</li>
+          <li>How to use object pronoun suffixes (e.g., `shaf-ni` - he saw me, `3titu l-ktab` - I gave him the book).</li>
+          <li>Basic past time expressions (`l-bare7` - yesterday, `s-simana lli fatet` - last week).</li>
+      </ul>
+      <p>Now, we'll focus on connecting these actions to tell a simple story.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Sequencing Words for Narratives</h2>
+      <p>To tell a story, you need words that show the order of events.</p>
+      <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>English</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Notes</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>First / In the beginning</td>
+                <td class="darija-script">ف اللول / أول حاجة</td>
+                <td class="word">f l-luwel / uwel 7aja</td>
+                <td>`uwel 7aja` means "first thing"</td>
+                <td><span class="play-button" onclick="alert('Audio: f l-luwel / uwel 7aja')"></span></td>
+            </tr>
+            <tr>
+                <td>Then / After that</td>
+                <td class="darija-script">من بعد / ديك الساعة</td>
+                <td class="word">mn ba3d / dik s-sa3a</td>
+                <td>`dik s-sa3a` means "that hour/time"</td>
+                <td><span class="play-button" onclick="alert('Audio: mn ba3d / dik s-sa3a')"></span></td>
+            </tr>
+            <tr>
+                <td>And then / And so</td>
+                <td class="darija-script">و من بعد / و</td>
+                <td class="word">u mn ba3d / u</td>
+                <td>`u` (and) can connect sequential actions.</td>
+                <td><span class="play-button" onclick="alert('Audio: u mn ba3d')"></span></td>
+            </tr>
+            <tr>
+                <td>Before</td>
+                <td class="darija-script">قبل</td>
+                <td class="word">qbel</td>
+                <td>e.g., `qbel ma nmshi` (before I go)</td>
+                <td><span class="play-button" onclick="alert('Audio: qbel')"></span></td>
+            </tr>
+            <tr>
+                <td>After</td>
+                <td class="darija-script">بعد</td>
+                <td class="word">ba3d</td>
+                <td>e.g., `ba3d ma klit` (after I ate)</td>
+                <td><span class="play-button" onclick="alert('Audio: ba3d')"></span></td>
+            </tr>
+             <tr>
+                <td>Finally / In the end</td>
+                <td class="darija-script">ف اللخر / ف التالي</td>
+                <td class="word">f l-lekher / f t-tali</td>
+                <td></td>
+                <td><span class="play-button" onclick="alert('Audio: f l-lekher / f t-tali')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+       <div class="note">
+        <strong>`mn ba3d` (After that/Then):</strong> This is a very common and useful phrase for connecting steps in a story or sequence of events.
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Example Simple Narrative</h2>
+        <p>Let's look at a short story about what someone did yesterday. Pay attention to the past tense verbs and sequencing words.</p>
+        <div class="story-box">
+            <p><span class="darija-text">البارح، ف اللول فقت بكري. من بعد، شربت قهوة و فطرت. و فطرت الخبز و الزيت. من بعد، مشيت للخدمة. فالخدمة، خدمت بزاف. ف اللخر، رجعت للدار و تعشيت.</span>
+            <span class="play-button" onclick="alert('Audio for full story')"></span></p>
+            <p><span class="transcription-text">L-bare7, f l-luwel feqt bekri. Mn ba3d, shrebt qhwa u ftert. U ftert l-khobz u z-zit. Mn ba3d, mshit l l-khedma. F l-khedma, khdemt bzzaf. F l-lekher, rje3t l d-dar u t3eshit.</span></p>
+            <p class="translation-text">Yesterday, first I woke up early. After that, I drank coffee and had breakfast. And I had bread and oil for breakfast. After that, I went to work. At work, I worked a lot. Finally, I returned home and had dinner.</p>
+        </div>
+        
+        <h3>Vocabulary from the Story:</h3>
+        <ul>
+            <li><span class="darija-script">فقت</span> (feqt) - I woke up (from <span class="darija-script">فاق</span> - faq)</li>
+            <li><span class="darija-script">بكري</span> (bekri) - early</li>
+            <li><span class="darija-script">فطرت</span> (ftert) - I had breakfast (from <span class="darija-script">فطر</span> - fter)</li>
+            <li><span class="darija-script">الزيت</span> (z-zit) - oil (olive oil)</li>
+            <li><span class="darija-script">الخدمة</span> (l-khedma) - work/the job</li>
+            <li><span class="darija-script">خدمت</span> (khdemt) - I worked (from <span class="darija-script">خدم</span> - khdem)</li>
+            <li><span class="darija-script">رجعت</span> (rje3t) - I returned (from <span class="darija-script">رجع</span> - rje3)</li>
+            <li><span class="darija-script">تعشيت</span> (t3eshit) - I had dinner (from <span class="darija-script">تعشى</span> - t3esha)</li>
+        </ul>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Weekend Activities Vocabulary (Past)</h2>
+        <p>Here's some vocabulary to help you talk about what you did over the weekend or on a day off.</p>
+        <table class="vocab-table">
+             <thead>
+                <tr>
+                    <th>English Activity</th>
+                    <th>Past Tense Example (Ana - I)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>To visit (someone/a place)</td>
+                    <td><span class="darija-script">زرت</span> (zرت l-3a'ila dyali)</td>
+                    <td class="word">zert (zert l-3a'ila dyali)</td>
+                    <td><span class="play-button" onclick="alert('Audio: zert')"></span></td>
+                </tr>
+                <tr>
+                    <td>To watch (TV/film)</td>
+                    <td><span class="darija-script">تفرجت</span> (tferrejt f wa7ed l-film)</td>
+                    <td class="word">tferrejt (tferrejt f wa7ed l-film)</td>
+                    <td><span class="play-button" onclick="alert('Audio: tferrejt')"></span></td>
+                </tr>
+                <tr>
+                    <td>To go out / To exit</td>
+                    <td><span class="darija-script">خرجت</span> (khrejt m3a s7abi)</td>
+                    <td class="word">khrejt (khrejt m3a s7abi - my friends)</td>
+                    <td><span class="play-button" onclick="alert('Audio: khrejt')"></span></td>
+                </tr>
+                <tr>
+                    <td>To stay (at home)</td>
+                    <td><span class="darija-script">بقيت</span> (bqit f d-dar)</td>
+                    <td class="word">bqit (bqit f d-dar)</td>
+                    <td><span class="play-button" onclick="alert('Audio: bqit')"></span></td>
+                </tr>
+                <tr>
+                    <td>To sleep</td>
+                    <td><span class="darija-script">نعست</span> (n3est bekri)</td>
+                    <td class="word">n3est (n3est bekri - I slept early)</td>
+                    <td><span class="play-button" onclick="alert('Audio: n3est')"></span></td>
+                </tr>
+                 <tr>
+                    <td>To cook</td>
+                    <td><span class="darija-script">طيبت</span> (tiyyebt ttajin)</td>
+                    <td class="word">tiyyebt (tiyyebt ttajin - I cooked tagine)</td>
+                    <td><span class="play-button" onclick="alert('Audio: tiyyebt')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Order the Events</h3>
+      <p class="prompt">Imagine these actions happened. Put them in a logical order using sequencing words. Translate your short story.</p>
+      <p>Actions: (A) <span class="darija-script">شربت قهوة</span> (shrebt qhwa - I drank coffee), (B) <span class="darija-script">مشيت للخدمة</span> (mshit l l-khedma - I went to work), (C) <span class="darija-script">فقت</span> (feqt - I woke up).</p>
+      <p>Your Story (Darija): <span class="fill-blank">ف اللول فقت، من بعد شربت قهوة، و من بعد مشيت للخدمة.</span></p>
+      <p>Your Story (English): <span class="fill-blank">First I woke up, after that I drank coffee, and then I went to work.</span></p>
+
+      <h3>Exercise 2: My Weekend</h3>
+      <p class="prompt">Write 2-3 sentences in Darija about what you did last weekend. Use past tense verbs and at least one sequencing word. (Example: L-weekend lli fat, zert 3a'ilti. Mn ba3d, tferrejt f wa7ed l-film.)</p>
+      <p>Your Sentences: <span class="fill-blank"></span></p>
+      <p><span class="fill-blank"></span></p>
+
+       <h3>Exercise 3: Translate to Darija</h3>
+      <ol>
+          <li>Yesterday, first I ate, then I went out.
+              <br>Answer: <span class="fill-blank">L-bare7, f l-luwel klit, mn ba3d khrejt.</span> (klit from kla)</li>
+          <li>She cooked tagine, and after that, we watched a film.
+              <br>Answer: <span class="fill-blank">Tiyybat ttajin, u mn ba3d tferrejna f wa7ed l-film.</span> (tferrejna = we watched)</li>
+          <li>Finally, I slept.
+              <br>Answer: <span class="fill-blank">F l-lekher, n3est.</span></li>
+      </ol>
+      <div class="note">
+          Storytelling, even simple narratives, is a great way to practice verb tenses and connectors. Try to describe your day in Darija!
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

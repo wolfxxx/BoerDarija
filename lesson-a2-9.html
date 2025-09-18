@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | A2 Module 9: Health & Body</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .vocab-table th, .vocab-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .vocab-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .vocab-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .vocab-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+     .vocab-table .plural {
+        font-size: 0.9em;
+        color: #ccc;
+     }
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+     .dialogue-box {
+        background: rgba(255,255,255,0.08);
+        border-left: 4px solid #99ff99;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+    .dialogue-box .speakerA { color: #ff9999; font-weight: bold; } /* Patient */
+    .dialogue-box .speakerB { color: #99ff99; font-weight: bold; } /* Doctor/Pharmacist */
+    .dialogue-box .darija-text { font-family: 'Amiri', serif; font-size: 1.2em; }
+    .dialogue-box .transcription-text { font-style: italic; color: #ffcc66; font-size: 0.95em;}
+    .dialogue-box .translation-text { color: #ccc; font-size: 0.9em; }
+    .dialogue-box p { margin-bottom: 10px; }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 100px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .vocab-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-a2.html">A2 Elementary</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">Module 9: Health & Body</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>A2 Module 9: Health & Body</h1>
+    <p>Learn vocabulary for parts of the body, common health problems, and how to talk to a doctor or pharmacist.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Parts of the Body (`A3da' l-Jism`)</h2>
+      <p>Here are some common body parts. Remember that some are singular and some are plural by nature (like eyes, ears).</p>
+      <table class="vocab-table">
+        <thead>
+            <tr>
+                <th>English</th>
+                <th>Darija (Script)</th>
+                <th>Transcription</th>
+                <th>Plural (if common)</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Head</td><td class="darija-script">راس</td><td class="transcription">ras</td><td class="plural"><span class="darija-script">ريوس</span> (ryus)</td><td><span class="play-button" onclick="alert('Audio: ras')"></span></td></tr>
+            <tr><td>Hair</td><td class="darija-script">شعر</td><td class="transcription">sh3r</td><td>(Collective noun)</td><td><span class="play-button" onclick="alert('Audio: sh3r')"></span></td></tr>
+            <tr><td>Eye / Eyes</td><td class="darija-script">عين / عينين</td><td class="transcription">3in / 3inin</td><td></td><td><span class="play-button" onclick="alert('Audio: 3in / 3inin')"></span></td></tr>
+            <tr><td>Ear / Ears</td><td class="darija-script">ودن / ودنين</td><td class="transcription">wden / wednin</td><td></td><td><span class="play-button" onclick="alert('Audio: wden / wednin')"></span></td></tr>
+            <tr><td>Nose</td><td class="darija-script">نيف</td><td class="transcription">nif</td><td></td><td><span class="play-button" onclick="alert('Audio: nif')"></span></td></tr>
+            <tr><td>Mouth</td><td class="darija-script">فم</td><td class="transcription">femm</td><td></td><td><span class="play-button" onclick="alert('Audio: femm')"></span></td></tr>
+            <tr><td>Hand / Hands</td><td class="darija-script">يد / يدين</td><td class="transcription">yedd / yddin</td><td></td><td><span class="play-button" onclick="alert('Audio: yedd / yddin')"></span></td></tr>
+            <tr><td>Arm / Arms</td><td class="darija-script">دراع / دراعين</td><td class="transcription">dra3 / dra3in</td><td></td><td><span class="play-button" onclick="alert('Audio: dra3 / dra3in')"></span></td></tr>
+            <tr><td>Leg / Legs</td><td class="darija-script">رجل / رجلين</td><td class="transcription">rjel / rjlin</td><td></td><td><span class="play-button" onclick="alert('Audio: rjel / rjlin')"></span></td></tr>
+            <tr><td>Foot / Feet</td><td class="darija-script">رجل / رجلين</td><td class="transcription">rjel / rjlin</td><td class="notes">(Same as leg)</td><td><span class="play-button" onclick="alert('Audio: rjel / rjlin (foot)')"></span></td></tr>
+            <tr><td>Stomach / Belly</td><td class="darija-script">كرش</td><td class="transcription">kersh</td><td></td><td><span class="play-button" onclick="alert('Audio: kersh')"></span></td></tr>
+            <tr><td>Back</td><td class="darija-script">ضهر</td><td class="transcription">Dher</td><td></td><td><span class="play-button" onclick="alert('Audio: Dher')"></span></td></tr>
+            <tr><td>Heart</td><td class="darija-script">قلب</td><td class="transcription">qelb</td><td></td><td><span class="play-button" onclick="alert('Audio: qelb')"></span></td></tr>
+        </tbody>
+      </table>
+       <div class="note">
+        <strong>Possessives:</strong> Remember to use possessive suffixes with body parts, e.g., `rasi` (my head), `yeddek` (your hand).
+      </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Common Health Problems & Symptoms</h2>
+        <p>How to say you're not feeling well.</p>
+        <table class="vocab-table">
+            <thead>
+                <tr>
+                    <th>English Symptom/Problem</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Notes</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I am sick/ill (m./f.)</td>
+                    <td class="darija-script">أنا مريض / مريضة</td>
+                    <td class="transcription">Ana mrid / mrida</td>
+                    <td></td>
+                    <td><span class="play-button" onclick="alert('Audio: Ana mrid / mrida')"></span></td>
+                </tr>
+                <tr>
+                    <td>My head hurts me. (I have a headache)</td>
+                    <td class="darija-script">كايضرني راسي.</td>
+                    <td class="transcription">KayDerrni rasi.</td>
+                    <td>`Derr` = to hurt + object suffix</td>
+                    <td><span class="play-button" onclick="alert('Audio: KayDerrni rasi.')"></span></td>
+                </tr>
+                <tr>
+                    <td>My stomach hurts me.</td>
+                    <td class="darija-script">كاتضرني كرشي.</td>
+                    <td class="transcription">KatDerrni kershi.</td>
+                    <td>`kershi` is feminine, so `katDerrni`</td>
+                    <td><span class="play-button" onclick="alert('Audio: KatDerrni kershi.')"></span></td>
+                </tr>
+                <tr>
+                    <td>I have a fever.</td>
+                    <td class="darija-script">فيا السخانة.</td>
+                    <td class="transcription">Fiya s-skhana.</td>
+                    <td>Lit. "In me is the fever."</td>
+                    <td><span class="play-button" onclick="alert('Audio: Fiya s-skhana.')"></span></td>
+                </tr>
+                <tr>
+                    <td>I have a cold/flu.</td>
+                    <td class="darija-script">ضاربني البرد. / فيا الرواح.</td>
+                    <td class="transcription">Darbni l-berd. / Fiya r-rwa7.</td>
+                    <td>`Darbni l-berd` lit. "The cold hit me."</td>
+                    <td><span class="play-button" onclick="alert('Audio: Darbni l-berd.')"></span></td>
+                </tr>
+                 <tr>
+                    <td>I have a cough.</td>
+                    <td class="darija-script">فيا الكحة.</td>
+                    <td class="transcription">Fiya l-ke77a.</td>
+                    <td></td>
+                    <td><span class="play-button" onclick="alert('Audio: Fiya l-ke77a.')"></span></td>
+                </tr>
+                <tr>
+                    <td>I feel dizzy.</td>
+                    <td class="darija-script">فيا الدوخة.</td>
+                    <td class="transcription">Fiya d-dokha.</td>
+                    <td></td>
+                    <td><span class="play-button" onclick="alert('Audio: Fiya d-dokha.')"></span></td>
+                </tr>
+                <tr>
+                    <td>I am tired (m./f.)</td>
+                    <td class="darija-script">أنا عيان / عيانة</td>
+                    <td class="transcription">Ana 3iyyan / 3iyyana</td>
+                    <td></td>
+                    <td><span class="play-button" onclick="alert('Audio: Ana 3iyyan / 3iyyana')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">
+            <strong>`KayDerrni / KatDerrni` (It hurts me):</strong> The verb `Derr` (<span class="darija-script">ضر</span> - to hurt) is conjugated based on what is hurting (masculine `kayDerr-`, feminine `katDerr-`) and then takes an object suffix for the person feeling the pain (`-ni` for me, `-ek` for you, etc.).
+            <br><strong>`Fiya` (In me / I have):</strong> Used for many symptoms like fever, cold, cough, dizziness.
+        </div>
+    </section>
+
+    <section class="lesson-section">
+        <h2>At the Doctor's (`3nd t-tbib`) / Pharmacy (`f l-farmasiyan`)</h2>
+        <table class="vocab-table">
+             <thead>
+                <tr>
+                    <th>English Phrase</th>
+                    <th>Darija (Script)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I need a doctor.</td>
+                    <td class="darija-script">بغيت طبيب. / خاصني طبيب.</td>
+                    <td>Bghit tbib. / Khassni tbib.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Bghit tbib.')"></span></td>
+                </tr>
+                <tr>
+                    <td>I have an appointment.</td>
+                    <td class="darija-script">عندي موعد.</td>
+                    <td>3ndi maw3id.</td>
+                    <td><span class="play-button" onclick="alert('Audio: 3ndi maw3id.')"></span></td>
+                </tr>
+                 <tr>
+                    <td>What's wrong with you? (m./f.) (What do you have?)</td>
+                    <td class="darija-script">مالك؟ / شنو عندك؟</td>
+                    <td>Malek? / Shnu 3ndek?</td>
+                    <td><span class="play-button" onclick="alert('Audio: Malek?')"></span></td>
+                </tr>
+                <tr>
+                    <td>I need medicine.</td>
+                    <td class="darija-script">بغيت الدوا. / خاصني الدوا.</td>
+                    <td>Bghit d-dwa. / Khassni d-dwa.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Bghit d-dwa.')"></span></td>
+                </tr>
+                 <tr>
+                    <td>Medicine for...</td>
+                    <td class="darija-script">الدوا ديال...</td>
+                    <td>D-dwa dyal...</td>
+                    <td><span class="play-button" onclick="alert('Audio: D-dwa dyal...')"></span></td>
+                </tr>
+                <tr>
+                    <td>Get well soon! (To m./f.)</td>
+                    <td class="darija-script">الله يشافيك.</td>
+                    <td>Allah yshafik.</td>
+                    <td><span class="play-button" onclick="alert('Audio: Allah yshafik.')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Dialogue: At the Pharmacy</h2>
+        <div class="dialogue-box">
+            <p><span class="speakerA">Patient:</span> <span class="darija-text">السلام عليكم.</span><br>
+            <span class="transcription-text">Ssalām 3likum.</span><br>
+            <span class="translation-text">Hello.</span></p>
+
+            <p><span class="speakerB">Pharmacist:</span> <span class="darija-text">و عليكم السلام. مالك؟</span><br>
+            <span class="transcription-text">Wa 3likum ssalam. Malek?</span><br>
+            <span class="translation-text">Hello. What's wrong with you?</span></p>
+
+            <p><span class="speakerA">Patient:</span> <span class="darija-text">كايضرني راسي و فيا السخانة شوية.</span><br>
+            <span class="transcription-text">KayDerrni rasi u fiya s-skhana shwiya.</span><br>
+            <span class="translation-text">My head hurts and I have a bit of a fever.</span></p>
+
+            <p><span class="speakerB">Pharmacist:</span> <span class="darija-text">واخا. خود هاد الدوا. شرَب حبة وحدة تلاتة د المرات ف النهار.</span><br>
+            <span class="transcription-text">Wakha. Khud had d-dwa. Shrb 7ebba we7da tlata d l-mrrat f n-nhar.</span><br>
+            <span class="translation-text">Okay. Take this medicine. Drink one pill three times a day.</span></p>
+            
+            <p><span class="speakerA">Patient:</span> <span class="darija-text">شكراً بزاف. بشحال؟</span><br>
+            <span class="transcription-text">Shukran bzzaf. Bsh7al?</span><br>
+            <span class="translation-text">Thank you very much. How much?</span></p>
+
+             <p><span class="speakerB">Pharmacist:</span> <span class="darija-text">عشرين درهم. الله يشافيك.</span><br>
+            <span class="transcription-text">3shrin derhem. Allah yshafik.</span><br>
+            <span class="translation-text">20 dirhams. Get well soon.</span></p>
+        </div>
+         <div class="note">
+            <strong>Dialogue Vocab:</strong>
+            <ul>
+                <li>`Khud` (<span class="darija-script">خود</span>): Take (command to m.s.)</li>
+                <li>`7ebba we7da` (<span class="darija-script">حبة وحدة</span>): One pill</li>
+                <li>`tlata d l-mrrat` (<span class="darija-script">تلاتة د المرات</span>): Three times</li>
+                <li>`f n-nhar` (<span class="darija-script">ف النهار</span>): In the day / per day</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Body Parts</h3>
+      <p>Write the Darija transcription for:</p>
+      <ol>
+          <li>My hand: <span class="fill-blank">yeddi</span></li>
+          <li>His eyes: <span class="fill-blank">3inih</span></li>
+          <li>Her leg: <span class="fill-blank">rjelha</span></li>
+          <li>Your (m.s.) head: <span class="fill-blank">rasek</span></li>
+      </ol>
+
+      <h3>Exercise 2: Symptoms</h3>
+      <p>How would you say the following in Darija?</p>
+      <ol>
+          <li>My back hurts me. <span class="fill-blank">KayDerrni Dheri.</span></li>
+          <li>She has a cough. <span class="fill-blank">Fiha l-ke77a.</span></li>
+          <li>Are you (f.s.) tired? <span class="fill-blank">Wash nti 3iyyana?</span></li>
+          <li>I don't have a fever. <span class="fill-blank">Ma fiya-sh s-skhana.</span></li>
+      </ol>
+
+       <h3>Exercise 3: At the Doctor</h3>
+       <p class="prompt">You go to the doctor. The doctor asks: `Malek?` (What's wrong?). How do you reply if your stomach hurts and you feel dizzy?</p>
+       <p>Reply: <span class="fill-blank">KatDerrni kershi u fiya d-dokha.</span></p>
+
+      <div class="note">
+          Being able to describe basic health issues is very useful. Try to make sentences about how you feel today, even if you feel good (`Ana mzyan, l-7amdullah!`).
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Placeholder for potential future JS
+  </script>
+</body>
+</html>

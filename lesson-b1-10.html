@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOERDARIJA | B1 Module 10: More Connectors & Discourse Markers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Core styles (consistent with previous modules) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+    nav {
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(15, 32, 39, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background: #004d80;
+      border-radius: 4px;
+    }
+    .breadcrumb {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 60px; /* Adjust if nav height changes */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      position: relative;
+      z-index: 40;
+    }
+    .breadcrumb-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding: 5px;
+      display: inline-block;
+    }
+    .breadcrumb a:hover {
+      color: #ff0066;
+    }
+    .breadcrumb-separator {
+      color: #ff0066;
+      margin: 0 10px;
+    }
+    .breadcrumb-current {
+      color: #ff0066;
+      padding: 5px;
+      display: inline-block;
+    }
+    .page-header {
+      padding: 80px 20px 40px; /* Adjusted for breadcrumb */
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff0066;
+    }
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+    .lesson-section {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .lesson-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff9999; /* Lighter pink for subheadings */
+      text-align: left;
+      border-bottom: 2px solid #ff0066;
+      padding-bottom: 10px;
+    }
+     .lesson-section h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #ffcc99;
+    }
+    .lesson-section p, .lesson-section li {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+    .note {
+      background: rgba(255, 0, 102, 0.1);
+      border-left: 5px solid #ff0066;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .note strong {
+        color: #ff9999;
+    }
+
+    .connector-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .connector-table th, .connector-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .connector-table th {
+      background-color: rgba(255, 0, 102, 0.3);
+      font-family: 'Oswald', sans-serif;
+    }
+    .connector-table .darija-script {
+        font-family: 'Amiri', serif;
+        font-size: 1.3rem;
+        color: #99ff99;
+    }
+    .connector-table .transcription {
+        font-style: italic;
+        color: #ffcc66;
+    }
+    .connector-table .connector { font-weight: bold; color: #99ff99; }
+    .connector-table .example-sentence { color: #fff; }
+
+
+    .play-button {
+        display: inline-block;
+        background-color: #ff0066;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .play-button:hover {
+        background-color: #cc0052;
+    }
+    .play-button::before {
+        content: '▶ '; /* Play icon */
+    }
+
+    .practice-section {
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .practice-section h3 {
+        color: #ff0066;
+        border-bottom: 1px solid #ff0066;
+        padding-bottom: 5px;
+    }
+    .practice-section ul li {
+        margin-bottom: 8px;
+    }
+    .practice-section .fill-blank {
+        display: inline-block;
+        min-width: 80px;
+        border-bottom: 1px solid #fff;
+        margin: 0 5px;
+        padding: 0 5px;
+        text-align: center;
+        color: #99ff99;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 32, 39, 0.8); /* Match nav.scrolled */
+      margin-top: auto; /* Pushes footer to bottom */
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .lesson-section h2 { font-size: 1.8rem; }
+      .lesson-section h3 { font-size: 1.4rem; }
+      .connector-table { font-size: 0.9rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses.html">Courses</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="courses-b1.html">B1 Intermediate</a>
+      <span class="breadcrumb-separator">›</span>
+      <span class="breadcrumb-current">B1 Module 10: More Connectors & Discourse Markers</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>B1 Module 10: More Connectors & Discourse Markers</h1>
+    <p>Enhance your fluency and create more complex, coherent sentences by mastering a wider range of connecting words and phrases.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <section class="lesson-section">
+      <h2>Review: Basic Conjunctions (A1/A2)</h2>
+      <p>You've already learned some fundamental connectors:</p>
+      <ul>
+          <li>`u` / `w` (<span class="darija-script">و</span>) - and</li>
+          <li>`wella` / `aw` (<span class="darija-script">ولا / أو</span>) - or</li>
+          <li>`walakin` (<span class="darija-script">ولكن</span>) - but</li>
+          <li>`7it` (<span class="darija-script">حيت</span>) - because</li>
+          <li>`ila` (<span class="darija-script">إلى</span>) - if</li>
+      </ul>
+      <p>Now, let's explore more sophisticated ways to link your ideas.</p>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Connectors for Contrast</h2>
+      <table class="connector-table">
+        <thead>
+            <tr>
+                <th>Connector (Darija/Trans.)</th>
+                <th>Meaning</th>
+                <th>Example Sentence (Darija)</th>
+                <th>Transcription</th>
+                <th>Audio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="connector darija-script">وخا</span> / wakha</td>
+                <td>although, even though, okay</td>
+                <td class="example-sentence darija-script">وخا كان البرد، خرجنا.</td>
+                <td>Wakha kan l-berd, khrejna. (Although it was cold, we went out.)</td>
+                <td><span class="play-button" onclick="alert('Audio: wakha')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="connector darija-script">بالعكس</span> / b l-3eks</td>
+                <td>on the contrary, actually</td>
+                <td class="example-sentence darija-script">هو ماشي معصب، بالعكس، ضريف بزاف.</td>
+                <td>Huwa mashi m3esseb, b l-3eks, drif bzzaf. (He's not angry, on the contrary, he's very kind.)</td>
+                <td><span class="play-button" onclick="alert('Audio: b l-3eks')"></span></td>
+            </tr>
+            <tr>
+                <td><span class="connector darija-script">و لكن</span> / walakin</td>
+                <td>but, however (Review)</td>
+                <td class="example-sentence darija-script">بغيت نسافر ولكن ما عنديش لفلوس.</td>
+                <td>Bghit nsafr walakin ma 3ndish l-flus. (I want to travel but I don't have money.)</td>
+                <td><span class="play-button" onclick="alert('Audio: walakin')"></span></td>
+            </tr>
+             <tr>
+                <td><span class="connector darija-script">مع ذلك</span> / ma3a dalik</td>
+                <td>despite that, nevertheless (more formal)</td>
+                <td class="example-sentence darija-script">كان مريض، و مع ذلك جا للخدمة.</td>
+                <td>Kan mrid, u ma3a dalik ja l l-khedma. (He was sick, and despite that he came to work.)</td>
+                <td><span class="play-button" onclick="alert('Audio: ma3a dalik')"></span></td>
+            </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Connectors for Cause & Reason</h2>
+        <table class="connector-table">
+            <thead>
+                <tr>
+                    <th>Connector (Darija/Trans.)</th>
+                    <th>Meaning</th>
+                    <th>Example Sentence (Darija)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="connector darija-script">حيت / حيتاش</span> / 7it / 7itash</td>
+                    <td>because (Review)</td>
+                    <td class="example-sentence darija-script">ما جيتش حيت كنت مريض.</td>
+                    <td>Ma jitsh 7it kunt mrid. (I didn't come because I was sick.)</td>
+                    <td><span class="play-button" onclick="alert('Audio: 7it / 7itash')"></span></td>
+                </tr>
+                <tr>
+                    <td><span class="connector darija-script">على ود / على قبل</span> / 3la wedd / 3la qbel</td>
+                    <td>because of, for the sake of</td>
+                    <td class="example-sentence darija-script">درت هادشي على ودك.</td>
+                    <td>Dert hadshi 3la weddek. (I did this because of you / for your sake.)</td>
+                    <td><span class="play-button" onclick="alert('Audio: 3la wedd')"></span></td>
+                </tr>
+                <tr>
+                    <td><span class="connector darija-script">بسباب</span> / bsbab</td>
+                    <td>because of (often for negative reasons)</td>
+                    <td class="example-sentence darija-script">تعطلنا بسباب الطررافيك.</td>
+                    <td>T3ettelna bsbab t-trafik. (We were late because of the traffic.)</td>
+                    <td><span class="play-button" onclick="alert('Audio: bsbab')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="lesson-section">
+        <h2>Connectors for Result & Consequence</h2>
+         <table class="connector-table">
+            <thead>
+                <tr>
+                    <th>Connector (Darija/Trans.)</th>
+                    <th>Meaning</th>
+                    <th>Example Sentence (Darija)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="connector darija-script">داكشي علاش</span> / dakshi 3lash</td>
+                    <td>that's why, so</td>
+                    <td class="example-sentence darija-script">كان البرد، داكشي علاش لبست جاكيطة.</td>
+                    <td>Kan l-berd, dakshi 3lash lbest jakita. (It was cold, that's why I wore a jacket.)</td>
+                    <td><span class="play-button" onclick="alert('Audio: dakshi 3lash')"></span></td>
+                </tr>
+                <tr>
+                    <td><span class="connector darija-script">إذن / إدا</span> / idan / ida (less common in casual Darija)</td>
+                    <td>so, therefore (more formal)</td>
+                    <td class="example-sentence darija-script">هو ما قراش، إذن ما نجحش.</td>
+                    <td>Huwa ma qrash, idan ma nje7sh. (He didn't study, therefore he didn't pass.)</td>
+                    <td><span class="play-button" onclick="alert('Audio: idan')"></span></td>
+                </tr>
+                 <tr>
+                    <td><span class="connector darija-script">و هكذا</span> / u hakda</td>
+                    <td>and so, thus</td>
+                    <td class="example-sentence darija-script">خدم مزيان و هكذا خدا ترقية.</td>
+                    <td>Khdem mzyan u hakda khda terqiya. (He worked well and so he got a promotion.) (`terqiya`=promotion)</td>
+                    <td><span class="play-button" onclick="alert('Audio: u hakda')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+     <section class="lesson-section">
+        <h2>Connectors for Adding Information</h2>
+        <table class="connector-table">
+            <thead>
+                <tr>
+                    <th>Connector (Darija/Trans.)</th>
+                    <th>Meaning</th>
+                    <th>Example Sentence (Darija)</th>
+                    <th>Transcription</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="connector darija-script">و / عاود / تاني</span> / u / 3awd / tani</td>
+                    <td>and, also, again</td>
+                    <td class="example-sentence darija-script">شريت الخضرة و عاود الفاكية.</td>
+                    <td>Shrit l-khdra u 3awd l-fakiya. (I bought vegetables and also fruit.)</td>
+                    <td><span class="play-button" onclick="alert('Audio: u / 3awd / tani')"></span></td>
+                </tr>
+                 <tr>
+                    <td><span class="connector darija-script">بالإضافة إلى</span> / b l-iDaafa ila</td>
+                    <td>in addition to (more formal)</td>
+                    <td class="example-sentence darija-script">كايعرف الدارجة، بالإضافة إلى الفرنسوية.</td>
+                    <td>Kay3ref d-darija, b l-iDaafa ila l-fransawiya. (He knows Darija, in addition to French.)</td>
+                    <td><span class="play-button" onclick="alert('Audio: b l-iDaafa ila')"></span></td>
+                </tr>
+                 <tr>
+                    <td><span class="connector darija-script">حتى</span> / 7tta</td>
+                    <td>also, even, too</td>
+                    <td class="example-sentence darija-script">حتى أنا بغيت نمشي.</td>
+                    <td>7tta ana bghit nmshi. (I also want to go. / Me too, I want to go.)</td>
+                    <td><span class="play-button" onclick="alert('Audio: 7tta (also)')"></span></td>
+                </tr>
+            </tbody>
+        </table>
+         <div class="note">
+            <strong>`3awd` and `tani`</strong> often imply "also" or "again" when adding a similar point or repeating an action. `Tani` can mean "second" or "again."
+        </div>
+    </section>
+
+    <section class="practice-section">
+      <h2>Practice Time!</h2>
+      <h3>Exercise 1: Choose the Best Connector</h3>
+      <p class="prompt">Fill in the blank with an appropriate connector from the lesson (e.g., wakha, 7it, dakshi 3lash, u 3awd, b l-3eks).</p>
+      <ol>
+          <li>Kunt 3iyyan, <span class="fill-blank">walakin / wakha</span> mshit l l-khedma. (I was tired, BUT/ALTHOUGH I went to work.)</li>
+          <li>Kay3jbni l-film <span class="fill-blank">7it</span> fih قصة (qissa - story) zwina. (I like the film BECAUSE it has a nice story.)</li>
+          <li>Ma 3ndush l-flus, <span class="fill-blank">dakshi 3lash</span> ma ghadi-sh ysafr. (He doesn't have money, THAT'S WHY he won't travel.)</li>
+          <li>Kanbghi nqra l-ktub <span class="fill-blank">u 3awd</span> ntferrej f l-aflam. (I like to read books AND ALSO watch films.)</li>
+          <li>Ma bghitsh hada, <span class="fill-blank">b l-3eks</span>, bghit لاخر (l-akher - the other one). (I don't want this one, ON THE CONTRARY, I want the other one.)</li>
+      </ol>
+
+      <h3>Exercise 2: Combine Sentences</h3>
+      <p class="prompt">Combine the two ideas into one sentence using an appropriate connector.</p>
+      <ol>
+          <li>It was raining. We stayed at home. (Use "because" or "that's why")
+              <br>Answer: <span class="fill-blank">Bqina f d-dar 7it kant sh-shta katصب (katSubb - falling). / Kant sh-shta katSubb, dakshi 3lash bqina f d-dar.</span></li>
+          <li>She is smart. She is also kind. (Use "and also")
+              <br>Answer: <span class="fill-blank">Hiya dkiya u 3awd Drifa.</span></li>
+          <li>I want to go out. I have a lot of work. (Use "but" or "although")
+              <br>Answer: <span class="fill-blank">Bghit nkhruj walakin 3ndi bzzaf d l-khedma. / Wakha 3ndi bzzaf d l-khedma, bghit nkhruj.</span></li>
+      </ol>
+      <div class="note">
+          Using a variety of connectors will make your Darija sound much more fluent and natural, allowing you to express more complex relationships between your ideas.
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BOERDARIJA. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Add navigation script -->
+  <script src="js/navigation.js"></script>
+  <script>
+    // Simple script to ensure correct breadcrumb is shown
+    if (document.getElementById('b1-breadcrumb')) { // Check if it's even there from a template
+        let allBreadcrumbs = document.querySelectorAll('.breadcrumb');
+        let b1BreadcrumbExists = false;
+        allBreadcrumbs.forEach(bc => {
+            if (bc.innerHTML.includes("B1 Intermediate")) b1BreadcrumbExists = true;
+        });
+
+        if (b1BreadcrumbExists) { // Only run if a B1 breadcrumb is found
+            allBreadcrumbs.forEach(bc => {
+                if (!bc.innerHTML.includes("B1 Module 10")) { // Adjust module number as needed
+                    bc.style.display = 'none';
+                } else {
+                    bc.style.display = 'block';
+                }
+            });
+        }
+    }
+  </script>
+</body>
+</html>
