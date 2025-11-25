@@ -1,0 +1,50 @@
+# ElevenLabs API Key Files
+# These files contain sensitive API keys and should not be committed to GitHub
+
+# Audio generation scripts with API keys
+force_generate_audio.py
+generate_pink_audio.py
+generate_zwin_singular.py
+fix_audio_zwina_mzyana.py
+generate_separate_audio.py
+fix_audio_zwin_mzyan.py
+fix_audio_mzyan.py
+fix_audio_zwin.py
+regenerate_with_arabic.py
+generate_lesson1_audio.py
+fix_transcription_audio.py
+generate_lesson0_audio.py
+generate_lesson_audio.py
+generate_audio.py
+
+# Other sensitive files
+# Add any other files containing API keys or sensitive information here
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+temp_*.txt
+missing_audio.txt
+
