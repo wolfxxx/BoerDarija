@@ -317,21 +317,24 @@
                 <td><span class="reporting-verb darija-script">أحمد قال</span> <span class="conjunction darija-script">بلي</span> <span class="reported-clause darija-script">هو مريض.</span></td>
                 <td class="transcription"><span class="reporting-verb">Ahmed qal</span> <span class="conjunction">belli</span> <span class="reported-clause">huwa mrid.</span></td>
                 <td>Ahmed said that he is sick.</td>
-                <td><span class="play-button" onclick="alert('Audio: Sentence 1')"></span></td>
+                <td><audio id="audio_sentence_1_mp3" src="audio/lessons/sentence_1.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_sentence_1_mp3').play()"></span></td>
             </tr>
             <tr>
                 <td>Fatima: "Ghadi nsafr ghdda." (I will travel tomorrow.)</td>
                 <td><span class="reporting-verb darija-script">فاطمة قالت</span> <span class="conjunction darija-script">بلي</span> <span class="reported-clause darija-script">هي غادي تسافر غدا.</span></td>
                 <td class="transcription"><span class="reporting-verb">Fatima qalet</span> <span class="conjunction">belli</span> <span class="reported-clause">hiya ghadi tsafr ghdda.</span></td>
                 <td>Fatima said that she will travel tomorrow.</td>
-                <td><span class="play-button" onclick="alert('Audio: Sentence 2')"></span></td>
+                <td><audio id="audio_sentence_2_mp3" src="audio/lessons/sentence_2.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_sentence_2_mp3').play()"></span></td>
             </tr>
             <tr>
                 <td>You (m.s.) said: "Shrebt atay." (I drank tea.)</td>
                 <td><span class="reporting-verb darija-script">قلتي</span> <span class="conjunction darija-script">بلي</span> <span class="reported-clause darija-script">شربتي أتاي.</span></td>
                 <td class="transcription"><span class="reporting-verb">Qelti</span> <span class="conjunction">belli</span> <span class="reported-clause">shrebti atay.</span></td>
                 <td>You said that you drank tea.</td>
-                <td><span class="play-button" onclick="alert('Audio: Sentence 3')"></span></td>
+                <td><audio id="audio_sentence_3_mp3" src="audio/lessons/sentence_3.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_sentence_3_mp3').play()"></span></td>
             </tr>
         </tbody>
       </table>
@@ -365,14 +368,16 @@
                     <td><span class="reporting-verb darija-script">علي سوّلني</span> <span class="conjunction darija-script">واش</span> <span class="reported-clause darija-script">أنا مريض.</span></td>
                     <td class="transcription"><span class="reporting-verb">Ali suwwel-ni</span> <span class="conjunction">wash</span> <span class="reported-clause">ana mrid.</span></td>
                     <td>Ali asked me if I am sick.</td>
-                    <td><span class="play-button" onclick="alert('Audio: Sentence 4')"></span></td>
+                    <td><audio id="audio_sentence_4_mp3" src="audio/lessons/sentence_4.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_sentence_4_mp3').play()"></span></td>
                 </tr>
                 <tr>
                     <td>Layla: "Wash ghadi tji?" (Will you (s.) come?)</td>
                     <td><span class="reporting-verb darija-script">ليلى سوّلاتو</span> <span class="conjunction darija-script">واش</span> <span class="reported-clause darija-script">غادي يجي.</span></td>
                     <td class="transcription"><span class="reporting-verb">Layla suwwlat-u</span> <span class="conjunction">wash</span> <span class="reported-clause">ghadi yji.</span></td>
                     <td>Layla asked him if he will come.</td>
-                    <td><span class="play-button" onclick="alert('Audio: Sentence 5')"></span></td>
+                    <td><audio id="audio_sentence_5_mp3" src="audio/lessons/sentence_5.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_sentence_5_mp3').play()"></span></td>
                 </tr>
             </tbody>
         </table>
@@ -437,6 +442,7 @@
 
   <!-- Add navigation script -->
   <script src="js/navigation.js"></script>
+  <script src="js/progress.js"></script>
   <script>
     // Simple script to ensure correct breadcrumb is shown
     if (document.getElementById('b1-breadcrumb')) { 

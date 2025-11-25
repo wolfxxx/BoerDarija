@@ -327,13 +327,20 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>Car</td><td class="transcription">ttomobil</td><td>Automobile</td><td><span class="play-button" onclick="alert('Audio: ttomobil')"></span></td></tr>
-                <tr><td>Train</td><td class="transcription">tran</td><td>Train</td><td><span class="play-button" onclick="alert('Audio: tran')"></span></td></tr>
-                <tr><td>Fork</td><td class="transcription">forshita</td><td>Fourchette</td><td><span class="play-button" onclick="alert('Audio: forshita')"></span></td></tr>
-                <tr><td>Week</td><td class="transcription">simana</td><td>Semaine</td><td><span class="play-button" onclick="alert('Audio: simana')"></span></td></tr>
-                <tr><td>Kitchen</td><td class="transcription">kuzina</td><td>Cuisine</td><td><span class="play-button" onclick="alert('Audio: kuzina')"></span></td></tr>
-                <tr><td>Thank you</td><td class="transcription">mersi</td><td>Merci (often used alongside `shukran`)</td><td><span class="play-button" onclick="alert('Audio: mersi')"></span></td></tr>
-                <tr><td>Okay</td><td class="transcription">Dakor</td><td>D'accord</td><td><span class="play-button" onclick="alert('Audio: Dakor')"></span></td></tr>
+                <tr><td>Car</td><td class="transcription">ttomobil</td><td>Automobile</td><td><audio id="audio_ttomobil_mp3" src="audio/lessons/ttomobil.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_ttomobil_mp3').play()"></span></td></tr>
+                <tr><td>Train</td><td class="transcription">tran</td><td>Train</td><td><audio id="audio_tran_mp3" src="audio/lessons/tran.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_tran_mp3').play()"></span></td></tr>
+                <tr><td>Fork</td><td class="transcription">forshita</td><td>Fourchette</td><td><audio id="audio_forshita_mp3" src="audio/lessons/forshita.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_forshita_mp3').play()"></span></td></tr>
+                <tr><td>Week</td><td class="transcription">simana</td><td>Semaine</td><td><audio id="audio_simana_mp3" src="audio/lessons/simana.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_simana_mp3').play()"></span></td></tr>
+                <tr><td>Kitchen</td><td class="transcription">kuzina</td><td>Cuisine</td><td><audio id="audio_kuzina_mp3" src="audio/lessons/kuzina.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_kuzina_mp3').play()"></span></td></tr>
+                <tr><td>Thank you</td><td class="transcription">mersi</td><td>Merci (often used alongside `shukran`)</td><td><audio id="audio_mersi_mp3" src="audio/lessons/mersi.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_mersi_mp3').play()"></span></td></tr>
+                <tr><td>Okay</td><td class="transcription">Dakor</td><td>D'accord</td><td><audio id="audio_dakor_mp3" src="audio/lessons/dakor.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_dakor_mp3').play()"></span></td></tr>
             </tbody>
         </table>
         <p>Sometimes, entire phrases or "code-switching" (mixing languages in one sentence) can occur, especially among bilingual Moroccans.</p>
@@ -392,6 +399,7 @@
 
   <!-- Add navigation script -->
   <script src="js/navigation.js"></script>
+  <script src="js/progress.js"></script>
   <script>
     // Simple script to ensure correct breadcrumb is shown
     if (document.getElementById('b1-breadcrumb')) { 

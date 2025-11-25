@@ -7,9 +7,13 @@
         this.totalQuestions = 0;
         this.questionsAnswered = 0;
         this.availableWords = [];
+        this.currentAudio = null; // Track currently playing audio
+        this.answerSelected = false; // Track if answer has been selected for current question
 
         // DOM Elements
         this.categoryList = document.getElementById('categoryList');
+        this.categorySection = document.getElementById('categorySection');
+        this.toggleCategoriesBtn = document.getElementById('toggleCategories');
         this.startGameBtn = document.getElementById('startGame');
         this.gameArea = document.getElementById('gameArea');
         this.questionEl = document.getElementById('question');
@@ -23,6 +27,7 @@
         this.startGameBtn.addEventListener('click', () => this.startGame());
         this.nextQuestionBtn.addEventListener('click', () => this.nextQuestion());
         this.endGameBtn.addEventListener('click', () => this.endGame());
+        this.toggleCategoriesBtn.addEventListener('click', () => this.toggleCategorySection());
 
         // Add category control buttons
         document.getElementById('selectAll').addEventListener('click', () => this.selectAllCategories());
@@ -42,6 +47,46 @@
         }
     }
 
+    playAudio(term) {
+        // Stop any currently playing audio
+        if (this.currentAudio) {
+            this.currentAudio.pause();
+            this.currentAudio.currentTime = 0;
+        }
+
+        // Find the audio path for this term from the dictionary
+        for (const category of this.dictionary.categories) {
+            const word = category.words.find(w => w.term === term || w.arabic === term);
+            if (word && word.audio) {
+                this.currentAudio = new Audio(word.audio);
+                this.currentAudio.play().catch(err => console.log('Audio play failed:', err));
+                return;
+            }
+        }
+    }
+
+    makeArabicTextPlayable(element, term) {
+        element.style.cursor = 'pointer';
+        element.title = 'Hover to hear pronunciation';
+
+        let hoverTimeout = null;
+
+        element.addEventListener('mouseenter', () => {
+            // Wait 500ms before playing audio
+            hoverTimeout = setTimeout(() => {
+                this.playAudio(term);
+            }, 500);
+        });
+
+        element.addEventListener('mouseleave', () => {
+            // Cancel the audio if user moves away before delay completes
+            if (hoverTimeout) {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = null;
+            }
+        });
+    }
+
     async loadDictionary() {
         try {
             const response = await fetch('dictionary.json');
@@ -56,11 +101,23 @@
     populateCategories() {
         this.dictionary.categories.forEach(category => {
             const categoryEl = document.createElement('div');
-            categoryEl.className = 'category-item';
+            categoryEl.className = 'category-item selected';
             categoryEl.textContent = category.name;
             categoryEl.addEventListener('click', () => this.toggleCategory(category.name, categoryEl));
             this.categoryList.appendChild(categoryEl);
+            // Select all categories by default
+            this.selectedCategories.add(category.name);
         });
+    }
+
+    toggleCategorySection() {
+        if (this.categorySection.style.display === 'none') {
+            this.categorySection.style.display = 'block';
+            this.toggleCategoriesBtn.textContent = 'Hide Categories';
+        } else {
+            this.categorySection.style.display = 'none';
+            this.toggleCategoriesBtn.textContent = 'Select Specific Categories';
+        }
     }
 
     toggleCategory(categoryName, element) {
@@ -71,7 +128,6 @@
             this.selectedCategories.add(categoryName);
             element.classList.add('selected');
         }
-        this.startGameBtn.disabled = this.selectedCategories.size === 0;
     }
 
     selectAllCategories() {
@@ -81,7 +137,6 @@
             this.selectedCategories.add(categoryName);
             element.classList.add('selected');
         });
-        this.startGameBtn.disabled = false;
     }
 
     deselectAllCategories() {
@@ -90,7 +145,6 @@
             element.classList.remove('selected');
         });
         this.selectedCategories.clear();
-        this.startGameBtn.disabled = true;
     }
 
     startGame() {
@@ -112,10 +166,10 @@
         this.questionsAnswered = 0;
         this.originalWords = [...this.availableWords]; // Keep a copy for reshuffling
 
-        // Show game area
+        // Show game area, hide controls
         this.gameArea.style.display = 'block';
-        this.startGameBtn.style.display = 'none';
-        this.categoryList.style.display = 'none';
+        document.querySelector('.game-controls').style.display = 'none';
+        this.categorySection.style.display = 'none';
 
         // Start with first question
         this.nextQuestion();
@@ -132,6 +186,7 @@
         this.arabicTextEl.textContent = '';
         this.optionsEl.innerHTML = '';
         this.nextQuestionBtn.style.display = 'none';
+        this.answerSelected = false; // Reset for new question
 
         // Select random word
         const randomIndex = Math.floor(Math.random() * this.availableWords.length);
@@ -140,10 +195,12 @@
 
         // Generate question type (randomly choose between term->meaning or meaning->term)
         const questionType = Math.random() < 0.5 ? 'term' : 'meaning';
-        
+
         if (questionType === 'term') {
             this.questionEl.textContent = `What does "${this.currentQuestion.term}" mean?`;
             this.arabicTextEl.textContent = this.sanitizeArabic(this.currentQuestion.arabic);
+            this.arabicTextEl.className = 'arabic-playable';
+            this.makeArabicTextPlayable(this.arabicTextEl, this.currentQuestion.term);
         } else {
             this.questionEl.textContent = `What is the Darija word for "${this.currentQuestion.meaning}"?`;
         }
@@ -214,10 +271,24 @@
                 const optionEl = document.createElement('div');
                 optionEl.className = 'option';
                 optionEl.dataset.value = opt.term; // compare using term value
-                const arabicSpan = opt.arabic
-                    ? " <span class=\"arabic\" style=\"font-family:'Amiri', serif; color:#99ff99; margin-left:8px;\">" + opt.arabic + "</span>"
-                    : '';
-                optionEl.innerHTML = opt.term + arabicSpan;
+
+                // Create term span
+                const termSpan = document.createElement('span');
+                termSpan.textContent = opt.term;
+                optionEl.appendChild(termSpan);
+
+                // Create Arabic span if available
+                if (opt.arabic) {
+                    const arabicSpan = document.createElement('span');
+                    arabicSpan.className = 'arabic arabic-playable';
+                    arabicSpan.style.fontFamily = "'Amiri', serif";
+                    arabicSpan.style.color = '#99ff99';
+                    arabicSpan.style.marginLeft = '8px';
+                    arabicSpan.textContent = opt.arabic;
+                    this.makeArabicTextPlayable(arabicSpan, opt.term);
+                    optionEl.appendChild(arabicSpan);
+                }
+
                 optionEl.addEventListener('click', () => this.checkAnswer(opt.term, correctAnswer));
                 this.optionsEl.appendChild(optionEl);
             });
@@ -228,9 +299,12 @@
     }
 
     checkAnswer(selectedAnswer, correctAnswer) {
+        // Prevent multiple answers
+        if (this.answerSelected) return;
+        this.answerSelected = true;
+
         const options = this.optionsEl.children;
         for (let option of options) {
-            option.style.pointerEvents = 'none';
             const value = option.dataset.value || option.textContent;
             if (value === correctAnswer) {
                 option.classList.add('correct');
@@ -258,11 +332,12 @@
     endGame() {
         const percentage = this.questionsAnswered > 0 ? (this.score / this.questionsAnswered) * 100 : 0;
         alert(`Game Ended!\nYour final score: ${this.score}/${this.questionsAnswered} (${percentage.toFixed(1)}%)`);
-        
+
         // Reset UI
         this.gameArea.style.display = 'none';
-        this.startGameBtn.style.display = 'block';
-        this.categoryList.style.display = 'grid';
+        document.querySelector('.game-controls').style.display = 'flex';
+        this.categorySection.style.display = 'none';
+        this.toggleCategoriesBtn.textContent = 'Select Specific Categories';
         this.nextQuestionBtn.style.display = 'none';
         this.endGameBtn.style.display = 'none';
     }

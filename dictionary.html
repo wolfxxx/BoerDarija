@@ -1,12 +1,16 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BOERDARIJA | Darija Dictionary</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <!-- Navigation Placeholder -->
   <div id="nav-placeholder"></div>
@@ -46,7 +50,7 @@
   <!-- Add navigation script -->
   <script src="js/navigation.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const dictionaryContainer = document.getElementById('dictionary-container');
       const searchInput = document.getElementById('search-input');
       let dictionaryData = [];
@@ -95,6 +99,7 @@
                 <th>Term</th>
                 <th>Arabic</th>
                 <th>Meaning</th>
+                <th>Audio</th>
                 <th>Verify</th>
               </tr>
             </thead>
@@ -106,10 +111,22 @@
 
           category.words.forEach(word => {
             const wordRow = document.createElement('tr');
+
+            // Audio Button Logic
+            let audioHtml = '<span style="color: #666; font-size: 0.8rem;">No audio</span>';
+            if (word.audio) {
+              audioHtml = `
+                    <button class="play-button" onclick="new Audio('${word.audio}').play()">
+                        Play
+                    </button>
+                `;
+            }
+
             wordRow.innerHTML = `
               <td>${word.term}</td>
               <td>${sanitizeArabic(word.arabic)}</td>
               <td>${word.meaning}</td>
+              <td>${audioHtml}</td>
               <td><a href="https://www.google.com/search?q=${encodeURIComponent(word.term + ' darija')}" target="_blank">Verify</a></td>
             `;
             wordTableBody.appendChild(wordRow);
@@ -202,7 +219,5 @@
     });
   </script>
 </body>
+
 </html>
-
-
-

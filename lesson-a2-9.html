@@ -313,19 +313,32 @@
             </tr>
         </thead>
         <tbody>
-            <tr><td>Head</td><td class="darija-script">راس</td><td class="transcription">ras</td><td class="plural"><span class="darija-script">ريوس</span> (ryus)</td><td><span class="play-button" onclick="alert('Audio: ras')"></span></td></tr>
-            <tr><td>Hair</td><td class="darija-script">شعر</td><td class="transcription">sh3r</td><td>(Collective noun)</td><td><span class="play-button" onclick="alert('Audio: sh3r')"></span></td></tr>
-            <tr><td>Eye / Eyes</td><td class="darija-script">عين / عينين</td><td class="transcription">3in / 3inin</td><td></td><td><span class="play-button" onclick="alert('Audio: 3in / 3inin')"></span></td></tr>
-            <tr><td>Ear / Ears</td><td class="darija-script">ودن / ودنين</td><td class="transcription">wden / wednin</td><td></td><td><span class="play-button" onclick="alert('Audio: wden / wednin')"></span></td></tr>
-            <tr><td>Nose</td><td class="darija-script">نيف</td><td class="transcription">nif</td><td></td><td><span class="play-button" onclick="alert('Audio: nif')"></span></td></tr>
-            <tr><td>Mouth</td><td class="darija-script">فم</td><td class="transcription">femm</td><td></td><td><span class="play-button" onclick="alert('Audio: femm')"></span></td></tr>
-            <tr><td>Hand / Hands</td><td class="darija-script">يد / يدين</td><td class="transcription">yedd / yddin</td><td></td><td><span class="play-button" onclick="alert('Audio: yedd / yddin')"></span></td></tr>
-            <tr><td>Arm / Arms</td><td class="darija-script">دراع / دراعين</td><td class="transcription">dra3 / dra3in</td><td></td><td><span class="play-button" onclick="alert('Audio: dra3 / dra3in')"></span></td></tr>
-            <tr><td>Leg / Legs</td><td class="darija-script">رجل / رجلين</td><td class="transcription">rjel / rjlin</td><td></td><td><span class="play-button" onclick="alert('Audio: rjel / rjlin')"></span></td></tr>
-            <tr><td>Foot / Feet</td><td class="darija-script">رجل / رجلين</td><td class="transcription">rjel / rjlin</td><td class="notes">(Same as leg)</td><td><span class="play-button" onclick="alert('Audio: rjel / rjlin (foot)')"></span></td></tr>
-            <tr><td>Stomach / Belly</td><td class="darija-script">كرش</td><td class="transcription">kersh</td><td></td><td><span class="play-button" onclick="alert('Audio: kersh')"></span></td></tr>
-            <tr><td>Back</td><td class="darija-script">ضهر</td><td class="transcription">Dher</td><td></td><td><span class="play-button" onclick="alert('Audio: Dher')"></span></td></tr>
-            <tr><td>Heart</td><td class="darija-script">قلب</td><td class="transcription">qelb</td><td></td><td><span class="play-button" onclick="alert('Audio: qelb')"></span></td></tr>
+            <tr><td>Head</td><td class="darija-script">راس</td><td class="transcription">ras</td><td class="plural"><span class="darija-script">ريوس</span> (ryus)</td><td><audio id="audio_ras_mp3" src="audio/lessons/ras.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_ras_mp3').play()"></span></td></tr>
+            <tr><td>Hair</td><td class="darija-script">شعر</td><td class="transcription">sh3r</td><td>(Collective noun)</td><td><audio id="audio_sh3r_mp3" src="audio/lessons/sh3r.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_sh3r_mp3').play()"></span></td></tr>
+            <tr><td>Eye / Eyes</td><td class="darija-script">عين / عينين</td><td class="transcription">3in / 3inin</td><td></td><td><audio id="audio_3in_3inin_mp3" src="audio/lessons/3in_3inin.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_3in_3inin_mp3').play()"></span></td></tr>
+            <tr><td>Ear / Ears</td><td class="darija-script">ودن / ودنين</td><td class="transcription">wden / wednin</td><td></td><td><audio id="audio_wden_wednin_mp3" src="audio/lessons/wden_wednin.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_wden_wednin_mp3').play()"></span></td></tr>
+            <tr><td>Nose</td><td class="darija-script">نيف</td><td class="transcription">nif</td><td></td><td><audio id="audio_nif_mp3" src="audio/lessons/nif.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_nif_mp3').play()"></span></td></tr>
+            <tr><td>Mouth</td><td class="darija-script">فم</td><td class="transcription">femm</td><td></td><td><audio id="audio_femm_mp3" src="audio/lessons/femm.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_femm_mp3').play()"></span></td></tr>
+            <tr><td>Hand / Hands</td><td class="darija-script">يد / يدين</td><td class="transcription">yedd / yddin</td><td></td><td><audio id="audio_yedd_yddin_mp3" src="audio/lessons/yedd_yddin.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_yedd_yddin_mp3').play()"></span></td></tr>
+            <tr><td>Arm / Arms</td><td class="darija-script">دراع / دراعين</td><td class="transcription">dra3 / dra3in</td><td></td><td><audio id="audio_dra3_dra3in_mp3" src="audio/lessons/dra3_dra3in.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_dra3_dra3in_mp3').play()"></span></td></tr>
+            <tr><td>Leg / Legs</td><td class="darija-script">رجل / رجلين</td><td class="transcription">rjel / rjlin</td><td></td><td><audio id="audio_rjel_rjlin_mp3" src="audio/lessons/rjel_rjlin.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_rjel_rjlin_mp3').play()"></span></td></tr>
+            <tr><td>Foot / Feet</td><td class="darija-script">رجل / رجلين</td><td class="transcription">rjel / rjlin</td><td class="notes">(Same as leg)</td><td><audio id="audio_rjel_rjlin_foot_mp3" src="audio/lessons/rjel_rjlin_foot.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_rjel_rjlin_foot_mp3').play()"></span></td></tr>
+            <tr><td>Stomach / Belly</td><td class="darija-script">كرش</td><td class="transcription">kersh</td><td></td><td><audio id="audio_kersh_mp3" src="audio/lessons/kersh.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_kersh_mp3').play()"></span></td></tr>
+            <tr><td>Back</td><td class="darija-script">ضهر</td><td class="transcription">Dher</td><td></td><td><audio id="audio_dher_mp3" src="audio/lessons/dher.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_dher_mp3').play()"></span></td></tr>
+            <tr><td>Heart</td><td class="darija-script">قلب</td><td class="transcription">qelb</td><td></td><td><audio id="audio_qelb_mp3" src="audio/lessons/qelb.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_qelb_mp3').play()"></span></td></tr>
         </tbody>
       </table>
        <div class="note">
@@ -352,56 +365,64 @@
                     <td class="darija-script">أنا مريض / مريضة</td>
                     <td class="transcription">Ana mrid / mrida</td>
                     <td></td>
-                    <td><span class="play-button" onclick="alert('Audio: Ana mrid / mrida')"></span></td>
+                    <td><audio id="audio_ana_mrid_mrida_mp3" src="audio/lessons/ana_mrid_mrida.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_ana_mrid_mrida_mp3').play()"></span></td>
                 </tr>
                 <tr>
                     <td>My head hurts me. (I have a headache)</td>
                     <td class="darija-script">كايضرني راسي.</td>
                     <td class="transcription">KayDerrni rasi.</td>
                     <td>`Derr` = to hurt + object suffix</td>
-                    <td><span class="play-button" onclick="alert('Audio: KayDerrni rasi.')"></span></td>
+                    <td><audio id="audio_kayderrni_rasi_mp3" src="audio/lessons/kayderrni_rasi.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_kayderrni_rasi_mp3').play()"></span></td>
                 </tr>
                 <tr>
                     <td>My stomach hurts me.</td>
                     <td class="darija-script">كاتضرني كرشي.</td>
                     <td class="transcription">KatDerrni kershi.</td>
                     <td>`kershi` is feminine, so `katDerrni`</td>
-                    <td><span class="play-button" onclick="alert('Audio: KatDerrni kershi.')"></span></td>
+                    <td><audio id="audio_katderrni_kershi_mp3" src="audio/lessons/katderrni_kershi.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_katderrni_kershi_mp3').play()"></span></td>
                 </tr>
                 <tr>
                     <td>I have a fever.</td>
                     <td class="darija-script">فيا السخانة.</td>
                     <td class="transcription">Fiya s-skhana.</td>
                     <td>Lit. "In me is the fever."</td>
-                    <td><span class="play-button" onclick="alert('Audio: Fiya s-skhana.')"></span></td>
+                    <td><audio id="audio_fiya_s_skhana_mp3" src="audio/lessons/fiya_s_skhana.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_fiya_s_skhana_mp3').play()"></span></td>
                 </tr>
                 <tr>
                     <td>I have a cold/flu.</td>
                     <td class="darija-script">ضاربني البرد. / فيا الرواح.</td>
                     <td class="transcription">Darbni l-berd. / Fiya r-rwa7.</td>
                     <td>`Darbni l-berd` lit. "The cold hit me."</td>
-                    <td><span class="play-button" onclick="alert('Audio: Darbni l-berd.')"></span></td>
+                    <td><audio id="audio_darbni_l_berd_mp3" src="audio/lessons/darbni_l_berd.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_darbni_l_berd_mp3').play()"></span></td>
                 </tr>
                  <tr>
                     <td>I have a cough.</td>
                     <td class="darija-script">فيا الكحة.</td>
                     <td class="transcription">Fiya l-ke77a.</td>
                     <td></td>
-                    <td><span class="play-button" onclick="alert('Audio: Fiya l-ke77a.')"></span></td>
+                    <td><audio id="audio_fiya_l_ke77a_mp3" src="audio/lessons/fiya_l_ke77a.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_fiya_l_ke77a_mp3').play()"></span></td>
                 </tr>
                 <tr>
                     <td>I feel dizzy.</td>
                     <td class="darija-script">فيا الدوخة.</td>
                     <td class="transcription">Fiya d-dokha.</td>
                     <td></td>
-                    <td><span class="play-button" onclick="alert('Audio: Fiya d-dokha.')"></span></td>
+                    <td><audio id="audio_fiya_d_dokha_mp3" src="audio/lessons/fiya_d_dokha.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_fiya_d_dokha_mp3').play()"></span></td>
                 </tr>
                 <tr>
                     <td>I am tired (m./f.)</td>
                     <td class="darija-script">أنا عيان / عيانة</td>
                     <td class="transcription">Ana 3iyyan / 3iyyana</td>
                     <td></td>
-                    <td><span class="play-button" onclick="alert('Audio: Ana 3iyyan / 3iyyana')"></span></td>
+                    <td><audio id="audio_ana_3iyyan_3iyyana_mp3" src="audio/lessons/ana_3iyyan_3iyyana.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_ana_3iyyan_3iyyana_mp3').play()"></span></td>
                 </tr>
             </tbody>
         </table>
@@ -427,37 +448,43 @@
                     <td>I need a doctor.</td>
                     <td class="darija-script">بغيت طبيب. / خاصني طبيب.</td>
                     <td>Bghit tbib. / Khassni tbib.</td>
-                    <td><span class="play-button" onclick="alert('Audio: Bghit tbib.')"></span></td>
+                    <td><audio id="audio_bghit_tbib_mp3" src="audio/lessons/bghit_tbib.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_bghit_tbib_mp3').play()"></span></td>
                 </tr>
                 <tr>
                     <td>I have an appointment.</td>
                     <td class="darija-script">عندي موعد.</td>
                     <td>3ndi maw3id.</td>
-                    <td><span class="play-button" onclick="alert('Audio: 3ndi maw3id.')"></span></td>
+                    <td><audio id="audio_3ndi_maw3id_mp3" src="audio/lessons/3ndi_maw3id.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_3ndi_maw3id_mp3').play()"></span></td>
                 </tr>
                  <tr>
                     <td>What's wrong with you? (m./f.) (What do you have?)</td>
                     <td class="darija-script">مالك؟ / شنو عندك؟</td>
                     <td>Malek? / Shnu 3ndek?</td>
-                    <td><span class="play-button" onclick="alert('Audio: Malek?')"></span></td>
+                    <td><audio id="audio_malek_mp3" src="audio/lessons/malek.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_malek_mp3').play()"></span></td>
                 </tr>
                 <tr>
                     <td>I need medicine.</td>
                     <td class="darija-script">بغيت الدوا. / خاصني الدوا.</td>
                     <td>Bghit d-dwa. / Khassni d-dwa.</td>
-                    <td><span class="play-button" onclick="alert('Audio: Bghit d-dwa.')"></span></td>
+                    <td><audio id="audio_bghit_d_dwa_mp3" src="audio/lessons/bghit_d_dwa.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_bghit_d_dwa_mp3').play()"></span></td>
                 </tr>
                  <tr>
                     <td>Medicine for...</td>
                     <td class="darija-script">الدوا ديال...</td>
                     <td>D-dwa dyal...</td>
-                    <td><span class="play-button" onclick="alert('Audio: D-dwa dyal...')"></span></td>
+                    <td><audio id="audio_d_dwa_dyal_mp3" src="audio/lessons/d_dwa_dyal.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_d_dwa_dyal_mp3').play()"></span></td>
                 </tr>
                 <tr>
                     <td>Get well soon! (To m./f.)</td>
                     <td class="darija-script">الله يشافيك.</td>
                     <td>Allah yshafik.</td>
-                    <td><span class="play-button" onclick="alert('Audio: Allah yshafik.')"></span></td>
+                    <td><audio id="audio_allah_yshafik_mp3" src="audio/lessons/allah_yshafik.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_allah_yshafik_mp3').play()"></span></td>
                 </tr>
             </tbody>
         </table>
@@ -539,6 +566,7 @@
 
   <!-- Add navigation script -->
   <script src="js/navigation.js"></script>
+  <script src="js/progress.js"></script>
   <script>
     // Placeholder for potential future JS
   </script>

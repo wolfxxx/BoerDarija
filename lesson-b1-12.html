@@ -318,7 +318,8 @@
       <h3>Example Description of a Person:</h3>
       <div class="vocab-table description-example">
         <p><span class="darija-script">صاحبي أحمد راجل طويل و ضريف. عندو شعر كحل و عينين خضرين. ديما لابس مزيان، غالبا كيلبس قميجة و سروال. هو خدام ف واحد الشركة كبيرة و كايعجبو يقرا الكتوب ف وقت الفراغ ديالو. هو اللي عاوني البارح.</span>
-        <span class="play-button" onclick="alert('Audio: Ahmed Description')"></span><br>
+        <audio id="audio_ahmed_description_mp3" src="audio/lessons/ahmed_description.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_ahmed_description_mp3').play()"></span><br>
         <span class="transcription">Sa7bi Ahmed rajl twil u Drif. 3ndu sh3r k7el u 3inin khDrin. Dima labes mzyan, ghaliban kaylbes qamija u srwal. Huwa khddam f wa7ed sh-sharika kbira u kay3jbu yqra l-ktub f weqt l-faragh dyalu. Huwa lli 3awenni l-bare7.</span></p>
         <p><strong>Translation:</strong> My friend Ahmed is a tall and kind man. He has black hair and green eyes. He's always well-dressed, often he wears a shirt and pants. He works at a big company and he likes to read books in his free time. He is the one who helped me yesterday.</p>
       </div>
@@ -336,7 +337,8 @@
          <h3>Example Description of a Place (e.g., a City):</h3>
         <div class="vocab-table description-example">
             <p><span class="darija-script">مراكش مدينة كبيرة و زوينة بزاف. فيها بزاف د الناس و الأسواق التقليدية اللي فيها كلشي. الجو تما كيكون سخون فالصيف ولكن ف الشتا زوين. جامع الفنا هو أشهر بلاصة تما، ديما عامر بالناس.</span>
-            <span class="play-button" onclick="alert('Audio: Marrakech Description')"></span><br>
+            <audio id="audio_marrakech_description_mp3" src="audio/lessons/marrakech_description.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_marrakech_description_mp3').play()"></span><br>
             <span class="transcription">Mrraksh mdina kbira u zwina bzzaf. Fiha bzzaf d n-nas u l-aswaq t-teqlidiya lli fiha kulshi. L-jeww temma kaykun skhun f s-sif walakin f sh-shta zwin. Jam3 l-Fna huwa ashhar blasa temma, dima 3amr b n-nas.</span></p>
             <p><strong>Translation:</strong> Marrakech is a very big and beautiful city. It has a lot of people and traditional markets where you can find everything. The weather there is usually hot in the summer but nice in the winter. Jemaa el-Fna is the most famous place there, always full of people.</p>
         </div>
@@ -348,7 +350,8 @@
         <h3>Example Description of an Object (e.g., a Book):</h3>
         <div class="vocab-table description-example">
             <p><span class="darija-script">عندي واحد الكتاب قديم و زرق. هو كتاب ديال القصص اللي كايعجبني نقراه قبل ما نعس. الغلاف ديالو مقطع شوية ولكن الصفحات مزال مزيانين. شريتو من واحد السوق صغير.</span>
-            <span class="play-button" onclick="alert('Audio: Book Description')"></span><br>
+            <audio id="audio_book_description_mp3" src="audio/lessons/book_description.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_book_description_mp3').play()"></span><br>
             <span class="transcription">3ndi wa7ed l-ktab qdim u zreq. Huwa ktab dyal l-qisas lli kay3jbni nqrah qbel ma n3es. L-ghlaf dyalu mqette3 shwiya walakin s-sfa7at mazal mzyanin. Shritu mn wa7ed s-souq sghir.</span></p>
             <p><strong>Translation:</strong> I have an old and blue book. It's a book of stories that I like to read before I sleep. Its cover is a bit torn but the pages are still good. I bought it from a small market.</p>
             <ul>
@@ -395,6 +398,7 @@
 
   <!-- Add navigation script -->
   <script src="js/navigation.js"></script>
+  <script src="js/progress.js"></script>
   <script>
     // Simple script to ensure correct breadcrumb is shown
     if (document.getElementById('b1-breadcrumb')) { 

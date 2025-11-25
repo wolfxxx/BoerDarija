@@ -51,32 +51,38 @@
       <p>These are some of the most distinctive sounds in Darija, often represented by numbers in informal transcription because there's no direct Latin alphabet equivalent.</p>
       <div class="sound-grid">
         <div class="sound-card">
-          <h3>3 <span class="play-button" onclick="alert('Audio for 3/ﻉ would play')">Play Sound</span></h3>
+          <h3>3 <audio id="audio_3_mp3" src="audio/lessons/3.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_3_mp3').play()">Play Sound</span></h3>
           <span class="darija-char">ع</span>
           <p class="description">This is the Arabic letter 'Ayn (ﻉ). It's a voiced pharyngeal fricative, meaning it's produced deep in the throat. It has no English equivalent.</p>
           <p><strong>How to try:</strong> Imagine you're trying to say "aaah" but constrict your throat muscles. It's a bit like the sound some people make when they're about to be sick, but more controlled and voiced.</p>
           <div class="example">
-            Example: <span class="darija-example">عافاك</span> (3afak - please) <span class="play-button" onclick="alert('Audio for 3afak would play')">Play Example</span>
+            Example: <span class="darija-example">عافاك</span> (3afak - please) <audio id="audio_3afak_mp3" src="audio/lessons/3afak.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_3afak_mp3').play()">Play Example</span>
           </div>
         </div>
 
         <div class="sound-card">
-          <h3>7 <span class="play-button" onclick="alert('Audio for 7/ﺡ would play')">Play Sound</span></h3>
+          <h3>7 <audio id="audio_7_mp3" src="audio/lessons/7.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_7_mp3').play()">Play Sound</span></h3>
           <span class="darija-char">ح</span>
           <p class="description">This is the Arabic letter Ḥāʾ (ح). It's a voiceless pharyngeal fricative. It's like a very breathy 'h' sound, made further back in the throat than the English 'h'.</p>
           <p><strong>How to try:</strong> Imagine you've just eaten something very spicy and you're exhaling sharply, or like you're fogging up a mirror with a strong, breathy "haaa."</p>
           <div class="example">
-            Example: <span class="darija-example">سبعة</span> (sb7a - seven) <span class="play-button" onclick="alert('Audio for sb7a would play')">Play Example</span>
+            Example: <span class="darija-example">سبعة</span> (sb7a - seven) <audio id="audio_sb7a_mp3" src="audio/lessons/sb7a.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_sb7a_mp3').play()">Play Example</span>
           </div>
         </div>
 
         <div class="sound-card">
-          <h3>9 <span class="play-button" onclick="alert('Audio for 9/ﻕ would play')">Play Sound</span></h3>
+          <h3>9 <audio id="audio_9_mp3" src="audio/lessons/9.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_9_mp3').play()">Play Sound</span></h3>
           <span class="darija-char">ق</span>
           <p class="description">This is the Arabic letter Qāf (ق). It's a voiceless uvular stop. It's like a 'k' sound, but produced much further back in the throat, at the uvula.</p>
           <p><strong>How to try:</strong> Try to say 'k' but pull the back of your tongue as far back as it can go, touching the soft part at the very back of your mouth (uvula).</p>
           <div class="example">
-            Example: <span class="darija-example">قهوة</span> (qhwa - coffee) <span class="play-button" onclick="alert('Audio for qhwa would play')">Play Example</span>
+            Example: <span class="darija-example">قهوة</span> (qhwa - coffee) <audio id="audio_qhwa_mp3" src="audio/lessons/qhwa.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_qhwa_mp3').play()">Play Example</span>
           </div>
         </div>
       </div>
@@ -102,7 +108,8 @@
                 <td>Voiceless velar fricative. Like the 'ch' in Scottish "loch" or German "Bach".</td>
                 <td class="darija-char-table">خبز</td>
                 <td>khobz (bread)</td>
-                <td><span class="play-button" onclick="alert('Audio for kh/خ and khobz would play')"></span></td>
+                <td><audio id="audio_khobz_mp3" src="audio/lessons/khobz.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_khobz_mp3').play()"></span></td>
             </tr>
             <tr>
                 <td class="transcription-char">gh</td>
@@ -110,7 +117,8 @@
                 <td>Voiced velar fricative. Similar to the French 'r' (like in "Paris") or the sound of gargling. No direct English equivalent.</td>
                 <td class="darija-char-table">غالي</td>
                 <td>ghali (expensive)</td>
-                <td><span class="play-button" onclick="alert('Audio for gh/غ and ghali would play')"></span></td>
+                <td><audio id="audio_ghali_mp3" src="audio/lessons/ghali.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_ghali_mp3').play()"></span></td>
             </tr>
             <tr>
                 <td class="transcription-char">h</td>
@@ -118,7 +126,8 @@
                 <td>A light, breathy 'h' like in "hello". Usually lighter than the Darija '7'.</td>
                 <td class="darija-char-table">هذا</td>
                 <td>hada (this)</td>
-                <td><span class="play-button" onclick="alert('Audio for h/ه and hada would play')"></span></td>
+                <td><audio id="audio_hada_mp3" src="audio/lessons/hada.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_hada_mp3').play()"></span></td>
             </tr>
              <tr>
                 <td class="transcription-char">sh</td>
@@ -126,7 +135,8 @@
                 <td>Like the 'sh' in "shoe".</td>
                 <td class="darija-char-table">شوف</td>
                 <td>shuf (look)</td>
-                <td><span class="play-button" onclick="alert('Audio for sh/ش and shuf would play')"></span></td>
+                <td><audio id="audio_shuf_mp3" src="audio/lessons/shuf.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_shuf_mp3').play()"></span></td>
             </tr>
             <tr>
                 <td class="transcription-char">j</td>
@@ -134,7 +144,8 @@
                 <td>Like the 's' in "pleasure" or "measure", or the French 'j' in "je". (Note: In some regions or for some speakers, it can be like English 'j' in "judge", but for Casablanca, 's' in pleasure is a good starting point).</td>
                 <td class="darija-char-table">جوج</td>
                 <td>juj (two)</td>
-                <td><span class="play-button" onclick="alert('Audio for j/ج and juj would play')"></span></td>
+                <td><audio id="audio_juj_mp3" src="audio/lessons/juj.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_juj_mp3').play()"></span></td>
             </tr>
             <tr>
                 <td class="transcription-char">r</td>
@@ -142,7 +153,8 @@
                 <td>Often a rolled or tapped 'r', similar to Spanish or Italian 'r'.</td>
                 <td class="darija-char-table">راديو</td>
                 <td>radio (radio)</td>
-                <td><span class="play-button" onclick="alert('Audio for r/ر and radio would play')"></span></td>
+                <td><audio id="audio_radio_mp3" src="audio/lessons/radio.mp3"></audio>
+<span class="play-button" onclick="document.getElementById('audio_radio_mp3').play()"></span></td>
             </tr>
         </tbody>
       </table>
@@ -188,6 +200,7 @@
 
   <!-- Add navigation script -->
   <script src="js/navigation.js"></script>
+  <script src="js/progress.js"></script>
   <script>
     // Placeholder for potential future JS, like loading nav or handling audio
     // For now, the main navigation loading should be in js/navigation.js

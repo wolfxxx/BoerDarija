@@ -1,0 +1,250 @@
+BOERDARIJA - COURSES AND LESSONS
+================================
+
+A1 BEGINNER COURSE (19 Lessons)
+-------------------------------
+
+Module 0: Darija Sounds & Transcription
+  File: lesson0.html
+  Topic: Master the unique sounds of Darija and learn how to read the transcription system used in this course.
+
+Module 1: Greetings, Politeness & Introductions
+  File: lesson1.html
+  Topic: Learn basic greetings, introductions, essential polite phrases, and subject pronouns.
+
+Module 2: Verb 'To Be', Nouns & Gender
+  File: lesson2.html
+  Topic: Understand the 'zero copula' for is/am/are, learn about noun gender, and the definite article 'l-'.
+
+Module 3: 'To Have' & Possession
+  File: lesson3.html
+  Topic: Learn to say "I have" using `3ndi` and express ownership with possessive suffixes and `dyal`.
+
+Module 4: Numbers (1-100) & Telling Age
+  File: lesson4.html
+  Topic: Master counting from 1 to 100 and learn how to ask and state your age.
+
+Module 5: Demonstratives & Common Objects
+  File: lesson5.html
+  Topic: Learn to use "this," "that," "these," and "those," and identify common objects.
+
+Module 6: Adjectives & Agreement, Colors
+  File: lesson6.html
+  Topic: Learn how to describe nouns using adjectives, ensure agreement, and basic color vocabulary.
+
+Module 7: Verb 'To Want', Food & Drink
+  File: lesson7.html
+  Topic: Master the verb "to want" (`bghit`) and learn vocabulary for common food and drinks.
+
+Module 8: Present Tense (`ka-` verbs)
+  File: lesson8.html
+  Topic: Learn to talk about habits and regular actions using the `ka-` present tense marker.
+
+Module 9: Asking Basic Questions
+  File: lesson9.html
+  Topic: Learn to ask Yes/No questions with `Wash` and use basic question words (Who, What, Where, When, How Much?).
+
+Module 10: Days, Months & Time
+  File: lesson10.html
+  Topic: Learn the days of the week, months of the year, and how to tell time in Darija.
+
+Module 11: Family Members
+  File: lesson11.html
+  Topic: Learn vocabulary for immediate family members and how to talk about your family.
+
+Module 12: Prepositions of Place & Conjunctions
+  File: lesson12.html
+  Topic: Learn essential prepositions to describe location (in, on, under, next to...) and basic conjunctions (and, or).
+
+Module 13: Negation
+  File: lesson13.html
+  Topic: Master negation using `ma-...-sh` for verbs, `mashi` for nouns/adjectives, and `ma 3ndish`.
+
+Module 14: Imperatives (Commands)
+  File: lesson14.html
+  Topic: Learn how to give commands, both telling someone to do something and not to do something.
+
+Module 15: Shopping & Bargaining
+  File: lesson15.html
+  Topic: Apply your A1 skills in practical shopping scenarios, including essential bargaining phrases.
+
+Module 16: Locations & Directions
+  File: lesson16.html
+  Topic: Learn vocabulary for places and how to ask for and give basic directions.
+
+Module 17: Expressing Likes/Dislikes
+  File: lesson17.html
+  Topic: Learn the common structure `kay3jbni...` to talk about what you like and dislike.
+
+Module 18: A1 Review & Consolidation
+  File: lesson18.html
+  Topic: Review all the A1 topics, practice with mixed exercises, and prepare for the next level!
+
+
+A2 ELEMENTARY COURSE (18 Lessons)
+----------------------------------
+
+Module 1: A1 Review & Intro to Past Tense
+  File: lesson-a2-1.html
+  Topic: Refresh A1 basics and learn the past tense for regular verbs, including past time expressions.
+
+Module 2: Past Tense (Irregular Verbs)
+  File: lesson-a2-2.html
+  Topic: Master the past tense of common irregular verbs like "to be," "to have," "to go," "to see," and "to do."
+
+Module 3: Object Pronoun Suffixes
+  File: lesson-a2-3.html
+  Topic: Learn to use suffixes for "me," "you," "him/her/it," "us," "them" attached to verbs.
+
+Module 4: Past Events & Simple Narratives
+  File: lesson-a2-4.html
+  Topic: Combine past tenses and sequencing words to tell simple stories and recount past events.
+
+Module 5: Future Tense with `Ghadi`
+  File: lesson-a2-5.html
+  Topic: Learn to talk about future plans and intentions using `ghadi` and future time expressions.
+
+Module 6: More Prepositions
+  File: lesson-a2-6.html
+  Topic: Expand your knowledge of prepositions, focusing on time, movement, and purpose.
+
+Module 7: Advanced Adjectives & Descriptions
+  File: lesson-a2-7.html
+  Topic: Learn more adjectives for personality and appearance, use multiple adjectives, and intensifiers.
+
+Module 8: Comparative & Superlative Adjectives
+  File: lesson-a2-8.html
+  Topic: Learn how to make comparisons (more than, as...as) and express superlatives (the most).
+
+Module 9: Health & Body
+  File: lesson-a2-9.html
+  Topic: Learn vocabulary for body parts, common health issues, and doctor/pharmacy interactions.
+
+Module 10: Daily Routines & Hobbies (Extended)
+  File: lesson-a2-10.html
+  Topic: Describe daily activities in more detail, discuss hobbies, and use adverbs of frequency.
+
+Module 11: Transportation & Travel (Extended)
+  File: lesson-a2-11.html
+  Topic: Learn vocabulary for transport types, buying tickets, and describing simple journeys.
+
+Module 12: Larger Numbers & Quantities
+  File: lesson-a2-12.html
+  Topic: Learn numbers beyond 100 (hundreds, thousands), fractions, and more complex quantity expressions.
+
+Module 13: Relative Clauses with `lli`
+  File: lesson-a2-13.html
+  Topic: Learn to connect ideas and add more information about nouns using `lli` (that/which/who).
+
+Module 14: Simple Conditional "If"
+  File: lesson-a2-14.html
+  Topic: Learn to express conditions and possible outcomes using `ila` (if) for real future possibilities.
+
+Module 15: Opinions & Suggestions
+  File: lesson-a2-15.html
+  Topic: Learn how to express your opinions and make suggestions for activities or plans.
+
+Module 16: Review of Verb Tenses
+  File: lesson-a2-16.html
+  Topic: Consolidate your understanding of present, past, and future tenses and practice using them.
+
+Module 17: Cultural Insights & Common Expressions
+  File: lesson-a2-17.html
+  Topic: Learn common idiomatic expressions, simple proverbs, and more about cultural etiquette.
+
+Module 18: A2 Consolidation & Moving Forward
+  File: lesson-a2-18.html
+  Topic: Review all A2 topics, practice with mixed exercises, and prepare for the B1 Intermediate level!
+
+
+B1 INTERMEDIATE COURSE (18 Lessons)
+-----------------------------------
+
+Module 1: A2 Review & Advanced Past Tense
+  File: lesson-b1-1.html
+  Topic: Consolidate A2 knowledge and delve deeper into past tense, focusing on irregular, 'hollow', and 'weak' verbs, and narrative techniques.
+
+Module 2: The Imperfect (Habitual Past)
+  File: lesson-b1-2.html
+  Topic: Learn to describe habitual or ongoing actions in the past using the "kan + ka-verb" structure (e.g., "I used to...", "I was -ing").
+
+Module 3: Active & Passive Participles
+  File: lesson-b1-3.html
+  Topic: Understand and form active (doer) and passive (done-to) participles, and their use as adjectives or in simple passive voice.
+
+Module 4: Expressing Ability, Possibility & Permission
+  File: lesson-b1-4.html
+  Topic: Learn to use `qder` (can), `yemken` (maybe/it's possible), and phrases for asking/giving permission.
+
+Module 5: Expressing Obligation & Necessity
+  File: lesson-b1-5.html
+  Topic: Master `khass` (must/need), `Daruri` (necessary), `lazem` (it is necessary) to talk about obligations and give advice.
+
+Module 6: More Complex Conditionals
+  File: lesson-b1-6.html
+  Topic: Explore present and past unreal conditionals ("If I had..., I would...") and using `lu kan`.
+
+Module 7: Advanced Relative Clauses & `ashmn`
+  File: lesson-b1-7.html
+  Topic: Deepen your use of `lli` including with prepositions, and learn to use `ashmn` (which).
+
+Module 8: Derived Verb Forms I (Causative)
+  File: lesson-b1-8.html
+  Topic: Introduction to verb patterns (awzan), focusing on Form II (`fe33el`) for causative and intensive meanings.
+
+Module 9: Derived Verb Forms II (Reflexive/Passive)
+  File: lesson-b1-9.html
+  Topic: Explore Form V (`tfe33el`) and Form VII (`nfe3el`) for reflexive and passive meanings.
+
+Module 10: More Connectors & Discourse Markers
+  File: lesson-b1-10.html
+  Topic: Learn advanced connectors for contrast, cause/reason, result, and adding information.
+
+Module 11: Reported Speech (Simple)
+  File: lesson-b1-11.html
+  Topic: Learn to report what others said (`qal belli...`) and asked (`suwwlat wash...`).
+
+Module 12: Describing in Detail
+  File: lesson-b1-12.html
+  Topic: Practice using a wide range of adjectives, relative clauses, and comparisons for rich descriptions.
+
+Module 13: Expressing Emotions & Feelings
+  File: lesson-b1-13.html
+  Topic: Expand vocabulary for emotions and learn structures to express how you feel more precisely.
+
+Module 14: Discussing Social & Cultural Topics
+  File: lesson-b1-14.html
+  Topic: Gain vocabulary for traditions, holidays, and daily life, and practice expressing opinions on these topics.
+
+Module 15: Handling Problems & Complaints
+  File: lesson-b1-15.html
+  Topic: Learn phrases for expressing dissatisfaction and asking for help with simple problems.
+
+Module 16: Understanding Different Registers
+  File: lesson-b1-16.html
+  Topic: Develop an awareness of variations in Darija (formal, informal, influence of French/MSA).
+
+Module 17: Extended Narratives & Storytelling
+  File: lesson-b1-17.html
+  Topic: Practice telling longer, more detailed stories in the past, using varied vocabulary and connectors.
+
+Module 18: B1 Consolidation & Moving to B2
+  File: lesson-b1-18.html
+  Topic: Comprehensive review of B1 grammar and vocabulary, and guidance for B2 Upper Intermediate.
+
+
+SUMMARY
+-------
+
+Total Courses: 3 (A1, A2, B1)
+Total Lessons: 55
+  - A1 Beginner: 19 lessons
+  - A2 Elementary: 18 lessons
+  - B1 Intermediate: 18 lessons
+
+Additional Pages:
+  - index.html (Homepage)
+  - courses.html (Course selection)
+  - vocabulary-game.html (Interactive vocabulary game)
+  - dictionary.html (Dictionary with 5000+ entries)
+

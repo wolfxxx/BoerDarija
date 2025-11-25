@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BOERDARIJA | Module 4: Numbers (1-100) & Telling Age</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&family=Amiri:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <!-- Navigation Placeholder -->
   <div id="nav-placeholder"></div>
@@ -36,20 +40,55 @@
       <h2>Numbers 0-10</h2>
       <p>Let's start with the very basics. These are fundamental building blocks.</p>
       <div class="numbers-grid">
-        <div class="number-item"><span class="num">0:</span> <span class="darija-num">صفر</span> <span class="transcription-num">(sifr / zero)</span> <span class="play-button" onclick="alert('Audio: sifr')"></span></div>
-        <div class="number-item"><span class="num">1:</span> <span class="darija-num">واحد</span> <span class="transcription-num">(wa7ed)</span> <span class="play-button" onclick="alert('Audio: wa7ed')"></span></div>
-        <div class="number-item"><span class="num">2:</span> <span class="darija-num">جوج</span> <span class="transcription-num">(juj)</span> <span class="play-button" onclick="alert('Audio: juj')"></span></div>
-        <div class="number-item"><span class="num">3:</span> <span class="darija-num">تلاتة</span> <span class="transcription-num">(tlata)</span> <span class="play-button" onclick="alert('Audio: tlata')"></span></div>
-        <div class="number-item"><span class="num">4:</span> <span class="darija-num">ربعة</span> <span class="transcription-num">(rb3a)</span> <span class="play-button" onclick="alert('Audio: rb3a')"></span></div>
-        <div class="number-item"><span class="num">5:</span> <span class="darija-num">خمسة</span> <span class="transcription-num">(khmsa)</span> <span class="play-button" onclick="alert('Audio: khmsa')"></span></div>
-        <div class="number-item"><span class="num">6:</span> <span class="darija-num">ستة</span> <span class="transcription-num">(setta)</span> <span class="play-button" onclick="alert('Audio: setta')"></span></div>
-        <div class="number-item"><span class="num">7:</span> <span class="darija-num">سبعة</span> <span class="transcription-num">(sb3a)</span> <span class="play-button" onclick="alert('Audio: sb3a')"></span></div>
-        <div class="number-item"><span class="num">8:</span> <span class="darija-num">تمنية</span> <span class="transcription-num">(tmnya)</span> <span class="play-button" onclick="alert('Audio: tmnya')"></span></div>
-        <div class="number-item"><span class="num">9:</span> <span class="darija-num">تسعود</span> <span class="transcription-num">(ts3ud)</span> <span class="play-button" onclick="alert('Audio: ts3ud')"></span></div>
-        <div class="number-item"><span class="num">10:</span> <span class="darija-num">عشرة</span> <span class="transcription-num">(3shra)</span> <span class="play-button" onclick="alert('Audio: 3shra')"></span></div>
+        <div class="number-item"><span class="num">0:</span> <span class="darija-num">صفر</span> <span
+            class="transcription-num">(sifr / zero)</span> <audio id="audio_sifr_mp3"
+            src="audio/lessons/sifr.mp3"></audio>
+          <span class="play-button" onclick="document.getElementById('audio_sifr_mp3').play()"></span>
+        </div>
+        <div class="number-item"><span class="num">1:</span> <span class="darija-num">واحد</span> <span
+            class="transcription-num">(wa7ed)</span> <audio id="audio_wa7ed_mp3" src="audio/lessons/wa7ed.mp3"></audio>
+          <span class="play-button" onclick="document.getElementById('audio_wa7ed_mp3').play()"></span>
+        </div>
+        <div class="number-item"><span class="num">2:</span> <span class="darija-num">جوج</span> <span
+            class="transcription-num">(juj)</span> <audio id="audio_juj_mp3" src="audio/lessons/juj.mp3"></audio>
+          <span class="play-button" onclick="document.getElementById('audio_juj_mp3').play()"></span>
+        </div>
+        <div class="number-item"><span class="num">3:</span> <span class="darija-num">تلاتة</span> <span
+            class="transcription-num">(tlata)</span> <audio id="audio_tlata_mp3" src="audio/lessons/tlata.mp3"></audio>
+          <span class="play-button" onclick="document.getElementById('audio_tlata_mp3').play()"></span>
+        </div>
+        <div class="number-item"><span class="num">4:</span> <span class="darija-num">ربعة</span> <span
+            class="transcription-num">(rb3a)</span> <audio id="audio_rb3a_mp3" src="audio/lessons/rb3a.mp3"></audio>
+          <span class="play-button" onclick="document.getElementById('audio_rb3a_mp3').play()"></span>
+        </div>
+        <div class="number-item"><span class="num">5:</span> <span class="darija-num">خمسة</span> <span
+            class="transcription-num">(khmsa)</span> <audio id="audio_khmsa_mp3" src="audio/lessons/khmsa.mp3"></audio>
+          <span class="play-button" onclick="document.getElementById('audio_khmsa_mp3').play()"></span>
+        </div>
+        <div class="number-item"><span class="num">6:</span> <span class="darija-num">ستة</span> <span
+            class="transcription-num">(setta)</span> <audio id="audio_setta_mp3" src="audio/lessons/setta.mp3"></audio>
+          <span class="play-button" onclick="document.getElementById('audio_setta_mp3').play()"></span>
+        </div>
+        <div class="number-item"><span class="num">7:</span> <span class="darija-num">سبعة</span> <span
+            class="transcription-num">(sb3a)</span> <audio id="audio_sb3a_mp3" src="audio/lessons/sb3a.mp3"></audio>
+          <span class="play-button" onclick="document.getElementById('audio_sb3a_mp3').play()"></span>
+        </div>
+        <div class="number-item"><span class="num">8:</span> <span class="darija-num">تمنية</span> <span
+            class="transcription-num">(tmnya)</span> <audio id="audio_tmnya_mp3" src="audio/lessons/tmnya.mp3"></audio>
+          <span class="play-button" onclick="document.getElementById('audio_tmnya_mp3').play()"></span>
+        </div>
+        <div class="number-item"><span class="num">9:</span> <span class="darija-num">تسعود</span> <span
+            class="transcription-num">(ts3ud)</span> <audio id="audio_ts3ud_mp3" src="audio/lessons/ts3ud.mp3"></audio>
+          <span class="play-button" onclick="document.getElementById('audio_ts3ud_mp3').play()"></span>
+        </div>
+        <div class="number-item"><span class="num">10:</span> <span class="darija-num">عشرة</span> <span
+            class="transcription-num">(3shra)</span> <audio id="audio_3shra_mp3" src="audio/lessons/3shra.mp3"></audio>
+          <span class="play-button" onclick="document.getElementById('audio_3shra_mp3').play()"></span>
+        </div>
       </div>
       <div class="note">
-          <strong>Counting Objects (1 & 2):</strong> When counting objects, "one" and "two" can sometimes change form or be used with gendered nouns, but for basic counting, `wa7ed` and `juj` are standard.
+        <strong>Counting Objects (1 & 2):</strong> When counting objects, "one" and "two" can sometimes change form or
+        be used with gendered nouns, but for basic counting, `wa7ed` and `juj` are standard.
       </div>
     </section>
 
@@ -58,23 +97,86 @@
       <p>These numbers generally end with a "-tash" sound, similar to "-teen" in English.</p>
       <table class="numbers-table">
         <thead>
-            <tr>
-                <th>Number</th>
-                <th>Darija Script</th>
-                <th>Transcription</th>
-                <th>Audio</th>
-            </tr>
+          <tr>
+            <th>Number</th>
+            <th>Darija Script</th>
+            <th>Transcription</th>
+            <th>Audio</th>
+          </tr>
         </thead>
         <tbody>
-            <tr><td>11</td><td class="darija-script">حداش</td><td class="transcription">7dash</td><td><span class="play-button" onclick="alert('Audio: 7dash')"></span></td></tr>
-            <tr><td>12</td><td class="darija-script">طناش</td><td class="transcription">tnash</td><td><span class="play-button" onclick="alert('Audio: tnash')"></span></td></tr>
-            <tr><td>13</td><td class="darija-script">تلطاش</td><td class="transcription">tlttash</td><td><span class="play-button" onclick="alert('Audio: tlttash')"></span></td></tr>
-            <tr><td>14</td><td class="darija-script">ربعطاش</td><td class="transcription">rb3tash</td><td><span class="play-button" onclick="alert('Audio: rb3tash')"></span></td></tr>
-            <tr><td>15</td><td class="darija-script">خمسطاش</td><td class="transcription">khmstash</td><td><span class="play-button" onclick="alert('Audio: khmstash')"></span></td></tr>
-            <tr><td>16</td><td class="darija-script">سطاش</td><td class="transcription">sttash</td><td><span class="play-button" onclick="alert('Audio: sttash')"></span></td></tr>
-            <tr><td>17</td><td class="darija-script">سبعطاش</td><td class="transcription">sb3tash</td><td><span class="play-button" onclick="alert('Audio: sb3tash')"></span></td></tr>
-            <tr><td>18</td><td class="darija-script">تمنطاش</td><td class="transcription">tmntash</td><td><span class="play-button" onclick="alert('Audio: tmntash')"></span></td></tr>
-            <tr><td>19</td><td class="darija-script">تسعطاش</td><td class="transcription">ts3tash</td><td><span class="play-button" onclick="alert('Audio: ts3tash')"></span></td></tr>
+          <tr>
+            <td>11</td>
+            <td class="darija-script">حداش</td>
+            <td class="transcription">7dash</td>
+            <td><audio id="audio_7dash_mp3" src="audio/lessons/7dash.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_7dash_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td class="darija-script">طناش</td>
+            <td class="transcription">tnash</td>
+            <td><audio id="audio_tnash_mp3" src="audio/lessons/tnash.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_tnash_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td class="darija-script">تلطاش</td>
+            <td class="transcription">tlttash</td>
+            <td><audio id="audio_tlttash_mp3" src="audio/lessons/tlttash.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_tlttash_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td class="darija-script">ربعطاش</td>
+            <td class="transcription">rb3tash</td>
+            <td><audio id="audio_rb3tash_mp3" src="audio/lessons/rb3tash.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_rb3tash_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td class="darija-script">خمسطاش</td>
+            <td class="transcription">khmstash</td>
+            <td><audio id="audio_khmstash_mp3" src="audio/lessons/khmstash.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_khmstash_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td class="darija-script">سطاش</td>
+            <td class="transcription">sttash</td>
+            <td><audio id="audio_sttash_mp3" src="audio/lessons/sttash.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_sttash_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td class="darija-script">سبعطاش</td>
+            <td class="transcription">sb3tash</td>
+            <td><audio id="audio_sb3tash_mp3" src="audio/lessons/sb3tash.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_sb3tash_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td class="darija-script">تمنطاش</td>
+            <td class="transcription">tmntash</td>
+            <td><audio id="audio_tmntash_mp3" src="audio/lessons/tmntash.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_tmntash_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td class="darija-script">تسعطاش</td>
+            <td class="transcription">ts3tash</td>
+            <td><audio id="audio_ts3tash_mp3" src="audio/lessons/ts3tash.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_ts3tash_mp3').play()"></span>
+            </td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -82,119 +184,212 @@
     <section class="lesson-section">
       <h2>Tens (20, 30, ... 100)</h2>
       <p>Learning the tens is crucial for forming numbers up to 100.</p>
-       <table class="numbers-table">
+      <table class="numbers-table">
         <thead>
-            <tr>
-                <th>Number</th>
-                <th>Darija Script</th>
-                <th>Transcription</th>
-                <th>Audio</th>
-            </tr>
+          <tr>
+            <th>Number</th>
+            <th>Darija Script</th>
+            <th>Transcription</th>
+            <th>Audio</th>
+          </tr>
         </thead>
         <tbody>
-            <tr><td>20</td><td class="darija-script">عشرين</td><td class="transcription">3shrin</td><td><span class="play-button" onclick="alert('Audio: 3shrin')"></span></td></tr>
-            <tr><td>30</td><td class="darija-script">تلاتين</td><td class="transcription">tlatin</td><td><span class="play-button" onclick="alert('Audio: tlatin')"></span></td></tr>
-            <tr><td>40</td><td class="darija-script">ربعين</td><td class="transcription">rb3in</td><td><span class="play-button" onclick="alert('Audio: rb3in')"></span></td></tr>
-            <tr><td>50</td><td class="darija-script">خمسين</td><td class="transcription">khmsin</td><td><span class="play-button" onclick="alert('Audio: khmsin')"></span></td></tr>
-            <tr><td>60</td><td class="darija-script">ستين</td><td class="transcription">settin</td><td><span class="play-button" onclick="alert('Audio: settin')"></span></td></tr>
-            <tr><td>70</td><td class="darija-script">سبعين</td><td class="transcription">sb3in</td><td><span class="play-button" onclick="alert('Audio: sb3in')"></span></td></tr>
-            <tr><td>80</td><td class="darija-script">تمانين</td><td class="transcription">tmanin</td><td><span class="play-button" onclick="alert('Audio: tmanin')"></span></td></tr>
-            <tr><td>90</td><td class="darija-script">تسعين</td><td class="transcription">ts3in</td><td><span class="play-button" onclick="alert('Audio: ts3in')"></span></td></tr>
-            <tr><td>100</td><td class="darija-script">مية</td><td class="transcription">mya</td><td><span class="play-button" onclick="alert('Audio: mya')"></span></td></tr>
+          <tr>
+            <td>20</td>
+            <td class="darija-script">عشرين</td>
+            <td class="transcription">3shrin</td>
+            <td><audio id="audio_3shrin_mp3" src="audio/lessons/3shrin.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_3shrin_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td class="darija-script">تلاتين</td>
+            <td class="transcription">tlatin</td>
+            <td><audio id="audio_tlatin_mp3" src="audio/lessons/tlatin.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_tlatin_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>40</td>
+            <td class="darija-script">ربعين</td>
+            <td class="transcription">rb3in</td>
+            <td><audio id="audio_rb3in_mp3" src="audio/lessons/rb3in.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_rb3in_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>50</td>
+            <td class="darija-script">خمسين</td>
+            <td class="transcription">khmsin</td>
+            <td><audio id="audio_khmsin_mp3" src="audio/lessons/khmsin.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_khmsin_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>60</td>
+            <td class="darija-script">ستين</td>
+            <td class="transcription">settin</td>
+            <td><audio id="audio_settin_mp3" src="audio/lessons/settin.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_settin_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>70</td>
+            <td class="darija-script">سبعين</td>
+            <td class="transcription">sb3in</td>
+            <td><audio id="audio_sb3in_mp3" src="audio/lessons/sb3in.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_sb3in_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>80</td>
+            <td class="darija-script">تمانين</td>
+            <td class="transcription">tmanin</td>
+            <td><audio id="audio_tmanin_mp3" src="audio/lessons/tmanin.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_tmanin_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>90</td>
+            <td class="darija-script">تسعين</td>
+            <td class="transcription">ts3in</td>
+            <td><audio id="audio_ts3in_mp3" src="audio/lessons/ts3in.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_ts3in_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td class="darija-script">مية</td>
+            <td class="transcription">mya</td>
+            <td><audio id="audio_mya_mp3" src="audio/lessons/mya.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_mya_mp3').play()"></span>
+            </td>
+          </tr>
         </tbody>
       </table>
     </section>
 
     <section class="lesson-section">
-        <h2>Combining Numbers (21-99)</h2>
-        <p>To form numbers like 21, 35, etc., you state the unit first, then "u" (and), then the ten.
-        <br>Pattern: **[Unit (1-9)] + `u` + [Ten (20, 30...)]**</p>
-        
-        <table class="example-table">
-            <thead>
-                <tr>
-                    <th>Number</th>
-                    <th>Breakdown (Darija)</th>
-                    <th>Full Darija</th>
-                    <th>Transcription</th>
-                    <th>Audio</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>21</td>
-                    <td><span class="darija-script">واحد و عشرين</span></td>
-                    <td><span class="darija-script">واحد وعشرين</span></td>
-                    <td class="transcription">wa7ed u 3shrin</td>
-                    <td><span class="play-button" onclick="alert('Audio: wa7ed u 3shrin')"></span></td>
-                </tr>
-                <tr>
-                    <td>35</td>
-                    <td><span class="darija-script">خمسة و تلاتين</span></td>
-                    <td><span class="darija-script">خمسة وتلاتين</span></td>
-                    <td class="transcription">khmsa u tlatin</td>
-                    <td><span class="play-button" onclick="alert('Audio: khmsa u tlatin')"></span></td>
-                </tr>
-                 <tr>
-                    <td>67</td>
-                     <td><span class="darija-script">سبعة و ستين</span></td>
-                    <td><span class="darija-script">سبعة وستين</span></td>
-                    <td class="transcription">sb3a u settin</td>
-                    <td><span class="play-button" onclick="alert('Audio: sb3a u settin')"></span></td>
-                </tr>
-                 <tr>
-                    <td>99</td>
-                     <td><span class="darija-script">تسعود و تسعين</span></td>
-                    <td><span class="darija-script">تسعود وتسعين</span></td>
-                    <td class="transcription">ts3ud u ts3in</td>
-                    <td><span class="play-button" onclick="alert('Audio: ts3ud u ts3in')"></span></td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="note">
-            <strong>The "u" Connector:</strong> The "u" (<span class="darija-script">و</span>) means "and". It connects the unit digit to the tens digit.
-        </div>
+      <h2>Combining Numbers (21-99)</h2>
+      <p>To form numbers like 21, 35, etc., you state the unit first, then "u" (and), then the ten.
+        <br>Pattern: **[Unit (1-9)] + `u` + [Ten (20, 30...)]**
+      </p>
+
+      <table class="example-table">
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Breakdown (Darija)</th>
+            <th>Full Darija</th>
+            <th>Transcription</th>
+            <th>Audio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>21</td>
+            <td><span class="darija-script">واحد و عشرين</span></td>
+            <td><span class="darija-script">واحد وعشرين</span></td>
+            <td class="transcription">wa7ed u 3shrin</td>
+            <td><audio id="audio_wa7ed_u_3shrin_mp3" src="audio/lessons/wa7ed_u_3shrin.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_wa7ed_u_3shrin_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>35</td>
+            <td><span class="darija-script">خمسة و تلاتين</span></td>
+            <td><span class="darija-script">خمسة وتلاتين</span></td>
+            <td class="transcription">khmsa u tlatin</td>
+            <td><audio id="audio_khmsa_u_tlatin_mp3" src="audio/lessons/khmsa_u_tlatin.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_khmsa_u_tlatin_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>67</td>
+            <td><span class="darija-script">سبعة و ستين</span></td>
+            <td><span class="darija-script">سبعة وستين</span></td>
+            <td class="transcription">sb3a u settin</td>
+            <td><audio id="audio_sb3a_u_settin_mp3" src="audio/lessons/sb3a_u_settin.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_sb3a_u_settin_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>99</td>
+            <td><span class="darija-script">تسعود و تسعين</span></td>
+            <td><span class="darija-script">تسعود وتسعين</span></td>
+            <td class="transcription">ts3ud u ts3in</td>
+            <td><audio id="audio_ts3ud_u_ts3in_mp3" src="audio/lessons/ts3ud_u_ts3in.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_ts3ud_u_ts3in_mp3').play()"></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note">
+        <strong>The "u" Connector:</strong> The "u" (<span class="darija-script">و</span>) means "and". It connects the
+        unit digit to the tens digit.
+      </div>
     </section>
 
     <section class="lesson-section">
-        <h2>Asking and Telling Age</h2>
-        <p>To talk about age, you use the structure "`3nd-` (to have) + [number] + `3am` (year/years)."</p>
+      <h2>Asking and Telling Age</h2>
+      <p>To talk about age, you use the structure "`3nd-` (to have) + [number] + `3am` (year/years)."</p>
 
-        <h3>Key Phrases:</h3>
-        <table class="example-table">
-            <thead>
-                <tr>
-                    <th>English</th>
-                    <th>Darija Script</th>
-                    <th>Transcription</th>
-                    <th>Audio</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>How old are you? (to male/female)</td>
-                    <td class="darija-script">شحال ف عمرك؟</td>
-                    <td class="transcription">Sh7al f 3mrek?</td>
-                    <td><span class="play-button" onclick="alert('Audio: Sh7al f 3mrek?')"></span></td>
-                </tr>
-                <tr>
-                    <td>I am ... years old.</td>
-                    <td class="darija-script">عندي ... عام</td>
-                    <td class="transcription">3ndi ... 3am.</td>
-                    <td><span class="play-button" onclick="alert('Audio for 3am')"></span></td>
-                </tr>
-            </tbody>
-        </table>
+      <h3>Key Phrases:</h3>
+      <table class="example-table">
+        <thead>
+          <tr>
+            <th>English</th>
+            <th>Darija Script</th>
+            <th>Transcription</th>
+            <th>Audio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>How old are you? (to male/female)</td>
+            <td class="darija-script">شحال ف عمرك؟</td>
+            <td class="transcription">Sh7al f 3mrek?</td>
+            <td><audio id="audio_sh7al_f_3mrek_mp3" src="audio/lessons/sh7al_f_3mrek.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_sh7al_f_3mrek_mp3').play()"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>I am ... years old.</td>
+            <td class="darija-script">عندي ... عام</td>
+            <td class="transcription">3ndi ... 3am.</td>
+            <td><audio id="audio_3ndi_3am_mp3" src="audio/lessons/3ndi_3am.mp3"></audio>
+              <span class="play-button" onclick="document.getElementById('audio_3ndi_3am_mp3').play()"></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-        <h3>Examples:</h3>
-        <ul>
-            <li>I am 25 years old: <span class="darija-script">عندي خمسة وعشرين عام.</span> (<span class="transcription">3ndi khmsa u 3shrin 3am.</span>) <span class="play-button" onclick="alert('Audio: 3ndi khmsa u 3shrin 3am.')"></span></li>
-            <li>He is 40 years old: <span class="darija-script">عندو ربعين عام.</span> (<span class="transcription">3ndu rb3in 3am.</span>) <span class="play-button" onclick="alert('Audio: 3ndu rb3in 3am.')"></span></li>
-            <li>She is 18 years old: <span class="darija-script">عندها تمنطاش عام.</span> (<span class="transcription">3ndha tmntash 3am.</span>) <span class="play-button" onclick="alert('Audio: 3ndha tmntash 3am.')"></span></li>
-        </ul>
-        <div class="note">
-            <strong>`3am` (year):</strong> The word <span class="darija-script">عام</span> (3am) means "year." For ages 3-10, you might sometimes hear <span class="darija-script">سنين</span> (snin - years), e.g., <span class="darija-script">عندو تلاتة سنين</span> (3ndu tlata snin - He is 3 years old). However, using `3am` is generally acceptable and simpler for A1. For ages 11 and above, `3am` is standard. For age 1, it's `3am`, for age 2, it's `3amayn`.
-        </div>
+      <h3>Examples:</h3>
+      <ul>
+        <li>I am 25 years old: <span class="darija-script">عندي خمسة وعشرين عام.</span> (<span
+            class="transcription">3ndi khmsa u 3shrin 3am.</span>) <audio id="audio_3ndi_khmsa_u_3shrin_3am_mp3"
+            src="audio/lessons/3ndi_khmsa_u_3shrin_3am.mp3"></audio>
+          <span class="play-button"
+            onclick="document.getElementById('audio_3ndi_khmsa_u_3shrin_3am_mp3').play()"></span>
+        </li>
+        <li>He is 40 years old: <span class="darija-script">عندو ربعين عام.</span> (<span class="transcription">3ndu
+            rb3in 3am.</span>) <audio id="audio_3ndu_rb3in_3am_mp3" src="audio/lessons/3ndu_rb3in_3am.mp3"></audio>
+          <span class="play-button" onclick="document.getElementById('audio_3ndu_rb3in_3am_mp3').play()"></span>
+        </li>
+        <li>She is 18 years old: <span class="darija-script">عندها تمنطاش عام.</span> (<span class="transcription">3ndha
+            tmntash 3am.</span>) <audio id="audio_3ndha_tmntash_3am_mp3"
+            src="audio/lessons/3ndha_tmntash_3am.mp3"></audio>
+          <span class="play-button" onclick="document.getElementById('audio_3ndha_tmntash_3am_mp3').play()"></span>
+        </li>
+      </ul>
+      <div class="note">
+        <strong>`3am` (year):</strong> The word <span class="darija-script">عام</span> (3am) means "year." For ages
+        3-10, you might sometimes hear <span class="darija-script">سنين</span> (snin - years), e.g., <span
+          class="darija-script">عندو تلاتة سنين</span> (3ndu tlata snin - He is 3 years old). However, using `3am` is
+        generally acceptable and simpler for A1. For ages 11 and above, `3am` is standard. For age 1, it's `3am`, for
+        age 2, it's `3amayn`.
+      </div>
     </section>
 
     <section class="practice-section">
@@ -202,22 +397,23 @@
       <h3>Exercise 1: Write the Numbers</h3>
       <p>Write the following numbers in Darija (transcription):</p>
       <ol>
-          <li>8: <span class="fill-blank">tmnya</span></li>
-          <li>15: <span class="fill-blank">khmstash</span></li>
-          <li>42: <span class="fill-blank">tnin u rb3in</span> (Note: 2 can be `tnin` before `u`)</li>
-          <li>70: <span class="fill-blank">sb3in</span></li>
-          <li>96: <span class="fill-blank">setta u ts3in</span></li>
+        <li>8: <span class="fill-blank">tmnya</span></li>
+        <li>15: <span class="fill-blank">khmstash</span></li>
+        <li>42: <span class="fill-blank">tnin u rb3in</span> (Note: 2 can be `tnin` before `u`)</li>
+        <li>70: <span class="fill-blank">sb3in</span></li>
+        <li>96: <span class="fill-blank">setta u ts3in</span></li>
       </ol>
 
       <h3>Exercise 2: How Old Are They?</h3>
       <p>Translate these sentences into Darija:</p>
       <ol>
-          <li>I am 30 years old. <span class="fill-blank">3ndi tlatin 3am.</span></li>
-          <li>How old is she? <span class="fill-blank">Sh7al f 3mrha?</span></li>
-          <li>He is 12 years old. <span class="fill-blank">3ndu tnash 3am.</span></li>
+        <li>I am 30 years old. <span class="fill-blank">3ndi tlatin 3am.</span></li>
+        <li>How old is she? <span class="fill-blank">Sh7al f 3mrha?</span></li>
+        <li>He is 12 years old. <span class="fill-blank">3ndu tnash 3am.</span></li>
       </ol>
       <div class="note">
-          <strong>Listen and Repeat:</strong> Numbers are best learned through repetition. Go back and listen to the audio for each number group multiple times.
+        <strong>Listen and Repeat:</strong> Numbers are best learned through repetition. Go back and listen to the audio
+        for each number group multiple times.
       </div>
     </section>
 
@@ -230,8 +426,10 @@
 
   <!-- Add navigation script -->
   <script src="js/navigation.js"></script>
+  <script src="js/progress.js"></script>
   <script>
     // Placeholder for potential future JS
   </script>
 </body>
+
 </html>

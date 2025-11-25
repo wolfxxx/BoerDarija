@@ -6,62 +6,74 @@
         {
           "term": "Salam",
           "arabic": "سلام",
-          "meaning": "Hello"
+          "meaning": "Hello",
+          "audio": "audio/salam.mp3"
         },
         {
           "term": "Salam Alikum",
           "arabic": "السلام عليكم",
-          "meaning": "Peace be upon you"
+          "meaning": "Peace be upon you",
+          "audio": "audio/salam_alikum.mp3"
         },
         {
           "term": "Labas?",
           "arabic": "لاباس؟",
-          "meaning": "How are you?"
+          "meaning": "How are you?",
+          "audio": "audio/labas.mp3"
         },
         {
           "term": "Mzyan",
           "arabic": "مزيان",
-          "meaning": "Good"
+          "meaning": "Good",
+          "audio": "audio/mzyan.mp3"
         },
         {
           "term": "Shukran",
           "arabic": "شكرا",
-          "meaning": "Thank you"
+          "meaning": "Thank you",
+          "audio": "audio/shukran.mp3"
         },
         {
           "term": "Afak",
           "arabic": "عفاك",
-          "meaning": "Please"
+          "meaning": "Please",
+          "audio": "audio/afak.mp3"
         },
         {
           "term": "Smehli",
           "arabic": "سمح لي",
-          "meaning": "Excuse me/Sorry"
+          "meaning": "Excuse me/Sorry",
+          "audio": "audio/smehli.mp3"
         },
         {
           "term": "B'slama",
           "arabic": "بالسلامة",
-          "meaning": "Goodbye"
+          "meaning": "Goodbye",
+          "audio": "audio/b_slama.mp3"
         },
         {
           "term": "Msa Lkhir",
           "arabic": "مساء الخير",
-          "meaning": "Good evening"
+          "meaning": "Good evening",
+          "audio": "audio/msa_lkhir.mp3"
         },
         {
           "term": "Sbah Lkhir",
           "arabic": "صباح الخير",
-          "meaning": "Good morning"
+          "meaning": "Good morning",
+          "audio": "audio/sbah_lkhir.mp3"
         },
         {
           "term": "Bssaha",
           "arabic": "بالصحة",
-          "meaning": "Enjoy your meal"
+          "meaning": "Enjoy your meal",
+          "audio": "audio/bssaha.mp3"
         },
         {
           "term": "Allah y3awen",
           "arabic": "الله يعاون",
-          "meaning": "God help you"
+          "meaning": "God help you",
+          "audio": "audio/allah_y3awen.mp3"
         }
       ]
     },
@@ -71,42 +83,50 @@
         {
           "term": "Fayn?",
           "arabic": "فاين؟",
-          "meaning": "Where?"
+          "meaning": "Where?",
+          "audio": "audio/fayn.mp3"
         },
         {
           "term": "Kam?",
           "arabic": "كم؟",
-          "meaning": "How much?"
+          "meaning": "How much?",
+          "audio": "audio/kam.mp3"
         },
         {
           "term": "Mata?",
           "arabic": "متى؟",
-          "meaning": "When?"
+          "meaning": "When?",
+          "audio": "audio/mata.mp3"
         },
         {
           "term": "Ashno?",
           "arabic": "اشنو؟",
-          "meaning": "What?"
+          "meaning": "What?",
+          "audio": "audio/ashno.mp3"
         },
         {
           "term": "3lash?",
           "arabic": "علاش؟",
-          "meaning": "Why?"
+          "meaning": "Why?",
+          "audio": "audio/3lash.mp3"
         },
         {
           "term": "Kifach?",
           "arabic": "كيفاش؟",
-          "meaning": "How?"
+          "meaning": "How?",
+          "audio": "audio/kifach.mp3"
         },
         {
           "term": "Chno smitk?",
           "arabic": "شنو سميتك؟",
-          "meaning": "What's your name?"
+          "meaning": "What's your name?",
+          "audio": "audio/chno_smitk.mp3"
         },
         {
           "term": "Fayn sknt?",
           "arabic": "فاين سكنت؟",
-          "meaning": "Where do you live?"
+          "meaning": "Where do you live?",
+          "audio": "audio/fayn_sknt.mp3"
         }
       ]
     },
@@ -116,47 +136,56 @@
         {
           "term": "Iyeh",
           "arabic": "اييه",
-          "meaning": "Yes"
+          "meaning": "Yes",
+          "audio": "audio/iyeh.mp3"
         },
         {
           "term": "La",
           "arabic": "لا",
-          "meaning": "No"
+          "meaning": "No",
+          "audio": "audio/la.mp3"
         },
         {
           "term": "Mafhemtch",
           "arabic": "مافهمتش",
-          "meaning": "I don't understand"
+          "meaning": "I don't understand",
+          "audio": "audio/mafhemtch.mp3"
         },
         {
           "term": "Ma3refch",
           "arabic": "ماعرفش",
-          "meaning": "I don't know"
+          "meaning": "I don't know",
+          "audio": "audio/ma3refch.mp3"
         },
         {
           "term": "Mashi",
           "arabic": "ماشي",
-          "meaning": "Not/No (used for negation)"
+          "meaning": "Not/No (used for negation)",
+          "audio": "audio/mashi.mp3"
         },
         {
           "term": "Mzyan",
           "arabic": "مزيان",
-          "meaning": "Good/Okay"
+          "meaning": "Good/Okay",
+          "audio": "audio/mzyan.mp3"
         },
         {
           "term": "3afak",
           "arabic": "عفاك",
-          "meaning": "Please"
+          "meaning": "Please",
+          "audio": "audio/3afak.mp3"
         },
         {
           "term": "Hamdullah",
           "arabic": "الحمد لله",
-          "meaning": "Praise be to God"
+          "meaning": "Praise be to God",
+          "audio": "audio/hamdullah.mp3"
         },
         {
           "term": "Inshallah",
           "arabic": "انشاء الله",
-          "meaning": "God willing"
+          "meaning": "God willing",
+          "audio": "audio/inshallah.mp3"
         }
       ]
     },
@@ -166,42 +195,50 @@
         {
           "term": "Dirham",
           "arabic": "درهم",
-          "meaning": "Dirham (currency)"
+          "meaning": "Dirham (currency)",
+          "audio": "audio/dirham.mp3"
         },
         {
           "term": "Ghir",
           "arabic": "غير",
-          "meaning": "Only"
+          "meaning": "Only",
+          "audio": "audio/ghir.mp3"
         },
         {
           "term": "Bzzaf",
           "arabic": "بزاف",
-          "meaning": "A lot / Very much"
+          "meaning": "A lot / Very much",
+          "audio": "audio/bzzaf.mp3"
         },
         {
           "term": "Rkhis",
           "arabic": "رخيص",
-          "meaning": "Cheap"
+          "meaning": "Cheap",
+          "audio": "audio/rkhis.mp3"
         },
         {
           "term": "Ghaly",
           "arabic": "غالي",
-          "meaning": "Expensive"
+          "meaning": "Expensive",
+          "audio": "audio/ghaly.mp3"
         },
         {
           "term": "3ndek?",
           "arabic": "عندك؟",
-          "meaning": "Do you have?"
+          "meaning": "Do you have?",
+          "audio": "audio/3ndek.mp3"
         },
         {
           "term": "Kam hada?",
           "arabic": "كم هادا؟",
-          "meaning": "How much is this?"
+          "meaning": "How much is this?",
+          "audio": "audio/kam_hada.mp3"
         },
         {
           "term": "M3ndich",
           "arabic": "ماعنديش",
-          "meaning": "I don't have"
+          "meaning": "I don't have",
+          "audio": "audio/m3ndich.mp3"
         }
       ]
     },
@@ -211,47 +248,56 @@
         {
           "term": "Fayn?",
           "arabic": "فاين؟",
-          "meaning": "Where?"
+          "meaning": "Where?",
+          "audio": "audio/fayn.mp3"
         },
         {
           "term": "Hna",
           "arabic": "هنا",
-          "meaning": "Here"
+          "meaning": "Here",
+          "audio": "audio/hna.mp3"
         },
         {
           "term": "Tani",
           "arabic": "تاني",
-          "meaning": "There"
+          "meaning": "There",
+          "audio": "audio/tani.mp3"
         },
         {
           "term": "Lissar",
           "arabic": "لِسار",
-          "meaning": "Left"
+          "meaning": "Left",
+          "audio": "audio/lissar.mp3"
         },
         {
           "term": "Limin",
           "arabic": "ليمين",
-          "meaning": "Right"
+          "meaning": "Right",
+          "audio": "audio/limin.mp3"
         },
         {
           "term": "Fog",
           "arabic": "فوق",
-          "meaning": "Up/Above"
+          "meaning": "Up/Above",
+          "audio": "audio/fog.mp3"
         },
         {
           "term": "Taht",
           "arabic": "تحت",
-          "meaning": "Down/Below"
+          "meaning": "Down/Below",
+          "audio": "audio/taht.mp3"
         },
         {
           "term": "Qbel",
           "arabic": "قبل",
-          "meaning": "Before"
+          "meaning": "Before",
+          "audio": "audio/qbel.mp3"
         },
         {
           "term": "Ba3d",
           "arabic": "بعد",
-          "meaning": "After"
+          "meaning": "After",
+          "audio": "audio/ba3d.mp3"
         }
       ]
     },
@@ -261,42 +307,50 @@
         {
           "term": "Daba",
           "arabic": "دابا",
-          "meaning": "Now"
+          "meaning": "Now",
+          "audio": "audio/daba.mp3"
         },
         {
           "term": "Gheda",
           "arabic": "غدا",
-          "meaning": "Tomorrow"
+          "meaning": "Tomorrow",
+          "audio": "audio/gheda.mp3"
         },
         {
           "term": "Lbareh",
           "arabic": "لبارح",
-          "meaning": "Yesterday"
+          "meaning": "Yesterday",
+          "audio": "audio/lbareh.mp3"
         },
         {
           "term": "Lyum",
           "arabic": "ليوم",
-          "meaning": "Today"
+          "meaning": "Today",
+          "audio": "audio/lyum.mp3"
         },
         {
           "term": "L3chir",
           "arabic": "لعشير",
-          "meaning": "Evening"
+          "meaning": "Evening",
+          "audio": "audio/l3chir.mp3"
         },
         {
           "term": "Lfjer",
           "arabic": "لفجر",
-          "meaning": "Dawn"
+          "meaning": "Dawn",
+          "audio": "audio/lfjer.mp3"
         },
         {
           "term": "L3sa",
           "arabic": "لعصا",
-          "meaning": "Afternoon"
+          "meaning": "Afternoon",
+          "audio": "audio/l3sa.mp3"
         },
         {
           "term": "Lil",
           "arabic": "ليل",
-          "meaning": "Night"
+          "meaning": "Night",
+          "audio": "audio/lil.mp3"
         }
       ]
     },
@@ -306,297 +360,356 @@
         {
           "term": "Faq",
           "arabic": "فاق",
-          "meaning": "Awake"
+          "meaning": "Awake",
+          "audio": "audio/faq.mp3"
         },
         {
           "term": "Khayb",
           "arabic": "خايب",
-          "meaning": "Bad / Ugly"
+          "meaning": "Bad / Ugly",
+          "audio": "audio/khayb.mp3"
         },
         {
           "term": "Zwin",
           "arabic": "زوين",
-          "meaning": "Beautiful"
+          "meaning": "Beautiful",
+          "audio": "audio/zwin.mp3"
         },
         {
           "term": "Kbir",
           "arabic": "كبير",
-          "meaning": "Big"
+          "meaning": "Big",
+          "audio": "audio/kbir.mp3"
         },
         {
           "term": "K7el",
           "arabic": "كحل",
-          "meaning": "Black"
+          "meaning": "Black",
+          "audio": "audio/k7el.mp3"
         },
         {
           "term": "Zreq",
           "arabic": "زرق",
-          "meaning": "Blue"
+          "meaning": "Blue",
+          "audio": "audio/zreq.mp3"
         },
         {
           "term": "Mml",
           "arabic": "ممل",
-          "meaning": "Boring"
+          "meaning": "Boring",
+          "audio": "audio/mml.mp3"
         },
         {
           "term": "Mshghul",
           "arabic": "مشغول",
-          "meaning": "Busy"
+          "meaning": "Busy",
+          "audio": "audio/mshghul.mp3"
         },
         {
           "term": "Rkhis",
           "arabic": "رخيص",
-          "meaning": "Cheap"
+          "meaning": "Cheap",
+          "audio": "audio/rkhis.mp3"
         },
         {
           "term": "N9i",
           "arabic": "نقي",
-          "meaning": "Clean"
+          "meaning": "Clean",
+          "audio": "audio/n9i.mp3"
         },
         {
           "term": "Msdud",
           "arabic": "مسدود",
-          "meaning": "Closed"
+          "meaning": "Closed",
+          "audio": "audio/msdud.mp3"
         },
         {
           "term": "Barid",
           "arabic": "بارد",
-          "meaning": "Cold"
+          "meaning": "Cold",
+          "audio": "audio/barid.mp3"
         },
         {
           "term": "Khtr",
           "arabic": "خطر",
-          "meaning": "Dangerous"
+          "meaning": "Dangerous",
+          "audio": "audio/khtr.mp3"
         },
         {
           "term": "S3ib",
           "arabic": "صعيب",
-          "meaning": "Difficult"
+          "meaning": "Difficult",
+          "audio": "audio/s3ib.mp3"
         },
         {
           "term": "Wskh",
           "arabic": "وسخ",
-          "meaning": "Dirty"
+          "meaning": "Dirty",
+          "audio": "audio/wskh.mp3"
         },
         {
           "term": "Bkri",
           "arabic": "بكري",
-          "meaning": "Early"
+          "meaning": "Early",
+          "audio": "audio/bkri.mp3"
         },
         {
           "term": "Sahl",
           "arabic": "سهل",
-          "meaning": "Easy"
+          "meaning": "Easy",
+          "audio": "audio/sahl.mp3"
         },
         {
           "term": "Khawi",
           "arabic": "خاوي",
-          "meaning": "Empty"
+          "meaning": "Empty",
+          "audio": "audio/khawi.mp3"
         },
         {
           "term": "Ghali",
           "arabic": "غالي",
-          "meaning": "Expensive"
+          "meaning": "Expensive",
+          "audio": "audio/ghali.mp3"
         },
         {
           "term": "Mshhur",
           "arabic": "مشهور",
-          "meaning": "Famous"
+          "meaning": "Famous",
+          "audio": "audio/mshhur.mp3"
         },
         {
           "term": "B3id",
           "arabic": "بعيد",
-          "meaning": "Far"
+          "meaning": "Far",
+          "audio": "audio/b3id.mp3"
         },
         {
           "term": "Sr3",
           "arabic": "سريع",
-          "meaning": "Fast"
+          "meaning": "Fast",
+          "audio": "audio/sr3.mp3"
         },
         {
           "term": "Fadi",
           "arabic": "فاضي",
-          "meaning": "Free"
+          "meaning": "Free",
+          "audio": "audio/fadi.mp3"
         },
         {
           "term": "3mr",
           "arabic": "عامر",
-          "meaning": "Full"
+          "meaning": "Full",
+          "audio": "audio/3mr.mp3"
         },
         {
           "term": "Mezyan",
           "arabic": "مزيان",
-          "meaning": "Good"
+          "meaning": "Good",
+          "audio": "audio/mezyan.mp3"
         },
         {
           "term": "Khdar",
           "arabic": "خضر",
-          "meaning": "Green"
+          "meaning": "Green",
+          "audio": "audio/khdar.mp3"
         },
         {
           "term": "Fer7an",
           "arabic": "فرحان",
-          "meaning": "Happy"
+          "meaning": "Happy",
+          "audio": "audio/fer7an.mp3"
         },
         {
           "term": "S7i",
           "arabic": "صحي",
-          "meaning": "Healthy"
+          "meaning": "Healthy",
+          "audio": "audio/s7i.mp3"
         },
         {
           "term": "Skhun",
           "arabic": "سخون",
-          "meaning": "Hot"
+          "meaning": "Hot",
+          "audio": "audio/skhun.mp3"
         },
         {
           "term": "J3an",
           "arabic": "جوعان",
-          "meaning": "Hungry"
+          "meaning": "Hungry",
+          "audio": "audio/j3an.mp3"
         },
         {
           "term": "Mhm",
           "arabic": "مهم",
-          "meaning": "Important"
+          "meaning": "Important",
+          "audio": "audio/mhm.mp3"
         },
         {
           "term": "Mthir",
           "arabic": "مثير",
-          "meaning": "Interesting"
+          "meaning": "Interesting",
+          "audio": "audio/mthir.mp3"
         },
         {
           "term": "M3ttl",
           "arabic": "معتّل",
-          "meaning": "Late"
+          "meaning": "Late",
+          "audio": "audio/m3ttl.mp3"
         },
         {
           "term": "Mzuwj",
           "arabic": "مزوج",
-          "meaning": "Married"
+          "meaning": "Married",
+          "audio": "audio/mzuwj.mp3"
         },
         {
           "term": "Qrib",
           "arabic": "قريب",
-          "meaning": "Near"
+          "meaning": "Near",
+          "audio": "audio/qrib.mp3"
         },
         {
           "term": "Jdid",
           "arabic": "جديد",
-          "meaning": "New"
+          "meaning": "New",
+          "audio": "audio/jdid.mp3"
         },
         {
           "term": "Mzdwj",
           "arabic": "مزدوِج",
-          "meaning": "Noisy"
+          "meaning": "Noisy",
+          "audio": "audio/mzdwj.mp3"
         },
         {
           "term": "Qdim",
           "arabic": "قديم",
-          "meaning": "Old"
+          "meaning": "Old",
+          "audio": "audio/qdim.mp3"
         },
         {
           "term": "M7lul",
           "arabic": "محلول",
-          "meaning": "Open"
+          "meaning": "Open",
+          "audio": "audio/m7lul.mp3"
         },
         {
           "term": "Fqir",
           "arabic": "فقير",
-          "meaning": "Poor"
+          "meaning": "Poor",
+          "audio": "audio/fqir.mp3"
         },
         {
           "term": "Hadi",
           "arabic": "هادي",
-          "meaning": "Quiet"
+          "meaning": "Quiet",
+          "audio": "audio/hadi.mp3"
         },
         {
           "term": "Wjjd",
           "arabic": "واجد",
-          "meaning": "Ready"
+          "meaning": "Ready",
+          "audio": "audio/wjjd.mp3"
         },
         {
           "term": "7mer",
           "arabic": "حمر",
-          "meaning": "Red"
+          "meaning": "Red",
+          "audio": "audio/7mer.mp3"
         },
         {
           "term": "Ghni",
           "arabic": "غني",
-          "meaning": "Rich"
+          "meaning": "Rich",
+          "audio": "audio/ghni.mp3"
         },
         {
           "term": "7zin",
           "arabic": "حزين",
-          "meaning": "Sad"
+          "meaning": "Sad",
+          "audio": "audio/7zin.mp3"
         },
         {
           "term": "Amn",
           "arabic": "آمن",
-          "meaning": "Safe"
+          "meaning": "Safe",
+          "audio": "audio/amn.mp3"
         },
         {
           "term": "Qsir",
           "arabic": "قصير",
-          "meaning": "Short"
+          "meaning": "Short",
+          "audio": "audio/qsir.mp3"
         },
         {
           "term": "Mrid",
           "arabic": "مريض",
-          "meaning": "Sick"
+          "meaning": "Sick",
+          "audio": "audio/mrid.mp3"
         },
         {
           "term": "3zbi",
           "arabic": "عزبي",
-          "meaning": "Single"
+          "meaning": "Single",
+          "audio": "audio/3zbi.mp3"
         },
         {
           "term": "N3ssan",
           "arabic": "نعسان",
-          "meaning": "Sleepy"
+          "meaning": "Sleepy",
+          "audio": "audio/n3ssan.mp3"
         },
         {
           "term": "Bti",
           "arabic": "بطيء",
-          "meaning": "Slow"
+          "meaning": "Slow",
+          "audio": "audio/bti.mp3"
         },
         {
           "term": "Sghir",
           "arabic": "صغير",
-          "meaning": "Small"
+          "meaning": "Small",
+          "audio": "audio/sghir.mp3"
         },
         {
           "term": "Qwi",
           "arabic": "قوي",
-          "meaning": "Strong"
+          "meaning": "Strong",
+          "audio": "audio/qwi.mp3"
         },
         {
           "term": "3ali",
           "arabic": "عالي",
-          "meaning": "Tall"
+          "meaning": "Tall",
+          "audio": "audio/3ali.mp3"
         },
         {
           "term": "3tshan",
           "arabic": "عطشان",
-          "meaning": "Thirsty"
+          "meaning": "Thirsty",
+          "audio": "audio/3tshan.mp3"
         },
         {
           "term": "3yan",
           "arabic": "عيان",
-          "meaning": "Tired"
+          "meaning": "Tired",
+          "audio": "audio/3yan.mp3"
         },
         {
           "term": "M3rufsh",
           "arabic": "مش معروف",
-          "meaning": "Unknown"
+          "meaning": "Unknown",
+          "audio": "audio/m3rufsh.mp3"
         },
         {
           "term": "D3if",
           "arabic": "ضعيف",
-          "meaning": "Weak"
+          "meaning": "Weak",
+          "audio": "audio/d3if.mp3"
         },
         {
           "term": "Byed",
           "arabic": "بيض",
-          "meaning": "White"
+          "meaning": "White",
+          "audio": "audio/byed.mp3"
         }
       ]
     },
@@ -606,42 +719,50 @@
         {
           "term": "Baba",
           "arabic": "بابا",
-          "meaning": "Father"
+          "meaning": "Father",
+          "audio": "audio/baba.mp3"
         },
         {
           "term": "Mama",
           "arabic": "ماما",
-          "meaning": "Mother"
+          "meaning": "Mother",
+          "audio": "audio/mama.mp3"
         },
         {
           "term": "Khouya",
           "arabic": "خويا",
-          "meaning": "Brother"
+          "meaning": "Brother",
+          "audio": "audio/khouya.mp3"
         },
         {
           "term": "Khti",
           "arabic": "ختي",
-          "meaning": "Sister"
+          "meaning": "Sister",
+          "audio": "audio/khti.mp3"
         },
         {
           "term": "Jeddi",
           "arabic": "جدي",
-          "meaning": "Grandfather"
+          "meaning": "Grandfather",
+          "audio": "audio/jeddi.mp3"
         },
         {
           "term": "Jeddati",
           "arabic": "جدتي",
-          "meaning": "Grandmother"
+          "meaning": "Grandmother",
+          "audio": "audio/jeddati.mp3"
         },
         {
           "term": "3mmi",
           "arabic": "عمي",
-          "meaning": "Uncle"
+          "meaning": "Uncle",
+          "audio": "audio/3mmi.mp3"
         },
         {
           "term": "Khalti",
           "arabic": "خالتي",
-          "meaning": "Aunt"
+          "meaning": "Aunt",
+          "audio": "audio/khalti.mp3"
         }
       ]
     },
@@ -651,47 +772,56 @@
         {
           "term": "Khobz",
           "arabic": "خبز",
-          "meaning": "Bread"
+          "meaning": "Bread",
+          "audio": "audio/khobz.mp3"
         },
         {
           "term": "Atay",
           "arabic": "اتاي",
-          "meaning": "Tea"
+          "meaning": "Tea",
+          "audio": "audio/atay.mp3"
         },
         {
           "term": "Qhwa",
           "arabic": "قهوة",
-          "meaning": "Coffee"
+          "meaning": "Coffee",
+          "audio": "audio/qhwa.mp3"
         },
         {
           "term": "Hlib",
           "arabic": "حليب",
-          "meaning": "Milk"
+          "meaning": "Milk",
+          "audio": "audio/hlib.mp3"
         },
         {
           "term": "Lhem",
           "arabic": "لحم",
-          "meaning": "Meat"
+          "meaning": "Meat",
+          "audio": "audio/lhem.mp3"
         },
         {
           "term": "Djaj",
           "arabic": "دجاج",
-          "meaning": "Chicken"
+          "meaning": "Chicken",
+          "audio": "audio/djaj.mp3"
         },
         {
           "term": "Hout",
           "arabic": "حوت",
-          "meaning": "Fish"
+          "meaning": "Fish",
+          "audio": "audio/hout.mp3"
         },
         {
           "term": "Khoudra",
           "arabic": "خضرة",
-          "meaning": "Vegetables"
+          "meaning": "Vegetables",
+          "audio": "audio/khoudra.mp3"
         },
         {
           "term": "Fakiha",
           "arabic": "فاكهة",
-          "meaning": "Fruit"
+          "meaning": "Fruit",
+          "audio": "audio/fakiha.mp3"
         }
       ]
     },
@@ -701,32 +831,38 @@
         {
           "term": "Hmer",
           "arabic": "حمر",
-          "meaning": "Red"
+          "meaning": "Red",
+          "audio": "audio/hmer.mp3"
         },
         {
           "term": "Zreq",
           "arabic": "زرق",
-          "meaning": "Blue"
+          "meaning": "Blue",
+          "audio": "audio/zreq.mp3"
         },
         {
           "term": "Khder",
           "arabic": "خضر",
-          "meaning": "Green"
+          "meaning": "Green",
+          "audio": "audio/khder.mp3"
         },
         {
           "term": "Sfar",
           "arabic": "صفر",
-          "meaning": "Yellow"
+          "meaning": "Yellow",
+          "audio": "audio/sfar.mp3"
         },
         {
           "term": "Khal",
           "arabic": "كحل",
-          "meaning": "Black"
+          "meaning": "Black",
+          "audio": "audio/khal.mp3"
         },
         {
           "term": "Byed",
           "arabic": "بيض",
-          "meaning": "White"
+          "meaning": "White",
+          "audio": "audio/byed.mp3"
         }
       ]
     },
@@ -736,42 +872,50 @@
         {
           "term": "Mcha",
           "arabic": "مشى",
-          "meaning": "To go"
+          "meaning": "To go",
+          "audio": "audio/mcha.mp3"
         },
         {
           "term": "Ja",
           "arabic": "جا",
-          "meaning": "To come"
+          "meaning": "To come",
+          "audio": "audio/ja.mp3"
         },
         {
           "term": "Kla",
           "arabic": "كلا",
-          "meaning": "To eat"
+          "meaning": "To eat",
+          "audio": "audio/kla.mp3"
         },
         {
           "term": "Chreb",
           "arabic": "شرب",
-          "meaning": "To drink"
+          "meaning": "To drink",
+          "audio": "audio/chreb.mp3"
         },
         {
           "term": "Khdem",
           "arabic": "خدم",
-          "meaning": "To work"
+          "meaning": "To work",
+          "audio": "audio/khdem.mp3"
         },
         {
           "term": "N3es",
           "arabic": "نعس",
-          "meaning": "To sleep"
+          "meaning": "To sleep",
+          "audio": "audio/n3es.mp3"
         },
         {
           "term": "Qra",
           "arabic": "قرا",
-          "meaning": "To read/study"
+          "meaning": "To read/study",
+          "audio": "audio/qra.mp3"
         },
         {
           "term": "Kteb",
           "arabic": "كتب",
-          "meaning": "To write"
+          "meaning": "To write",
+          "audio": "audio/kteb.mp3"
         }
       ]
     },
@@ -781,32 +925,38 @@
         {
           "term": "Souk",
           "arabic": "سوق",
-          "meaning": "Market"
+          "meaning": "Market",
+          "audio": "audio/souk.mp3"
         },
         {
           "term": "Dar",
           "arabic": "دار",
-          "meaning": "House"
+          "meaning": "House",
+          "audio": "audio/dar.mp3"
         },
         {
           "term": "Madrasa",
           "arabic": "مدرسة",
-          "meaning": "School"
+          "meaning": "School",
+          "audio": "audio/madrasa.mp3"
         },
         {
           "term": "Mektaba",
           "arabic": "مكتبة",
-          "meaning": "Library"
+          "meaning": "Library",
+          "audio": "audio/mektaba.mp3"
         },
         {
           "term": "Sbitar",
           "arabic": "سبيطار",
-          "meaning": "Hospital"
+          "meaning": "Hospital",
+          "audio": "audio/sbitar.mp3"
         },
         {
           "term": "Hanout",
           "arabic": "حانوت",
-          "meaning": "Shop"
+          "meaning": "Shop",
+          "audio": "audio/hanout.mp3"
         }
       ]
     },
@@ -816,137 +966,164 @@
         {
           "term": "Zero",
           "arabic": "صفر",
-          "meaning": "0"
+          "meaning": "0",
+          "audio": "audio/zero.mp3"
         },
         {
           "term": "Wahed",
           "arabic": "واحد",
-          "meaning": "1"
+          "meaning": "1",
+          "audio": "audio/wahed.mp3"
         },
         {
           "term": "Juj",
           "arabic": "جوج",
-          "meaning": "2"
+          "meaning": "2",
+          "audio": "audio/juj.mp3"
         },
         {
           "term": "Tlata",
           "arabic": "تلاتة",
-          "meaning": "3"
+          "meaning": "3",
+          "audio": "audio/tlata.mp3"
         },
         {
           "term": "Rb3a",
           "arabic": "ربعة",
-          "meaning": "4"
+          "meaning": "4",
+          "audio": "audio/rb3a.mp3"
         },
         {
           "term": "Khmsa",
           "arabic": "خمسة",
-          "meaning": "5"
+          "meaning": "5",
+          "audio": "audio/khmsa.mp3"
         },
         {
           "term": "Stta",
           "arabic": "ستة",
-          "meaning": "6"
+          "meaning": "6",
+          "audio": "audio/stta.mp3"
         },
         {
           "term": "Sb3a",
           "arabic": "سبعة",
-          "meaning": "7"
+          "meaning": "7",
+          "audio": "audio/sb3a.mp3"
         },
         {
           "term": "Tmnya",
           "arabic": "تمنية",
-          "meaning": "8"
+          "meaning": "8",
+          "audio": "audio/tmnya.mp3"
         },
         {
           "term": "Ts3oud",
           "arabic": "تسعود",
-          "meaning": "9"
+          "meaning": "9",
+          "audio": "audio/ts3oud.mp3"
         },
         {
           "term": "3chra",
           "arabic": "عشرة",
-          "meaning": "10"
+          "meaning": "10",
+          "audio": "audio/3chra.mp3"
         },
         {
           "term": "Hd3ch",
           "arabic": "حداش",
-          "meaning": "11"
+          "meaning": "11",
+          "audio": "audio/hd3ch.mp3"
         },
         {
           "term": "Tn3ch",
           "arabic": "طناش",
-          "meaning": "12"
+          "meaning": "12",
+          "audio": "audio/tn3ch.mp3"
         },
         {
           "term": "Tlt3ch",
           "arabic": "تلطاش",
-          "meaning": "13"
+          "meaning": "13",
+          "audio": "audio/tlt3ch.mp3"
         },
         {
           "term": "Rb3t3ch",
           "arabic": "ربعطاش",
-          "meaning": "14"
+          "meaning": "14",
+          "audio": "audio/rb3t3ch.mp3"
         },
         {
           "term": "Khmst3ch",
           "arabic": "خمسطاش",
-          "meaning": "15"
+          "meaning": "15",
+          "audio": "audio/khmst3ch.mp3"
         },
         {
           "term": "3chrin",
           "arabic": "عشرين",
-          "meaning": "20"
+          "meaning": "20",
+          "audio": "audio/3chrin.mp3"
         },
         {
           "term": "Tlatin",
           "arabic": "تلاتين",
-          "meaning": "30"
+          "meaning": "30",
+          "audio": "audio/tlatin.mp3"
         },
         {
           "term": "Rb3in",
           "arabic": "ربعين",
-          "meaning": "40"
+          "meaning": "40",
+          "audio": "audio/rb3in.mp3"
         },
         {
           "term": "Khmsin",
           "arabic": "خمسين",
-          "meaning": "50"
+          "meaning": "50",
+          "audio": "audio/khmsin.mp3"
         },
         {
           "term": "Mya",
           "arabic": "مية",
-          "meaning": "100"
+          "meaning": "100",
+          "audio": "audio/mya.mp3"
         },
         {
           "term": "Alf",
           "arabic": "ألف",
-          "meaning": "1000"
+          "meaning": "1000",
+          "audio": "audio/alf.mp3"
         },
         {
           "term": "Mlyun",
           "arabic": "مليون",
-          "meaning": "Million"
+          "meaning": "Million",
+          "audio": "audio/mlyun.mp3"
         },
         {
           "term": "Wahed u 3chrin",
           "arabic": "واحد وعشرين",
-          "meaning": "21 (one and twenty)"
+          "meaning": "21 (one and twenty)",
+          "audio": "audio/wahed_u_3chrin.mp3"
         },
         {
           "term": "Khmsa u tlatin",
           "arabic": "خمسة وتلاتين",
-          "meaning": "35 (five and thirty)"
+          "meaning": "35 (five and thirty)",
+          "audio": "audio/khmsa_u_tlatin.mp3"
         },
         {
           "term": "Mya u khmsin",
           "arabic": "مية وخمسين",
-          "meaning": "150 (hundred and fifty)"
+          "meaning": "150 (hundred and fifty)",
+          "audio": "audio/mya_u_khmsin.mp3"
         },
         {
           "term": "Alf u mya",
           "arabic": "ألف ومية",
-          "meaning": "1100 (thousand and hundred)"
+          "meaning": "1100 (thousand and hundred)",
+          "audio": "audio/alf_u_mya.mp3"
         }
       ]
     },
@@ -956,52 +1133,62 @@
         {
           "term": "Telefon",
           "arabic": "تيليفون",
-          "meaning": "Phone"
+          "meaning": "Phone",
+          "audio": "audio/telefon.mp3"
         },
         {
           "term": "Muhfada",
           "arabic": "محفظة",
-          "meaning": "Wallet"
+          "meaning": "Wallet",
+          "audio": "audio/muhfada.mp3"
         },
         {
           "term": "Meftah",
           "arabic": "مفتاح",
-          "meaning": "Key"
+          "meaning": "Key",
+          "audio": "audio/meftah.mp3"
         },
         {
           "term": "Naddara",
           "arabic": "نظارة",
-          "meaning": "Glasses"
+          "meaning": "Glasses",
+          "audio": "audio/naddara.mp3"
         },
         {
           "term": "Sa3a",
           "arabic": "ساعة",
-          "meaning": "Watch/Clock"
+          "meaning": "Watch/Clock",
+          "audio": "audio/sa3a.mp3"
         },
         {
           "term": "Hwayej",
           "arabic": "حوايج",
-          "meaning": "Clothes"
+          "meaning": "Clothes",
+          "audio": "audio/hwayej.mp3"
         },
         {
           "term": "Serwel",
           "arabic": "سروال",
-          "meaning": "Pants"
+          "meaning": "Pants",
+          "audio": "audio/serwel.mp3"
         },
         {
           "term": "Qamija",
           "arabic": "قميجة",
-          "meaning": "Shirt"
+          "meaning": "Shirt",
+          "audio": "audio/qamija.mp3"
         },
         {
           "term": "Sabbat",
           "arabic": "صباط",
-          "meaning": "Shoes"
+          "meaning": "Shoes",
+          "audio": "audio/sabbat.mp3"
         },
         {
           "term": "Jeket",
           "arabic": "جيكيت",
-          "meaning": "Jacket"
+          "meaning": "Jacket",
+          "audio": "audio/jeket.mp3"
         }
       ]
     },
@@ -1011,52 +1198,62 @@
         {
           "term": "Tabla",
           "arabic": "طابلة",
-          "meaning": "Table"
+          "meaning": "Table",
+          "audio": "audio/tabla.mp3"
         },
         {
           "term": "Kursi",
           "arabic": "كرسي",
-          "meaning": "Chair"
+          "meaning": "Chair",
+          "audio": "audio/kursi.mp3"
         },
         {
           "term": "Srir",
           "arabic": "سرير",
-          "meaning": "Bed"
+          "meaning": "Bed",
+          "audio": "audio/srir.mp3"
         },
         {
           "term": "Khzana",
           "arabic": "خزانة",
-          "meaning": "Closet/Wardrobe"
+          "meaning": "Closet/Wardrobe",
+          "audio": "audio/khzana.mp3"
         },
         {
           "term": "Mri",
           "arabic": "مري",
-          "meaning": "Mirror"
+          "meaning": "Mirror",
+          "audio": "audio/mri.mp3"
         },
         {
           "term": "Telfaza",
           "arabic": "تلفازة",
-          "meaning": "Television"
+          "meaning": "Television",
+          "audio": "audio/telfaza.mp3"
         },
         {
           "term": "Berrad",
           "arabic": "براد",
-          "meaning": "Teapot"
+          "meaning": "Teapot",
+          "audio": "audio/berrad.mp3"
         },
         {
           "term": "Kas",
           "arabic": "كاس",
-          "meaning": "Glass (drinking)"
+          "meaning": "Glass (drinking)",
+          "audio": "audio/kas.mp3"
         },
         {
           "term": "Maghsel",
           "arabic": "مغسل",
-          "meaning": "Sink"
+          "meaning": "Sink",
+          "audio": "audio/maghsel.mp3"
         },
         {
           "term": "Frach",
           "arabic": "فراش",
-          "meaning": "Mattress"
+          "meaning": "Mattress",
+          "audio": "audio/frach.mp3"
         }
       ]
     },
@@ -1066,42 +1263,50 @@
         {
           "term": "Tomobil",
           "arabic": "طوموبيل",
-          "meaning": "Car"
+          "meaning": "Car",
+          "audio": "audio/tomobil.mp3"
         },
         {
           "term": "Tram",
           "arabic": "طرام",
-          "meaning": "Tram"
+          "meaning": "Tram",
+          "audio": "audio/tram.mp3"
         },
         {
           "term": "Tran",
           "arabic": "تران",
-          "meaning": "Train"
+          "meaning": "Train",
+          "audio": "audio/tran.mp3"
         },
         {
           "term": "Bis",
           "arabic": "بيس",
-          "meaning": "Bus"
+          "meaning": "Bus",
+          "audio": "audio/bis.mp3"
         },
         {
           "term": "Taxi",
           "arabic": "طاكسي",
-          "meaning": "Taxi"
+          "meaning": "Taxi",
+          "audio": "audio/taxi.mp3"
         },
         {
           "term": "Biskleta",
           "arabic": "بيسكليطة",
-          "meaning": "Bicycle"
+          "meaning": "Bicycle",
+          "audio": "audio/biskleta.mp3"
         },
         {
           "term": "Moteur",
           "arabic": "موتور",
-          "meaning": "Motorcycle"
+          "meaning": "Motorcycle",
+          "audio": "audio/moteur.mp3"
         },
         {
           "term": "Tayara",
           "arabic": "طيارة",
-          "meaning": "Airplane"
+          "meaning": "Airplane",
+          "audio": "audio/tayara.mp3"
         }
       ]
     },
@@ -1111,52 +1316,62 @@
         {
           "term": "Ras",
           "arabic": "راس",
-          "meaning": "Head"
+          "meaning": "Head",
+          "audio": "audio/ras.mp3"
         },
         {
           "term": "Wejh",
           "arabic": "وجه",
-          "meaning": "Face"
+          "meaning": "Face",
+          "audio": "audio/wejh.mp3"
         },
         {
           "term": "3in",
           "arabic": "عين",
-          "meaning": "Eye"
+          "meaning": "Eye",
+          "audio": "audio/3in.mp3"
         },
         {
           "term": "Nif",
           "arabic": "نيف",
-          "meaning": "Nose"
+          "meaning": "Nose",
+          "audio": "audio/nif.mp3"
         },
         {
           "term": "Fom",
           "arabic": "فم",
-          "meaning": "Mouth"
+          "meaning": "Mouth",
+          "audio": "audio/fom.mp3"
         },
         {
           "term": "Wden",
           "arabic": "ودن",
-          "meaning": "Ear"
+          "meaning": "Ear",
+          "audio": "audio/wden.mp3"
         },
         {
           "term": "Yed",
           "arabic": "يد",
-          "meaning": "Hand"
+          "meaning": "Hand",
+          "audio": "audio/yed.mp3"
         },
         {
           "term": "Rejl",
           "arabic": "رجل",
-          "meaning": "Leg/Foot"
+          "meaning": "Leg/Foot",
+          "audio": "audio/rejl.mp3"
         },
         {
           "term": "Ktef",
           "arabic": "كتف",
-          "meaning": "Shoulder"
+          "meaning": "Shoulder",
+          "audio": "audio/ktef.mp3"
         },
         {
           "term": "Kerch",
           "arabic": "كرش",
-          "meaning": "Stomach"
+          "meaning": "Stomach",
+          "audio": "audio/kerch.mp3"
         }
       ]
     },
@@ -1166,52 +1381,62 @@
         {
           "term": "Shems",
           "arabic": "شمس",
-          "meaning": "Sun"
+          "meaning": "Sun",
+          "audio": "audio/shems.mp3"
         },
         {
           "term": "Qmer",
           "arabic": "قمر",
-          "meaning": "Moon"
+          "meaning": "Moon",
+          "audio": "audio/qmer.mp3"
         },
         {
           "term": "Shta",
           "arabic": "شتا",
-          "meaning": "Rain"
+          "meaning": "Rain",
+          "audio": "audio/shta.mp3"
         },
         {
           "term": "Telj",
           "arabic": "تلج",
-          "meaning": "Snow"
+          "meaning": "Snow",
+          "audio": "audio/telj.mp3"
         },
         {
           "term": "Rih",
           "arabic": "ريح",
-          "meaning": "Wind"
+          "meaning": "Wind",
+          "audio": "audio/rih.mp3"
         },
         {
           "term": "Sma",
           "arabic": "سما",
-          "meaning": "Sky"
+          "meaning": "Sky",
+          "audio": "audio/sma.mp3"
         },
         {
           "term": "Bhar",
           "arabic": "بحر",
-          "meaning": "Sea"
+          "meaning": "Sea",
+          "audio": "audio/bhar.mp3"
         },
         {
           "term": "Jbel",
           "arabic": "جبل",
-          "meaning": "Mountain"
+          "meaning": "Mountain",
+          "audio": "audio/jbel.mp3"
         },
         {
           "term": "Ghaba",
           "arabic": "غابة",
-          "meaning": "Forest"
+          "meaning": "Forest",
+          "audio": "audio/ghaba.mp3"
         },
         {
           "term": "Wad",
           "arabic": "واد",
-          "meaning": "River"
+          "meaning": "River",
+          "audio": "audio/wad.mp3"
         }
       ]
     },
@@ -1221,52 +1446,62 @@
         {
           "term": "Tbib",
           "arabic": "طبيب",
-          "meaning": "Doctor"
+          "meaning": "Doctor",
+          "audio": "audio/tbib.mp3"
         },
         {
           "term": "Ustad",
           "arabic": "أستاذ",
-          "meaning": "Teacher"
+          "meaning": "Teacher",
+          "audio": "audio/ustad.mp3"
         },
         {
           "term": "Bulis",
           "arabic": "بوليس",
-          "meaning": "Police"
+          "meaning": "Police",
+          "audio": "audio/bulis.mp3"
         },
         {
           "term": "Kheddam",
           "arabic": "خدام",
-          "meaning": "Worker"
+          "meaning": "Worker",
+          "audio": "audio/kheddam.mp3"
         },
         {
           "term": "Fellah",
           "arabic": "فلاح",
-          "meaning": "Farmer"
+          "meaning": "Farmer",
+          "audio": "audio/fellah.mp3"
         },
         {
           "term": "Kheddam",
           "arabic": "خدام",
-          "meaning": "Employee"
+          "meaning": "Employee",
+          "audio": "audio/kheddam.mp3"
         },
         {
           "term": "Muhandis",
           "arabic": "مهندس",
-          "meaning": "Engineer"
+          "meaning": "Engineer",
+          "audio": "audio/muhandis.mp3"
         },
         {
           "term": "Tager",
           "arabic": "تاجر",
-          "meaning": "Merchant"
+          "meaning": "Merchant",
+          "audio": "audio/tager.mp3"
         },
         {
           "term": "Khabbaz",
           "arabic": "خباز",
-          "meaning": "Baker"
+          "meaning": "Baker",
+          "audio": "audio/khabbaz.mp3"
         },
         {
           "term": "Nejjar",
           "arabic": "نجار",
-          "meaning": "Carpenter"
+          "meaning": "Carpenter",
+          "audio": "audio/nejjar.mp3"
         }
       ]
     },
@@ -1276,42 +1511,50 @@
         {
           "term": "Ordinateur",
           "arabic": "أوردينتور",
-          "meaning": "Computer"
+          "meaning": "Computer",
+          "audio": "audio/ordinateur.mp3"
         },
         {
           "term": "Internet",
           "arabic": "إنترنت",
-          "meaning": "Internet"
+          "meaning": "Internet",
+          "audio": "audio/internet.mp3"
         },
         {
           "term": "Tablet",
           "arabic": "طابليت",
-          "meaning": "Tablet"
+          "meaning": "Tablet",
+          "audio": "audio/tablet.mp3"
         },
         {
           "term": "Chargeur",
           "arabic": "شارجور",
-          "meaning": "Charger"
+          "meaning": "Charger",
+          "audio": "audio/chargeur.mp3"
         },
         {
           "term": "Batteria",
           "arabic": "بطارية",
-          "meaning": "Battery"
+          "meaning": "Battery",
+          "audio": "audio/batteria.mp3"
         },
         {
           "term": "Camera",
           "arabic": "كاميرا",
-          "meaning": "Camera"
+          "meaning": "Camera",
+          "audio": "audio/camera.mp3"
         },
         {
           "term": "Wifi",
           "arabic": "وايفي",
-          "meaning": "Wifi"
+          "meaning": "Wifi",
+          "audio": "audio/wifi.mp3"
         },
         {
           "term": "Application",
           "arabic": "تطبيق",
-          "meaning": "App"
+          "meaning": "App",
+          "audio": "audio/application.mp3"
         }
       ]
     },
@@ -1321,37 +1564,44 @@
         {
           "term": "Shno hada?",
           "arabic": "شنو هدا؟",
-          "meaning": "What is this?"
+          "meaning": "What is this?",
+          "audio": "audio/shno_hada.mp3"
         },
         {
           "term": "3ndek...?",
           "arabic": "عندك...؟",
-          "meaning": "Do you have...?"
+          "meaning": "Do you have...?",
+          "audio": "audio/3ndek.mp3"
         },
         {
           "term": "Kayn...?",
           "arabic": "كاين...؟",
-          "meaning": "Is there...?"
+          "meaning": "Is there...?",
+          "audio": "audio/kayn.mp3"
         },
         {
           "term": "Khassni...",
           "arabic": "خصني...",
-          "meaning": "I need..."
+          "meaning": "I need...",
+          "audio": "audio/khassni.mp3"
         },
         {
           "term": "Bgheet...",
           "arabic": "بغيت...",
-          "meaning": "I want..."
+          "meaning": "I want...",
+          "audio": "audio/bgheet.mp3"
         },
         {
           "term": "Kifash...?",
           "arabic": "كيفاش...؟",
-          "meaning": "How do I...?"
+          "meaning": "How do I...?",
+          "audio": "audio/kifash.mp3"
         },
         {
           "term": "Tkder t3aweni?",
           "arabic": "تقدر تعاوني؟",
-          "meaning": "Can you help me?"
+          "meaning": "Can you help me?",
+          "audio": "audio/tkder_t3aweni.mp3"
         }
       ]
     },
@@ -1361,57 +1611,68 @@
         {
           "term": "Tbib",
           "arabic": "طبيب",
-          "meaning": "Doctor"
+          "meaning": "Doctor",
+          "audio": "audio/tbib.mp3"
         },
         {
           "term": "Sbitar",
           "arabic": "سبيطار",
-          "meaning": "Hospital"
+          "meaning": "Hospital",
+          "audio": "audio/sbitar.mp3"
         },
         {
           "term": "Dwa",
           "arabic": "دوا",
-          "meaning": "Medicine"
+          "meaning": "Medicine",
+          "audio": "audio/dwa.mp3"
         },
         {
           "term": "Mrid",
           "arabic": "مريض",
-          "meaning": "Sick"
+          "meaning": "Sick",
+          "audio": "audio/mrid.mp3"
         },
         {
           "term": "Wj3",
           "arabic": "وجع",
-          "meaning": "Pain"
+          "meaning": "Pain",
+          "audio": "audio/wj3.mp3"
         },
         {
           "term": "Zkem",
           "arabic": "زكام",
-          "meaning": "Cold (illness)"
+          "meaning": "Cold (illness)",
+          "audio": "audio/zkem.mp3"
         },
         {
           "term": "Skhana",
           "arabic": "سخانة",
-          "meaning": "Fever"
+          "meaning": "Fever",
+          "audio": "audio/skhana.mp3"
         },
         {
           "term": "3yan",
           "arabic": "عيان",
-          "meaning": "Tired"
+          "meaning": "Tired",
+          "audio": "audio/3yan.mp3"
         },
         {
           "term": "Tdarr",
           "arabic": "تضر",
-          "meaning": "Hurt"
+          "meaning": "Hurt",
+          "audio": "audio/tdarr.mp3"
         },
         {
           "term": "3awenni",
           "arabic": "عاونّي",
-          "meaning": "Help me"
+          "meaning": "Help me",
+          "audio": "audio/3awenni.mp3"
         },
         {
           "term": "Farmasyan",
           "arabic": "فرماسيان",
-          "meaning": "Pharmacy"
+          "meaning": "Pharmacy",
+          "audio": "audio/farmasyan.mp3"
         }
       ]
     },
@@ -1421,72 +1682,86 @@
         {
           "term": "Ras",
           "arabic": "راس",
-          "meaning": "Head"
+          "meaning": "Head",
+          "audio": "audio/ras.mp3"
         },
         {
           "term": "Sh3r",
           "arabic": "شعر",
-          "meaning": "Hair"
+          "meaning": "Hair",
+          "audio": "audio/sh3r.mp3"
         },
         {
           "term": "3in",
           "arabic": "عين",
-          "meaning": "Eye"
+          "meaning": "Eye",
+          "audio": "audio/3in.mp3"
         },
         {
           "term": "Wden",
           "arabic": "ودن",
-          "meaning": "Ear"
+          "meaning": "Ear",
+          "audio": "audio/wden.mp3"
         },
         {
           "term": "Nif",
           "arabic": "نيف",
-          "meaning": "Nose"
+          "meaning": "Nose",
+          "audio": "audio/nif.mp3"
         },
         {
           "term": "Fom",
           "arabic": "فم",
-          "meaning": "Mouth"
+          "meaning": "Mouth",
+          "audio": "audio/fom.mp3"
         },
         {
           "term": "Yed",
           "arabic": "يد",
-          "meaning": "Hand"
+          "meaning": "Hand",
+          "audio": "audio/yed.mp3"
         },
         {
           "term": "Dra3",
           "arabic": "دراع",
-          "meaning": "Arm"
+          "meaning": "Arm",
+          "audio": "audio/dra3.mp3"
         },
         {
           "term": "Rjel",
           "arabic": "رجل",
-          "meaning": "Leg"
+          "meaning": "Leg",
+          "audio": "audio/rjel.mp3"
         },
         {
           "term": "Saq",
           "arabic": "ساق",
-          "meaning": "Foot"
+          "meaning": "Foot",
+          "audio": "audio/saq.mp3"
         },
         {
           "term": "Qelb",
           "arabic": "قلب",
-          "meaning": "Heart"
+          "meaning": "Heart",
+          "audio": "audio/qelb.mp3"
         },
         {
           "term": "Dher",
           "arabic": "ظهر",
-          "meaning": "Back"
+          "meaning": "Back",
+          "audio": "audio/dher.mp3"
         },
         {
           "term": "Kersh",
           "arabic": "كرش",
-          "meaning": "Stomach"
+          "meaning": "Stomach",
+          "audio": "audio/kersh.mp3"
         },
         {
           "term": "Snan",
           "arabic": "سنان",
-          "meaning": "Tooth"
+          "meaning": "Tooth",
+          "audio": "audio/snan.mp3"
         }
       ]
     },
@@ -1496,67 +1771,80 @@
         {
           "term": "Dar",
           "arabic": "دار",
-          "meaning": "House"
+          "meaning": "House",
+          "audio": "audio/dar.mp3"
         },
         {
           "term": "Bit",
           "arabic": "بيت",
-          "meaning": "Room"
+          "meaning": "Room",
+          "audio": "audio/bit.mp3"
         },
         {
           "term": "Bab",
           "arabic": "باب",
-          "meaning": "Door"
+          "meaning": "Door",
+          "audio": "audio/bab.mp3"
         },
         {
           "term": "Shrjem",
           "arabic": "شرجم",
-          "meaning": "Window"
+          "meaning": "Window",
+          "audio": "audio/shrjem.mp3"
         },
         {
           "term": "Tabla",
           "arabic": "طابلة",
-          "meaning": "Table"
+          "meaning": "Table",
+          "audio": "audio/tabla.mp3"
         },
         {
           "term": "Kursi",
           "arabic": "كرسي",
-          "meaning": "Chair"
+          "meaning": "Chair",
+          "audio": "audio/kursi.mp3"
         },
         {
           "term": "Namusiya",
           "arabic": "ناموسية",
-          "meaning": "Bed"
+          "meaning": "Bed",
+          "audio": "audio/namusiya.mp3"
         },
         {
           "term": "Ktab",
           "arabic": "كتاب",
-          "meaning": "Book"
+          "meaning": "Book",
+          "audio": "audio/ktab.mp3"
         },
         {
           "term": "Stilou",
           "arabic": "ستيلو",
-          "meaning": "Pen"
+          "meaning": "Pen",
+          "audio": "audio/stilou.mp3"
         },
         {
           "term": "Wrqa",
           "arabic": "ورقة",
-          "meaning": "Paper"
+          "meaning": "Paper",
+          "audio": "audio/wrqa.mp3"
         },
         {
           "term": "Tilifun",
           "arabic": "تيليفون",
-          "meaning": "Phone"
+          "meaning": "Phone",
+          "audio": "audio/tilifun.mp3"
         },
         {
           "term": "Sarut",
           "arabic": "ساروت",
-          "meaning": "Key"
+          "meaning": "Key",
+          "audio": "audio/sarut.mp3"
         },
         {
           "term": "Shkara",
           "arabic": "شكارة",
-          "meaning": "Bag"
+          "meaning": "Bag",
+          "audio": "audio/shkara.mp3"
         }
       ]
     },
@@ -1566,32 +1854,38 @@
         {
           "term": "Qr3a dyal lma",
           "arabic": "قرعة ديال لما",
-          "meaning": "Water bottle"
+          "meaning": "Water bottle",
+          "audio": "audio/qr3a_dyal_lma.mp3"
         },
         {
           "term": "Kas",
           "arabic": "كاس",
-          "meaning": "Glass"
+          "meaning": "Glass",
+          "audio": "audio/kas.mp3"
         },
         {
           "term": "Tbsil",
           "arabic": "طبسيل",
-          "meaning": "Plate"
+          "meaning": "Plate",
+          "audio": "audio/tbsil.mp3"
         },
         {
           "term": "Furchita",
           "arabic": "فورشيطة",
-          "meaning": "Fork"
+          "meaning": "Fork",
+          "audio": "audio/furchita.mp3"
         },
         {
           "term": "M3lqa",
           "arabic": "معلقة",
-          "meaning": "Spoon"
+          "meaning": "Spoon",
+          "audio": "audio/m3lqa.mp3"
         },
         {
           "term": "Mus",
           "arabic": "موس",
-          "meaning": "Knife"
+          "meaning": "Knife",
+          "audio": "audio/mus.mp3"
         }
       ]
     },
@@ -1601,32 +1895,38 @@
         {
           "term": "Ordinateur",
           "arabic": "أوردينتور",
-          "meaning": "Computer"
+          "meaning": "Computer",
+          "audio": "audio/ordinateur.mp3"
         },
         {
           "term": "Tilifun",
           "arabic": "تيليفون",
-          "meaning": "Phone"
+          "meaning": "Phone",
+          "audio": "audio/tilifun.mp3"
         },
         {
           "term": "Tlfaza",
           "arabic": "تلفازة",
-          "meaning": "Television"
+          "meaning": "Television",
+          "audio": "audio/tlfaza.mp3"
         },
         {
           "term": "Camera",
           "arabic": "كاميرا",
-          "meaning": "Camera"
+          "meaning": "Camera",
+          "audio": "audio/camera.mp3"
         },
         {
           "term": "Chargeur",
           "arabic": "شارجور",
-          "meaning": "Charger"
+          "meaning": "Charger",
+          "audio": "audio/chargeur.mp3"
         },
         {
           "term": "Ecran",
           "arabic": "إكران",
-          "meaning": "Screen"
+          "meaning": "Screen",
+          "audio": "audio/ecran.mp3"
         }
       ]
     },
@@ -1636,32 +1936,38 @@
         {
           "term": "Khsheb",
           "arabic": "خشب",
-          "meaning": "Wood"
+          "meaning": "Wood",
+          "audio": "audio/khsheb.mp3"
         },
         {
           "term": "M3den",
           "arabic": "معدن",
-          "meaning": "Metal"
+          "meaning": "Metal",
+          "audio": "audio/m3den.mp3"
         },
         {
           "term": "Plastik",
           "arabic": "بلاستيك",
-          "meaning": "Plastic"
+          "meaning": "Plastic",
+          "audio": "audio/plastik.mp3"
         },
         {
           "term": "Zjaj",
           "arabic": "زجاج",
-          "meaning": "Glass"
+          "meaning": "Glass",
+          "audio": "audio/zjaj.mp3"
         },
         {
           "term": "Wraq",
           "arabic": "وراق",
-          "meaning": "Paper"
+          "meaning": "Paper",
+          "audio": "audio/wraq.mp3"
         },
         {
           "term": "Qmash",
           "arabic": "قماش",
-          "meaning": "Cloth"
+          "meaning": "Cloth",
+          "audio": "audio/qmash.mp3"
         }
       ]
     },
@@ -1671,32 +1977,38 @@
         {
           "term": "Mitr",
           "arabic": "متر",
-          "meaning": "Meter"
+          "meaning": "Meter",
+          "audio": "audio/mitr.mp3"
         },
         {
           "term": "Kilo",
           "arabic": "كيلو",
-          "meaning": "Kilogram"
+          "meaning": "Kilogram",
+          "audio": "audio/kilo.mp3"
         },
         {
           "term": "Litr",
           "arabic": "ليتر",
-          "meaning": "Liter"
+          "meaning": "Liter",
+          "audio": "audio/litr.mp3"
         },
         {
           "term": "Santimistr",
           "arabic": "سنتيمتر",
-          "meaning": "Centimeter"
+          "meaning": "Centimeter",
+          "audio": "audio/santimistr.mp3"
         },
         {
           "term": "Rqm",
           "arabic": "رقم",
-          "meaning": "Number"
+          "meaning": "Number",
+          "audio": "audio/rqm.mp3"
         },
         {
           "term": "Qyas",
           "arabic": "قياس",
-          "meaning": "Size"
+          "meaning": "Size",
+          "audio": "audio/qyas.mp3"
         }
       ]
     },
@@ -1706,62 +2018,74 @@
         {
           "term": "Shems",
           "arabic": "شمس",
-          "meaning": "Sun"
+          "meaning": "Sun",
+          "audio": "audio/shems.mp3"
         },
         {
           "term": "Shta",
           "arabic": "شتا",
-          "meaning": "Rain"
+          "meaning": "Rain",
+          "audio": "audio/shta.mp3"
         },
         {
           "term": "Telj",
           "arabic": "تلج",
-          "meaning": "Snow"
+          "meaning": "Snow",
+          "audio": "audio/telj.mp3"
         },
         {
           "term": "Rih",
           "arabic": "ريح",
-          "meaning": "Wind"
+          "meaning": "Wind",
+          "audio": "audio/rih.mp3"
         },
         {
           "term": "Shab",
           "arabic": "سحاب",
-          "meaning": "Cloud"
+          "meaning": "Cloud",
+          "audio": "audio/shab.mp3"
         },
         {
           "term": "Skhan",
           "arabic": "سخان",
-          "meaning": "Hot"
+          "meaning": "Hot",
+          "audio": "audio/skhan.mp3"
         },
         {
           "term": "Bard",
           "arabic": "برد",
-          "meaning": "Cold"
+          "meaning": "Cold",
+          "audio": "audio/bard.mp3"
         },
         {
           "term": "Dafi",
           "arabic": "دافي",
-          "meaning": "Warm"
+          "meaning": "Warm",
+          "audio": "audio/dafi.mp3"
         },
         {
           "term": "Rteb",
           "arabic": "رطب",
-          "meaning": "Wet"
+          "meaning": "Wet",
+          "audio": "audio/rteb.mp3"
         },
         {
           "term": "Nashef",
           "arabic": "ناشف",
-          "meaning": "Dry"
+          "meaning": "Dry",
+          "audio": "audio/nashef.mp3"
         },
         {
           "term": "Tqs",
           "arabic": "طقس",
-          "meaning": "Weather"
+          "meaning": "Weather",
+          "audio": "audio/tqs.mp3"
         },
         {
           "term": "Kifash tqs?",
           "arabic": "كيفاش طقس؟",
-          "meaning": "What's the weather like?"
+          "meaning": "What's the weather like?",
+          "audio": "audio/kifash_tqs.mp3"
         }
       ]
     },
@@ -1771,102 +2095,122 @@
         {
           "term": "Kan",
           "arabic": "كان",
-          "meaning": "To be"
+          "meaning": "To be",
+          "audio": "audio/kan.mp3"
         },
         {
           "term": "3ndo",
           "arabic": "عندو",
-          "meaning": "To have"
+          "meaning": "To have",
+          "audio": "audio/3ndo.mp3"
         },
         {
           "term": "Dir",
           "arabic": "دير",
-          "meaning": "To do"
+          "meaning": "To do",
+          "audio": "audio/dir.mp3"
         },
         {
           "term": "Msha",
           "arabic": "مشى",
-          "meaning": "To go"
+          "meaning": "To go",
+          "audio": "audio/msha.mp3"
         },
         {
           "term": "Ja",
           "arabic": "جا",
-          "meaning": "To come"
+          "meaning": "To come",
+          "audio": "audio/ja.mp3"
         },
         {
           "term": "Shaf",
           "arabic": "شاف",
-          "meaning": "To see"
+          "meaning": "To see",
+          "audio": "audio/shaf.mp3"
         },
         {
           "term": "Sm3",
           "arabic": "سمع",
-          "meaning": "To hear"
+          "meaning": "To hear",
+          "audio": "audio/sm3.mp3"
         },
         {
           "term": "Hdar",
           "arabic": "هضر",
-          "meaning": "To speak"
+          "meaning": "To speak",
+          "audio": "audio/hdar.mp3"
         },
         {
           "term": "Gal",
           "arabic": "گال",
-          "meaning": "To say"
+          "meaning": "To say",
+          "audio": "audio/gal.mp3"
         },
         {
           "term": "Kla",
           "arabic": "كلا",
-          "meaning": "To eat"
+          "meaning": "To eat",
+          "audio": "audio/kla.mp3"
         },
         {
           "term": "Shreb",
           "arabic": "شرب",
-          "meaning": "To drink"
+          "meaning": "To drink",
+          "audio": "audio/shreb.mp3"
         },
         {
           "term": "N3es",
           "arabic": "نعس",
-          "meaning": "To sleep"
+          "meaning": "To sleep",
+          "audio": "audio/n3es.mp3"
         },
         {
           "term": "Faq",
           "arabic": "فاق",
-          "meaning": "To wake up"
+          "meaning": "To wake up",
+          "audio": "audio/faq.mp3"
         },
         {
           "term": "Msha",
           "arabic": "مشى",
-          "meaning": "To walk"
+          "meaning": "To walk",
+          "audio": "audio/msha.mp3"
         },
         {
           "term": "Jra",
           "arabic": "جرى",
-          "meaning": "To run"
+          "meaning": "To run",
+          "audio": "audio/jra.mp3"
         },
         {
           "term": "Shra",
           "arabic": "شرى",
-          "meaning": "To buy"
+          "meaning": "To buy",
+          "audio": "audio/shra.mp3"
         },
         {
           "term": "Bra",
           "arabic": "برا",
-          "meaning": "To want"
+          "meaning": "To want",
+          "audio": "audio/bra.mp3"
         },
         {
           "term": "3ref",
           "arabic": "عرف",
-          "meaning": "To know"
+          "meaning": "To know",
+          "audio": "audio/3ref.mp3"
         },
         {
           "term": "Fhem",
           "arabic": "فهم",
-          "meaning": "To understand"
+          "meaning": "To understand",
+          "audio": "audio/fhem.mp3"
         },
         {
           "term": "3awen",
           "arabic": "عاون",
-          "meaning": "To help"
+          "meaning": "To help",
+          "audio": "audio/3awen.mp3"
         }
       ]
     },
@@ -1876,52 +2220,62 @@
         {
           "term": "Musiqa",
           "arabic": "موسيقى",
-          "meaning": "Music"
+          "meaning": "Music",
+          "audio": "audio/musiqa.mp3"
         },
         {
           "term": "Ughnia",
           "arabic": "أغنية",
-          "meaning": "Song"
+          "meaning": "Song",
+          "audio": "audio/ughnia.mp3"
         },
         {
           "term": "Firqa",
           "arabic": "فرقة",
-          "meaning": "Band"
+          "meaning": "Band",
+          "audio": "audio/firqa.mp3"
         },
         {
           "term": "Ala",
           "arabic": "آلة",
-          "meaning": "Instrument"
+          "meaning": "Instrument",
+          "audio": "audio/ala.mp3"
         },
         {
           "term": "Rqs",
           "arabic": "رقص",
-          "meaning": "Dance"
+          "meaning": "Dance",
+          "audio": "audio/rqs.mp3"
         },
         {
           "term": "Film",
           "arabic": "فيلم",
-          "meaning": "Movie"
+          "meaning": "Movie",
+          "audio": "audio/film.mp3"
         },
         {
           "term": "Rsem",
           "arabic": "رسم",
-          "meaning": "Drawing/Painting"
+          "meaning": "Drawing/Painting",
+          "audio": "audio/rsem.mp3"
         },
         {
           "term": "Masrah",
           "arabic": "مسرح",
-          "meaning": "Theater"
+          "meaning": "Theater",
+          "audio": "audio/masrah.mp3"
         },
         {
           "term": "Fnaan",
           "arabic": "فنان",
-          "meaning": "Artist"
+          "meaning": "Artist",
+          "audio": "audio/fnaan.mp3"
         },
         {
           "term": "Mughanni",
           "arabic": "مغني",
-          "meaning": "Singer"
+          "meaning": "Singer",
+          "audio": "audio/mughanni.mp3"
         }
       ]
     },
@@ -1931,52 +2285,62 @@
         {
           "term": "Khedma",
           "arabic": "خدمة",
-          "meaning": "Work/Job"
+          "meaning": "Work/Job",
+          "audio": "audio/khedma.mp3"
         },
         {
           "term": "Chrika",
           "arabic": "شريكة",
-          "meaning": "Company"
+          "meaning": "Company",
+          "audio": "audio/chrika.mp3"
         },
         {
           "term": "Mekteb",
           "arabic": "مكتب",
-          "meaning": "Office"
+          "meaning": "Office",
+          "audio": "audio/mekteb.mp3"
         },
         {
           "term": "Mudeer",
           "arabic": "مدير",
-          "meaning": "Manager"
+          "meaning": "Manager",
+          "audio": "audio/mudeer.mp3"
         },
         {
           "term": "Muwaddaf",
           "arabic": "موظف",
-          "meaning": "Employee"
+          "meaning": "Employee",
+          "audio": "audio/muwaddaf.mp3"
         },
         {
           "term": "Flus",
           "arabic": "فلوس",
-          "meaning": "Money"
+          "meaning": "Money",
+          "audio": "audio/flus.mp3"
         },
         {
           "term": "Rateb",
           "arabic": "راتب",
-          "meaning": "Salary"
+          "meaning": "Salary",
+          "audio": "audio/rateb.mp3"
         },
         {
           "term": "Ijtima3",
           "arabic": "اجتماع",
-          "meaning": "Meeting"
+          "meaning": "Meeting",
+          "audio": "audio/ijtima3.mp3"
         },
         {
           "term": "Zbayn",
           "arabic": "زبون",
-          "meaning": "Customer"
+          "meaning": "Customer",
+          "audio": "audio/zbayn.mp3"
         },
         {
           "term": "Tijara",
           "arabic": "تجارة",
-          "meaning": "Business/Trade"
+          "meaning": "Business/Trade",
+          "audio": "audio/tijara.mp3"
         }
       ]
     },
@@ -1986,52 +2350,62 @@
         {
           "term": "Ferhan",
           "arabic": "فرحان",
-          "meaning": "Happy"
+          "meaning": "Happy",
+          "audio": "audio/ferhan.mp3"
         },
         {
           "term": "Hazin",
           "arabic": "حزين",
-          "meaning": "Sad"
+          "meaning": "Sad",
+          "audio": "audio/hazin.mp3"
         },
         {
           "term": "Za3fan",
           "arabic": "زعفان",
-          "meaning": "Angry"
+          "meaning": "Angry",
+          "audio": "audio/za3fan.mp3"
         },
         {
           "term": "Khayef",
           "arabic": "خايف",
-          "meaning": "Scared"
+          "meaning": "Scared",
+          "audio": "audio/khayef.mp3"
         },
         {
           "term": "Mertah",
           "arabic": "مرتاح",
-          "meaning": "Comfortable/Relaxed"
+          "meaning": "Comfortable/Relaxed",
+          "audio": "audio/mertah.mp3"
         },
         {
           "term": "T3ban",
           "arabic": "تعبان",
-          "meaning": "Tired"
+          "meaning": "Tired",
+          "audio": "audio/t3ban.mp3"
         },
         {
           "term": "Mqleq",
           "arabic": "مقلق",
-          "meaning": "Worried"
+          "meaning": "Worried",
+          "audio": "audio/mqleq.mp3"
         },
         {
           "term": "Mhemmes",
           "arabic": "محمس",
-          "meaning": "Excited"
+          "meaning": "Excited",
+          "audio": "audio/mhemmes.mp3"
         },
         {
           "term": "Mdemmer",
           "arabic": "مدمر",
-          "meaning": "Frustrated"
+          "meaning": "Frustrated",
+          "audio": "audio/mdemmer.mp3"
         },
         {
           "term": "Mabsut",
           "arabic": "مبسوط",
-          "meaning": "Pleased"
+          "meaning": "Pleased",
+          "audio": "audio/mabsut.mp3"
         }
       ]
     },
@@ -2041,52 +2415,62 @@
         {
           "term": "Kelb",
           "arabic": "كلب",
-          "meaning": "Dog"
+          "meaning": "Dog",
+          "audio": "audio/kelb.mp3"
         },
         {
           "term": "Qet",
           "arabic": "قط",
-          "meaning": "Cat"
+          "meaning": "Cat",
+          "audio": "audio/qet.mp3"
         },
         {
           "term": "Hut",
           "arabic": "حوت",
-          "meaning": "Fish"
+          "meaning": "Fish",
+          "audio": "audio/hut.mp3"
         },
         {
           "term": "3asfur",
           "arabic": "عصفور",
-          "meaning": "Bird"
+          "meaning": "Bird",
+          "audio": "audio/3asfur.mp3"
         },
         {
           "term": "3awed",
           "arabic": "عود",
-          "meaning": "Horse"
+          "meaning": "Horse",
+          "audio": "audio/3awed.mp3"
         },
         {
           "term": "Begra",
           "arabic": "بقرة",
-          "meaning": "Cow"
+          "meaning": "Cow",
+          "audio": "audio/begra.mp3"
         },
         {
           "term": "Jmel",
           "arabic": "جمل",
-          "meaning": "Camel"
+          "meaning": "Camel",
+          "audio": "audio/jmel.mp3"
         },
         {
           "term": "Hmar",
           "arabic": "حمار",
-          "meaning": "Donkey"
+          "meaning": "Donkey",
+          "audio": "audio/hmar.mp3"
         },
         {
           "term": "Dib",
           "arabic": "ديب",
-          "meaning": "Wolf"
+          "meaning": "Wolf",
+          "audio": "audio/dib.mp3"
         },
         {
           "term": "Qerd",
           "arabic": "قرد",
-          "meaning": "Monkey"
+          "meaning": "Monkey",
+          "audio": "audio/qerd.mp3"
         }
       ]
     },
@@ -2096,52 +2480,62 @@
         {
           "term": "Kura",
           "arabic": "كورة",
-          "meaning": "Football"
+          "meaning": "Football",
+          "audio": "audio/kura.mp3"
         },
         {
           "term": "Sbaha",
           "arabic": "سباحة",
-          "meaning": "Swimming"
+          "meaning": "Swimming",
+          "audio": "audio/sbaha.mp3"
         },
         {
           "term": "Jri",
           "arabic": "جري",
-          "meaning": "Running"
+          "meaning": "Running",
+          "audio": "audio/jri.mp3"
         },
         {
           "term": "Tennis",
           "arabic": "تنس",
-          "meaning": "Tennis"
+          "meaning": "Tennis",
+          "audio": "audio/tennis.mp3"
         },
         {
           "term": "Basket",
           "arabic": "باسكيت",
-          "meaning": "Basketball"
+          "meaning": "Basketball",
+          "audio": "audio/basket.mp3"
         },
         {
           "term": "Qira2a",
           "arabic": "قراءة",
-          "meaning": "Reading"
+          "meaning": "Reading",
+          "audio": "audio/qira2a.mp3"
         },
         {
           "term": "Safar",
           "arabic": "سفر",
-          "meaning": "Traveling"
+          "meaning": "Traveling",
+          "audio": "audio/safar.mp3"
         },
         {
           "term": "Tebkh",
           "arabic": "طبخ",
-          "meaning": "Cooking"
+          "meaning": "Cooking",
+          "audio": "audio/tebkh.mp3"
         },
         {
           "term": "Taswir",
           "arabic": "تصوير",
-          "meaning": "Photography"
+          "meaning": "Photography",
+          "audio": "audio/taswir.mp3"
         },
         {
           "term": "Jardinage",
           "arabic": "جارديناج",
-          "meaning": "Gardening"
+          "meaning": "Gardening",
+          "audio": "audio/jardinage.mp3"
         }
       ]
     },
@@ -2151,42 +2545,50 @@
         {
           "term": "Tomobil",
           "arabic": "طوموبيل",
-          "meaning": "Car"
+          "meaning": "Car",
+          "audio": "audio/tomobil.mp3"
         },
         {
           "term": "Tram",
           "arabic": "طرام",
-          "meaning": "Tram"
+          "meaning": "Tram",
+          "audio": "audio/tram.mp3"
         },
         {
           "term": "Qitar",
           "arabic": "قطار",
-          "meaning": "Train"
+          "meaning": "Train",
+          "audio": "audio/qitar.mp3"
         },
         {
           "term": "Bis",
           "arabic": "بيس",
-          "meaning": "Bus"
+          "meaning": "Bus",
+          "audio": "audio/bis.mp3"
         },
         {
           "term": "Taxi",
           "arabic": "طاكسي",
-          "meaning": "Taxi"
+          "meaning": "Taxi",
+          "audio": "audio/taxi.mp3"
         },
         {
           "term": "Biskleta",
           "arabic": "بيسكليطة",
-          "meaning": "Bicycle"
+          "meaning": "Bicycle",
+          "audio": "audio/biskleta.mp3"
         },
         {
           "term": "Moteur",
           "arabic": "موتور",
-          "meaning": "Motorcycle"
+          "meaning": "Motorcycle",
+          "audio": "audio/moteur.mp3"
         },
         {
           "term": "Tayara",
           "arabic": "طيارة",
-          "meaning": "Airplane"
+          "meaning": "Airplane",
+          "audio": "audio/tayara.mp3"
         }
       ]
     },
@@ -2196,62 +2598,74 @@
         {
           "term": "Shems",
           "arabic": "شمس",
-          "meaning": "Sun"
+          "meaning": "Sun",
+          "audio": "audio/shems.mp3"
         },
         {
           "term": "Qmer",
           "arabic": "قمر",
-          "meaning": "Moon"
+          "meaning": "Moon",
+          "audio": "audio/qmer.mp3"
         },
         {
           "term": "Njum",
           "arabic": "نجوم",
-          "meaning": "Stars"
+          "meaning": "Stars",
+          "audio": "audio/njum.mp3"
         },
         {
           "term": "Sma",
           "arabic": "سما",
-          "meaning": "Sky"
+          "meaning": "Sky",
+          "audio": "audio/sma.mp3"
         },
         {
           "term": "Bhar",
           "arabic": "بحر",
-          "meaning": "Sea"
+          "meaning": "Sea",
+          "audio": "audio/bhar.mp3"
         },
         {
           "term": "Jbel",
           "arabic": "جبل",
-          "meaning": "Mountain"
+          "meaning": "Mountain",
+          "audio": "audio/jbel.mp3"
         },
         {
           "term": "Ghaba",
           "arabic": "غابة",
-          "meaning": "Forest"
+          "meaning": "Forest",
+          "audio": "audio/ghaba.mp3"
         },
         {
           "term": "Wad",
           "arabic": "واد",
-          "meaning": "River"
+          "meaning": "River",
+          "audio": "audio/wad.mp3"
         },
         {
           "term": "Sahara",
           "arabic": "صحراء",
-          "meaning": "Desert"
+          "meaning": "Desert",
+          "audio": "audio/sahara.mp3"
         },
         {
           "term": "Shjer",
           "arabic": "شجر",
-          "meaning": "Trees"
+          "meaning": "Trees",
+          "audio": "audio/shjer.mp3"
         },
         {
           "term": "Ward",
           "arabic": "ورد",
-          "meaning": "Flowers"
+          "meaning": "Flowers",
+          "audio": "audio/ward.mp3"
         },
         {
           "term": "3sheb",
           "arabic": "عشب",
-          "meaning": "Grass"
+          "meaning": "Grass",
+          "audio": "audio/3sheb.mp3"
         }
       ]
     },
@@ -2261,92 +2675,110 @@
         {
           "term": "Daba",
           "arabic": "دابا",
-          "meaning": "Now"
+          "meaning": "Now",
+          "audio": "audio/daba.mp3"
         },
         {
           "term": "Gheda",
           "arabic": "غدا",
-          "meaning": "Tomorrow"
+          "meaning": "Tomorrow",
+          "audio": "audio/gheda.mp3"
         },
         {
           "term": "Lbareh",
           "arabic": "لبارح",
-          "meaning": "Yesterday"
+          "meaning": "Yesterday",
+          "audio": "audio/lbareh.mp3"
         },
         {
           "term": "Lyum",
           "arabic": "ليوم",
-          "meaning": "Today"
+          "meaning": "Today",
+          "audio": "audio/lyum.mp3"
         },
         {
           "term": "Bekri",
           "arabic": "بكري",
-          "meaning": "Early"
+          "meaning": "Early",
+          "audio": "audio/bekri.mp3"
         },
         {
           "term": "M3a tal",
           "arabic": "معا طال",
-          "meaning": "Late"
+          "meaning": "Late",
+          "audio": "audio/m3a_tal.mp3"
         },
         {
           "term": "Simana",
           "arabic": "سيمانة",
-          "meaning": "Week"
+          "meaning": "Week",
+          "audio": "audio/simana.mp3"
         },
         {
           "term": "Shher",
           "arabic": "شهر",
-          "meaning": "Month"
+          "meaning": "Month",
+          "audio": "audio/shher.mp3"
         },
         {
           "term": "3am",
           "arabic": "عام",
-          "meaning": "Year"
+          "meaning": "Year",
+          "audio": "audio/3am.mp3"
         },
         {
           "term": "Sa3a",
           "arabic": "ساعة",
-          "meaning": "Hour"
+          "meaning": "Hour",
+          "audio": "audio/sa3a.mp3"
         },
         {
           "term": "Dqiqa",
           "arabic": "دقيقة",
-          "meaning": "Minute"
+          "meaning": "Minute",
+          "audio": "audio/dqiqa.mp3"
         },
         {
           "term": "Thnin",
           "arabic": "تنين",
-          "meaning": "Monday"
+          "meaning": "Monday",
+          "audio": "audio/thnin.mp3"
         },
         {
           "term": "Tlat",
           "arabic": "تلات",
-          "meaning": "Tuesday"
+          "meaning": "Tuesday",
+          "audio": "audio/tlat.mp3"
         },
         {
           "term": "Larb3",
           "arabic": "لاربع",
-          "meaning": "Wednesday"
+          "meaning": "Wednesday",
+          "audio": "audio/larb3.mp3"
         },
         {
           "term": "Lkhmis",
           "arabic": "لخميس",
-          "meaning": "Thursday"
+          "meaning": "Thursday",
+          "audio": "audio/lkhmis.mp3"
         },
         {
           "term": "Jm3a",
           "arabic": "جمعة",
-          "meaning": "Friday"
+          "meaning": "Friday",
+          "audio": "audio/jm3a.mp3"
         },
         {
           "term": "Sebt",
           "arabic": "سبت",
-          "meaning": "Saturday"
+          "meaning": "Saturday",
+          "audio": "audio/sebt.mp3"
         },
         {
           "term": "Lhedd",
           "arabic": "لحد",
-          "meaning": "Sunday"
+          "meaning": "Sunday",
+          "audio": "audio/lhedd.mp3"
         }
       ]
     },
@@ -2356,62 +2788,74 @@
         {
           "term": "Medrasa",
           "arabic": "مدرسة",
-          "meaning": "School"
+          "meaning": "School",
+          "audio": "audio/medrasa.mp3"
         },
         {
           "term": "Jami3a",
           "arabic": "جامعة",
-          "meaning": "University"
+          "meaning": "University",
+          "audio": "audio/jami3a.mp3"
         },
         {
           "term": "Ustad",
           "arabic": "أستاذ",
-          "meaning": "Teacher/Professor"
+          "meaning": "Teacher/Professor",
+          "audio": "audio/ustad.mp3"
         },
         {
           "term": "Tilmid",
           "arabic": "تلميذ",
-          "meaning": "Student"
+          "meaning": "Student",
+          "audio": "audio/tilmid.mp3"
         },
         {
           "term": "Qism",
           "arabic": "قسم",
-          "meaning": "Classroom"
+          "meaning": "Classroom",
+          "audio": "audio/qism.mp3"
         },
         {
           "term": "Ktab",
           "arabic": "كتاب",
-          "meaning": "Book"
+          "meaning": "Book",
+          "audio": "audio/ktab.mp3"
         },
         {
           "term": "Defter",
           "arabic": "دفتر",
-          "meaning": "Notebook"
+          "meaning": "Notebook",
+          "audio": "audio/defter.mp3"
         },
         {
           "term": "Qelm",
           "arabic": "قلم",
-          "meaning": "Pen"
+          "meaning": "Pen",
+          "audio": "audio/qelm.mp3"
         },
         {
           "term": "Imtihan",
           "arabic": "امتحان",
-          "meaning": "Exam"
+          "meaning": "Exam",
+          "audio": "audio/imtihan.mp3"
         },
         {
           "term": "Wajib",
           "arabic": "واجب",
-          "meaning": "Homework"
+          "meaning": "Homework",
+          "audio": "audio/wajib.mp3"
         },
         {
           "term": "Qraya",
           "arabic": "قراية",
-          "meaning": "Studies"
+          "meaning": "Studies",
+          "audio": "audio/qraya.mp3"
         },
         {
           "term": "Mektaba",
           "arabic": "مكتبة",
-          "meaning": "Library"
+          "meaning": "Library",
+          "audio": "audio/mektaba.mp3"
         }
       ]
     },
@@ -2421,62 +2865,74 @@
         {
           "term": "Internet",
           "arabic": "إنترنت",
-          "meaning": "Internet"
+          "meaning": "Internet",
+          "audio": "audio/internet.mp3"
         },
         {
           "term": "Wifi",
           "arabic": "وايفاي",
-          "meaning": "Wifi"
+          "meaning": "Wifi",
+          "audio": "audio/wifi.mp3"
         },
         {
           "term": "Password",
           "arabic": "باسوورد",
-          "meaning": "Password"
+          "meaning": "Password",
+          "audio": "audio/password.mp3"
         },
         {
           "term": "Email",
           "arabic": "إيميل",
-          "meaning": "Email"
+          "meaning": "Email",
+          "audio": "audio/email.mp3"
         },
         {
           "term": "Website",
           "arabic": "ويبسايت",
-          "meaning": "Website"
+          "meaning": "Website",
+          "audio": "audio/website.mp3"
         },
         {
           "term": "Application",
           "arabic": "تطبيق",
-          "meaning": "App"
+          "meaning": "App",
+          "audio": "audio/application.mp3"
         },
         {
           "term": "Download",
           "arabic": "تحميل",
-          "meaning": "Download"
+          "meaning": "Download",
+          "audio": "audio/download.mp3"
         },
         {
           "term": "Upload",
           "arabic": "رفع",
-          "meaning": "Upload (borrowed from English; Arabic root 'rafaʿ' means 'to lift/raise')"
+          "meaning": "Upload (borrowed from English; Arabic root 'rafaʿ' means 'to lift/raise')",
+          "audio": "audio/upload.mp3"
         },
         {
           "term": "Click",
           "arabic": "كليك",
-          "meaning": "Click"
+          "meaning": "Click",
+          "audio": "audio/click.mp3"
         },
         {
           "term": "Share",
           "arabic": "شير",
-          "meaning": "Share"
+          "meaning": "Share",
+          "audio": "audio/share.mp3"
         },
         {
           "term": "Battarya",
           "arabic": "بطارية",
-          "meaning": "Battery"
+          "meaning": "Battery",
+          "audio": "audio/battarya.mp3"
         },
         {
           "term": "Chargeur",
           "arabic": "شارجور",
-          "meaning": "Charger"
+          "meaning": "Charger",
+          "audio": "audio/chargeur.mp3"
         }
       ]
     },
@@ -2486,62 +2942,74 @@
         {
           "term": "Allah",
           "arabic": "الله",
-          "meaning": "God"
+          "meaning": "God",
+          "audio": "audio/allah.mp3"
         },
         {
           "term": "Masjid",
           "arabic": "مسجد",
-          "meaning": "Mosque"
+          "meaning": "Mosque",
+          "audio": "audio/masjid.mp3"
         },
         {
           "term": "Salat",
           "arabic": "صلاة",
-          "meaning": "Prayer"
+          "meaning": "Prayer",
+          "audio": "audio/salat.mp3"
         },
         {
           "term": "Ramadan",
           "arabic": "رمضان",
-          "meaning": "Ramadan"
+          "meaning": "Ramadan",
+          "audio": "audio/ramadan.mp3"
         },
         {
           "term": "3id",
           "arabic": "عيد",
-          "meaning": "Festival/Holiday"
+          "meaning": "Festival/Holiday",
+          "audio": "audio/3id.mp3"
         },
         {
           "term": "Hajj",
           "arabic": "حج",
-          "meaning": "Pilgrimage"
+          "meaning": "Pilgrimage",
+          "audio": "audio/hajj.mp3"
         },
         {
           "term": "Imam",
           "arabic": "إمام",
-          "meaning": "Imam"
+          "meaning": "Imam",
+          "audio": "audio/imam.mp3"
         },
         {
           "term": "Baraka",
           "arabic": "بركة",
-          "meaning": "Blessing"
+          "meaning": "Blessing",
+          "audio": "audio/baraka.mp3"
         },
         {
           "term": "Sadaqa",
           "arabic": "صدقة",
-          "meaning": "Charity"
+          "meaning": "Charity",
+          "audio": "audio/sadaqa.mp3"
         },
         {
           "term": "Halal",
           "arabic": "حلال",
-          "meaning": "Permissible"
+          "meaning": "Permissible",
+          "audio": "audio/halal.mp3"
         },
         {
           "term": "Haram",
           "arabic": "حرام",
-          "meaning": "Forbidden"
+          "meaning": "Forbidden",
+          "audio": "audio/haram.mp3"
         },
         {
           "term": "Du3a",
           "arabic": "دعاء",
-          "meaning": "Supplication"
+          "meaning": "Supplication",
+          "audio": "audio/du3a.mp3"
         }
       ]
     },
@@ -2551,52 +3019,62 @@
         {
           "term": "Facebook",
           "arabic": "فيسبوك",
-          "meaning": "Facebook"
+          "meaning": "Facebook",
+          "audio": "audio/facebook.mp3"
         },
         {
           "term": "Instagram",
           "arabic": "إنستغرام",
-          "meaning": "Instagram"
+          "meaning": "Instagram",
+          "audio": "audio/instagram.mp3"
         },
         {
           "term": "WhatsApp",
           "arabic": "واتساب",
-          "meaning": "WhatsApp"
+          "meaning": "WhatsApp",
+          "audio": "audio/whatsapp.mp3"
         },
         {
           "term": "Message",
           "arabic": "ميساج",
-          "meaning": "Message"
+          "meaning": "Message",
+          "audio": "audio/message.mp3"
         },
         {
           "term": "Post",
           "arabic": "بوست",
-          "meaning": "Post"
+          "meaning": "Post",
+          "audio": "audio/post.mp3"
         },
         {
           "term": "Story",
           "arabic": "ستوري",
-          "meaning": "Story"
+          "meaning": "Story",
+          "audio": "audio/story.mp3"
         },
         {
           "term": "Like",
           "arabic": "لايك",
-          "meaning": "Like"
+          "meaning": "Like",
+          "audio": "audio/like.mp3"
         },
         {
           "term": "Comment",
           "arabic": "كومنت",
-          "meaning": "Comment"
+          "meaning": "Comment",
+          "audio": "audio/comment.mp3"
         },
         {
           "term": "Chat",
           "arabic": "شات",
-          "meaning": "Chat"
+          "meaning": "Chat",
+          "audio": "audio/chat.mp3"
         },
         {
           "term": "Video Call",
           "arabic": "فيديو كول",
-          "meaning": "Video Call"
+          "meaning": "Video Call",
+          "audio": "audio/video_call.mp3"
         }
       ]
     },
@@ -2606,52 +3084,62 @@
         {
           "term": "Hukuma",
           "arabic": "حكومة",
-          "meaning": "Government"
+          "meaning": "Government",
+          "audio": "audio/hukuma.mp3"
         },
         {
           "term": "Malik",
           "arabic": "ملك",
-          "meaning": "King"
+          "meaning": "King",
+          "audio": "audio/malik.mp3"
         },
         {
           "term": "Wazir",
           "arabic": "وزير",
-          "meaning": "Minister"
+          "meaning": "Minister",
+          "audio": "audio/wazir.mp3"
         },
         {
           "term": "Barlaman",
           "arabic": "برلمان",
-          "meaning": "Parliament"
+          "meaning": "Parliament",
+          "audio": "audio/barlaman.mp3"
         },
         {
           "term": "Ra2is",
           "arabic": "رئيس",
-          "meaning": "President"
+          "meaning": "President",
+          "audio": "audio/ra2is.mp3"
         },
         {
           "term": "Intikhab",
           "arabic": "انتخاب",
-          "meaning": "Election"
+          "meaning": "Election",
+          "audio": "audio/intikhab.mp3"
         },
         {
           "term": "Qanun",
           "arabic": "قانون",
-          "meaning": "Law"
+          "meaning": "Law",
+          "audio": "audio/qanun.mp3"
         },
         {
           "term": "Siyasa",
           "arabic": "سياسة",
-          "meaning": "Politics"
+          "meaning": "Politics",
+          "audio": "audio/siyasa.mp3"
         },
         {
           "term": "Watan",
           "arabic": "وطن",
-          "meaning": "Nation"
+          "meaning": "Nation",
+          "audio": "audio/watan.mp3"
         },
         {
           "term": "Dawla",
           "arabic": "دولة",
-          "meaning": "State/Country"
+          "meaning": "State/Country",
+          "audio": "audio/dawla.mp3"
         }
       ]
     },
@@ -2661,52 +3149,62 @@
         {
           "term": "Mahkama",
           "arabic": "محكمة",
-          "meaning": "Court"
+          "meaning": "Court",
+          "audio": "audio/mahkama.mp3"
         },
         {
           "term": "Qadi",
           "arabic": "قاضي",
-          "meaning": "Judge"
+          "meaning": "Judge",
+          "audio": "audio/qadi.mp3"
         },
         {
           "term": "Muhami",
           "arabic": "محامي",
-          "meaning": "Lawyer"
+          "meaning": "Lawyer",
+          "audio": "audio/muhami.mp3"
         },
         {
           "term": "Shahada",
           "arabic": "شهادة",
-          "meaning": "Testimony"
+          "meaning": "Testimony",
+          "audio": "audio/shahada.mp3"
         },
         {
           "term": "3qd",
           "arabic": "عقد",
-          "meaning": "Contract"
+          "meaning": "Contract",
+          "audio": "audio/3qd.mp3"
         },
         {
           "term": "Hukm",
           "arabic": "حكم",
-          "meaning": "Verdict"
+          "meaning": "Verdict",
+          "audio": "audio/hukm.mp3"
         },
         {
           "term": "Jarima",
           "arabic": "جريمة",
-          "meaning": "Crime"
+          "meaning": "Crime",
+          "audio": "audio/jarima.mp3"
         },
         {
           "term": "Bulis",
           "arabic": "بوليس",
-          "meaning": "Police"
+          "meaning": "Police",
+          "audio": "audio/bulis.mp3"
         },
         {
           "term": "Sijjil",
           "arabic": "سجل",
-          "meaning": "Record"
+          "meaning": "Record",
+          "audio": "audio/sijjil.mp3"
         },
         {
           "term": "Watiqa",
           "arabic": "وثيقة",
-          "meaning": "Document"
+          "meaning": "Document",
+          "audio": "audio/watiqa.mp3"
         }
       ]
     },
@@ -2716,52 +3214,62 @@
         {
           "term": "3ilm",
           "arabic": "علم",
-          "meaning": "Science"
+          "meaning": "Science",
+          "audio": "audio/3ilm.mp3"
         },
         {
           "term": "Tajriba",
           "arabic": "تجربة",
-          "meaning": "Experiment"
+          "meaning": "Experiment",
+          "audio": "audio/tajriba.mp3"
         },
         {
           "term": "Kimya",
           "arabic": "كيمياء",
-          "meaning": "Chemistry"
+          "meaning": "Chemistry",
+          "audio": "audio/kimya.mp3"
         },
         {
           "term": "Fizya",
           "arabic": "فيزياء",
-          "meaning": "Physics"
+          "meaning": "Physics",
+          "audio": "audio/fizya.mp3"
         },
         {
           "term": "Biologia",
           "arabic": "بيولوجيا",
-          "meaning": "Biology"
+          "meaning": "Biology",
+          "audio": "audio/biologia.mp3"
         },
         {
           "term": "Ryadiyat",
           "arabic": "رياضيات",
-          "meaning": "Mathematics"
+          "meaning": "Mathematics",
+          "audio": "audio/ryadiyat.mp3"
         },
         {
           "term": "Mohtabar",
           "arabic": "مختبر",
-          "meaning": "Laboratory"
+          "meaning": "Laboratory",
+          "audio": "audio/mohtabar.mp3"
         },
         {
           "term": "Microscope",
           "arabic": "ميكروسكوب",
-          "meaning": "Microscope"
+          "meaning": "Microscope",
+          "audio": "audio/microscope.mp3"
         },
         {
           "term": "Formula",
           "arabic": "فورمولا",
-          "meaning": "Formula"
+          "meaning": "Formula",
+          "audio": "audio/formula.mp3"
         },
         {
           "term": "Nadhariya",
           "arabic": "نظرية",
-          "meaning": "Theory"
+          "meaning": "Theory",
+          "audio": "audio/nadhariya.mp3"
         }
       ]
     },
@@ -2771,92 +3279,110 @@
         {
           "term": "Tbib",
           "arabic": "طبيب",
-          "meaning": "Doctor"
+          "meaning": "Doctor",
+          "audio": "audio/tbib.mp3"
         },
         {
           "term": "Mrid",
           "arabic": "مريض",
-          "meaning": "Patient"
+          "meaning": "Patient",
+          "audio": "audio/mrid.mp3"
         },
         {
           "term": "Mmrrd",
           "arabic": "ممرض",
-          "meaning": "Nurse"
+          "meaning": "Nurse",
+          "audio": "audio/mmrrd.mp3"
         },
         {
           "term": "Dwa",
           "arabic": "دواء",
-          "meaning": "Medicine"
+          "meaning": "Medicine",
+          "audio": "audio/dwa.mp3"
         },
         {
           "term": "3maliya",
           "arabic": "عملية",
-          "meaning": "Surgery"
+          "meaning": "Surgery",
+          "audio": "audio/3maliya.mp3"
         },
         {
           "term": "Fhes",
           "arabic": "فحص",
-          "meaning": "Examination"
+          "meaning": "Examination",
+          "audio": "audio/fhes.mp3"
         },
         {
           "term": "Wj3",
           "arabic": "وجع",
-          "meaning": "Pain"
+          "meaning": "Pain",
+          "audio": "audio/wj3.mp3"
         },
         {
           "term": "Sda3",
           "arabic": "صداع",
-          "meaning": "Headache"
+          "meaning": "Headache",
+          "audio": "audio/sda3.mp3"
         },
         {
           "term": "Zkem",
           "arabic": "زكام",
-          "meaning": "Cold"
+          "meaning": "Cold",
+          "audio": "audio/zkem.mp3"
         },
         {
           "term": "Hssasiya",
           "arabic": "حساسية",
-          "meaning": "Allergy"
+          "meaning": "Allergy",
+          "audio": "audio/hssasiya.mp3"
         },
         {
           "term": "Sukkar",
           "arabic": "سكر",
-          "meaning": "Diabetes"
+          "meaning": "Diabetes",
+          "audio": "audio/sukkar.mp3"
         },
         {
           "term": "Daght",
           "arabic": "ضغط",
-          "meaning": "Blood Pressure"
+          "meaning": "Blood Pressure",
+          "audio": "audio/daght.mp3"
         },
         {
           "term": "Qelb",
           "arabic": "قلب",
-          "meaning": "Heart"
+          "meaning": "Heart",
+          "audio": "audio/qelb.mp3"
         },
         {
           "term": "Riya",
           "arabic": "رئة",
-          "meaning": "Lung"
+          "meaning": "Lung",
+          "audio": "audio/riya.mp3"
         },
         {
           "term": "M3da",
           "arabic": "معدة",
-          "meaning": "Stomach"
+          "meaning": "Stomach",
+          "audio": "audio/m3da.mp3"
         },
         {
           "term": "Iltihab",
           "arabic": "التهاب",
-          "meaning": "Inflammation"
+          "meaning": "Inflammation",
+          "audio": "audio/iltihab.mp3"
         },
         {
           "term": "Tahlil",
           "arabic": "تحليل",
-          "meaning": "Analysis/Test"
+          "meaning": "Analysis/Test",
+          "audio": "audio/tahlil.mp3"
         },
         {
           "term": "Ash3a",
           "arabic": "أشعة",
-          "meaning": "X-ray"
+          "meaning": "X-ray",
+          "audio": "audio/ash3a.mp3"
         }
       ]
     },
@@ -2866,62 +3392,74 @@
         {
           "term": "Bank",
           "arabic": "بنك",
-          "meaning": "Bank"
+          "meaning": "Bank",
+          "audio": "audio/bank.mp3"
         },
         {
           "term": "Flus",
           "arabic": "فلوس",
-          "meaning": "Money"
+          "meaning": "Money",
+          "audio": "audio/flus.mp3"
         },
         {
           "term": "Hssab",
           "arabic": "حساب",
-          "meaning": "Account"
+          "meaning": "Account",
+          "audio": "audio/hssab.mp3"
         },
         {
           "term": "Carte",
           "arabic": "كارط",
-          "meaning": "Card"
+          "meaning": "Card",
+          "audio": "audio/carte.mp3"
         },
         {
           "term": "Credit",
           "arabic": "كريدي",
-          "meaning": "Credit"
+          "meaning": "Credit",
+          "audio": "audio/credit.mp3"
         },
         {
           "term": "Debit",
           "arabic": "ديبي",
-          "meaning": "Debit"
+          "meaning": "Debit",
+          "audio": "audio/debit.mp3"
         },
         {
           "term": "Fa2ida",
           "arabic": "فائدة",
-          "meaning": "Interest"
+          "meaning": "Interest",
+          "audio": "audio/fa2ida.mp3"
         },
         {
           "term": "Qerd",
           "arabic": "قرض",
-          "meaning": "Loan"
+          "meaning": "Loan",
+          "audio": "audio/qerd.mp3"
         },
         {
           "term": "Tawfir",
           "arabic": "توفير",
-          "meaning": "Savings"
+          "meaning": "Savings",
+          "audio": "audio/tawfir.mp3"
         },
         {
           "term": "Sarraf",
           "arabic": "صراف",
-          "meaning": "ATM"
+          "meaning": "ATM",
+          "audio": "audio/sarraf.mp3"
         },
         {
           "term": "Tahwil",
           "arabic": "تحويل",
-          "meaning": "Transfer"
+          "meaning": "Transfer",
+          "audio": "audio/tahwil.mp3"
         },
         {
           "term": "Fatura",
           "arabic": "فاتورة",
-          "meaning": "Bill/Invoice"
+          "meaning": "Bill/Invoice",
+          "audio": "audio/fatura.mp3"
         }
       ]
     },
@@ -2931,62 +3469,74 @@
         {
           "term": "Hwayj",
           "arabic": "حوايج",
-          "meaning": "Clothes"
+          "meaning": "Clothes",
+          "audio": "audio/hwayj.mp3"
         },
         {
           "term": "Qamija",
           "arabic": "قميجة",
-          "meaning": "Shirt"
+          "meaning": "Shirt",
+          "audio": "audio/qamija.mp3"
         },
         {
           "term": "Srwal",
           "arabic": "سروال",
-          "meaning": "Pants"
+          "meaning": "Pants",
+          "audio": "audio/srwal.mp3"
         },
         {
           "term": "Jeket",
           "arabic": "جيكيت",
-          "meaning": "Jacket"
+          "meaning": "Jacket",
+          "audio": "audio/jeket.mp3"
         },
         {
           "term": "Jellaba",
           "arabic": "جلابة",
-          "meaning": "Traditional Robe"
+          "meaning": "Traditional Robe",
+          "audio": "audio/jellaba.mp3"
         },
         {
           "term": "Hijab",
           "arabic": "حجاب",
-          "meaning": "Headscarf"
+          "meaning": "Headscarf",
+          "audio": "audio/hijab.mp3"
         },
         {
           "term": "Sabbat",
           "arabic": "صباط",
-          "meaning": "Shoes"
+          "meaning": "Shoes",
+          "audio": "audio/sabbat.mp3"
         },
         {
           "term": "Sandal",
           "arabic": "صندل",
-          "meaning": "Sandals"
+          "meaning": "Sandals",
+          "audio": "audio/sandal.mp3"
         },
         {
           "term": "Jild",
           "arabic": "جلد",
-          "meaning": "Leather"
+          "meaning": "Leather",
+          "audio": "audio/jild.mp3"
         },
         {
           "term": "Khyata",
           "arabic": "خياطة",
-          "meaning": "Sewing"
+          "meaning": "Sewing",
+          "audio": "audio/khyata.mp3"
         },
         {
           "term": "Moda",
           "arabic": "مودا",
-          "meaning": "Fashion"
+          "meaning": "Fashion",
+          "audio": "audio/moda.mp3"
         },
         {
           "term": "Tqchira",
           "arabic": "تقشيرة",
-          "meaning": "Traditional Dress"
+          "meaning": "Traditional Dress",
+          "audio": "audio/tqchira.mp3"
         }
       ]
     },
@@ -2996,72 +3546,86 @@
         {
           "term": "Dar",
           "arabic": "دار",
-          "meaning": "House"
+          "meaning": "House",
+          "audio": "audio/dar.mp3"
         },
         {
           "term": "Bit",
           "arabic": "بيت",
-          "meaning": "Room"
+          "meaning": "Room",
+          "audio": "audio/bit.mp3"
         },
         {
           "term": "Salon",
           "arabic": "صالون",
-          "meaning": "Living Room"
+          "meaning": "Living Room",
+          "audio": "audio/salon.mp3"
         },
         {
           "term": "Cusina",
           "arabic": "كوزينة",
-          "meaning": "Kitchen"
+          "meaning": "Kitchen",
+          "audio": "audio/cusina.mp3"
         },
         {
           "term": "Hammam",
           "arabic": "حمام",
-          "meaning": "Bathroom"
+          "meaning": "Bathroom",
+          "audio": "audio/hammam.mp3"
         },
         {
           "term": "Bit Nnas",
           "arabic": "بيت النعاس",
-          "meaning": "Bedroom"
+          "meaning": "Bedroom",
+          "audio": "audio/bit_nnas.mp3"
         },
         {
           "term": "Khzana",
           "arabic": "خزانة",
-          "meaning": "Closet"
+          "meaning": "Closet",
+          "audio": "audio/khzana.mp3"
         },
         {
           "term": "Tabla",
           "arabic": "طابلة",
-          "meaning": "Table"
+          "meaning": "Table",
+          "audio": "audio/tabla.mp3"
         },
         {
           "term": "Kursi",
           "arabic": "كرسي",
-          "meaning": "Chair"
+          "meaning": "Chair",
+          "audio": "audio/kursi.mp3"
         },
         {
           "term": "Sdari",
           "arabic": "صداري",
-          "meaning": "Sofa"
+          "meaning": "Sofa",
+          "audio": "audio/sdari.mp3"
         },
         {
           "term": "Maryo",
           "arabic": "ماريو",
-          "meaning": "Cabinet"
+          "meaning": "Cabinet",
+          "audio": "audio/maryo.mp3"
         },
         {
           "term": "Mri",
           "arabic": "مري",
-          "meaning": "Mirror"
+          "meaning": "Mirror",
+          "audio": "audio/mri.mp3"
         },
         {
           "term": "Tapis",
           "arabic": "تابي",
-          "meaning": "Carpet"
+          "meaning": "Carpet",
+          "audio": "audio/tapis.mp3"
         },
         {
           "term": "Sbitriya",
           "arabic": "سبيطرية",
-          "meaning": "Curtains"
+          "meaning": "Curtains",
+          "audio": "audio/sbitriya.mp3"
         }
       ]
     },
@@ -3071,62 +3635,74 @@
         {
           "term": "Ferhan",
           "arabic": "فرحان",
-          "meaning": "Happy"
+          "meaning": "Happy",
+          "audio": "audio/ferhan.mp3"
         },
         {
           "term": "Hazin",
           "arabic": "حزين",
-          "meaning": "Sad"
+          "meaning": "Sad",
+          "audio": "audio/hazin.mp3"
         },
         {
           "term": "Za3fan",
           "arabic": "زعفان",
-          "meaning": "Angry"
+          "meaning": "Angry",
+          "audio": "audio/za3fan.mp3"
         },
         {
           "term": "Khayef",
           "arabic": "خايف",
-          "meaning": "Scared"
+          "meaning": "Scared",
+          "audio": "audio/khayef.mp3"
         },
         {
           "term": "Mertah",
           "arabic": "مرتاح",
-          "meaning": "Relaxed"
+          "meaning": "Relaxed",
+          "audio": "audio/mertah.mp3"
         },
         {
           "term": "Mqleq",
           "arabic": "مقلق",
-          "meaning": "Worried"
+          "meaning": "Worried",
+          "audio": "audio/mqleq.mp3"
         },
         {
           "term": "Deki",
           "arabic": "ذكي",
-          "meaning": "Smart"
+          "meaning": "Smart",
+          "audio": "audio/deki.mp3"
         },
         {
           "term": "Latif",
           "arabic": "لطيف",
-          "meaning": "Kind"
+          "meaning": "Kind",
+          "audio": "audio/latif.mp3"
         },
         {
           "term": "Qwi",
           "arabic": "قوي",
-          "meaning": "Strong"
+          "meaning": "Strong",
+          "audio": "audio/qwi.mp3"
         },
         {
           "term": "D3if",
           "arabic": "ضعيف",
-          "meaning": "Weak"
+          "meaning": "Weak",
+          "audio": "audio/d3if.mp3"
         },
         {
           "term": "Mzyan",
           "arabic": "مزيان",
-          "meaning": "Good/Nice"
+          "meaning": "Good/Nice",
+          "audio": "audio/mzyan.mp3"
         },
         {
           "term": "Khayb",
           "arabic": "خايب",
-          "meaning": "Bad"
+          "meaning": "Bad",
+          "audio": "audio/khayb.mp3"
         }
       ]
     },
@@ -3136,52 +3712,62 @@
         {
           "term": "Kura",
           "arabic": "كورة",
-          "meaning": "Ball"
+          "meaning": "Ball",
+          "audio": "audio/kura.mp3"
         },
         {
           "term": "Mla3b",
           "arabic": "ملعب",
-          "meaning": "Field/Court"
+          "meaning": "Field/Court",
+          "audio": "audio/mla3b.mp3"
         },
         {
           "term": "Goal",
           "arabic": "گول",
-          "meaning": "Goal"
+          "meaning": "Goal",
+          "audio": "audio/goal.mp3"
         },
         {
           "term": "Hakem",
           "arabic": "حكم",
-          "meaning": "Referee"
+          "meaning": "Referee",
+          "audio": "audio/hakem.mp3"
         },
         {
           "term": "La3ib",
           "arabic": "لاعب",
-          "meaning": "Player"
+          "meaning": "Player",
+          "audio": "audio/la3ib.mp3"
         },
         {
           "term": "Fariq",
           "arabic": "فريق",
-          "meaning": "Team"
+          "meaning": "Team",
+          "audio": "audio/fariq.mp3"
         },
         {
           "term": "Match",
           "arabic": "ماتش",
-          "meaning": "Match"
+          "meaning": "Match",
+          "audio": "audio/match.mp3"
         },
         {
           "term": "Raqm",
           "arabic": "رقم",
-          "meaning": "Score"
+          "meaning": "Score",
+          "audio": "audio/raqm.mp3"
         },
         {
           "term": "Tqniya",
           "arabic": "تقنية",
-          "meaning": "Technique"
+          "meaning": "Technique",
+          "audio": "audio/tqniya.mp3"
         },
         {
           "term": "Tamrin",
           "arabic": "تمرين",
-          "meaning": "Exercise"
+          "meaning": "Exercise",
+          "audio": "audio/tamrin.mp3"
         }
       ]
     },
@@ -3191,52 +3777,62 @@
         {
           "term": "Musiqa",
           "arabic": "موسيقى",
-          "meaning": "Music"
+          "meaning": "Music",
+          "audio": "audio/musiqa.mp3"
         },
         {
           "term": "Ughnia",
           "arabic": "أغنية",
-          "meaning": "Song"
+          "meaning": "Song",
+          "audio": "audio/ughnia.mp3"
         },
         {
           "term": "3oud",
           "arabic": "عود",
-          "meaning": "Oud"
+          "meaning": "Oud",
+          "audio": "audio/3oud.mp3"
         },
         {
           "term": "Derbouka",
           "arabic": "دربوكة",
-          "meaning": "Drum"
+          "meaning": "Drum",
+          "audio": "audio/derbouka.mp3"
         },
         {
           "term": "Qanun",
           "arabic": "قانون",
-          "meaning": "Qanun (zither)"
+          "meaning": "Qanun (zither)",
+          "audio": "audio/qanun.mp3"
         },
         {
           "term": "Violin",
           "arabic": "فيولين",
-          "meaning": "Violin"
+          "meaning": "Violin",
+          "audio": "audio/violin.mp3"
         },
         {
           "term": "Piano",
           "arabic": "بيانو",
-          "meaning": "Piano"
+          "meaning": "Piano",
+          "audio": "audio/piano.mp3"
         },
         {
           "term": "Nay",
           "arabic": "ناي",
-          "meaning": "Flute"
+          "meaning": "Flute",
+          "audio": "audio/nay.mp3"
         },
         {
           "term": "Bendir",
           "arabic": "بندير",
-          "meaning": "Frame Drum"
+          "meaning": "Frame Drum",
+          "audio": "audio/bendir.mp3"
         },
         {
           "term": "Rqs",
           "arabic": "رقص",
-          "meaning": "Dance"
+          "meaning": "Dance",
+          "audio": "audio/rqs.mp3"
         }
       ]
     },
@@ -3246,62 +3842,74 @@
         {
           "term": "Tiyab",
           "arabic": "طياب",
-          "meaning": "Cooking"
+          "meaning": "Cooking",
+          "audio": "audio/tiyab.mp3"
         },
         {
           "term": "Tenjra",
           "arabic": "طنجرة",
-          "meaning": "Pot"
+          "meaning": "Pot",
+          "audio": "audio/tenjra.mp3"
         },
         {
           "term": "Mqla",
           "arabic": "مقلى",
-          "meaning": "Pan"
+          "meaning": "Pan",
+          "audio": "audio/mqla.mp3"
         },
         {
           "term": "Fourn",
           "arabic": "فرن",
-          "meaning": "Oven"
+          "meaning": "Oven",
+          "audio": "audio/fourn.mp3"
         },
         {
           "term": "Mus",
           "arabic": "موس",
-          "meaning": "Knife"
+          "meaning": "Knife",
+          "audio": "audio/mus.mp3"
         },
         {
           "term": "M3lqa",
           "arabic": "معلقة",
-          "meaning": "Spoon"
+          "meaning": "Spoon",
+          "audio": "audio/m3lqa.mp3"
         },
         {
           "term": "Furchita",
           "arabic": "فرشيطة",
-          "meaning": "Fork"
+          "meaning": "Fork",
+          "audio": "audio/furchita.mp3"
         },
         {
           "term": "Tbsil",
           "arabic": "طبسيل",
-          "meaning": "Plate"
+          "meaning": "Plate",
+          "audio": "audio/tbsil.mp3"
         },
         {
           "term": "Tajin",
           "arabic": "طاجين",
-          "meaning": "Tagine"
+          "meaning": "Tagine",
+          "audio": "audio/tajin.mp3"
         },
         {
           "term": "Bhar",
           "arabic": "بهار",
-          "meaning": "Spices"
+          "meaning": "Spices",
+          "audio": "audio/bhar.mp3"
         },
         {
           "term": "Zit",
           "arabic": "زيت",
-          "meaning": "Oil"
+          "meaning": "Oil",
+          "audio": "audio/zit.mp3"
         },
         {
           "term": "Tqtia3",
           "arabic": "تقطيع",
-          "meaning": "Cutting"
+          "meaning": "Cutting",
+          "audio": "audio/tqtia3.mp3"
         }
       ]
     },
@@ -3311,62 +3919,74 @@
         {
           "term": "Safar",
           "arabic": "سفر",
-          "meaning": "Travel"
+          "meaning": "Travel",
+          "audio": "audio/safar.mp3"
         },
         {
           "term": "Passport",
           "arabic": "باسبور",
-          "meaning": "Passport"
+          "meaning": "Passport",
+          "audio": "audio/passport.mp3"
         },
         {
           "term": "Visa",
           "arabic": "فيزا",
-          "meaning": "Visa"
+          "meaning": "Visa",
+          "audio": "audio/visa.mp3"
         },
         {
           "term": "Hotel",
           "arabic": "أوتيل",
-          "meaning": "Hotel"
+          "meaning": "Hotel",
+          "audio": "audio/hotel.mp3"
         },
         {
           "term": "Riad",
           "arabic": "رياض",
-          "meaning": "Traditional House"
+          "meaning": "Traditional House",
+          "audio": "audio/riad.mp3"
         },
         {
           "term": "Reservation",
           "arabic": "ريزيرفاسيون",
-          "meaning": "Reservation"
+          "meaning": "Reservation",
+          "audio": "audio/reservation.mp3"
         },
         {
           "term": "Guide",
           "arabic": "گيد",
-          "meaning": "Guide"
+          "meaning": "Guide",
+          "audio": "audio/guide.mp3"
         },
         {
           "term": "Souk",
           "arabic": "سوق",
-          "meaning": "Market"
+          "meaning": "Market",
+          "audio": "audio/souk.mp3"
         },
         {
           "term": "Medina",
           "arabic": "مدينة",
-          "meaning": "Old City"
+          "meaning": "Old City",
+          "audio": "audio/medina.mp3"
         },
         {
           "term": "Plage",
           "arabic": "بلاج",
-          "meaning": "Beach"
+          "meaning": "Beach",
+          "audio": "audio/plage.mp3"
         },
         {
           "term": "Matar",
           "arabic": "مطار",
-          "meaning": "Airport"
+          "meaning": "Airport",
+          "audio": "audio/matar.mp3"
         },
         {
           "term": "Mahatta",
           "arabic": "محطة",
-          "meaning": "Station"
+          "meaning": "Station",
+          "audio": "audio/mahatta.mp3"
         }
       ]
     },
@@ -3376,62 +3996,74 @@
         {
           "term": "Shjer",
           "arabic": "شجر",
-          "meaning": "Tree"
+          "meaning": "Tree",
+          "audio": "audio/shjer.mp3"
         },
         {
           "term": "Werd",
           "arabic": "ورد",
-          "meaning": "Flower"
+          "meaning": "Flower",
+          "audio": "audio/werd.mp3"
         },
         {
           "term": "Zra3",
           "arabic": "زرع",
-          "meaning": "Plant/Crop"
+          "meaning": "Plant/Crop",
+          "audio": "audio/zra3.mp3"
         },
         {
           "term": "Fellah",
           "arabic": "فلاح",
-          "meaning": "Farmer"
+          "meaning": "Farmer",
+          "audio": "audio/fellah.mp3"
         },
         {
           "term": "Ard",
           "arabic": "أرض",
-          "meaning": "Land/Soil"
+          "meaning": "Land/Soil",
+          "audio": "audio/ard.mp3"
         },
         {
           "term": "Zitun",
           "arabic": "زيتون",
-          "meaning": "Olive"
+          "meaning": "Olive",
+          "audio": "audio/zitun.mp3"
         },
         {
           "term": "Khudra",
           "arabic": "خضرة",
-          "meaning": "Vegetables"
+          "meaning": "Vegetables",
+          "audio": "audio/khudra.mp3"
         },
         {
           "term": "Fakiha",
           "arabic": "فاكهة",
-          "meaning": "Fruit"
+          "meaning": "Fruit",
+          "audio": "audio/fakiha.mp3"
         },
         {
           "term": "Sqi",
           "arabic": "سقي",
-          "meaning": "Irrigation"
+          "meaning": "Irrigation",
+          "audio": "audio/sqi.mp3"
         },
         {
           "term": "Jnina",
           "arabic": "جنينة",
-          "meaning": "Garden"
+          "meaning": "Garden",
+          "audio": "audio/jnina.mp3"
         },
         {
           "term": "Hsad",
           "arabic": "حصاد",
-          "meaning": "Harvest"
+          "meaning": "Harvest",
+          "audio": "audio/hsad.mp3"
         },
         {
           "term": "Bstan",
           "arabic": "بستان",
-          "meaning": "Orchard"
+          "meaning": "Orchard",
+          "audio": "audio/bstan.mp3"
         }
       ]
     },
@@ -3441,62 +4073,74 @@
         {
           "term": "Ijtima3",
           "arabic": "إجتماع",
-          "meaning": "Meeting"
+          "meaning": "Meeting",
+          "audio": "audio/ijtima3.mp3"
         },
         {
           "term": "Chrika",
           "arabic": "شريكة",
-          "meaning": "Company"
+          "meaning": "Company",
+          "audio": "audio/chrika.mp3"
         },
         {
           "term": "Mudir",
           "arabic": "مدير",
-          "meaning": "Manager"
+          "meaning": "Manager",
+          "audio": "audio/mudir.mp3"
         },
         {
           "term": "Muw3id",
           "arabic": "موعد",
-          "meaning": "Appointment"
+          "meaning": "Appointment",
+          "audio": "audio/muw3id.mp3"
         },
         {
           "term": "3qd",
           "arabic": "عقد",
-          "meaning": "Contract"
+          "meaning": "Contract",
+          "audio": "audio/3qd.mp3"
         },
         {
           "term": "Maktab",
           "arabic": "مكتب",
-          "meaning": "Office"
+          "meaning": "Office",
+          "audio": "audio/maktab.mp3"
         },
         {
           "term": "Muw6af",
           "arabic": "موظف",
-          "meaning": "Employee"
+          "meaning": "Employee",
+          "audio": "audio/muw6af.mp3"
         },
         {
           "term": "Tawqit",
           "arabic": "توقيت",
-          "meaning": "Schedule"
+          "meaning": "Schedule",
+          "audio": "audio/tawqit.mp3"
         },
         {
           "term": "Mushru3",
           "arabic": "مشروع",
-          "meaning": "Project"
+          "meaning": "Project",
+          "audio": "audio/mushru3.mp3"
         },
         {
           "term": "Taqrir",
           "arabic": "تقرير",
-          "meaning": "Report"
+          "meaning": "Report",
+          "audio": "audio/taqrir.mp3"
         },
         {
           "term": "Zbuun",
           "arabic": "زبون",
-          "meaning": "Client"
+          "meaning": "Client",
+          "audio": "audio/zbuun.mp3"
         },
         {
           "term": "Rbeh",
           "arabic": "ربح",
-          "meaning": "Profit"
+          "meaning": "Profit",
+          "audio": "audio/rbeh.mp3"
         }
       ]
     },
@@ -3506,62 +4150,74 @@
         {
           "term": "Ryadiyat",
           "arabic": "رياضيات",
-          "meaning": "Mathematics"
+          "meaning": "Mathematics",
+          "audio": "audio/ryadiyat.mp3"
         },
         {
           "term": "3ulum",
           "arabic": "علوم",
-          "meaning": "Science"
+          "meaning": "Science",
+          "audio": "audio/3ulum.mp3"
         },
         {
           "term": "Tarikh",
           "arabic": "تاريخ",
-          "meaning": "History"
+          "meaning": "History",
+          "audio": "audio/tarikh.mp3"
         },
         {
           "term": "Jughrafya",
           "arabic": "جغرافية",
-          "meaning": "Geography"
+          "meaning": "Geography",
+          "audio": "audio/jughrafya.mp3"
         },
         {
           "term": "Lugha",
           "arabic": "لغة",
-          "meaning": "Language"
+          "meaning": "Language",
+          "audio": "audio/lugha.mp3"
         },
         {
           "term": "Adab",
           "arabic": "أدب",
-          "meaning": "Literature"
+          "meaning": "Literature",
+          "audio": "audio/adab.mp3"
         },
         {
           "term": "Fann",
           "arabic": "فن",
-          "meaning": "Art"
+          "meaning": "Art",
+          "audio": "audio/fann.mp3"
         },
         {
           "term": "Riada",
           "arabic": "رياضة",
-          "meaning": "Physical Education"
+          "meaning": "Physical Education",
+          "audio": "audio/riada.mp3"
         },
         {
           "term": "Fizya2",
           "arabic": "فيزياء",
-          "meaning": "Physics"
+          "meaning": "Physics",
+          "audio": "audio/fizya2.mp3"
         },
         {
           "term": "Kimya2",
           "arabic": "كيمياء",
-          "meaning": "Chemistry"
+          "meaning": "Chemistry",
+          "audio": "audio/kimya2.mp3"
         },
         {
           "term": "Islamiyat",
           "arabic": "إسلاميات",
-          "meaning": "Islamic Studies"
+          "meaning": "Islamic Studies",
+          "audio": "audio/islamiyat.mp3"
         },
         {
           "term": "Informatik",
           "arabic": "إنفورماتيك",
-          "meaning": "Computer Science"
+          "meaning": "Computer Science",
+          "audio": "audio/informatik.mp3"
         }
       ]
     },
@@ -3571,62 +4227,74 @@
         {
           "term": "Hmer",
           "arabic": "حمر",
-          "meaning": "Red"
+          "meaning": "Red",
+          "audio": "audio/hmer.mp3"
         },
         {
           "term": "Zreq",
           "arabic": "زرق",
-          "meaning": "Blue"
+          "meaning": "Blue",
+          "audio": "audio/zreq.mp3"
         },
         {
           "term": "Khder",
           "arabic": "خضر",
-          "meaning": "Green"
+          "meaning": "Green",
+          "audio": "audio/khder.mp3"
         },
         {
           "term": "Sfer",
           "arabic": "صفر",
-          "meaning": "Yellow"
+          "meaning": "Yellow",
+          "audio": "audio/sfer.mp3"
         },
         {
           "term": "Byed",
           "arabic": "بيض",
-          "meaning": "White"
+          "meaning": "White",
+          "audio": "audio/byed.mp3"
         },
         {
           "term": "Khel",
           "arabic": "كحل",
-          "meaning": "Black"
+          "meaning": "Black",
+          "audio": "audio/khel.mp3"
         },
         {
           "term": "Qhwi",
           "arabic": "قهوي",
-          "meaning": "Brown"
+          "meaning": "Brown",
+          "audio": "audio/qhwi.mp3"
         },
         {
           "term": "Rmadi",
           "arabic": "رمادي",
-          "meaning": "Gray"
+          "meaning": "Gray",
+          "audio": "audio/rmadi.mp3"
         },
         {
           "term": "Mnaqesh",
           "arabic": "منقش",
-          "meaning": "Patterned"
+          "meaning": "Patterned",
+          "audio": "audio/mnaqesh.mp3"
         },
         {
           "term": "Mkhtet",
           "arabic": "مخطط",
-          "meaning": "Striped"
+          "meaning": "Striped",
+          "audio": "audio/mkhtet.mp3"
         },
         {
           "term": "Mbeqe3",
           "arabic": "مبقع",
-          "meaning": "Spotted"
+          "meaning": "Spotted",
+          "audio": "audio/mbeqe3.mp3"
         },
         {
           "term": "Mzyen",
           "arabic": "مزين",
-          "meaning": "Decorated"
+          "meaning": "Decorated",
+          "audio": "audio/mzyen.mp3"
         }
       ]
     },
@@ -3636,62 +4304,74 @@
         {
           "term": "3id",
           "arabic": "عيد",
-          "meaning": "Holiday/Festival"
+          "meaning": "Holiday/Festival",
+          "audio": "audio/3id.mp3"
         },
         {
           "term": "3ers",
           "arabic": "عرس",
-          "meaning": "Wedding"
+          "meaning": "Wedding",
+          "audio": "audio/3ers.mp3"
         },
         {
           "term": "Zfaf",
           "arabic": "زفاف",
-          "meaning": "Marriage Ceremony"
+          "meaning": "Marriage Ceremony",
+          "audio": "audio/zfaf.mp3"
         },
         {
           "term": "Hafla",
           "arabic": "حفلة",
-          "meaning": "Party"
+          "meaning": "Party",
+          "audio": "audio/hafla.mp3"
         },
         {
           "term": "Ramadan",
           "arabic": "رمضان",
-          "meaning": "Ramadan"
+          "meaning": "Ramadan",
+          "audio": "audio/ramadan.mp3"
         },
         {
           "term": "3id Lkbir",
           "arabic": "عيد الكبير",
-          "meaning": "Eid Al-Adha"
+          "meaning": "Eid Al-Adha",
+          "audio": "audio/3id_lkbir.mp3"
         },
         {
           "term": "3id Sghir",
           "arabic": "عيد الصغير",
-          "meaning": "Eid Al-Fitr"
+          "meaning": "Eid Al-Fitr",
+          "audio": "audio/3id_sghir.mp3"
         },
         {
           "term": "Milad",
           "arabic": "ميلاد",
-          "meaning": "Birthday"
+          "meaning": "Birthday",
+          "audio": "audio/milad.mp3"
         },
         {
           "term": "Mubarka",
           "arabic": "مباركة",
-          "meaning": "Congratulations"
+          "meaning": "Congratulations",
+          "audio": "audio/mubarka.mp3"
         },
         {
           "term": "Hdiya",
           "arabic": "هدية",
-          "meaning": "Gift"
+          "meaning": "Gift",
+          "audio": "audio/hdiya.mp3"
         },
         {
           "term": "Da3wa",
           "arabic": "دعوة",
-          "meaning": "Invitation"
+          "meaning": "Invitation",
+          "audio": "audio/da3wa.mp3"
         },
         {
           "term": "Ihtifal",
           "arabic": "إحتفال",
-          "meaning": "Celebration"
+          "meaning": "Celebration",
+          "audio": "audio/ihtifal.mp3"
         }
       ]
     },
@@ -3701,62 +4381,74 @@
         {
           "term": "Jedd",
           "arabic": "جد",
-          "meaning": "Grandfather"
+          "meaning": "Grandfather",
+          "audio": "audio/jedd.mp3"
         },
         {
           "term": "Jedda",
           "arabic": "جدة",
-          "meaning": "Grandmother"
+          "meaning": "Grandmother",
+          "audio": "audio/jedda.mp3"
         },
         {
           "term": "3emm",
           "arabic": "عم",
-          "meaning": "Paternal Uncle"
+          "meaning": "Paternal Uncle",
+          "audio": "audio/3emm.mp3"
         },
         {
           "term": "3emma",
           "arabic": "عمة",
-          "meaning": "Paternal Aunt"
+          "meaning": "Paternal Aunt",
+          "audio": "audio/3emma.mp3"
         },
         {
           "term": "Khal",
           "arabic": "خال",
-          "meaning": "Maternal Uncle"
+          "meaning": "Maternal Uncle",
+          "audio": "audio/khal.mp3"
         },
         {
           "term": "Khala",
           "arabic": "خالة",
-          "meaning": "Maternal Aunt"
+          "meaning": "Maternal Aunt",
+          "audio": "audio/khala.mp3"
         },
         {
           "term": "Weld L3emm",
           "arabic": "ولد العم",
-          "meaning": "Male Cousin (Paternal)"
+          "meaning": "Male Cousin (Paternal)",
+          "audio": "audio/weld_l3emm.mp3"
         },
         {
           "term": "Bent L3emm",
           "arabic": "بنت العم",
-          "meaning": "Female Cousin (Paternal)"
+          "meaning": "Female Cousin (Paternal)",
+          "audio": "audio/bent_l3emm.mp3"
         },
         {
           "term": "Weld Lkhal",
           "arabic": "ولد الخال",
-          "meaning": "Male Cousin (Maternal)"
+          "meaning": "Male Cousin (Maternal)",
+          "audio": "audio/weld_lkhal.mp3"
         },
         {
           "term": "Bent Lkhal",
           "arabic": "بنت الخال",
-          "meaning": "Female Cousin (Maternal)"
+          "meaning": "Female Cousin (Maternal)",
+          "audio": "audio/bent_lkhal.mp3"
         },
         {
           "term": "Nsib",
           "arabic": "نسيب",
-          "meaning": "Brother-in-law"
+          "meaning": "Brother-in-law",
+          "audio": "audio/nsib.mp3"
         },
         {
           "term": "Nsiba",
           "arabic": "نسيبة",
-          "meaning": "Sister-in-law"
+          "meaning": "Sister-in-law",
+          "audio": "audio/nsiba.mp3"
         }
       ]
     },
@@ -3766,62 +4458,74 @@
         {
           "term": "Sifr",
           "arabic": "صفر",
-          "meaning": "Zero"
+          "meaning": "Zero",
+          "audio": "audio/sifr.mp3"
         },
         {
           "term": "Wahd",
           "arabic": "واحد",
-          "meaning": "One"
+          "meaning": "One",
+          "audio": "audio/wahd.mp3"
         },
         {
           "term": "Juj",
           "arabic": "جوج",
-          "meaning": "Two"
+          "meaning": "Two",
+          "audio": "audio/juj.mp3"
         },
         {
           "term": "Tlata",
           "arabic": "تلاتة",
-          "meaning": "Three"
+          "meaning": "Three",
+          "audio": "audio/tlata.mp3"
         },
         {
           "term": "Rb3a",
           "arabic": "ربعة",
-          "meaning": "Four"
+          "meaning": "Four",
+          "audio": "audio/rb3a.mp3"
         },
         {
           "term": "Khmsa",
           "arabic": "خمسة",
-          "meaning": "Five"
+          "meaning": "Five",
+          "audio": "audio/khmsa.mp3"
         },
         {
           "term": "Mya",
           "arabic": "مية",
-          "meaning": "Hundred"
+          "meaning": "Hundred",
+          "audio": "audio/mya.mp3"
         },
         {
           "term": "Alf",
           "arabic": "ألف",
-          "meaning": "Thousand"
+          "meaning": "Thousand",
+          "audio": "audio/alf.mp3"
         },
         {
           "term": "Zayed",
           "arabic": "زايد",
-          "meaning": "Plus"
+          "meaning": "Plus",
+          "audio": "audio/zayed.mp3"
         },
         {
           "term": "Naqes",
           "arabic": "ناقص",
-          "meaning": "Minus"
+          "meaning": "Minus",
+          "audio": "audio/naqes.mp3"
         },
         {
           "term": "Fi",
           "arabic": "في",
-          "meaning": "Multiply"
+          "meaning": "Multiply",
+          "audio": "audio/fi.mp3"
         },
         {
           "term": "3la",
           "arabic": "على",
-          "meaning": "Divide"
+          "meaning": "Divide",
+          "audio": "audio/3la.mp3"
         }
       ]
     },
@@ -3831,62 +4535,74 @@
         {
           "term": "Tbib",
           "arabic": "طبيب",
-          "meaning": "Doctor"
+          "meaning": "Doctor",
+          "audio": "audio/tbib.mp3"
         },
         {
           "term": "Ustad",
           "arabic": "أستاذ",
-          "meaning": "Teacher"
+          "meaning": "Teacher",
+          "audio": "audio/ustad.mp3"
         },
         {
           "term": "Muhami",
           "arabic": "محامي",
-          "meaning": "Lawyer"
+          "meaning": "Lawyer",
+          "audio": "audio/muhami.mp3"
         },
         {
           "term": "Muhandis",
           "arabic": "مهندس",
-          "meaning": "Engineer"
+          "meaning": "Engineer",
+          "audio": "audio/muhandis.mp3"
         },
         {
           "term": "Fellah",
           "arabic": "فلاح",
-          "meaning": "Farmer"
+          "meaning": "Farmer",
+          "audio": "audio/fellah.mp3"
         },
         {
           "term": "Tager",
           "arabic": "تاجر",
-          "meaning": "Merchant"
+          "meaning": "Merchant",
+          "audio": "audio/tager.mp3"
         },
         {
           "term": "Khbaz",
           "arabic": "خباز",
-          "meaning": "Baker"
+          "meaning": "Baker",
+          "audio": "audio/khbaz.mp3"
         },
         {
           "term": "Nejjar",
           "arabic": "نجار",
-          "meaning": "Carpenter"
+          "meaning": "Carpenter",
+          "audio": "audio/nejjar.mp3"
         },
         {
           "term": "Bulis",
           "arabic": "بوليس",
-          "meaning": "Police Officer"
+          "meaning": "Police Officer",
+          "audio": "audio/bulis.mp3"
         },
         {
           "term": "Kheddam",
           "arabic": "خدام",
-          "meaning": "Worker"
+          "meaning": "Worker",
+          "audio": "audio/kheddam.mp3"
         },
         {
           "term": "Mualim",
           "arabic": "معلم",
-          "meaning": "Master/Expert"
+          "meaning": "Master/Expert",
+          "audio": "audio/mualim.mp3"
         },
         {
           "term": "Sayiq",
           "arabic": "سائق",
-          "meaning": "Driver"
+          "meaning": "Driver",
+          "audio": "audio/sayiq.mp3"
         }
       ]
     },
@@ -3896,77 +4612,92 @@
         {
           "term": "Ordinateur",
           "arabic": "أورديناتور",
-          "meaning": "Computer"
+          "meaning": "Computer",
+          "audio": "audio/ordinateur.mp3"
         },
         {
           "term": "Tilifun",
           "arabic": "تليفون",
-          "meaning": "Phone"
+          "meaning": "Phone",
+          "audio": "audio/tilifun.mp3"
         },
         {
           "term": "Tlfaza",
           "arabic": "تلفازة",
-          "meaning": "Television"
+          "meaning": "Television",
+          "audio": "audio/tlfaza.mp3"
         },
         {
           "term": "Internet",
           "arabic": "إنترنت",
-          "meaning": "Internet"
+          "meaning": "Internet",
+          "audio": "audio/internet.mp3"
         },
         {
           "term": "WiFi",
           "arabic": "واي فاي",
-          "meaning": "WiFi"
+          "meaning": "WiFi",
+          "audio": "audio/wifi.mp3"
         },
         {
           "term": "Kamera",
           "arabic": "كاميرا",
-          "meaning": "Camera"
+          "meaning": "Camera",
+          "audio": "audio/kamera.mp3"
         },
         {
           "term": "Charger",
           "arabic": "شارجر",
-          "meaning": "Charger"
+          "meaning": "Charger",
+          "audio": "audio/charger.mp3"
         },
         {
           "term": "Battery",
           "arabic": "باتري",
-          "meaning": "Battery"
+          "meaning": "Battery",
+          "audio": "audio/battery.mp3"
         },
         {
           "term": "Screen",
           "arabic": "سكرين",
-          "meaning": "Screen"
+          "meaning": "Screen",
+          "audio": "audio/screen.mp3"
         },
         {
           "term": "Keyboard",
           "arabic": "كيبورد",
-          "meaning": "Keyboard"
+          "meaning": "Keyboard",
+          "audio": "audio/keyboard.mp3"
         },
         {
           "term": "Mouse",
           "arabic": "ماوس",
-          "meaning": "Mouse"
+          "meaning": "Mouse",
+          "audio": "audio/mouse.mp3"
         },
         {
           "term": "Printer",
           "arabic": "برانتر",
-          "meaning": "Printer"
+          "meaning": "Printer",
+          "audio": "audio/printer.mp3"
         },
         {
           "term": "Download",
           "arabic": "داونلود",
-          "meaning": "Download"
+          "meaning": "Download",
+          "audio": "audio/download.mp3"
         },
         {
           "term": "Upload",
           "arabic": "رفع",
-          "meaning": "Upload (borrowed from English; Arabic root 'rafaʿ' means 'to lift/raise')"
+          "meaning": "Upload (borrowed from English; Arabic root 'rafaʿ' means 'to lift/raise')",
+          "audio": "audio/upload.mp3"
         },
         {
           "term": "Email",
           "arabic": "إيميل",
-          "meaning": "Email"
+          "meaning": "Email",
+          "audio": "audio/email.mp3"
         }
       ]
     },
@@ -3976,72 +4707,86 @@
         {
           "term": "Shems",
           "arabic": "شمس",
-          "meaning": "Sun"
+          "meaning": "Sun",
+          "audio": "audio/shems.mp3"
         },
         {
           "term": "Qmer",
           "arabic": "قمر",
-          "meaning": "Moon"
+          "meaning": "Moon",
+          "audio": "audio/qmer.mp3"
         },
         {
           "term": "Njoum",
           "arabic": "نجوم",
-          "meaning": "Stars"
+          "meaning": "Stars",
+          "audio": "audio/njoum.mp3"
         },
         {
           "term": "Shta",
           "arabic": "شتا",
-          "meaning": "Rain"
+          "meaning": "Rain",
+          "audio": "audio/shta.mp3"
         },
         {
           "term": "Telj",
           "arabic": "تلج",
-          "meaning": "Snow"
+          "meaning": "Snow",
+          "audio": "audio/telj.mp3"
         },
         {
           "term": "Rih",
           "arabic": "ريح",
-          "meaning": "Wind"
+          "meaning": "Wind",
+          "audio": "audio/rih.mp3"
         },
         {
           "term": "Ghama",
           "arabic": "غيمة",
-          "meaning": "Cloud"
+          "meaning": "Cloud",
+          "audio": "audio/ghama.mp3"
         },
         {
           "term": "Ra3d",
           "arabic": "رعد",
-          "meaning": "Thunder"
+          "meaning": "Thunder",
+          "audio": "audio/ra3d.mp3"
         },
         {
           "term": "Barq",
           "arabic": "برق",
-          "meaning": "Lightning"
+          "meaning": "Lightning",
+          "audio": "audio/barq.mp3"
         },
         {
           "term": "Skhun",
           "arabic": "سخون",
-          "meaning": "Hot"
+          "meaning": "Hot",
+          "audio": "audio/skhun.mp3"
         },
         {
           "term": "Bred",
           "arabic": "برد",
-          "meaning": "Cold"
+          "meaning": "Cold",
+          "audio": "audio/bred.mp3"
         },
         {
           "term": "M3ttar",
           "arabic": "ماطر",
-          "meaning": "Rainy"
+          "meaning": "Rainy",
+          "audio": "audio/m3ttar.mp3"
         },
         {
           "term": "Mshmsh",
           "arabic": "مشمش",
-          "meaning": "Sunny"
+          "meaning": "Sunny",
+          "audio": "audio/mshmsh.mp3"
         },
         {
           "term": "Mghim",
           "arabic": "مغيم",
-          "meaning": "Cloudy"
+          "meaning": "Cloudy",
+          "audio": "audio/mghim.mp3"
         }
       ]
     },
@@ -4051,72 +4796,86 @@
         {
           "term": "Sabun",
           "arabic": "صابون",
-          "meaning": "Soap"
+          "meaning": "Soap",
+          "audio": "audio/sabun.mp3"
         },
         {
           "term": "Shampo",
           "arabic": "شامبو",
-          "meaning": "Shampoo"
+          "meaning": "Shampoo",
+          "audio": "audio/shampo.mp3"
         },
         {
           "term": "Krim",
           "arabic": "كريم",
-          "meaning": "Cream"
+          "meaning": "Cream",
+          "audio": "audio/krim.mp3"
         },
         {
           "term": "M3sun",
           "arabic": "معصون",
-          "meaning": "Toothpaste"
+          "meaning": "Toothpaste",
+          "audio": "audio/m3sun.mp3"
         },
         {
           "term": "Forsha",
           "arabic": "فرشة",
-          "meaning": "Brush"
+          "meaning": "Brush",
+          "audio": "audio/forsha.mp3"
         },
         {
           "term": "M3suna",
           "arabic": "معصونة",
-          "meaning": "Toothbrush"
+          "meaning": "Toothbrush",
+          "audio": "audio/m3suna.mp3"
         },
         {
           "term": "Mghsel",
           "arabic": "مغسل",
-          "meaning": "Washbasin"
+          "meaning": "Washbasin",
+          "audio": "audio/mghsel.mp3"
         },
         {
           "term": "Dush",
           "arabic": "دوش",
-          "meaning": "Shower"
+          "meaning": "Shower",
+          "audio": "audio/dush.mp3"
         },
         {
           "term": "Hammam",
           "arabic": "حمام",
-          "meaning": "Bathroom"
+          "meaning": "Bathroom",
+          "audio": "audio/hammam.mp3"
         },
         {
           "term": "Mnafel",
           "arabic": "منفال",
-          "meaning": "Towel"
+          "meaning": "Towel",
+          "audio": "audio/mnafel.mp3"
         },
         {
           "term": "3tr",
           "arabic": "عطر",
-          "meaning": "Perfume"
+          "meaning": "Perfume",
+          "audio": "audio/3tr.mp3"
         },
         {
           "term": "M3dil",
           "arabic": "معادل",
-          "meaning": "Deodorant"
+          "meaning": "Deodorant",
+          "audio": "audio/m3dil.mp3"
         },
         {
           "term": "Kli",
           "arabic": "كلي",
-          "meaning": "Comb"
+          "meaning": "Comb",
+          "audio": "audio/kli.mp3"
         },
         {
           "term": "M3s",
           "arabic": "معص",
-          "meaning": "Wash"
+          "meaning": "Wash",
+          "audio": "audio/m3s.mp3"
         }
       ]
     },
@@ -4126,77 +4885,92 @@
         {
           "term": "Tbib",
           "arabic": "طبيب",
-          "meaning": "Doctor"
+          "meaning": "Doctor",
+          "audio": "audio/tbib.mp3"
         },
         {
           "term": "Sbitar",
           "arabic": "سبيطار",
-          "meaning": "Hospital"
+          "meaning": "Hospital",
+          "audio": "audio/sbitar.mp3"
         },
         {
           "term": "Dwa",
           "arabic": "دوا",
-          "meaning": "Medicine"
+          "meaning": "Medicine",
+          "audio": "audio/dwa.mp3"
         },
         {
           "term": "Pharmacy",
           "arabic": "فارماسي",
-          "meaning": "Pharmacy"
+          "meaning": "Pharmacy",
+          "audio": "audio/pharmacy.mp3"
         },
         {
           "term": "Mrid",
           "arabic": "مريض",
-          "meaning": "Sick"
+          "meaning": "Sick",
+          "audio": "audio/mrid.mp3"
         },
         {
           "term": "Wj3",
           "arabic": "وجع",
-          "meaning": "Pain"
+          "meaning": "Pain",
+          "audio": "audio/wj3.mp3"
         },
         {
           "term": "Hma",
           "arabic": "حمى",
-          "meaning": "Fever"
+          "meaning": "Fever",
+          "audio": "audio/hma.mp3"
         },
         {
           "term": "K3s",
           "arabic": "كعس",
-          "meaning": "Cough"
+          "meaning": "Cough",
+          "audio": "audio/k3s.mp3"
         },
         {
           "term": "Zlam",
           "arabic": "زلام",
-          "meaning": "Cold"
+          "meaning": "Cold",
+          "audio": "audio/zlam.mp3"
         },
         {
           "term": "M3da",
           "arabic": "معدة",
-          "meaning": "Stomach"
+          "meaning": "Stomach",
+          "audio": "audio/m3da.mp3"
         },
         {
           "term": "Qlb",
           "arabic": "قلب",
-          "meaning": "Heart"
+          "meaning": "Heart",
+          "audio": "audio/qlb.mp3"
         },
         {
           "term": "Dm",
           "arabic": "دم",
-          "meaning": "Blood"
+          "meaning": "Blood",
+          "audio": "audio/dm.mp3"
         },
         {
           "term": "3sab",
           "arabic": "عصاب",
-          "meaning": "Nerves"
+          "meaning": "Nerves",
+          "audio": "audio/3sab.mp3"
         },
         {
           "term": "3dam",
           "arabic": "عظام",
-          "meaning": "Bones"
+          "meaning": "Bones",
+          "audio": "audio/3dam.mp3"
         },
         {
           "term": "Jrd",
           "arabic": "جرد",
-          "meaning": "Skin"
+          "meaning": "Skin",
+          "audio": "audio/jrd.mp3"
         }
       ]
     },
@@ -4206,72 +4980,86 @@
         {
           "term": "Hkuma",
           "arabic": "حكومة",
-          "meaning": "Government"
+          "meaning": "Government",
+          "audio": "audio/hkuma.mp3"
         },
         {
           "term": "Qanun",
           "arabic": "قانون",
-          "meaning": "Law"
+          "meaning": "Law",
+          "audio": "audio/qanun.mp3"
         },
         {
           "term": "Mahkma",
           "arabic": "محكمة",
-          "meaning": "Court"
+          "meaning": "Court",
+          "audio": "audio/mahkma.mp3"
         },
         {
           "term": "Qadi",
           "arabic": "قاضي",
-          "meaning": "Judge"
+          "meaning": "Judge",
+          "audio": "audio/qadi.mp3"
         },
         {
           "term": "Muhami",
           "arabic": "محامي",
-          "meaning": "Lawyer"
+          "meaning": "Lawyer",
+          "audio": "audio/muhami.mp3"
         },
         {
           "term": "Jrm",
           "arabic": "جرم",
-          "meaning": "Crime"
+          "meaning": "Crime",
+          "audio": "audio/jrm.mp3"
         },
         {
           "term": "3qba",
           "arabic": "عقبة",
-          "meaning": "Punishment"
+          "meaning": "Punishment",
+          "audio": "audio/3qba.mp3"
         },
         {
           "term": "Haq",
           "arabic": "حق",
-          "meaning": "Right"
+          "meaning": "Right",
+          "audio": "audio/haq.mp3"
         },
         {
           "term": "Wajib",
           "arabic": "واجب",
-          "meaning": "Duty"
+          "meaning": "Duty",
+          "audio": "audio/wajib.mp3"
         },
         {
           "term": "Shahada",
           "arabic": "شهادة",
-          "meaning": "Testimony"
+          "meaning": "Testimony",
+          "audio": "audio/shahada.mp3"
         },
         {
           "term": "3hd",
           "arabic": "عهد",
-          "meaning": "Oath"
+          "meaning": "Oath",
+          "audio": "audio/3hd.mp3"
         },
         {
           "term": "Mlkya",
           "arabic": "ملكية",
-          "meaning": "Property"
+          "meaning": "Property",
+          "audio": "audio/mlkya.mp3"
         },
         {
           "term": "Wasiya",
           "arabic": "وصية",
-          "meaning": "Will"
+          "meaning": "Will",
+          "audio": "audio/wasiya.mp3"
         },
         {
           "term": "Ta3wid",
           "arabic": "تعويض",
-          "meaning": "Compensation"
+          "meaning": "Compensation",
+          "audio": "audio/ta3wid.mp3"
         }
       ]
     },
@@ -4281,92 +5069,110 @@
         {
           "term": "Tomobil",
           "arabic": "توموبيل",
-          "meaning": "Car"
+          "meaning": "Car",
+          "audio": "audio/tomobil.mp3"
         },
         {
           "term": "Qitar",
           "arabic": "قطار",
-          "meaning": "Train"
+          "meaning": "Train",
+          "audio": "audio/qitar.mp3"
         },
         {
           "term": "Bis",
           "arabic": "بيس",
-          "meaning": "Bus"
+          "meaning": "Bus",
+          "audio": "audio/bis.mp3"
         },
         {
           "term": "Taxi",
           "arabic": "تاكسي",
-          "meaning": "Taxi"
+          "meaning": "Taxi",
+          "audio": "audio/taxi.mp3"
         },
         {
           "term": "Tram",
           "arabic": "ترام",
-          "meaning": "Tram"
+          "meaning": "Tram",
+          "audio": "audio/tram.mp3"
         },
         {
           "term": "Bisiklit",
           "arabic": "بيسكليت",
-          "meaning": "Bicycle"
+          "meaning": "Bicycle",
+          "audio": "audio/bisiklit.mp3"
         },
         {
           "term": "Moto",
           "arabic": "موتو",
-          "meaning": "Motorcycle"
+          "meaning": "Motorcycle",
+          "audio": "audio/moto.mp3"
         },
         {
           "term": "Sayiq",
           "arabic": "سائق",
-          "meaning": "Driver"
+          "meaning": "Driver",
+          "audio": "audio/sayiq.mp3"
         },
         {
           "term": "Rakib",
           "arabic": "راكب",
-          "meaning": "Passenger"
+          "meaning": "Passenger",
+          "audio": "audio/rakib.mp3"
         },
         {
           "term": "Mahatta",
           "arabic": "محطة",
-          "meaning": "Station"
+          "meaning": "Station",
+          "audio": "audio/mahatta.mp3"
         },
         {
           "term": "Matar",
           "arabic": "مطار",
-          "meaning": "Airport"
+          "meaning": "Airport",
+          "audio": "audio/matar.mp3"
         },
         {
           "term": "Port",
           "arabic": "بورط",
-          "meaning": "Port"
+          "meaning": "Port",
+          "audio": "audio/port.mp3"
         },
         {
           "term": "Lissar",
           "arabic": "ليسار",
-          "meaning": "Left"
+          "meaning": "Left",
+          "audio": "audio/lissar.mp3"
         },
         {
           "term": "Limin",
           "arabic": "ليمين",
-          "meaning": "Right"
+          "meaning": "Right",
+          "audio": "audio/limin.mp3"
         },
         {
           "term": "Mstraight",
           "arabic": "مستريت",
-          "meaning": "Straight"
+          "meaning": "Straight",
+          "audio": "audio/mstraight.mp3"
         },
         {
           "term": "Dawr",
           "arabic": "دور",
-          "meaning": "Turn"
+          "meaning": "Turn",
+          "audio": "audio/dawr.mp3"
         },
         {
           "term": "Qrib",
           "arabic": "قريب",
-          "meaning": "Near"
+          "meaning": "Near",
+          "audio": "audio/qrib.mp3"
         },
         {
           "term": "B3id",
           "arabic": "بعيد",
-          "meaning": "Far"
+          "meaning": "Far",
+          "audio": "audio/b3id.mp3"
         }
       ]
     },
@@ -4376,77 +5182,92 @@
         {
           "term": "Allah",
           "arabic": "الله",
-          "meaning": "God"
+          "meaning": "God",
+          "audio": "audio/allah.mp3"
         },
         {
           "term": "Din",
           "arabic": "دين",
-          "meaning": "Religion"
+          "meaning": "Religion",
+          "audio": "audio/din.mp3"
         },
         {
           "term": "Islam",
           "arabic": "إسلام",
-          "meaning": "Islam"
+          "meaning": "Islam",
+          "audio": "audio/islam.mp3"
         },
         {
           "term": "Muslim",
           "arabic": "مسلم",
-          "meaning": "Muslim"
+          "meaning": "Muslim",
+          "audio": "audio/muslim.mp3"
         },
         {
           "term": "Quran",
           "arabic": "قرآن",
-          "meaning": "Quran"
+          "meaning": "Quran",
+          "audio": "audio/quran.mp3"
         },
         {
           "term": "Hadith",
           "arabic": "حديث",
-          "meaning": "Hadith"
+          "meaning": "Hadith",
+          "audio": "audio/hadith.mp3"
         },
         {
           "term": "Masjid",
           "arabic": "مسجد",
-          "meaning": "Mosque"
+          "meaning": "Mosque",
+          "audio": "audio/masjid.mp3"
         },
         {
           "term": "Imam",
           "arabic": "إمام",
-          "meaning": "Imam"
+          "meaning": "Imam",
+          "audio": "audio/imam.mp3"
         },
         {
           "term": "Salat",
           "arabic": "صلاة",
-          "meaning": "Prayer"
+          "meaning": "Prayer",
+          "audio": "audio/salat.mp3"
         },
         {
           "term": "Sawm",
           "arabic": "صوم",
-          "meaning": "Fasting"
+          "meaning": "Fasting",
+          "audio": "audio/sawm.mp3"
         },
         {
           "term": "Zakat",
           "arabic": "زكاة",
-          "meaning": "Charity"
+          "meaning": "Charity",
+          "audio": "audio/zakat.mp3"
         },
         {
           "term": "Hajj",
           "arabic": "حج",
-          "meaning": "Pilgrimage"
+          "meaning": "Pilgrimage",
+          "audio": "audio/hajj.mp3"
         },
         {
           "term": "Dua",
           "arabic": "دعاء",
-          "meaning": "Supplication"
+          "meaning": "Supplication",
+          "audio": "audio/dua.mp3"
         },
         {
           "term": "Baraka",
           "arabic": "بركة",
-          "meaning": "Blessing"
+          "meaning": "Blessing",
+          "audio": "audio/baraka.mp3"
         },
         {
           "term": "Rahma",
           "arabic": "رحمة",
-          "meaning": "Mercy"
+          "meaning": "Mercy",
+          "audio": "audio/rahma.mp3"
         }
       ]
     },
@@ -4456,77 +5277,92 @@
         {
           "term": "Facebook",
           "arabic": "فيسبوك",
-          "meaning": "Facebook"
+          "meaning": "Facebook",
+          "audio": "audio/facebook.mp3"
         },
         {
           "term": "Instagram",
           "arabic": "إنستغرام",
-          "meaning": "Instagram"
+          "meaning": "Instagram",
+          "audio": "audio/instagram.mp3"
         },
         {
           "term": "Twitter",
           "arabic": "تويتر",
-          "meaning": "Twitter"
+          "meaning": "Twitter",
+          "audio": "audio/twitter.mp3"
         },
         {
           "term": "WhatsApp",
           "arabic": "واتساب",
-          "meaning": "WhatsApp"
+          "meaning": "WhatsApp",
+          "audio": "audio/whatsapp.mp3"
         },
         {
           "term": "Snapchat",
           "arabic": "سناب شات",
-          "meaning": "Snapchat"
+          "meaning": "Snapchat",
+          "audio": "audio/snapchat.mp3"
         },
         {
           "term": "TikTok",
           "arabic": "تيك توك",
-          "meaning": "TikTok"
+          "meaning": "TikTok",
+          "audio": "audio/tiktok.mp3"
         },
         {
           "term": "Post",
           "arabic": "بوست",
-          "meaning": "Post"
+          "meaning": "Post",
+          "audio": "audio/post.mp3"
         },
         {
           "term": "Like",
           "arabic": "لايك",
-          "meaning": "Like"
+          "meaning": "Like",
+          "audio": "audio/like.mp3"
         },
         {
           "term": "Comment",
           "arabic": "كومون",
-          "meaning": "Comment"
+          "meaning": "Comment",
+          "audio": "audio/comment.mp3"
         },
         {
           "term": "Share",
           "arabic": "شار",
-          "meaning": "Share"
+          "meaning": "Share",
+          "audio": "audio/share.mp3"
         },
         {
           "term": "Story",
           "arabic": "ستوري",
-          "meaning": "Story"
+          "meaning": "Story",
+          "audio": "audio/story.mp3"
         },
         {
           "term": "Live",
           "arabic": "لايف",
-          "meaning": "Live"
+          "meaning": "Live",
+          "audio": "audio/live.mp3"
         },
         {
           "term": "Filter",
           "arabic": "فيلتر",
-          "meaning": "Filter"
+          "meaning": "Filter",
+          "audio": "audio/filter.mp3"
         },
         {
           "term": "Hashtag",
           "arabic": "هاشتاغ",
-          "meaning": "Hashtag"
+          "meaning": "Hashtag",
+          "audio": "audio/hashtag.mp3"
         },
         {
           "term": "Profile",
           "arabic": "بروفايل",
-          "meaning": "Profile"
+          "meaning": "Profile",
+          "audio": "audio/profile.mp3"
         }
       ]
     }
