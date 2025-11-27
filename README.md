@@ -20,3 +20,5 @@ Learning materials and datasets for Moroccan Arabic (Darija). The project bundle
 
 ## License
 No explicit license is provided yet. If you intend to reuse the material, please contact the repository owner.
+
+<!-- Last updated: 2025-01-27 -->
