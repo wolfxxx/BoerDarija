@@ -1,0 +1,94 @@
+Regenerating 43 audio files for Lesson 10 from Arabic text...
+This ensures correct pronunciation from the Arabic script.
+
+Removed existing file: t_tnin.mp3
+[1/43] t_tnin.mp3... (Arabic: التنين) ✓ (18435 bytes)
+Removed existing file: t_tlat.mp3
+[2/43] t_tlat.mp3... (Arabic: التلات) ✓ (13837 bytes)
+Removed existing file: l_arb3.mp3
+[3/43] l_arb3.mp3... (Arabic: الأربع) ✓ (16345 bytes)
+Removed existing file: l_khmis.mp3
+[4/43] l_khmis.mp3... (Arabic: الخميس) ✓ (17599 bytes)
+Removed existing file: j_jem3a.mp3
+[5/43] j_jem3a.mp3... (Arabic: الجمعة) ✓ (15509 bytes)
+Removed existing file: s_sebt.mp3
+[6/43] s_sebt.mp3... (Arabic: السبت) ✓ (14673 bytes)
+Removed existing file: l_7edd.mp3
+[7/43] l_7edd.mp3... (Arabic: الحد) ✓ (13419 bytes)
+Removed existing file: yanayr.mp3
+[8/43] yanayr.mp3... (Arabic: يناير) ✓ (15509 bytes)
+Removed existing file: febrayr.mp3
+[9/43] febrayr.mp3... (Arabic: فبراير) ✓ (16345 bytes)
+Removed existing file: mars.mp3
+[10/43] mars.mp3... (Arabic: مارس) ✓ (13837 bytes)
+Removed existing file: abril.mp3
+[11/43] abril.mp3... (Arabic: أبريل) ✓ (15509 bytes)
+Removed existing file: may.mp3
+[12/43] may.mp3... (Arabic: ماي) ✓ (14673 bytes)
+Removed existing file: yunyu.mp3
+[13/43] yunyu.mp3... (Arabic: يونيو) ✓ (14673 bytes)
+Removed existing file: yulyuz.mp3
+[14/43] yulyuz.mp3... (Arabic: يوليوز) ✓ (17599 bytes)
+Removed existing file: ghusht.mp3
+[15/43] ghusht.mp3... (Arabic: غشت) ✓ (13837 bytes)
+Removed existing file: shutanbir.mp3
+[16/43] shutanbir.mp3... (Arabic: شتنبر) ✓ (15509 bytes)
+Removed existing file: oktobr.mp3
+[17/43] oktobr.mp3... (Arabic: أكتوبر) ✓ (16345 bytes)
+Removed existing file: nuwanbir.mp3
+[18/43] nuwanbir.mp3... (Arabic: نونبر) ✓ (15509 bytes)
+Removed existing file: dujanbir.mp3
+[19/43] dujanbir.mp3... (Arabic: دجنبر) ✓ (17181 bytes)
+Removed existing file: l_we7da.mp3
+[20/43] l_we7da.mp3... (Arabic: الوحدة) ✓ (13837 bytes)
+Removed existing file: j_juj.mp3
+[21/43] j_juj.mp3... (Arabic: الجوج) ✓ (13837 bytes)
+Removed existing file: t_tlata.mp3
+[22/43] t_tlata.mp3... (Arabic: التلاتة) ✓ (15509 bytes)
+Removed existing file: r_rb3a.mp3
+[23/43] r_rb3a.mp3... (Arabic: الربعة) ✓ (13419 bytes)
+Removed existing file: l_khmsa.mp3
+[24/43] l_khmsa.mp3... (Arabic: الخمسة) ✓ (13419 bytes)
+Removed existing file: s_setta.mp3
+[25/43] s_setta.mp3... (Arabic: الستة) ✓ (12583 bytes)
+Removed existing file: t_tnash.mp3
+[26/43] t_tnash.mp3... (Arabic: الطناش) ✓ (15509 bytes)
+Removed existing file: u_rbe3.mp3
+[27/43] u_rbe3.mp3... (Arabic: و ربع) ✓ (17599 bytes)
+Removed existing file: u_nus.mp3
+[28/43] u_nus.mp3... (Arabic: و نص) ✓ (13837 bytes)
+Removed existing file: illa_rbe3.mp3
+[29/43] illa_rbe3.mp3... (Arabic: إلا ربع) ✓ (17181 bytes)
+Removed existing file: l_yum.mp3
+[30/43] l_yum.mp3... (Arabic: اليوم) ✓ (15509 bytes)
+Removed existing file: ghdda.mp3
+[31/43] ghdda.mp3... (Arabic: غدا) ✓ (13419 bytes)
+Removed existing file: l_bare7.mp3
+[32/43] l_bare7.mp3... (Arabic: البارح) ✓ (15509 bytes)
+Removed existing file: daba.mp3
+[33/43] daba.mp3... (Arabic: دابا) ✓ (13837 bytes)
+Removed existing file: mn_ba3d.mp3
+[34/43] mn_ba3d.mp3... (Arabic: من بعد) ✓ (14673 bytes)
+Removed existing file: simana.mp3
+[35/43] simana.mp3... (Arabic: سيمانة) ✓ (17181 bytes)
+Removed existing file: shher.mp3
+[36/43] shher.mp3... (Arabic: شهر) ✓ (13419 bytes)
+Removed existing file: 3am.mp3
+[37/43] 3am.mp3... (Arabic: عام) ✓ (12583 bytes)
+Removed existing file: sba7.mp3
+[38/43] sba7.mp3... (Arabic: صباح) ✓ (15509 bytes)
+Removed existing file: 3shiya.mp3
+[39/43] 3shiya.mp3... (Arabic: عشية) ✓ (14673 bytes)
+Removed existing file: lil.mp3
+[40/43] lil.mp3... (Arabic: ليل) ✓ (12583 bytes)
+Removed existing file: sh7al_hadi_f_s_sa3a.mp3
+[41/43] sh7al_hadi_f_s_sa3a.mp3... (Arabic: شحال هادي ف الساعة؟) ✓ (28884 bytes)
+Removed existing file: ashmn_nhar_l_yum.mp3
+[42/43] ashmn_nhar_l_yum.mp3... (Arabic: أشمن نهار اليوم؟) ✓ (22196 bytes)
+Removed existing file: imta_foqash.mp3
+[43/43] imta_foqash.mp3... (Arabic: إيمتى؟ / فوقاش؟) ✓ (29720 bytes)
+
+==================================================
+✅ Created/Regenerated: 43
+❌ Failed: 0
+Total: 43

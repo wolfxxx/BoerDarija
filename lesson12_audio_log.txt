@@ -1,0 +1,26 @@
+Regenerating 9 audio files for Lesson 12 from Arabic text...
+This ensures correct pronunciation from the Arabic script.
+
+Removed existing file: f.mp3
+[1/9] f.mp3... (Arabic: ف) ✓ (11747 bytes)
+Removed existing file: 3la.mp3
+[2/9] 3la.mp3... (Arabic: على) ✓ (10911 bytes)
+Removed existing file: t7t.mp3
+[3/9] t7t.mp3... (Arabic: تحت) ✓ (9658 bytes)
+Removed existing file: 7da.mp3
+[4/9] 7da.mp3... (Arabic: حدا) ✓ (14673 bytes)
+Removed existing file: qddam.mp3
+[5/9] qddam.mp3... (Arabic: قدام) ✓ (13419 bytes)
+Removed existing file: mura.mp3
+[6/9] mura.mp3... (Arabic: مورا) ✓ (13419 bytes)
+Removed existing file: bin.mp3
+[7/9] bin.mp3... (Arabic: بين) ✓ (13419 bytes)
+Removed existing file: u_w.mp3
+[8/9] u_w.mp3... (Arabic: و) ✓ (10911 bytes)
+Removed existing file: wella.mp3
+[9/9] wella.mp3... (Arabic: أو / ولا) ✓ (20525 bytes)
+
+==================================================
+✅ Created/Regenerated: 9
+❌ Failed: 0
+Total: 9

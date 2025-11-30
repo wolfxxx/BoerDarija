@@ -1,0 +1,40 @@
+Generating 33 audio files for Lesson 11...
+
+[1/33] 3a_ila.mp3... (already exists, skipping)
+[2/33] walidin.mp3... (already exists, skipping)
+[3/33] ab_baba.mp3... (already exists, skipping)
+[4/33] omm_mama.mp3... (already exists, skipping)
+[5/33] akh_khu.mp3... (already exists, skipping)
+[6/33] ukht_kht.mp3... (already exists, skipping)
+[7/33] khut.mp3... (already exists, skipping)
+[8/33] weld.mp3... (already exists, skipping)
+[9/33] bent.mp3... (already exists, skipping)
+[10/33] wlad_drari.mp3... (already exists, skipping)
+[11/33] rajl.mp3... (already exists, skipping)
+[12/33] mra.mp3... (already exists, skipping)
+[13/33] baba_ab_i.mp3... (already exists, skipping)
+[14/33] mama_omm_i.mp3... (already exists, skipping)
+[15/33] khu_ya.mp3... (already exists, skipping)
+[16/33] kh_ti.mp3... (already exists, skipping)
+[17/33] khu_k.mp3... (already exists, skipping)
+[18/33] mra_tu.mp3... (already exists, skipping)
+[19/33] rajl_ha.mp3... (already exists, skipping)
+[20/33] wlad_na.mp3... (already exists, skipping)
+[21/33] jedd.mp3... (already exists, skipping)
+[22/33] jedda.mp3... (already exists, skipping)
+[23/33] 3emm.mp3... (already exists, skipping)
+[24/33] 3emma.mp3... (already exists, skipping)
+[25/33] khal.mp3... (already exists, skipping)
+[26/33] khala.mp3... (already exists, skipping)
+[27/33] weld_l_3emm.mp3... (already exists, skipping)
+[28/33] bent_l_khala.mp3... (already exists, skipping)
+[29/33] wash_3ndek_khut.mp3... (Arabic: واش عندك خوت؟) ✓ (23032 bytes)
+[30/33] sh7al_3ndek_d_l_khut.mp3... (Arabic: شحال عندك د الخوت؟) ✓ (24286 bytes)
+[31/33] shnu_smit_bak.mp3... (Arabic: شنو سميت باك؟) ✓ (20107 bytes)
+[32/33] wash_mzewwej.mp3... (Arabic: واش مزوج؟) ✓ (20107 bytes)
+[33/33] wash_mzewwja.mp3... (Arabic: واش مزوجة؟) ✓ (18435 bytes)
+
+==================================================
+✅ Created: 33
+❌ Failed: 0
+Total: 33

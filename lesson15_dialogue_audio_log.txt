@@ -1,0 +1,14 @@
+Generating 7 dialogue audio files for Lesson 15...
+
+[1/7] dialogue_customer_1.mp3... (Arabic: السلام عليكم. واش عندك طاجين صغير؟) ✓ (46020 bytes)
+[2/7] dialogue_customer_2.mp3... (Arabic: زوين. بشحال هادا؟) ✓ (27212 bytes)
+[3/7] dialogue_customer_3.mp3... (Arabic: أووو، غالي بزاف! نقص شوية، عافاك.) ✓ (61485 bytes)
+[4/7] dialogue_customer_4.mp3... (Arabic: صافي، مزيان. بغيتو.) ✓ (35571 bytes)
+[5/7] dialogue_seller_1.mp3... (Arabic: و عليكم السلام. إييه، عندي هادا.) ✓ (39333 bytes)
+[6/7] dialogue_seller_2.mp3... (Arabic: هادا ب سبعين درهم.) ✓ (25958 bytes)
+[7/7] dialogue_seller_3.mp3... (Arabic: واخا. ستين درهم، أخير تمن.) ✓ (48110 bytes)
+
+==================================================
+✅ Created/Regenerated: 7
+❌ Failed: 0
+Total: 7

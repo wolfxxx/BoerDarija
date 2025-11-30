@@ -1,0 +1,35 @@
+Generating 28 audio files for Lesson 8...
+
+[1/28] kanakul.mp3... (Arabic: كاناكل) ✓ (13837 bytes)
+[2/28] katakul_m.mp3... (Arabic: كاتاكل) ✓ (13419 bytes)
+[3/28] katakli.mp3... (Arabic: كاتاكلي) ✓ (14673 bytes)
+[4/28] kayakul.mp3... (Arabic: كاياكل) ✓ (14673 bytes)
+[5/28] katakul_f.mp3... (Arabic: كاتاكل) ✓ (13837 bytes)
+[6/28] kanaklu.mp3... (Arabic: كاناكلو) ✓ (14673 bytes)
+[7/28] kataklu_pl.mp3... (Arabic: كاتاكلو) ✓ (14673 bytes)
+[8/28] kayaklu.mp3... (Arabic: كاياكلو) ✓ (17181 bytes)
+[9/28] kanshrb.mp3... (Arabic: كانشرب) ✓ (11747 bytes)
+[10/28] katshrb_m.mp3... (Arabic: كاتشرب) ✓ (13419 bytes)
+[11/28] katshrbi.mp3... (Arabic: كاتشربي) ✓ (16345 bytes)
+[12/28] kayishrb.mp3... (Arabic: كيشرب) ✓ (13837 bytes)
+[13/28] katshrb_f.mp3... (Arabic: كاتشرب) ✓ (14673 bytes)
+[14/28] kanshrbu.mp3... (Arabic: كانشربو) ✓ (13837 bytes)
+[15/28] katshrbu_pl.mp3... (Arabic: كاتشربو) ✓ (13837 bytes)
+[16/28] kayishrbu.mp3... (Arabic: كيشربو) ✓ (16345 bytes)
+[17/28] kanmshi.mp3... (already exists, skipping)
+[18/28] katmshi_m.mp3... (Arabic: كتمشي) ✓ (13419 bytes)
+[19/28] katmshi_f.mp3... (Arabic: كتمشي) ✓ (13419 bytes)
+[20/28] kayimshi.mp3... (Arabic: كيمشي) ✓ (11747 bytes)
+[21/28] katmshi_she.mp3... (Arabic: كتمشي) ✓ (11747 bytes)
+[22/28] kanmshiw.mp3... (Arabic: كانمشيو) ✓ (14673 bytes)
+[23/28] katmshiw_pl.mp3... (Arabic: كتمشيو) ✓ (17181 bytes)
+[24/28] kayimshiw.mp3... (Arabic: كيمشيو) ✓ (13419 bytes)
+[25/28] kanakul_l_khobz_kul_nhar.mp3... (Arabic: كاناكل الخبز كل نهار) ✓ (28884 bytes)
+[26/28] katshrb_atay_f_s_sba7.mp3... (Arabic: كاتشرب أتاي فالصباح) ✓ (28884 bytes)
+[27/28] kayimshiw_l_l_mdrasa.mp3... (Arabic: كيمشيو للمدرسة) ✓ (23868 bytes)
+[28/28] shnu_katshuf.mp3... (Arabic: شنو كاتشوف) ✓ (17599 bytes)
+
+==================================================
+✅ Created: 28
+❌ Failed: 0
+Total: 28

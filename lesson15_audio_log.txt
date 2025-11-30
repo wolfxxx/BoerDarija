@@ -1,0 +1,40 @@
+Regenerating 16 audio files for Lesson 15 from Arabic text...
+This ensures correct pronunciation from the Arabic script.
+
+Removed existing file: wash_3ndek.mp3
+[1/16] wash_3ndek.mp3... (Arabic: واش عندك...؟) ✓ (18435 bytes)
+Removed existing file: bghit.mp3
+[2/16] bghit.mp3... (Arabic: بغيت...) ✓ (15509 bytes)
+Removed existing file: bsh7al_hada.mp3
+[3/16] bsh7al_hada.mp3... (Arabic: بشحال هادا؟) ✓ (17181 bytes)
+Removed existing file: bsh7al_hadi.mp3
+[4/16] bsh7al_hadi.mp3... (Arabic: بشحال هادي؟) ✓ (23032 bytes)
+Removed existing file: flus.mp3
+[5/16] flus.mp3... (Arabic: فلوس) ✓ (13837 bytes)
+Removed existing file: derhem.mp3
+[6/16] derhem.mp3... (Arabic: درهم) ✓ (13837 bytes)
+Removed existing file: 3afak.mp3
+[7/16] 3afak.mp3... (Arabic: عافاك) ✓ (16345 bytes)
+Removed existing file: wakha_safi.mp3
+[8/16] wakha_safi.mp3... (Arabic: واخا / صافي) ✓ (25122 bytes)
+Removed existing file: ghali.mp3
+[9/16] ghali.mp3... (Arabic: غالي!) ✓ (13419 bytes)
+Removed existing file: ghali_bzzaf.mp3
+[10/16] ghali_bzzaf.mp3... (Arabic: غالي بزاف!) ✓ (20107 bytes)
+Removed existing file: mashi_ghali.mp3
+[11/16] mashi_ghali.mp3... (Arabic: ماشي غالي) ✓ (20525 bytes)
+Removed existing file: neqqs_shwiya_3afak.mp3
+[12/16] neqqs_shwiya_3afak.mp3... (Arabic: نقص شوية، عافاك) ✓ (27212 bytes)
+Removed existing file: akhir_taman.mp3
+[13/16] akhir_taman.mp3... (Arabic: أخير تمن؟) ✓ (19271 bytes)
+Removed existing file: dir_shi_taman_mzyan.mp3
+[14/16] dir_shi_taman_mzyan.mp3... (Arabic: دير شي تمن مزيان) ✓ (24286 bytes)
+Removed existing file: safi_bghitu.mp3
+[15/16] safi_bghitu.mp3... (Arabic: صافي، بغيتو) ✓ (21360 bytes)
+Removed existing file: la_shukran_khllih.mp3
+[16/16] la_shukran_khllih.mp3... (Arabic: لا، شكراً. / خليه) ✓ (31809 bytes)
+
+==================================================
+✅ Created/Regenerated: 16
+❌ Failed: 0
+Total: 16

@@ -1,0 +1,19 @@
+Generating 12 audio files for Lesson 9...
+
+[1/12] wash_hada_ktab.mp3... (Arabic: واش هادا كتاب؟) ✓ (21360 bytes)
+[2/12] wash_nta_mzyan.mp3... (Arabic: واش نتا مزيان؟) ✓ (23032 bytes)
+[3/12] wash_3ndek_l_flus.mp3... (already exists, skipping)
+[4/12] wash_katshrb_atay.mp3... (Arabic: واش كاتشرب أتاي؟) ✓ (23032 bytes)
+[5/12] iyyeh_ah.mp3... (Arabic: إييه / آه) ✓ (17599 bytes)
+[6/12] la.mp3... (already exists, skipping)
+[7/12] shnu_shnu_hada.mp3... (already exists, skipping)
+[8/12] shkun_shkun_nta.mp3... (already exists, skipping)
+[9/12] fin_fin_d_dar.mp3... (already exists, skipping)
+[10/12] imta_imta_katmshi.mp3... (already exists, skipping)
+[11/12] bsh7al_bsh7al_had_l_ktab.mp3... (already exists, skipping)
+[12/12] sh7al_sh7al_3ndek_dyal_l_flus.mp3... (already exists, skipping)
+
+==================================================
+✅ Created: 12
+❌ Failed: 0
+Total: 12

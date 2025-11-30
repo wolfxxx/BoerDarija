@@ -1,0 +1,23 @@
+Regenerating 15 audio files for Lesson 13 from Arabic text...
+This ensures correct pronunciation from the Arabic script.
+
+[1/15] ma_kanakulsh.mp3... (Arabic: ما كاناكُلش) ✓ (20107 bytes)
+[2/15] ma_katshrbsh.mp3... (Arabic: ما كاتشرَبش) ✓ (19271 bytes)
+[3/15] ma_kayimshish.mp3... (Arabic: ما كايمشيش) ✓ (17181 bytes)
+[4/15] ma_kanfhmush.mp3... (Arabic: ما كانفهموش) ✓ (19271 bytes)
+[5/15] ma_bghitsh.mp3... (Arabic: ما بغيتش) ✓ (15509 bytes)
+[6/15] hada_mashi_ktab.mp3... (Arabic: هادا ماشي كتاب) ✓ (23868 bytes)
+[7/15] hiya_mashi_ustada.mp3... (Arabic: هي ماشي أستاذة) ✓ (19271 bytes)
+[8/15] d_dar_mashi_kbira.mp3... (Arabic: الدار ماشي كبيرة) ✓ (22196 bytes)
+[9/15] huwa_mashi_fr7an.mp3... (Arabic: هو ماشي فرحان) ✓ (21360 bytes)
+[10/15] ma_3ndish.mp3... (Arabic: ما عنديش) ✓ (15509 bytes)
+[11/15] ma_3ndeksh.mp3... (Arabic: ما عندكش) ✓ (13419 bytes)
+[12/15] ma_3ndush.mp3... (Arabic: ما عندوش) ✓ (13837 bytes)
+[13/15] ma_3ndhash.mp3... (Arabic: ما عندهاش) ✓ (17181 bytes)
+[14/15] ma_3ndnash.mp3... (Arabic: ما عندناش) ✓ (16345 bytes)
+[15/15] ma_3ndhumsh.mp3... (Arabic: ما عندهُمش) ✓ (17599 bytes)
+
+==================================================
+✅ Created/Regenerated: 15
+❌ Failed: 0
+Total: 15

@@ -1,0 +1,22 @@
+Regenerating 14 audio files for Lesson 17 from Arabic text...
+This ensures correct pronunciation from the Arabic script.
+
+[1/14] kay3jbni_l_ktab.mp3... (Arabic: كايعجبني الكتاب) ✓ (22196 bytes)
+[2/14] kat3jbni_l_mdina.mp3... (Arabic: كاتعجبني المدينة) ✓ (25122 bytes)
+[3/14] kay3jbuni_l_ktub.mp3... (Arabic: كايعجبوني الكتوب) ✓ (25122 bytes)
+[4/14] kay3jbek_atay.mp3... (Arabic: كايعجبك أتاي) ✓ (21360 bytes)
+[5/14] kat3jbu_t_tomobil.mp3... (Arabic: كاتعجبه الطموبيل) ✓ (25958 bytes)
+[6/14] kay3jbha_ksksu.mp3... (Arabic: كايعجبها كسكسو) ✓ (24286 bytes)
+[7/14] kay3jbuna_l_wlad.mp3... (Arabic: كايعجبونا الولاد) ✓ (23032 bytes)
+[8/14] kay3jbni_nshrb_atay.mp3... (Arabic: كايعجبني نشرب أتاي) ✓ (28884 bytes)
+[9/14] kay3jbha_tqra_l_ktub.mp3... (Arabic: كايعجبها تقرا الكتوب) ✓ (29720 bytes)
+[10/14] wash_kay3jbek_tmshi_l_s_souq.mp3... (Arabic: واش كايعجبك تمشي للسوق؟) ✓ (35571 bytes)
+[11/14] ma_kat3jbnish_l_qhwa.mp3... (Arabic: ما كاتعجبنيش القهوة) ✓ (25958 bytes)
+[12/14] ma_kay3jbush_l_film.mp3... (Arabic: ما كايعجبوش الفيلم) ✓ (23868 bytes)
+[13/14] ma_kay3jbunash_had_t_tomobilat.mp3... (Arabic: ما كايعجبوناش هاد الطموبيلات) ✓ (37661 bytes)
+[14/14] ma_kay3jbnish_nkhruj_b_l_lil.mp3... (Arabic: ما كايعجبنيش نخرج بالليل) ✓ (31809 bytes)
+
+==================================================
+✅ Created/Regenerated: 14
+❌ Failed: 0
+Total: 14

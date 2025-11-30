@@ -1,0 +1,60 @@
+Regenerating 36 audio files for Lesson 16 from Arabic text...
+This ensures correct pronunciation from the Arabic script.
+
+Removed existing file: s_souq.mp3
+[1/36] s_souq.mp3... (Arabic: السوق) ✓ (13419 bytes)
+Removed existing file: l_7anut.mp3
+[2/36] l_7anut.mp3... (Arabic: الحانوت) ✓ (16345 bytes)
+Removed existing file: d_dar.mp3
+[3/36] d_dar.mp3... (Arabic: الدار) ✓ (13419 bytes)
+Removed existing file: l_qhwa.mp3
+[4/36] l_qhwa.mp3... (Arabic: القهوة) ✓ (13837 bytes)
+Removed existing file: r_restora.mp3
+[5/36] r_restora.mp3... (Arabic: الريسطورة) ✓ (19271 bytes)
+Removed existing file: l_m7atta.mp3
+[6/36] l_m7atta.mp3... (Arabic: المحطة) ✓ (14673 bytes)
+Removed existing file: l_banka.mp3
+[7/36] l_banka.mp3... (Arabic: البانكة) ✓ (14673 bytes)
+Removed existing file: l_farmasiyan.mp3
+[8/36] l_farmasiyan.mp3... (Arabic: الفارماسيان) ✓ (20107 bytes)
+Removed existing file: j_jam3.mp3
+[9/36] j_jam3.mp3... (Arabic: الجامع) ✓ (17181 bytes)
+Removed existing file: l_mdrasa.mp3
+[10/36] l_mdrasa.mp3... (Arabic: المدرسة) ✓ (15509 bytes)
+Removed existing file: l_otel.mp3
+[11/36] l_otel.mp3... (Arabic: لوطيل) ✓ (17599 bytes)
+[12/36] fin_s_souq.mp3... (Arabic: فين السوق؟) ✓ (17599 bytes)
+[13/36] fin_l_farmasiyan.mp3... (Arabic: فين الفارماسيان؟) ✓ (22196 bytes)
+[14/36] fin_l_m7atta.mp3... (Arabic: فين المحطة؟) ✓ (18435 bytes)
+[15/36] kifash_nmshi_l_l_banka.mp3... (Arabic: كيفاش نمشي للبانكة؟) ✓ (25958 bytes)
+[16/36] wash_qrib.mp3... (Arabic: واش قريب؟) ✓ (17599 bytes)
+[17/36] wash_b3id.mp3... (Arabic: واش بعيد؟) ✓ (17599 bytes)
+Removed existing file: limen.mp3
+[18/36] limen.mp3... (Arabic: اليمين) ✓ (13837 bytes)
+Removed existing file: lisr.mp3
+[19/36] lisr.mp3... (Arabic: اليسر) ✓ (14673 bytes)
+Removed existing file: nishan.mp3
+[20/36] nishan.mp3... (Arabic: نيشان) ✓ (16345 bytes)
+Removed existing file: hna.mp3
+[21/36] hna.mp3... (Arabic: هنا) ✓ (11747 bytes)
+Removed existing file: temma_lhih.mp3
+[22/36] temma_lhih.mp3... (Arabic: تما / لهيه) ✓ (25122 bytes)
+[23/36] sir_nishan.mp3... (Arabic: سير نيشان) ✓ (17181 bytes)
+[24/36] dur_3la_limen.mp3... (Arabic: دور على اليمين) ✓ (22196 bytes)
+[25/36] dur_3la_lisr.mp3... (Arabic: دور على اليسر) ✓ (22196 bytes)
+[26/36] kayen_3la_limen.mp3... (Arabic: كاين على اليمين) ✓ (21360 bytes)
+[27/36] kayen_3la_lisr.mp3... (Arabic: كاين على اليسر) ✓ (22196 bytes)
+[28/36] qrib_mn_hna.mp3... (Arabic: قريب من هنا) ✓ (20107 bytes)
+[29/36] b3id_mn_hna.mp3... (Arabic: بعيد من هنا) ✓ (20525 bytes)
+[30/36] 7da_l.mp3... (Arabic: حدا ال...) ✓ (13837 bytes)
+[31/36] dialogue_person_a_1.mp3... (Arabic: السلام عليكم. عافاك، فين كاينة البانكة؟) ✓ (42258 bytes)
+[32/36] dialogue_person_b_1.mp3... (Arabic: و عليكم السلام. سير نيشان، و من بعد دور على ليسر. البانكة كاينة حدا الفارماسيان.) ✓ (97429 bytes)
+[33/36] dialogue_person_a_2.mp3... (Arabic: واش بعيدة من هنا؟) ✓ (23032 bytes)
+[34/36] dialogue_person_b_2.mp3... (Arabic: لا، ماشي بعيدة بزاف. قريبة.) ✓ (37661 bytes)
+[35/36] dialogue_person_a_3.mp3... (Arabic: شكراً بزاف!) ✓ (20525 bytes)
+[36/36] dialogue_person_b_3.mp3... (Arabic: العفو.) ✓ (17181 bytes)
+
+==================================================
+✅ Created/Regenerated: 36
+❌ Failed: 0
+Total: 36

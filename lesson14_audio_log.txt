@@ -1,0 +1,20 @@
+Regenerating 12 audio files for Lesson 14 from Arabic text...
+This ensures correct pronunciation from the Arabic script.
+
+[1/12] shrb_shrbi_shrbu.mp3... (Arabic: شرَب / شرَبي / شرَبو) ✓ (34735 bytes)
+[2/12] kul_kuli_kulu.mp3... (Arabic: كول / كولي / كولو) ✓ (33481 bytes)
+[3/12] sir_siri_siru.mp3... (Arabic: سير / سيري / سيرو) ✓ (34735 bytes)
+[4/12] aji_aji_ajiw.mp3... (Arabic: أجي / أجي / أجيو) ✓ (28884 bytes)
+[5/12] shuf_shufi_shufu.mp3... (Arabic: شوف / شوفي / شوفو) ✓ (29720 bytes)
+[6/12] kteb_ketbi_ketbu.mp3... (Arabic: كتَب / كتَبي / كتَبو) ✓ (29720 bytes)
+[7/12] qra_qray_qraw.mp3... (Arabic: قرا / قراي / قراو) ✓ (33899 bytes)
+[8/12] ma_tshrbs_h_ma_tshrbu_sh.mp3... (Arabic: ما تشرَبش / ما تشرَبوش) ✓ (30974 bytes)
+[9/12] ma_takul_sh_ma_takulu_sh.mp3... (Arabic: ما تاكُلش / ما تاكُلوش) ✓ (30974 bytes)
+[10/12] ma_tmshi_sh_ma_tmshiw_sh.mp3... (Arabic: ما تمشيش / ما تمشيوش) ✓ (33481 bytes)
+[11/12] ma_tji_sh_ma_tjiw_sh.mp3... (Arabic: ما تجيش / ما تجيوش) ✓ (31809 bytes)
+[12/12] ma_tkteb_sh_ma_tktebu_sh.mp3... (Arabic: ما تكتَبش / ما تكتَبوش) ✓ (33481 bytes)
+
+==================================================
+✅ Created/Regenerated: 12
+❌ Failed: 0
+Total: 12
