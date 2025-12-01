@@ -1,0 +1,33 @@
+Regenerating 13 audio files for Lesson A2-6 from Arabic text...
+
+Removed existing file: qbel.mp3
+[1/13] qbel.mp3... (Arabic: قبل) ✓ (11747 bytes)
+Removed existing file: ba3d.mp3
+[2/13] ba3d.mp3... (Arabic: بعد) ✓ (12583 bytes)
+Removed existing file: f_weqt.mp3
+[3/13] f_weqt.mp3... (Arabic: ف وقت) ✓ (13837 bytes)
+Removed existing file: mn_7tta_l.mp3
+[4/13] mn_7tta_l.mp3... (Arabic: من... حتى ل...) ✓ (28884 bytes)
+Removed existing file: 7tta.mp3
+[5/13] 7tta.mp3... (Arabic: حتى) ✓ (13837 bytes)
+Removed existing file: l.mp3
+[6/13] l.mp3... (Arabic: ل) ✓ (9658 bytes)
+Removed existing file: mn.mp3
+[7/13] mn.mp3... (Arabic: من) ✓ (10494 bytes)
+Removed existing file: foq.mp3
+[8/13] foq.mp3... (Arabic: فوق) ✓ (10494 bytes)
+Removed existing file: t7t.mp3
+[9/13] t7t.mp3... (Arabic: تحت) ✓ (11747 bytes)
+Removed existing file: 3la.mp3
+[10/13] 3la.mp3... (Arabic: على) ✓ (12583 bytes)
+Removed existing file: bash.mp3
+[11/13] bash.mp3... (Arabic: باش) ✓ (11747 bytes)
+Removed existing file: 3la_wedd.mp3
+[12/13] 3la_wedd.mp3... (Arabic: على ود) ✓ (13419 bytes)
+Removed existing file: l_purpose.mp3
+[13/13] l_purpose.mp3... (Arabic: ل) ✓ (10494 bytes)
+
+==================================================
+✅ Created/Regenerated: 13
+❌ Failed: 0
+Total: 13

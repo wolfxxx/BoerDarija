@@ -1,0 +1,27 @@
+Regenerating 10 audio files for Lesson A2-8 from Arabic text...
+
+Removed existing file: sentence_1.mp3
+[1/10] sentence_1.mp3... (Arabic: هاد الدار كبيرة كتر من هاديك الدار) ✓ (43094 bytes)
+Removed existing file: sentence_2.mp3
+[2/10] sentence_2.mp3... (Arabic: أحمد طويل كتر من علي) ✓ (27212 bytes)
+Removed existing file: sentence_3.mp3
+[3/10] sentence_3.mp3... (Arabic: هاد الطموبيل غالية كتر من طموبيلتي) ✓ (48110 bytes)
+Removed existing file: sentence_4.mp3
+[4/10] sentence_4.mp3... (Arabic: كتابي صغير قل من كتابك) ✓ (32645 bytes)
+Removed existing file: sentence_5.mp3
+[5/10] sentence_5.mp3... (Arabic: داري كبيرة بحال دارك) ✓ (25958 bytes)
+Removed existing file: sentence_6.mp3
+[6/10] sentence_6.mp3... (Arabic: هو طويل بحال خوه) ✓ (23868 bytes)
+Removed existing file: sentence_7.mp3
+[7/10] sentence_7.mp3... (Arabic: أكبر دار) ✓ (17181 bytes)
+Removed existing file: sentence_8.mp3
+[8/10] sentence_8.mp3... (Arabic: أطول راجل) ✓ (17181 bytes)
+Removed existing file: sentence_9.mp3
+[9/10] sentence_9.mp3... (Arabic: أحسن كتاب) ✓ (17181 bytes)
+Removed existing file: sentence_10.mp3
+[10/10] sentence_10.mp3... (Arabic: الطموبيل الغالية كتر وحدة) ✓ (33481 bytes)
+
+==================================================
+✅ Created/Regenerated: 10
+❌ Failed: 0
+Total: 10

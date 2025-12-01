@@ -1,0 +1,61 @@
+Regenerating 27 audio files for Lesson A2-9 from Arabic text...
+
+Removed existing file: ras.mp3
+[1/27] ras.mp3... (Arabic: راس) ✓ (13837 bytes)
+Removed existing file: sh3r.mp3
+[2/27] sh3r.mp3... (Arabic: شعر) ✓ (12583 bytes)
+Removed existing file: 3in_3inin.mp3
+[3/27] 3in_3inin.mp3... (Arabic: عين / عينين) ✓ (25122 bytes)
+Removed existing file: wden_wednin.mp3
+[4/27] wden_wednin.mp3... (Arabic: ودن / ودنين) ✓ (25122 bytes)
+Removed existing file: nif.mp3
+[5/27] nif.mp3... (Arabic: نيف) ✓ (13419 bytes)
+Removed existing file: femm.mp3
+[6/27] femm.mp3... (Arabic: فم) ✓ (11747 bytes)
+Removed existing file: yedd_yddin.mp3
+[7/27] yedd_yddin.mp3... (Arabic: يد / يدين) ✓ (28884 bytes)
+Removed existing file: dra3_dra3in.mp3
+[8/27] dra3_dra3in.mp3... (Arabic: دراع / دراعين) ✓ (27212 bytes)
+Removed existing file: rjel_rjlin.mp3
+[9/27] rjel_rjlin.mp3... (Arabic: رجل / رجلين) ✓ (25958 bytes)
+Removed existing file: rjel_rjlin_foot.mp3
+[10/27] rjel_rjlin_foot.mp3... (Arabic: رجل / رجلين) ✓ (24286 bytes)
+Removed existing file: kersh.mp3
+[11/27] kersh.mp3... (Arabic: كرش) ✓ (13419 bytes)
+Removed existing file: dher.mp3
+[12/27] dher.mp3... (Arabic: ضهر) ✓ (13837 bytes)
+Removed existing file: qelb.mp3
+[13/27] qelb.mp3... (Arabic: قلب) ✓ (13837 bytes)
+Removed existing file: ana_mrid_mrida.mp3
+[14/27] ana_mrid_mrida.mp3... (Arabic: أنا مريض / مريضة) ✓ (25958 bytes)
+Removed existing file: kayderrni_rasi.mp3
+[15/27] kayderrni_rasi.mp3... (Arabic: كايضرني راسي) ✓ (22196 bytes)
+Removed existing file: katderrni_kershi.mp3
+[16/27] katderrni_kershi.mp3... (Arabic: كاتضرني كرشي) ✓ (23032 bytes)
+Removed existing file: fiya_s_skhana.mp3
+[17/27] fiya_s_skhana.mp3... (Arabic: فيا السخانة) ✓ (17599 bytes)
+Removed existing file: darbni_l_berd.mp3
+[18/27] darbni_l_berd.mp3... (Arabic: ضاربني البرد) ✓ (17181 bytes)
+Removed existing file: fiya_l_ke77a.mp3
+[19/27] fiya_l_ke77a.mp3... (Arabic: فيا الكحة) ✓ (19271 bytes)
+Removed existing file: fiya_d_dokha.mp3
+[20/27] fiya_d_dokha.mp3... (Arabic: فيا الدوخة) ✓ (18435 bytes)
+Removed existing file: ana_3iyyan_3iyyana.mp3
+[21/27] ana_3iyyan_3iyyana.mp3... (Arabic: أنا عيان / عيانة) ✓ (28884 bytes)
+Removed existing file: bghit_tbib.mp3
+[22/27] bghit_tbib.mp3... (Arabic: بغيت طبيب) ✓ (16345 bytes)
+Removed existing file: 3ndi_maw3id.mp3
+[23/27] 3ndi_maw3id.mp3... (Arabic: عندي موعد) ✓ (15509 bytes)
+Removed existing file: malek.mp3
+[24/27] malek.mp3... (Arabic: مالك؟) ✓ (14673 bytes)
+Removed existing file: bghit_d_dwa.mp3
+[25/27] bghit_d_dwa.mp3... (Arabic: بغيت الدوا) ✓ (19271 bytes)
+Removed existing file: d_dwa_dyal.mp3
+[26/27] d_dwa_dyal.mp3... (Arabic: الدوا ديال...) ✓ (17599 bytes)
+Removed existing file: allah_yshafik.mp3
+[27/27] allah_yshafik.mp3... (Arabic: الله يشافيك) ✓ (16345 bytes)
+
+==================================================
+✅ Created/Regenerated: 27
+❌ Failed: 0
+Total: 27

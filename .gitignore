@@ -1,7 +1,24 @@
 # ElevenLabs API Key Files
 # These files contain sensitive API keys and should not be committed to GitHub
 
-# Audio generation scripts with API keys
+# Pattern-based exclusions to catch all files with API keys
+create_lesson*.py
+create_lesson_a2_*.py
+fix_*_audio.py
+fix_lesson*.py
+test_*.py
+gen_*.py
+generate_*.py
+ensure_*.py
+remove_api_key*.py
+remove_api_key*.ps1
+REMOVE_API_KEY*.md
+remove_api_keys_from_history.ps1
+verify_no_api_keys_in_git.py
+check_git_for_api_key.ps1
+API_KEY_SECURITY_CHECK.md
+
+# Specific files (kept for reference)
 force_generate_audio.py
 generate_pink_audio.py
 generate_zwin_singular.py

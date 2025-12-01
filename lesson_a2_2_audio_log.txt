@@ -1,0 +1,79 @@
+Regenerating 36 audio files for Lesson A2-2 from Arabic text...
+
+Removed existing file: kunt.mp3
+[1/36] kunt.mp3... (Arabic: كنت) ✓ (12583 bytes)
+Removed existing file: kunti_m.mp3
+[2/36] kunti_m.mp3... (Arabic: كنتي) ✓ (13837 bytes)
+Removed existing file: kunti_f.mp3
+[3/36] kunti_f.mp3... (Arabic: كنتي) ✓ (10911 bytes)
+Removed existing file: kan.mp3
+[4/36] kan.mp3... (Arabic: كان) ✓ (12583 bytes)
+Removed existing file: kanet.mp3
+[5/36] kanet.mp3... (Arabic: كانت) ✓ (11747 bytes)
+Removed existing file: kunna.mp3
+[6/36] kunna.mp3... (Arabic: كنا) ✓ (13419 bytes)
+Removed existing file: kuntu.mp3
+[7/36] kuntu.mp3... (Arabic: كنتو) ✓ (13419 bytes)
+Removed existing file: kanu.mp3
+[8/36] kanu.mp3... (Arabic: كانو) ✓ (13419 bytes)
+Removed existing file: kan_3ndi.mp3
+[9/36] kan_3ndi.mp3... (Arabic: كان عندي) ✓ (13419 bytes)
+Removed existing file: kan_3ndek.mp3
+[10/36] kan_3ndek.mp3... (Arabic: كان عندك) ✓ (12583 bytes)
+Removed existing file: kan_3ndu.mp3
+[11/36] kan_3ndu.mp3... (Arabic: كان عندو) ✓ (17181 bytes)
+Removed existing file: kan_3ndha.mp3
+[12/36] kan_3ndha.mp3... (Arabic: كان عندها) ✓ (16345 bytes)
+Removed existing file: kan_3ndna.mp3
+[13/36] kan_3ndna.mp3... (Arabic: كان عندنا) ✓ (17181 bytes)
+Removed existing file: kan_3ndkum.mp3
+[14/36] kan_3ndkum.mp3... (Arabic: كان عندكم) ✓ (17181 bytes)
+Removed existing file: kan_3ndhum.mp3
+[15/36] kan_3ndhum.mp3... (Arabic: كان عندهم) ✓ (17181 bytes)
+Removed existing file: mshit.mp3
+[16/36] mshit.mp3... (Arabic: مشيت) ✓ (11747 bytes)
+Removed existing file: mshiti.mp3
+[17/36] mshiti.mp3... (Arabic: مشيتي) ✓ (13837 bytes)
+Removed existing file: msha.mp3
+[18/36] msha.mp3... (Arabic: مشى) ✓ (12583 bytes)
+Removed existing file: mshat.mp3
+[19/36] mshat.mp3... (Arabic: مشات) ✓ (13419 bytes)
+Removed existing file: mshina.mp3
+[20/36] mshina.mp3... (Arabic: مشينا) ✓ (13419 bytes)
+Removed existing file: mshitu.mp3
+[21/36] mshitu.mp3... (Arabic: مشيتو) ✓ (13837 bytes)
+Removed existing file: mshaw.mp3
+[22/36] mshaw.mp3... (Arabic: مشاو) ✓ (13837 bytes)
+Removed existing file: sheft.mp3
+[23/36] sheft.mp3... (Arabic: شفت) ✓ (10911 bytes)
+Removed existing file: shefti.mp3
+[24/36] shefti.mp3... (Arabic: شفتي) ✓ (13837 bytes)
+Removed existing file: shaf.mp3
+[25/36] shaf.mp3... (Arabic: شاف) ✓ (11747 bytes)
+Removed existing file: shafet.mp3
+[26/36] shafet.mp3... (Arabic: شافات) ✓ (13419 bytes)
+Removed existing file: shefna.mp3
+[27/36] shefna.mp3... (Arabic: شفنا) ✓ (11747 bytes)
+Removed existing file: sheftu.mp3
+[28/36] sheftu.mp3... (Arabic: شفتو) ✓ (13419 bytes)
+Removed existing file: shafu.mp3
+[29/36] shafu.mp3... (Arabic: شافو) ✓ (12583 bytes)
+Removed existing file: dert.mp3
+[30/36] dert.mp3... (Arabic: درت) ✓ (13419 bytes)
+Removed existing file: derti.mp3
+[31/36] derti.mp3... (Arabic: درتي) ✓ (11747 bytes)
+Removed existing file: dar_he.mp3
+[32/36] dar_he.mp3... (Arabic: دار) ✓ (12583 bytes)
+Removed existing file: daret.mp3
+[33/36] daret.mp3... (Arabic: دارت) ✓ (13837 bytes)
+Removed existing file: derna.mp3
+[34/36] derna.mp3... (Arabic: درنا) ✓ (11747 bytes)
+Removed existing file: dertu.mp3
+[35/36] dertu.mp3... (Arabic: درتو) ✓ (13837 bytes)
+Removed existing file: daru.mp3
+[36/36] daru.mp3... (Arabic: دارو) ✓ (13837 bytes)
+
+==================================================
+✅ Created/Regenerated: 36
+❌ Failed: 0
+Total: 36

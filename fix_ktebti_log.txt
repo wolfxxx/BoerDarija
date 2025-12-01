@@ -1,0 +1,6 @@
+Regenerating 2 ktebti audio files...
+
+Generating ktebti_m.mp3... (Arabic: كتبتي) ✓ (13837 bytes)
+Generating ktebti_f.mp3... (Arabic: كتبتي) ✓ (12583 bytes)
+
+Done!

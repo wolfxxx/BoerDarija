@@ -1,0 +1,45 @@
+Regenerating 19 audio files for Lesson A2-7 from Arabic text...
+
+Removed existing file: drif_drifa.mp3
+[1/19] drif_drifa.mp3... (Arabic: ضريف / ضريفة) ✓ (26794 bytes)
+Removed existing file: mde77ek_mde77ka.mp3
+[2/19] mde77ek_mde77ka.mp3... (Arabic: مضحك / مضحكة) ✓ (25122 bytes)
+Removed existing file: m3qul_m3qula.mp3
+[3/19] m3qul_m3qula.mp3... (Arabic: معقول / معقولة) ✓ (29720 bytes)
+Removed existing file: dki_dkiya.mp3
+[4/19] dki_dkiya.mp3... (Arabic: ذكي / ذكية) ✓ (23868 bytes)
+Removed existing file: mkellekh_mkellkha.mp3
+[5/19] mkellekh_mkellkha.mp3... (Arabic: مكلخ / مكلخة) ✓ (25122 bytes)
+Removed existing file: 7shumi_7shumiya.mp3
+[6/19] 7shumi_7shumiya.mp3... (Arabic: حشومي / حشومية) ✓ (25958 bytes)
+Removed existing file: m3esseb_m3essba.mp3
+[7/19] m3esseb_m3essba.mp3... (Arabic: معصب / معصبة) ✓ (29720 bytes)
+Removed existing file: twil_twila.mp3
+[8/19] twil_twila.mp3... (Arabic: طويل / طويلة) ✓ (24286 bytes)
+Removed existing file: qsir_qsira.mp3
+[9/19] qsir_qsira.mp3... (Arabic: قصير / قصيرة) ✓ (24286 bytes)
+Removed existing file: ghlid_ghlida.mp3
+[10/19] ghlid_ghlida.mp3... (Arabic: غليض / غليضة) ✓ (24286 bytes)
+Removed existing file: rqiq_rqiqa.mp3
+[11/19] rqiq_rqiqa.mp3... (Arabic: رقيق / رقيقة) ✓ (28884 bytes)
+Removed existing file: zwin_zwina.mp3
+[12/19] zwin_zwina.mp3... (Arabic: زوين / زوينة) ✓ (23032 bytes)
+Removed existing file: khayb_khayba.mp3
+[13/19] khayb_khayba.mp3... (Arabic: خايب / خايبة) ✓ (25122 bytes)
+Removed existing file: kbir_f_s_sinn.mp3
+[14/19] kbir_f_s_sinn.mp3... (Arabic: كبير ف السن / كبيرة ف السن) ✓ (36407 bytes)
+Removed existing file: sghir_f_s_sinn.mp3
+[15/19] sghir_f_s_sinn.mp3... (Arabic: صغير ف السن / صغيرة ف السن) ✓ (89070 bytes)
+Removed existing file: bzzaf.mp3
+[16/19] bzzaf.mp3... (Arabic: بزاف) ✓ (13419 bytes)
+Removed existing file: shwiya.mp3
+[17/19] shwiya.mp3... (Arabic: شوية) ✓ (10911 bytes)
+Removed existing file: bzzaf_too.mp3
+[18/19] bzzaf_too.mp3... (Arabic: بزاف) ✓ (13837 bytes)
+Removed existing file: bssa7.mp3
+[19/19] bssa7.mp3... (Arabic: بصح) ✓ (10911 bytes)
+
+==================================================
+✅ Created/Regenerated: 19
+❌ Failed: 0
+Total: 19

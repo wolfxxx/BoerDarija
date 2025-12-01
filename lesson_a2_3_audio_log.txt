@@ -1,0 +1,37 @@
+Regenerating 15 audio files for Lesson A2-3 from Arabic text...
+
+Removed existing file: ni_shafni.mp3
+[1/15] ni_shafni.mp3... (Arabic: شافني) ✓ (13419 bytes)
+Removed existing file: ek_shafek.mp3
+[2/15] ek_shafek.mp3... (Arabic: شافك) ✓ (11747 bytes)
+Removed existing file: u_shafu_obj.mp3
+[3/15] u_shafu_obj.mp3... (Arabic: شافو) ✓ (11747 bytes)
+Removed existing file: ha_shafha.mp3
+[4/15] ha_shafha.mp3... (Arabic: شافها) ✓ (13419 bytes)
+Removed existing file: na_shafna.mp3
+[5/15] na_shafna.mp3... (Arabic: شافنا) ✓ (13419 bytes)
+Removed existing file: kum_shafkum.mp3
+[6/15] kum_shafkum.mp3... (Arabic: شافكم) ✓ (13837 bytes)
+Removed existing file: hum_shafhum.mp3
+[7/15] hum_shafhum.mp3... (Arabic: شافهُم) ✓ (14673 bytes)
+Removed existing file: sheftek_l_bare7.mp3
+[8/15] sheftek_l_bare7.mp3... (Arabic: شفتك البارح) ✓ (17599 bytes)
+Removed existing file: ketbat_liya_bra.mp3
+[9/15] ketbat_liya_bra.mp3... (Arabic: كتبات ليا برا) ✓ (23032 bytes)
+Removed existing file: 3awenna.mp3
+[10/15] 3awenna.mp3... (Arabic: عاونا) ✓ (12583 bytes)
+Removed existing file: wash_fhemuk.mp3
+[11/15] wash_fhemuk.mp3... (Arabic: واش فهموك؟) ✓ (17599 bytes)
+Removed existing file: 3titu_l_ktab.mp3
+[12/15] 3titu_l_ktab.mp3... (Arabic: عطيتو الكتاب) ✓ (19271 bytes)
+Removed existing file: kayishufni_kul_nhar.mp3
+[13/15] kayishufni_kul_nhar.mp3... (Arabic: كايشوفني كل نهار) ✓ (25958 bytes)
+Removed existing file: kanfhemek_mzyan.mp3
+[14/15] kanfhemek_mzyan.mp3... (Arabic: كانفهمك مزيان) ✓ (22196 bytes)
+Removed existing file: wash_kat3awenhum.mp3
+[15/15] wash_kat3awenhum.mp3... (Arabic: واش كاتعاونهم؟) ✓ (22196 bytes)
+
+==================================================
+✅ Created/Regenerated: 15
+❌ Failed: 0
+Total: 15

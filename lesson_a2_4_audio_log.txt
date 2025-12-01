@@ -1,0 +1,31 @@
+Regenerating 12 audio files for Lesson A2-4 from Arabic text...
+
+Removed existing file: f_l_luwel_uwel_7aja.mp3
+[1/12] f_l_luwel_uwel_7aja.mp3... (Arabic: ف اللول / أول حاجة) ✓ (28048 bytes)
+Removed existing file: mn_ba3d_dik_s_sa3a.mp3
+[2/12] mn_ba3d_dik_s_sa3a.mp3... (Arabic: من بعد / ديك الساعة) ✓ (26794 bytes)
+Removed existing file: u_mn_ba3d.mp3
+[3/12] u_mn_ba3d.mp3... (Arabic: و من بعد / و) ✓ (17181 bytes)
+Removed existing file: qbel.mp3
+[4/12] qbel.mp3... (Arabic: قبل) ✓ (13419 bytes)
+Removed existing file: ba3d.mp3
+[5/12] ba3d.mp3... (Arabic: بعد) ✓ (13419 bytes)
+Removed existing file: f_l_lekher_f_t_tali.mp3
+[6/12] f_l_lekher_f_t_tali.mp3... (Arabic: ف اللخر / ف التالي) ✓ (29720 bytes)
+Removed existing file: zert.mp3
+[7/12] zert.mp3... (Arabic: زرت) ✓ (13419 bytes)
+Removed existing file: tferrejt.mp3
+[8/12] tferrejt.mp3... (Arabic: تفرجت) ✓ (13837 bytes)
+Removed existing file: khrejt.mp3
+[9/12] khrejt.mp3... (Arabic: خرجت) ✓ (12583 bytes)
+Removed existing file: bqit.mp3
+[10/12] bqit.mp3... (Arabic: بقيت) ✓ (15509 bytes)
+Removed existing file: n3est.mp3
+[11/12] n3est.mp3... (Arabic: نعست) ✓ (12583 bytes)
+Removed existing file: tiyyebt.mp3
+[12/12] tiyyebt.mp3... (Arabic: طيبت) ✓ (12583 bytes)
+
+==================================================
+✅ Created/Regenerated: 12
+❌ Failed: 0
+Total: 12

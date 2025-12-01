@@ -1,0 +1,49 @@
+Regenerating 21 audio files for Lesson A2-1 from Arabic text...
+
+Removed existing file: ktebt.mp3
+[1/21] ktebt.mp3... (Arabic: كتبت) ✓ (12583 bytes)
+Removed existing file: ktebti_m.mp3
+[2/21] ktebti_m.mp3... (Arabic: كتبتي) ✓ (11747 bytes)
+Removed existing file: ktebti_f.mp3
+[3/21] ktebti_f.mp3... (Arabic: كتبتي) ✓ (13837 bytes)
+Removed existing file: kteb.mp3
+[4/21] kteb.mp3... (Arabic: كتب) ✓ (11747 bytes)
+Removed existing file: ketbat.mp3
+[5/21] ketbat.mp3... (Arabic: كتبات) ✓ (13419 bytes)
+Removed existing file: ktebna.mp3
+[6/21] ktebna.mp3... (Arabic: كتبنا) ✓ (11747 bytes)
+Removed existing file: ktebtu.mp3
+[7/21] ktebtu.mp3... (Arabic: كتبتو) ✓ (11747 bytes)
+Removed existing file: ketbu.mp3
+[8/21] ketbu.mp3... (Arabic: كتبو) ✓ (11747 bytes)
+Removed existing file: shrebt.mp3
+[9/21] shrebt.mp3... (Arabic: شربت) ✓ (13837 bytes)
+Removed existing file: shrebti.mp3
+[10/21] shrebti.mp3... (Arabic: شربتي) ✓ (13837 bytes)
+Removed existing file: shreb.mp3
+[11/21] shreb.mp3... (Arabic: شرب) ✓ (13837 bytes)
+Removed existing file: shrbat.mp3
+[12/21] shrbat.mp3... (Arabic: شربات) ✓ (13419 bytes)
+Removed existing file: shrebna.mp3
+[13/21] shrebna.mp3... (Arabic: شربنا) ✓ (13419 bytes)
+Removed existing file: shrebtu.mp3
+[14/21] shrebtu.mp3... (Arabic: شربتو) ✓ (12583 bytes)
+Removed existing file: shrbu.mp3
+[15/21] shrbu.mp3... (Arabic: شربو) ✓ (12583 bytes)
+Removed existing file: l_bare7.mp3
+[16/21] l_bare7.mp3... (Arabic: البارح) ✓ (13837 bytes)
+Removed existing file: wel_l_bare7.mp3
+[17/21] wel_l_bare7.mp3... (Arabic: ول البارح) ✓ (15509 bytes)
+Removed existing file: s_simana_lli_fatet.mp3
+[18/21] s_simana_lli_fatet.mp3... (Arabic: السيمانة اللي فاتت) ✓ (28884 bytes)
+Removed existing file: sh_shher_lli_fat.mp3
+[19/21] sh_shher_lli_fat.mp3... (Arabic: الشهر اللي فات) ✓ (20107 bytes)
+Removed existing file: l_3am_lli_fat.mp3
+[20/21] l_3am_lli_fat.mp3... (Arabic: العام اللي فات) ✓ (20525 bytes)
+Removed existing file: qbel_hadi.mp3
+[21/21] qbel_hadi.mp3... (Arabic: قبل / هادي) ✓ (23868 bytes)
+
+==================================================
+✅ Created/Regenerated: 21
+❌ Failed: 0
+Total: 21

@@ -1,0 +1,53 @@
+Regenerating 23 audio files for Lesson A2-5 from Arabic text...
+
+Removed existing file: ghadi_nmshi.mp3
+[1/23] ghadi_nmshi.mp3... (Arabic: غادي نمشي) ✓ (16345 bytes)
+Removed existing file: ghadi_tmshi_m.mp3
+[2/23] ghadi_tmshi_m.mp3... (Arabic: غادي تمشي) ✓ (16345 bytes)
+Removed existing file: ghadi_tmshi_f.mp3
+[3/23] ghadi_tmshi_f.mp3... (Arabic: غادي تمشي) ✓ (17181 bytes)
+Removed existing file: ghadi_ymshi.mp3
+[4/23] ghadi_ymshi.mp3... (Arabic: غادي يمشي) ✓ (14673 bytes)
+Removed existing file: ghadi_tmshi_she.mp3
+[5/23] ghadi_tmshi_she.mp3... (Arabic: غادي تمشي) ✓ (14673 bytes)
+Removed existing file: ghadi_nmshiw.mp3
+[6/23] ghadi_nmshiw.mp3... (Arabic: غادي نمشيو) ✓ (15509 bytes)
+Removed existing file: ghadi_tmshiw_pl.mp3
+[7/23] ghadi_tmshiw_pl.mp3... (Arabic: غادي تمشيو) ✓ (15509 bytes)
+Removed existing file: ghadi_ymshiw.mp3
+[8/23] ghadi_ymshiw.mp3... (Arabic: غادي يمشيو) ✓ (18435 bytes)
+Removed existing file: ghadi_nakul_ksksu.mp3
+[9/23] ghadi_nakul_ksksu.mp3... (Arabic: غادي ناكل كسكسو) ✓ (23032 bytes)
+Removed existing file: ghadi_tshrb_atay.mp3
+[10/23] ghadi_tshrb_atay.mp3... (Arabic: غادي تشرب أتاي) ✓ (23032 bytes)
+Removed existing file: ghadi_ykteb_bra.mp3
+[11/23] ghadi_ykteb_bra.mp3... (Arabic: غادي يكتب برا) ✓ (21360 bytes)
+Removed existing file: ghadi_nshufu_film.mp3
+[12/23] ghadi_nshufu_film.mp3... (Arabic: غادي نشوفو فيلم) ✓ (21360 bytes)
+Removed existing file: ghadi_ydiru_t_tamarin_dyalhum.mp3
+[13/23] ghadi_ydiru_t_tamarin_dyalhum.mp3... (Arabic: غادي يديرو التمارين ديالهم) ✓ (30974 bytes)
+Removed existing file: ghdda.mp3
+[14/23] ghdda.mp3... (Arabic: غدا) ✓ (13837 bytes)
+Removed existing file: ba3d_ghdda.mp3
+[15/23] ba3d_ghdda.mp3... (Arabic: بعد غدا) ✓ (20107 bytes)
+Removed existing file: s_simana_j_jaya.mp3
+[16/23] s_simana_j_jaya.mp3... (Arabic: السيمانة الجاية) ✓ (22196 bytes)
+Removed existing file: sh_shher_j_jay.mp3
+[17/23] sh_shher_j_jay.mp3... (Arabic: الشهر الجاي) ✓ (19271 bytes)
+Removed existing file: l_3am_j_jay.mp3
+[18/23] l_3am_j_jay.mp3... (Arabic: العام الجاي) ✓ (16345 bytes)
+Removed existing file: mn_ba3d.mp3
+[19/23] mn_ba3d.mp3... (Arabic: من بعد) ✓ (15509 bytes)
+Removed existing file: qrib.mp3
+[20/23] qrib.mp3... (Arabic: قريب / عن قريب) ✓ (26794 bytes)
+Removed existing file: ma_ghadi_sh_nmshi.mp3
+[21/23] ma_ghadi_sh_nmshi.mp3... (Arabic: ما غاديش نمشي) ✓ (20107 bytes)
+Removed existing file: ma_ghadi_sh_yakul.mp3
+[22/23] ma_ghadi_sh_yakul.mp3... (Arabic: ما غاديش ياكل) ✓ (19271 bytes)
+Removed existing file: ma_ghadi_sh_ysafru_ghdda.mp3
+[23/23] ma_ghadi_sh_ysafru_ghdda.mp3... (Arabic: ما غاديش يسافرو غدا) ✓ (26794 bytes)
+
+==================================================
+✅ Created/Regenerated: 23
+❌ Failed: 0
+Total: 23
