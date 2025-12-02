@@ -1,0 +1,37 @@
+Regenerating 15 audio files for Lesson A2-17 from Arabic text...
+
+Removed existing file: l_7amdullah.mp3
+[1/15] l_7amdullah.mp3... (Arabic: الحمد لله) ✓ (18435 bytes)
+Removed existing file: insha_allah.mp3
+[2/15] insha_allah.mp3... (Arabic: إن شاء الله) ✓ (20525 bytes)
+Removed existing file: masha_allah.mp3
+[3/15] masha_allah.mp3... (Arabic: ما شاء الله) ✓ (19271 bytes)
+Removed existing file: allah_y3tik_s_se77a.mp3
+[4/15] allah_y3tik_s_se77a.mp3... (Arabic: الله يعطيك الصحة) ✓ (24286 bytes)
+Removed existing file: allah_ybarik_fik.mp3
+[5/15] allah_ybarik_fik.mp3... (Arabic: الله يبارك فيك / آمين) ✓ (28884 bytes)
+Removed existing file: mer7ba_bik.mp3
+[6/15] mer7ba_bik.mp3... (Arabic: مرحبا (بيك)) ✓ (25122 bytes)
+Removed existing file: 3la_r_ras_u_l_3in.mp3
+[7/15] 3la_r_ras_u_l_3in.mp3... (Arabic: على الراس و العين) ✓ (23032 bytes)
+Removed existing file: wakha.mp3
+[8/15] wakha.mp3... (Arabic: واخا) ✓ (14673 bytes)
+Removed existing file: safi_baraka.mp3
+[9/15] safi_baraka.mp3... (Arabic: صافي / باراكا) ✓ (25122 bytes)
+Removed existing file: bssa7.mp3
+[10/15] bssa7.mp3... (Arabic: بصح؟) ✓ (12583 bytes)
+Removed existing file: nishan.mp3
+[11/15] nishan.mp3... (Arabic: نيشان) ✓ (17181 bytes)
+Removed existing file: mashi_mushkil.mp3
+[12/15] mashi_mushkil.mp3... (Arabic: ماشي مشكل) ✓ (16345 bytes)
+Removed existing file: ma_3reftsh.mp3
+[13/15] ma_3reftsh.mp3... (Arabic: ما عرفتش) ✓ (16345 bytes)
+Removed existing file: belati_tsenna_shwiya.mp3
+[14/15] belati_tsenna_shwiya.mp3... (Arabic: بلاتي / تسنى شوية) ✓ (28884 bytes)
+Removed existing file: redd_l_bal.mp3
+[15/15] redd_l_bal.mp3... (Arabic: رد البال! / ردي البال! / ردو البال!) ✓ (53543 bytes)
+
+==================================================
+✅ Created/Regenerated: 15
+❌ Failed: 0
+Total: 15

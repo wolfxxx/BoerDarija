@@ -1,0 +1,13 @@
+Regenerating 6 audio files for Lesson B1-8 from Arabic text...
+
+[1/6] form2_b1_8_fhhem.mp3... (Arabic: الأستاذ كايفهّــم الدرس....) ✓ (35571 bytes)
+[2/6] form2_b1_8_dekhkhel.mp3... (Arabic: دخّــلت الطموبيل للݣــاراج....) ✓ (40587 bytes)
+[3/6] form2_b1_8_kherrej.mp3... (Arabic: خرّجت ستيلو من الصاك....) ✓ (33899 bytes)
+[4/6] form2_b1_8_rejje3.mp3... (Arabic: خاصني نرجّــع ليك كتابك....) ✓ (37243 bytes)
+[5/6] form2_b1_8_kebber.mp3... (Arabic: كبّــرت الصورة....) ✓ (23032 bytes)
+[6/6] form2_b1_8_herres.mp3... (Arabic: الولد هرّس الزاجة....) ✓ (32645 bytes)
+
+==================================================
+✅ Created/Regenerated: 6
+❌ Failed: 0
+Total: 6

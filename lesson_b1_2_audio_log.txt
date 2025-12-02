@@ -1,0 +1,23 @@
+Regenerating 8 audio files for Lesson B1-2 from Arabic text...
+
+Removed existing file: kunt_kankteb.mp3
+[1/8] kunt_kankteb.mp3... (Arabic: كنت كانكتب) ✓ (17181 bytes)
+Removed existing file: kunti_katkteb.mp3
+[2/8] kunti_katkteb.mp3... (Arabic: كنتي كاتكتب) ✓ (16345 bytes)
+Removed existing file: kunti_katketbi.mp3
+[3/8] kunti_katketbi.mp3... (Arabic: كنتي كاتكتبي) ✓ (20525 bytes)
+Removed existing file: kan_kaykteb.mp3
+[4/8] kan_kaykteb.mp3... (Arabic: كان كايكتب) ✓ (15509 bytes)
+Removed existing file: kanet_katkteb.mp3
+[5/8] kanet_katkteb.mp3... (Arabic: كانت كاتكتب) ✓ (19271 bytes)
+Removed existing file: kunna_kanketbu.mp3
+[6/8] kunna_kanketbu.mp3... (Arabic: كنا كانكتبو) ✓ (18435 bytes)
+Removed existing file: kuntu_katketbu.mp3
+[7/8] kuntu_katketbu.mp3... (Arabic: كنتو كاتكتبو) ✓ (19271 bytes)
+Removed existing file: kanu_kayketbu.mp3
+[8/8] kanu_kayketbu.mp3... (Arabic: كانو كايكتبو) ✓ (18435 bytes)
+
+==================================================
+✅ Created/Regenerated: 8
+❌ Failed: 0
+Total: 8

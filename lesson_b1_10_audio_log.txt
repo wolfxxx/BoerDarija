@@ -1,0 +1,20 @@
+Regenerating 13 audio files for Lesson B1-10 from Arabic text...
+
+[1/13] connector_b1_10_wakha.mp3... (Arabic: وخا كان البرد، خرجنا....) ✓ (29720 bytes)
+[2/13] connector_b1_10_b_l_3eks.mp3... (Arabic: هو ماشي معصب، بالعكس، ضريف بزاف....) ✓ (52707 bytes)
+[3/13] connector_b1_10_walakin.mp3... (Arabic: بغيت نسافر ولكن ما عنديش لفلوس....) ✓ (45184 bytes)
+[4/13] connector_b1_10_ma3a_dalik.mp3... (Arabic: كان مريض، و مع ذلك جا للخدمة....) ✓ (43094 bytes)
+[5/13] connector_b1_10_7it.mp3... (Arabic: ما جيتش حيت كنت مريض....) ✓ (27212 bytes)
+[6/13] connector_b1_10_3la_wedd.mp3... (Arabic: درت هادشي على ودك....) ✓ (25122 bytes)
+[7/13] connector_b1_10_bsbab.mp3... (Arabic: تعطلنا بسباب الطررافيك....) ✓ (43094 bytes)
+[8/13] connector_b1_10_dakshi_3lash.mp3... (Arabic: كان البرد، داكشي علاش لبست جاكيطة....) ✓ (41422 bytes)
+[9/13] connector_b1_10_idan.mp3... (Arabic: هو ما قراش، إذن ما نجحش....) ✓ (38497 bytes)
+[10/13] connector_b1_10_u_hakda.mp3... (Arabic: خدم مزيان و هكذا خدا ترقية....) ✓ (38497 bytes)
+[11/13] connector_b1_10_u_3awd.mp3... (Arabic: شريت الخضرة و عاود الفاكية....) ✓ (36407 bytes)
+[12/13] connector_b1_10_b_l_idaafa_ila.mp3... (Arabic: كايعرف الدارجة، بالإضافة إلى الفرنسوية....) ✓ (48946 bytes)
+[13/13] connector_b1_10_7tta.mp3... (Arabic: حتى أنا بغيت نمشي....) ✓ (25958 bytes)
+
+==================================================
+✅ Created/Regenerated: 13
+❌ Failed: 0
+Total: 13

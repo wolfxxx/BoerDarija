@@ -1,0 +1,59 @@
+Regenerating 26 audio files for Lesson A2-11 from Arabic text...
+
+Removed existing file: ttomobil.mp3
+[1/26] ttomobil.mp3... (Arabic: طموبيل / سيارة) ✓ (25958 bytes)
+Removed existing file: ttobis.mp3
+[2/26] ttobis.mp3... (Arabic: طوبيس) ✓ (13837 bytes)
+Removed existing file: tran.mp3
+[3/26] tran.mp3... (Arabic: تران) ✓ (14673 bytes)
+Removed existing file: taxi_sghir.mp3
+[4/26] taxi_sghir.mp3... (Arabic: طاكسي صغير) ✓ (25122 bytes)
+Removed existing file: taxi_kbir.mp3
+[5/26] taxi_kbir.mp3... (Arabic: طاكسي كبير) ✓ (20107 bytes)
+Removed existing file: tiyyara.mp3
+[6/26] tiyyara.mp3... (Arabic: طيارة) ✓ (13837 bytes)
+Removed existing file: beshklita.mp3
+[7/26] beshklita.mp3... (Arabic: بشكليطة) ✓ (14673 bytes)
+Removed existing file: motor.mp3
+[8/26] motor.mp3... (Arabic: موطور) ✓ (16345 bytes)
+Removed existing file: bato_babor.mp3
+[9/26] bato_babor.mp3... (Arabic: باطو / بابور) ✓ (23032 bytes)
+Removed existing file: safr.mp3
+[10/26] safr.mp3... (Arabic: سافر) ✓ (13837 bytes)
+Removed existing file: werqa_biyyi.mp3
+[11/26] werqa_biyyi.mp3... (Arabic: ورقة / بيّي) ✓ (28048 bytes)
+Removed existing file: m7atta.mp3
+[12/26] m7atta.mp3... (Arabic: محطة) ✓ (13419 bytes)
+Removed existing file: matar.mp3
+[13/26] matar.mp3... (Arabic: مطار) ✓ (15509 bytes)
+Removed existing file: mersa.mp3
+[14/26] mersa.mp3... (Arabic: مرسى) ✓ (13419 bytes)
+Removed existing file: triq.mp3
+[15/26] triq.mp3... (Arabic: طريق) ✓ (13419 bytes)
+Removed existing file: wsel.mp3
+[16/26] wsel.mp3... (Arabic: وصل) ✓ (14673 bytes)
+Removed existing file: msha_khrej.mp3
+[17/26] msha_khrej.mp3... (Arabic: مشى / خرج) ✓ (21360 bytes)
+Removed existing file: baliza_shkara.mp3
+[18/26] baliza_shkara.mp3... (Arabic: باليزة / شكارة) ✓ (27212 bytes)
+Removed existing file: safar_ri7la.mp3
+[19/26] safar_ri7la.mp3... (Arabic: سفر / رحلة) ✓ (24286 bytes)
+Removed existing file: sentence_1.mp3
+[20/26] sentence_1.mp3... (Arabic: بغيت واحد الورقة ل الرباط، عافاك.) ✓ (45184 bytes)
+Removed existing file: sentence_2.mp3
+[21/26] sentence_2.mp3... (Arabic: بشحال الورقة ل مراكش؟) ✓ (32645 bytes)
+Removed existing file: sentence_3.mp3
+[22/26] sentence_3.mp3... (Arabic: إيمتى غادي يخرج التران/الطوبيس؟) ✓ (32645 bytes)
+Removed existing file: sentence_4.mp3
+[23/26] sentence_4.mp3... (Arabic: إيمتى غادي يوصل؟) ✓ (22196 bytes)
+Removed existing file: sentence_5.mp3
+[24/26] sentence_5.mp3... (Arabic: ألي ولا ألي روتور؟) ✓ (30556 bytes)
+Removed existing file: sentence_6.mp3
+[25/26] sentence_6.mp3... (Arabic: غير ألي، عافاك.) ✓ (25122 bytes)
+Removed existing file: sentence_7.mp3
+[26/26] sentence_7.mp3... (Arabic: واش هادا هو الطوبيس ديال فاس؟) ✓ (33481 bytes)
+
+==================================================
+✅ Created/Regenerated: 26
+❌ Failed: 0
+Total: 26

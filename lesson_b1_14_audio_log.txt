@@ -1,0 +1,21 @@
+Regenerating 14 audio files for Lesson B1-14 from Arabic text...
+
+[1/14] cultural_b1_14_3id.mp3... (Arabic: عيد...) ✓ (12583 bytes)
+[2/14] cultural_b1_14_3ers.mp3... (Arabic: عرس...) ✓ (11747 bytes)
+[3/14] cultural_b1_14_remdan.mp3... (Arabic: رمضان...) ✓ (16345 bytes)
+[4/14] cultural_b1_14_s_siyam.mp3... (Arabic: الصيام...) ✓ (17181 bytes)
+[5/14] cultural_b1_14_taqalid.mp3... (Arabic: تقاليد...) ✓ (13837 bytes)
+[6/14] cultural_b1_14_3ada.mp3... (Arabic: عادة عادات...) ✓ (17181 bytes)
+[7/14] cultural_b1_14_jem3a.mp3... (Arabic: جمعة د العائلة...) ✓ (24286 bytes)
+[8/14] cultural_b1_14_khedma.mp3... (Arabic: خدمة...) ✓ (11747 bytes)
+[9/14] cultural_b1_14_qraya.mp3... (Arabic: قراية...) ✓ (12583 bytes)
+[10/14] cultural_b1_14_jiran.mp3... (Arabic: جيران...) ✓ (16345 bytes)
+[11/14] cultural_b1_14_mdina.mp3... (Arabic: مدينة...) ✓ (13419 bytes)
+[12/14] cultural_b1_14_qarya.mp3... (Arabic: قرية عروبية...) ✓ (19271 bytes)
+[13/14] cultural_b1_14_i7tiram.mp3... (Arabic: إحترام...) ✓ (15509 bytes)
+[14/14] cultural_b1_14_m3awna.mp3... (Arabic: المعاونة...) ✓ (17599 bytes)
+
+==================================================
+✅ Created/Regenerated: 14
+❌ Failed: 0
+Total: 14

@@ -1,0 +1,15 @@
+Regenerating 8 audio files for Lesson B1-7 from Arabic text...
+
+[1/8] relative_b1_7_1.mp3... (Arabic: الدار فاللي كانسكن فيها....) ✓ (30556 bytes)
+[2/8] relative_b1_7_2.mp3... (Arabic: الراجل مللي سافرت معاه....) ✓ (30556 bytes)
+[3/8] relative_b1_7_3.mp3... (Arabic: المدينة للي مشينا ليها....) ✓ (34735 bytes)
+[4/8] relative_b1_7_4.mp3... (Arabic: الستيلو باش كانكتب بيه....) ✓ (30974 bytes)
+[5/8] question_b1_7_1.mp3... (Arabic: أشمن كتاب بغيتي؟...) ✓ (23868 bytes)
+[6/8] question_b1_7_2.mp3... (Arabic: أشمن طموبيل ديالك؟...) ✓ (26794 bytes)
+[7/8] statement_b1_7_1.mp3... (Arabic: ما عرفتش أشمن راجل اللي جا....) ✓ (33481 bytes)
+[8/8] statement_b1_7_2.mp3... (Arabic: وريني أشمن دار اللي شريتي....) ✓ (32645 bytes)
+
+==================================================
+✅ Created/Regenerated: 8
+❌ Failed: 0
+Total: 8

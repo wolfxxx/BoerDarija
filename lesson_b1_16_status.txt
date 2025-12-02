@@ -1,0 +1,3 @@
+Script completed
+Created: 7
+Failed: 0

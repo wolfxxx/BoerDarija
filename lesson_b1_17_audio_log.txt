@@ -1,0 +1,8 @@
+Regenerating 1 audio files for Lesson B1-17 from Arabic text...
+
+[1/1] story_b1_17_ifran.mp3... (Arabic: العام اللي فات، سافرت أنا و عائلتي لمدينة إفران. ف...) ✓ (589785 bytes)
+
+==================================================
+✅ Created/Regenerated: 1
+❌ Failed: 0
+Total: 1

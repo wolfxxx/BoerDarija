@@ -1,0 +1,41 @@
+Regenerating 17 audio files for Lesson B1-4 from Arabic text...
+
+Removed existing file: kanqder.mp3
+[1/17] kanqder.mp3... (Arabic: كانقدر...) ✓ (13419 bytes)
+Removed existing file: katqder.mp3
+[2/17] katqder.mp3... (Arabic: كاتقدر...) ✓ (15509 bytes)
+Removed existing file: kayqder.mp3
+[3/17] kayqder.mp3... (Arabic: كايقدر...) ✓ (13419 bytes)
+Removed existing file: katqder_f.mp3
+[4/17] katqder_f.mp3... (Arabic: كاتقدر...) ✓ (14673 bytes)
+Removed existing file: kanqdru.mp3
+[5/17] kanqdru.mp3... (Arabic: كانقدرو...) ✓ (17181 bytes)
+Removed existing file: katqdru.mp3
+[6/17] katqdru.mp3... (Arabic: كاتقدرو...) ✓ (17181 bytes)
+Removed existing file: kayqdru.mp3
+[7/17] kayqdru.mp3... (Arabic: كايقدرو...) ✓ (13837 bytes)
+Removed existing file: yemken_nmshi.mp3
+[8/17] yemken_nmshi.mp3... (Arabic: يمكن نمشي....) ✓ (18435 bytes)
+Removed existing file: yemken_lik_t3awen.mp3
+[9/17] yemken_lik_t3awen.mp3... (Arabic: يمكن ليك تعاون....) ✓ (25958 bytes)
+Removed existing file: yemken_belli_huwa_mrid.mp3
+[10/17] yemken_belli_huwa_mrid.mp3... (Arabic: يمكن بلي هو مريض....) ✓ (26794 bytes)
+Removed existing file: yemken_ghadi_ti7_sh_shta_ghdda.mp3
+[11/17] yemken_ghadi_ti7_sh_shta_ghdda.mp3... (Arabic: يمكن غادي طيح الشتا غدا....) ✓ (27212 bytes)
+Removed existing file: wash_yemken_liya.mp3
+[12/17] wash_yemken_liya.mp3... (Arabic: واش يمكن ليا...؟ / واش نقدر...؟...) ✓ (51871 bytes)
+Removed existing file: wash_yemken_liya_ngles_hna.mp3
+[13/17] wash_yemken_liya_ngles_hna.mp3... (Arabic: واش يمكن ليا نجلس هنا؟...) ✓ (26794 bytes)
+Removed existing file: iyyeh_yemken_lik.mp3
+[14/17] iyyeh_yemken_lik.mp3... (Arabic: إييه، يمكن ليك. / واخا....) ✓ (36407 bytes)
+Removed existing file: la_ma_yemkensh_lik.mp3
+[15/17] la_ma_yemkensh_lik.mp3... (Arabic: لا، ما يمكنش ليك. / لا....) ✓ (33481 bytes)
+Removed existing file: wash_mesmu7.mp3
+[16/17] wash_mesmu7.mp3... (Arabic: واش مسموح...؟...) ✓ (21360 bytes)
+Removed existing file: memnu3.mp3
+[17/17] memnu3.mp3... (Arabic: ممنوع....) ✓ (16345 bytes)
+
+==================================================
+✅ Created/Regenerated: 17
+❌ Failed: 0
+Total: 17

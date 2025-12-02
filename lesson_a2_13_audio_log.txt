@@ -1,0 +1,19 @@
+Regenerating 6 audio files for Lesson A2-13 from Arabic text...
+
+Removed existing file: sentence_1.mp3
+[1/6] sentence_1.mp3... (Arabic: الراجل اللي جا البارح.) ✓ (26794 bytes)
+Removed existing file: sentence_2.mp3
+[2/6] sentence_2.mp3... (Arabic: المرا اللي كاتخدم هنا.) ✓ (26794 bytes)
+Removed existing file: sentence_3.mp3
+[3/6] sentence_3.mp3... (Arabic: شفت التلامذ اللي نجحو ف الامتحان.) ✓ (39333 bytes)
+Removed existing file: sentence_4.mp3
+[4/6] sentence_4.mp3... (Arabic: الكتاب اللي على الطبلة.) ✓ (28048 bytes)
+Removed existing file: sentence_5.mp3
+[5/6] sentence_5.mp3... (Arabic: الطموبيل اللي شريت.) ✓ (27212 bytes)
+Removed existing file: sentence_6.mp3
+[6/6] sentence_6.mp3... (Arabic: بغيت الطاجين اللي فيه اللحم.) ✓ (29720 bytes)
+
+==================================================
+✅ Created/Regenerated: 6
+❌ Failed: 0
+Total: 6

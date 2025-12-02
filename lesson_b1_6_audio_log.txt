@@ -1,0 +1,13 @@
+Regenerating 6 audio files for Lesson B1-6 from Arabic text...
+
+[1/6] conditional_b1_6_1.mp3... (Arabic: كون كان عندي الفلوس، كون سافرت....) ✓ (40169 bytes)
+[2/6] conditional_b1_6_2.mp3... (Arabic: كون كان هنا، كون عاونا....) ✓ (31809 bytes)
+[3/6] conditional_b1_6_3.mp3... (Arabic: كون كنت ف بلاصتك، كون قريت....) ✓ (43094 bytes)
+[4/6] conditional_b1_6_4.mp3... (Arabic: كون قريت، كون راني نجحت....) ✓ (36407 bytes)
+[5/6] conditional_b1_6_5.mp3... (Arabic: كون جات بكري، كون راها شافتو....) ✓ (32645 bytes)
+[6/6] conditional_b1_6_6.mp3... (Arabic: كون كان عندهم الفلوس، كون راهُم سافرو....) ✓ (43930 bytes)
+
+==================================================
+✅ Created/Regenerated: 6
+❌ Failed: 0
+Total: 6

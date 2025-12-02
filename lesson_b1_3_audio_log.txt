@@ -1,0 +1,27 @@
+Regenerating 10 audio files for Lesson B1-3 from Arabic text...
+
+Removed existing file: kateb_katba.mp3
+[1/10] kateb_katba.mp3... (Arabic: كاتب كاتبة) ✓ (21360 bytes)
+Removed existing file: khddam_khddama.mp3
+[2/10] khddam_khddama.mp3... (Arabic: خدام خدامة) ✓ (18435 bytes)
+Removed existing file: gales_galsa.mp3
+[3/10] gales_galsa.mp3... (Arabic: جالس گالسة) ✓ (21360 bytes)
+Removed existing file: waqef_waqfa.mp3
+[4/10] waqef_waqfa.mp3... (Arabic: واقف واقفة) ✓ (17599 bytes)
+Removed existing file: na3es_na3sa.mp3
+[5/10] na3es_na3sa.mp3... (Arabic: ناعس ناعسة) ✓ (21360 bytes)
+Removed existing file: mektub_mektuba.mp3
+[6/10] mektub_mektuba.mp3... (Arabic: مكتوب مكتوبة) ✓ (26794 bytes)
+Removed existing file: mfhum_mfhuma.mp3
+[7/10] mfhum_mfhuma.mp3... (Arabic: مفهوم مفهومة) ✓ (21360 bytes)
+Removed existing file: meftu7_meftu7a.mp3
+[8/10] meftu7_meftu7a.mp3... (Arabic: مفتوح مفتوحة) ✓ (25122 bytes)
+Removed existing file: mesdud_mesduda.mp3
+[9/10] mesdud_mesduda.mp3... (Arabic: مسدود مسدودة) ✓ (24286 bytes)
+Removed existing file: mherres_mherrsa.mp3
+[10/10] mherres_mherrsa.mp3... (Arabic: مهزوز مهروزة) ✓ (25122 bytes)
+
+==================================================
+✅ Created/Regenerated: 10
+❌ Failed: 0
+Total: 10

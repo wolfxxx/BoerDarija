@@ -1,0 +1,12 @@
+Regenerating 5 audio files for Lesson B1-11 from Arabic text...
+
+[1/5] reported_b1_11_1.mp3... (Arabic: أحمد قال بلي هو مريض....) ✓ (33481 bytes)
+[2/5] reported_b1_11_2.mp3... (Arabic: فاطمة قالت بلي هي غادي تسافر غدا....) ✓ (45184 bytes)
+[3/5] reported_b1_11_3.mp3... (Arabic: قلتي بلي شربتي أتاي....) ✓ (28884 bytes)
+[4/5] reported_b1_11_4.mp3... (Arabic: علي سوّلني واش أنا مريض....) ✓ (30974 bytes)
+[5/5] reported_b1_11_5.mp3... (Arabic: ليلى سوّلاتو واش غادي يجي....) ✓ (40169 bytes)
+
+==================================================
+✅ Created/Regenerated: 5
+❌ Failed: 0
+Total: 5

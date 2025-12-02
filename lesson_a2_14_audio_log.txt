@@ -1,0 +1,17 @@
+Regenerating 5 audio files for Lesson A2-14 from Arabic text...
+
+Removed existing file: sentence_1.mp3
+[1/5] sentence_1.mp3... (Arabic: إلى مشيت للسوق، غادي نشري الخضرة.) ✓ (47274 bytes)
+Removed existing file: sentence_2.mp3
+[2/5] sentence_2.mp3... (Arabic: إلى قرات، غادي تنجح ف الامتحان.) ✓ (39333 bytes)
+Removed existing file: sentence_3.mp3
+[3/5] sentence_3.mp3... (Arabic: إلى كان عندك الوقت، غادي نمشيو للسينما.) ✓ (40587 bytes)
+Removed existing file: sentence_4.mp3
+[4/5] sentence_4.mp3... (Arabic: إلى كاناكل بزاف، كانعيا.) ✓ (37661 bytes)
+Removed existing file: sentence_5.mp3
+[5/5] sentence_5.mp3... (Arabic: إلى كاتقراي، غادي تفهمي.) ✓ (33899 bytes)
+
+==================================================
+✅ Created/Regenerated: 5
+❌ Failed: 0
+Total: 5

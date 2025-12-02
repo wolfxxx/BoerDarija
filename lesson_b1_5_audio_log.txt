@@ -1,0 +1,31 @@
+Regenerating 12 audio files for Lesson B1-5 from Arabic text...
+
+Removed existing file: khassni_nmshi.mp3
+[1/12] khassni_nmshi.mp3... (Arabic: خاصني نمشي...) ✓ (19271 bytes)
+Removed existing file: khassk_tmshi.mp3
+[2/12] khassk_tmshi.mp3... (Arabic: خاصك تمشي...) ✓ (18435 bytes)
+Removed existing file: khassu_ymshi.mp3
+[3/12] khassu_ymshi.mp3... (Arabic: خاصو يمشي...) ✓ (16345 bytes)
+Removed existing file: khassha_tmshi.mp3
+[4/12] khassha_tmshi.mp3... (Arabic: خاصها تمشي...) ✓ (19271 bytes)
+Removed existing file: khassna_nmshiw.mp3
+[5/12] khassna_nmshiw.mp3... (Arabic: خاصنا نمشيو...) ✓ (19271 bytes)
+Removed existing file: khasskum_tmshiw.mp3
+[6/12] khasskum_tmshiw.mp3... (Arabic: خاصكم تمشيو...) ✓ (19271 bytes)
+Removed existing file: khasshum_ymshiw.mp3
+[7/12] khasshum_ymshiw.mp3... (Arabic: خاصهُم يمشيو...) ✓ (20525 bytes)
+Removed existing file: daruri_nmshiw.mp3
+[8/12] daruri_nmshiw.mp3... (Arabic: ضروري نمشيو. / ضروري الواحد يمشي....) ✓ (63156 bytes)
+Removed existing file: daruri_3liya_nqra.mp3
+[9/12] daruri_3liya_nqra.mp3... (Arabic: ضروري عليا نقرا....) ✓ (23868 bytes)
+Removed existing file: daruri_yji_bekri.mp3
+[10/12] daruri_yji_bekri.mp3... (Arabic: ضروري يجي بكري....) ✓ (21360 bytes)
+Removed existing file: lazem_n3es.mp3
+[11/12] lazem_n3es.mp3... (Arabic: لازم نعس....) ✓ (17181 bytes)
+Removed existing file: lazem_takul.mp3
+[12/12] lazem_takul.mp3... (Arabic: لازم تاكل....) ✓ (20525 bytes)
+
+==================================================
+✅ Created/Regenerated: 12
+❌ Failed: 0
+Total: 12

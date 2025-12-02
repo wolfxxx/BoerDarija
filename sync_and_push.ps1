@@ -21,3 +21,5 @@ Write-Host "`n=== Step 7: Final status ===" -ForegroundColor Cyan
 git status
 
 Write-Host "`n=== Done! ===" -ForegroundColor Green
+
+

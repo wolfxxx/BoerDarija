@@ -147,3 +147,5 @@ log("1. Check the log file above for any errors")
 log("2. Visit: https://github.com/wolfxxx/BoerDarija")
 log("3. Verify all files are present")
 log("4. Verify API key files are NOT present")
+
+

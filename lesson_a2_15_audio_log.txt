@@ -1,0 +1,31 @@
+Regenerating 12 audio files for Lesson A2-15 from Arabic text...
+
+Removed existing file: f_rray_i.mp3
+[1/12] f_rray_i.mp3... (Arabic: ف رأيي...) ✓ (15509 bytes)
+Removed existing file: kandenn_belli.mp3
+[2/12] kandenn_belli.mp3... (Arabic: كانضن بلي... / كايبان ليا بلي...) ✓ (44348 bytes)
+Removed existing file: b_n_nisba_li_ya.mp3
+[3/12] b_n_nisba_li_ya.mp3... (Arabic: بالنسبة ليا...) ✓ (20525 bytes)
+Removed existing file: kayban_li_ya_belli.mp3
+[4/12] kayban_li_ya_belli.mp3... (Arabic: كايبان ليا بلي...) ✓ (22196 bytes)
+Removed existing file: mettafeq.mp3
+[5/12] mettafeq.mp3... (Arabic: متافق(ة).) ✓ (23032 bytes)
+Removed existing file: ma_mettafeq_sh.mp3
+[6/12] ma_mettafeq_sh.mp3... (Arabic: ما متافقش / ما متافقاش.) ✓ (43930 bytes)
+Removed existing file: yallah_nmshiw.mp3
+[7/12] yallah_nmshiw.mp3... (Arabic: يلاه نمشيو...) ✓ (23868 bytes)
+Removed existing file: ashnu_ban_lik_ila.mp3
+[8/12] ashnu_ban_lik_ila.mp3... (Arabic: أشنو بان ليك إلا / إلى...?) ✓ (28884 bytes)
+Removed existing file: 3lash_ma_sh.mp3
+[9/12] 3lash_ma_sh.mp3... (Arabic: علاش ما نمشيوش / نديروش...?) ✓ (39333 bytes)
+Removed existing file: yemken_lina.mp3
+[10/12] yemken_lina.mp3... (Arabic: يمكن لينا... / نقدروا...) ✓ (33899 bytes)
+Removed existing file: fikra_mzyana.mp3
+[11/12] fikra_mzyana.mp3... (Arabic: فكرة مزيانة!) ✓ (25958 bytes)
+Removed existing file: ma_bghitsh_ma_fiya_sh.mp3
+[12/12] ma_bghitsh_ma_fiya_sh.mp3... (Arabic: ما بغيتش. / ما فياش.) ✓ (33481 bytes)
+
+==================================================
+✅ Created/Regenerated: 12
+❌ Failed: 0
+Total: 12

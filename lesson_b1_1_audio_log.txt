@@ -1,0 +1,35 @@
+Regenerating 14 audio files for Lesson B1-1 from Arabic text...
+
+Removed existing file: qelt.mp3
+[1/14] qelt.mp3... (Arabic: قلت) ✓ (11747 bytes)
+Removed existing file: qelti.mp3
+[2/14] qelti.mp3... (Arabic: قلتي) ✓ (11747 bytes)
+Removed existing file: qal.mp3
+[3/14] qal.mp3... (Arabic: قال) ✓ (12583 bytes)
+Removed existing file: qalet.mp3
+[4/14] qalet.mp3... (Arabic: قالت) ✓ (14673 bytes)
+Removed existing file: qelna.mp3
+[5/14] qelna.mp3... (Arabic: قلنا) ✓ (12583 bytes)
+Removed existing file: qeltu.mp3
+[6/14] qeltu.mp3... (Arabic: قلتو) ✓ (10911 bytes)
+Removed existing file: qalu.mp3
+[7/14] qalu.mp3... (Arabic: قالو) ✓ (15509 bytes)
+Removed existing file: nsit.mp3
+[8/14] nsit.mp3... (Arabic: نسيت) ✓ (13837 bytes)
+Removed existing file: nsiti.mp3
+[9/14] nsiti.mp3... (Arabic: نسيتي) ✓ (16345 bytes)
+Removed existing file: nsa.mp3
+[10/14] nsa.mp3... (Arabic: نسى) ✓ (10911 bytes)
+Removed existing file: nsat.mp3
+[11/14] nsat.mp3... (Arabic: نسات) ✓ (13837 bytes)
+Removed existing file: nsina.mp3
+[12/14] nsina.mp3... (Arabic: نسينا) ✓ (15509 bytes)
+Removed existing file: nsitu.mp3
+[13/14] nsitu.mp3... (Arabic: نسيتو) ✓ (13419 bytes)
+Removed existing file: nsaw.mp3
+[14/14] nsaw.mp3... (Arabic: نساو) ✓ (16345 bytes)
+
+==================================================
+✅ Created/Regenerated: 14
+❌ Failed: 0
+Total: 14

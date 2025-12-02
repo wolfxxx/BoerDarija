@@ -1,0 +1,14 @@
+Regenerating 4 audio files for Lesson A2-16 from Arabic text...
+
+Removed existing file: kankteb.mp3
+[1/4] kankteb.mp3... (Arabic: كانكتب...) ✓ (13837 bytes)
+Removed existing file: ktebt.mp3
+[2/4] ktebt.mp3... (Arabic: كتبت...) ✓ (11747 bytes)
+Removed existing file: ghadi_nkteb.mp3
+[3/4] ghadi_nkteb.mp3... (Arabic: غادي نكتب...) ✓ (17181 bytes)
+[4/4] story_a2_16.mp3... (Arabic: البارح، مشيت للسوق. شريت الخضرة و الفاكية. ملي رجع...) ✓ (195231 bytes)
+
+==================================================
+✅ Created/Regenerated: 4
+❌ Failed: 0
+Total: 4

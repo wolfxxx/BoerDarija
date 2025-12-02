@@ -87,3 +87,5 @@ Log-Output "  Total tracked files: $trackedFiles"
 Log-Output "=== Process Complete ==="
 Log-Output "Check the log file: $logFile"
 Write-Host "`nFull log saved to: $logFile" -ForegroundColor Green
+
+

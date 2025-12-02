@@ -1,0 +1,61 @@
+Regenerating 27 audio files for Lesson A2-10 from Arabic text...
+
+Removed existing file: kanfiq.mp3
+[1/27] kanfiq.mp3... (Arabic: كانفيق) ✓ (17181 bytes)
+Removed existing file: kanud.mp3
+[2/27] kanud.mp3... (Arabic: كانوض) ✓ (13837 bytes)
+Removed existing file: kanghsel.mp3
+[3/27] kanghsel.mp3... (Arabic: كان غسل) ✓ (12583 bytes)
+Removed existing file: kanlbes.mp3
+[4/27] kanlbes.mp3... (Arabic: كانلبس) ✓ (15509 bytes)
+Removed existing file: kanfter.mp3
+[5/27] kanfter.mp3... (Arabic: كانفطر) ✓ (13837 bytes)
+Removed existing file: kanmshi.mp3
+[6/27] kanmshi.mp3... (Arabic: كانمشي) ✓ (13837 bytes)
+Removed existing file: kankhdem.mp3
+[7/27] kankhdem.mp3... (Arabic: كانخدم) ✓ (13419 bytes)
+Removed existing file: kanqra.mp3
+[8/27] kanqra.mp3... (Arabic: كانقرا) ✓ (17181 bytes)
+Removed existing file: kanrje3.mp3
+[9/27] kanrje3.mp3... (Arabic: كانرجع) ✓ (12583 bytes)
+Removed existing file: kantghedda.mp3
+[10/27] kantghedda.mp3... (Arabic: كانتغدى) ✓ (17181 bytes)
+Removed existing file: kantferrej.mp3
+[11/27] kantferrej.mp3... (Arabic: كانتفرج) ✓ (13837 bytes)
+Removed existing file: kant3esha.mp3
+[12/27] kant3esha.mp3... (Arabic: كانتعشى) ✓ (13837 bytes)
+Removed existing file: kan3es.mp3
+[13/27] kan3es.mp3... (Arabic: كانعس) ✓ (13837 bytes)
+Removed existing file: dima.mp3
+[14/27] dima.mp3... (Arabic: ديما) ✓ (13837 bytes)
+Removed existing file: ghaliban.mp3
+[15/27] ghaliban.mp3... (Arabic: غالباً) ✓ (17181 bytes)
+Removed existing file: mrra_mrra.mp3
+[16/27] mrra_mrra.mp3... (Arabic: مرة مرة / بعض المرات) ✓ (33481 bytes)
+Removed existing file: qlil_fin.mp3
+[17/27] qlil_fin.mp3... (Arabic: قليل فين) ✓ (15509 bytes)
+Removed existing file: jamais.mp3
+[18/27] jamais.mp3... (Arabic: جامي) ✓ (13837 bytes)
+Removed existing file: kul_nhar.mp3
+[19/27] kul_nhar.mp3... (Arabic: كل نهار) ✓ (15509 bytes)
+Removed existing file: kul_simana.mp3
+[20/27] kul_simana.mp3... (Arabic: كل سيمانة) ✓ (18435 bytes)
+Removed existing file: qra.mp3
+[21/27] qra.mp3... (Arabic: قرا) ✓ (11747 bytes)
+Removed existing file: tferrej.mp3
+[22/27] tferrej.mp3... (Arabic: تفرج) ✓ (15509 bytes)
+Removed existing file: l3eb.mp3
+[23/27] l3eb.mp3... (Arabic: لعب) ✓ (12583 bytes)
+Removed existing file: tiyyeb.mp3
+[24/27] tiyyeb.mp3... (Arabic: طيب) ✓ (11747 bytes)
+Removed existing file: safr.mp3
+[25/27] safr.mp3... (Arabic: سافر) ✓ (10494 bytes)
+Removed existing file: sma3_l_l_musiqa.mp3
+[26/27] sma3_l_l_musiqa.mp3... (Arabic: سمع للموسيقى) ✓ (23868 bytes)
+Removed existing file: khruj.mp3
+[27/27] khruj.mp3... (Arabic: خرج) ✓ (12583 bytes)
+
+==================================================
+✅ Created/Regenerated: 27
+❌ Failed: 0
+Total: 27

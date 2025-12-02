@@ -1,0 +1,21 @@
+Regenerating 14 audio files for Lesson B1-15 from Arabic text...
+
+[1/14] problem_b1_15_kayen_mushkil.mp3... (Arabic: كاين مشكل....) ✓ (18435 bytes)
+[2/14] problem_b1_15_3ndi_mushkil.mp3... (Arabic: عندي مشكل....) ✓ (16345 bytes)
+[3/14] problem_b1_15_hada_ma_khddamsh.mp3... (Arabic: هادا ما خدامش....) ✓ (22196 bytes)
+[4/14] problem_b1_15_mherres.mp3... (Arabic: مهرس مهرسة....) ✓ (22196 bytes)
+[5/14] problem_b1_15_hadshi_mashi_huwa_lli_bghit.mp3... (Arabic: هادشي ماشي هو اللي بغيت....) ✓ (28884 bytes)
+[6/14] problem_b1_15_sme7_liya_walakin.mp3... (Arabic: سمح ليا، ولكن......) ✓ (28884 bytes)
+[7/14] problem_b1_15_hadshi_ma_3jebnish.mp3... (Arabic: هادشي ما عجبنيش....) ✓ (24286 bytes)
+[8/14] problem_b1_15_mashi_mzyan.mp3... (Arabic: ماشي مزيان....) ✓ (18435 bytes)
+[9/14] problem_b1_15_hadshi_mashi_normal.mp3... (Arabic: هادشي ماشي نورمال....) ✓ (23868 bytes)
+[10/14] problem_b1_15_shnu_ndiru.mp3... (Arabic: شنو نديرو؟...) ✓ (17181 bytes)
+[11/14] problem_b1_15_wash_yemken_lik_t3awenni.mp3... (Arabic: واش يمكن ليك تعاوني، عافاك؟...) ✓ (33899 bytes)
+[12/14] problem_b1_15_bghit_nbeddel_hada.mp3... (Arabic: بغيت نبدّل هادا....) ✓ (21360 bytes)
+[13/14] problem_b1_15_bghit_flusi.mp3... (Arabic: بغيت فلوسي، عافاك....) ✓ (29720 bytes)
+[14/14] problem_b1_15_wash_yemken_lik_tsele7u.mp3... (Arabic: واش يمكن ليك تصلحو؟...) ✓ (26794 bytes)
+
+==================================================
+✅ Created/Regenerated: 14
+❌ Failed: 0
+Total: 14

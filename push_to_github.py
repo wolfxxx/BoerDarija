@@ -105,3 +105,5 @@ log_and_print("\n" + "="*60)
 log_and_print("SUCCESS! Files have been pushed to GitHub")
 log_and_print("="*60)
 log_and_print(f"\nFull log saved to: {LOG_FILE}")
+
+

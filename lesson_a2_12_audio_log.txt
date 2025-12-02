@@ -1,0 +1,59 @@
+Regenerating 26 audio files for Lesson A2-12 from Arabic text...
+
+Removed existing file: mya.mp3
+[1/26] mya.mp3... (Arabic: مية) ✓ (10494 bytes)
+Removed existing file: myatayn.mp3
+[2/26] myatayn.mp3... (Arabic: ميتين) ✓ (13837 bytes)
+Removed existing file: telt_mya.mp3
+[3/26] telt_mya.mp3... (Arabic: تلت مية) ✓ (14673 bytes)
+Removed existing file: rbe3_mya.mp3
+[4/26] rbe3_mya.mp3... (Arabic: ربع مية) ✓ (15509 bytes)
+Removed existing file: khms_mya.mp3
+[5/26] khms_mya.mp3... (Arabic: خمس مية) ✓ (17181 bytes)
+Removed existing file: sett_mya.mp3
+[6/26] sett_mya.mp3... (Arabic: ست مية) ✓ (15509 bytes)
+Removed existing file: sb3_mya.mp3
+[7/26] sb3_mya.mp3... (Arabic: سبع مية) ✓ (15509 bytes)
+Removed existing file: tmen_mya.mp3
+[8/26] tmen_mya.mp3... (Arabic: تمن مية) ✓ (15509 bytes)
+Removed existing file: ts3_mya.mp3
+[9/26] ts3_mya.mp3... (Arabic: تسع مية) ✓ (16345 bytes)
+Removed existing file: alf.mp3
+[10/26] alf.mp3... (Arabic: ألف) ✓ (13837 bytes)
+Removed existing file: alfayn.mp3
+[11/26] alfayn.mp3... (Arabic: ألفين) ✓ (15509 bytes)
+Removed existing file: tlata_alaf.mp3
+[12/26] tlata_alaf.mp3... (Arabic: تلات آلاف) ✓ (19271 bytes)
+Removed existing file: 3shra_alaf.mp3
+[13/26] 3shra_alaf.mp3... (Arabic: عشرة آلاف) ✓ (23868 bytes)
+Removed existing file: nuss.mp3
+[14/26] nuss.mp3... (Arabic: نص) ✓ (7986 bytes)
+Removed existing file: rbe3.mp3
+[15/26] rbe3.mp3... (Arabic: ربع) ✓ (13837 bytes)
+Removed existing file: tulut.mp3
+[16/26] tulut.mp3... (Arabic: تولت) ✓ (14673 bytes)
+Removed existing file: kilo.mp3
+[17/26] kilo.mp3... (Arabic: كيلو) ✓ (12583 bytes)
+Removed existing file: itru.mp3
+[18/26] itru.mp3... (Arabic: إيترو) ✓ (13837 bytes)
+Removed existing file: mitru.mp3
+[19/26] mitru.mp3... (Arabic: ميترو) ✓ (16345 bytes)
+Removed existing file: bzzaf.mp3
+[20/26] bzzaf.mp3... (Arabic: بزاف) ✓ (13419 bytes)
+Removed existing file: bzzaf_dyal.mp3
+[21/26] bzzaf_dyal.mp3... (Arabic: بزاف ديال...) ✓ (20525 bytes)
+Removed existing file: shwiya.mp3
+[22/26] shwiya.mp3... (Arabic: شوية) ✓ (11747 bytes)
+Removed existing file: shi.mp3
+[23/26] shi.mp3... (Arabic: شي) ✓ (9658 bytes)
+Removed existing file: kulshi_kul.mp3
+[24/26] kulshi_kul.mp3... (Arabic: كلشي / كل) ✓ (19271 bytes)
+Removed existing file: kafi_baraka.mp3
+[25/26] kafi_baraka.mp3... (Arabic: كافي / باراكا) ✓ (25958 bytes)
+Removed existing file: walu_ta_7aja.mp3
+[26/26] walu_ta_7aja.mp3... (Arabic: والو / تا حاجة) ✓ (30974 bytes)
+
+==================================================
+✅ Created/Regenerated: 26
+❌ Failed: 0
+Total: 26

@@ -1,0 +1,14 @@
+Regenerating 7 audio files for Lesson B1-16 from Arabic text...
+
+[1/7] register_b1_16_ttomobil.mp3... (Arabic: طموبيل...) ✓ (16345 bytes)
+[2/7] register_b1_16_tran.mp3... (Arabic: تران...) ✓ (14673 bytes)
+[3/7] register_b1_16_forshita.mp3... (Arabic: فورشيطا...) ✓ (15509 bytes)
+[4/7] register_b1_16_simana.mp3... (Arabic: سيمانا...) ✓ (13837 bytes)
+[5/7] register_b1_16_kuzina.mp3... (Arabic: كوزينة...) ✓ (13837 bytes)
+[6/7] register_b1_16_mersi.mp3... (Arabic: مرسي...) ✓ (15509 bytes)
+[7/7] register_b1_16_dakor.mp3... (Arabic: داكور...) ✓ (17181 bytes)
+
+==================================================
+✅ Created/Regenerated: 7
+❌ Failed: 0
+Total: 7

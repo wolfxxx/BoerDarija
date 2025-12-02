@@ -1,0 +1,15 @@
+Regenerating 8 audio files for Lesson B1-9 from Arabic text...
+
+[1/8] form5_b1_9_t3llem.mp3... (Arabic: كانبغي نتعلّم لغات جداد....) ✓ (30556 bytes)
+[2/8] form5_b1_9_tbeddel.mp3... (Arabic: الجو تبدّل اليوم....) ✓ (29720 bytes)
+[3/8] form5_b1_9_tsuwwer.mp3... (Arabic: تصوّرت بلي أنا ف مكان آخر....) ✓ (42258 bytes)
+[4/8] form5_b1_9_tkellem.mp3... (Arabic: خاصك تتكلّم معاه....) ✓ (25122 bytes)
+[5/8] form7_b1_9_t7ell.mp3... (Arabic: الباب تحلّ بوحدو....) ✓ (23868 bytes)
+[6/8] form7_b1_9_therres.mp3... (Arabic: الكاس تهرّس....) ✓ (20525 bytes)
+[7/8] form7_b1_9_tkteb.mp3... (Arabic: الكتاب تكتب ف 2020....) ✓ (38497 bytes)
+[8/8] form7_b1_9_t7bes.mp3... (Arabic: اللص تحبس....) ✓ (16345 bytes)
+
+==================================================
+✅ Created/Regenerated: 8
+❌ Failed: 0
+Total: 8

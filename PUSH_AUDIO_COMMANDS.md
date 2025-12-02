@@ -71,3 +71,5 @@ After pushing, verify the files are on GitHub:
 1. Go to: https://github.com/wolfxxx/boerdarija
 2. Navigate to: `audio/lessons/`
 3. Check if your updated audio files are there
+
+
