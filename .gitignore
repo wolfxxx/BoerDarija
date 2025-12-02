@@ -4,6 +4,7 @@
 # Pattern-based exclusions to catch all files with API keys
 create_lesson*.py
 create_lesson_a2_*.py
+create_*_audio*.py
 fix_*_audio.py
 fix_lesson*.py
 test_*.py
@@ -33,6 +34,7 @@ fix_transcription_audio.py
 generate_lesson0_audio.py
 generate_lesson_audio.py
 generate_audio.py
+check_github_status.py
 
 # Other sensitive files
 # Add any other files containing API keys or sensitive information here
