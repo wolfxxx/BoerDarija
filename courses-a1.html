@@ -203,10 +203,23 @@
   <script src="js/progress.js"></script>
   <script>
     // Add green tick marks for completed lessons
-    document.addEventListener('DOMContentLoaded', () => {
+    // Wait for both DOM and ProgressSystem to be ready
+    function addCompletionTicks() {
+      // Check if ProgressSystem is available
+      if (typeof ProgressSystem === 'undefined') {
+        // Retry after a short delay if ProgressSystem isn't loaded yet
+        setTimeout(addCompletionTicks, 100);
+        return;
+      }
+      
       const startButtons = document.querySelectorAll('.start-button');
       
       startButtons.forEach(button => {
+        // Skip if tick already added
+        if (button.querySelector('.completion-tick')) {
+          return;
+        }
+        
         // Extract lesson ID from href (e.g., "lesson1.html" -> "lesson1")
         const href = button.getAttribute('href');
         if (href) {
@@ -232,7 +245,15 @@
           }
         }
       });
-    });
+    }
+    
+    // Try immediately if DOM is ready, otherwise wait for DOMContentLoaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', addCompletionTicks);
+    } else {
+      // DOM is already ready
+      addCompletionTicks();
+    }
   </script>
 </body>
 </html>

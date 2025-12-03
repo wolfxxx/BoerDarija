@@ -216,27 +216,44 @@
       });
 
       // Add green tick marks for completed lessons
-      document.querySelectorAll('.start-button').forEach(button => {
-        const href = button.getAttribute('href');
-        if (href) {
-          const lessonId = href.replace('.html', '');
-          if (ProgressSystem.isComplete(lessonId)) {
-            // Create green tick mark
-            const tick = document.createElement('span');
-            tick.className = 'completion-tick';
-            tick.innerHTML = '✓';
-            tick.style.cssText = `
-              display: inline-block;
-              color: #00ff00;
-              font-weight: bold;
-              font-size: 1.2em;
-              margin-left: 8px;
-              vertical-align: middle;
-            `;
-            button.appendChild(tick);
-          }
+      function addCompletionTicks() {
+        // Check if ProgressSystem is available
+        if (typeof ProgressSystem === 'undefined') {
+          // Retry after a short delay if ProgressSystem isn't loaded yet
+          setTimeout(addCompletionTicks, 100);
+          return;
         }
-      });
+        
+        document.querySelectorAll('.start-button').forEach(button => {
+          // Skip if tick already added
+          if (button.querySelector('.completion-tick')) {
+            return;
+          }
+          
+          const href = button.getAttribute('href');
+          if (href) {
+            const lessonId = href.replace('.html', '');
+            if (ProgressSystem.isComplete(lessonId)) {
+              // Create green tick mark
+              const tick = document.createElement('span');
+              tick.className = 'completion-tick';
+              tick.innerHTML = '✓';
+              tick.style.cssText = `
+                display: inline-block;
+                color: #00ff00;
+                font-weight: bold;
+                font-size: 1.2em;
+                margin-left: 8px;
+                vertical-align: middle;
+              `;
+              button.appendChild(tick);
+            }
+          }
+        });
+      }
+      
+      // Call after a short delay to ensure ProgressSystem is loaded
+      setTimeout(addCompletionTicks, 50);
     });
   </script>
 </body>
