@@ -193,6 +193,7 @@
   <!-- Add navigation script -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Assuming jQuery for nav loading -->
   <script src="js/navigation.js"></script>
+  <script src="js/progress.js"></script>
   <script>
     $(function(){
       $("#nav-placeholder").load("nav.html", function() {
@@ -204,6 +205,29 @@
                   nav.removeClass('scrolled');
               }
           });
+      });
+      
+      // Add green tick marks for completed lessons
+      document.querySelectorAll('.start-button').forEach(button => {
+        const href = button.getAttribute('href');
+        if (href) {
+          const lessonId = href.replace('.html', '');
+          if (ProgressSystem.isComplete(lessonId)) {
+            // Create green tick mark
+            const tick = document.createElement('span');
+            tick.className = 'completion-tick';
+            tick.innerHTML = '✓';
+            tick.style.cssText = `
+              display: inline-block;
+              color: #00ff00;
+              font-weight: bold;
+              font-size: 1.2em;
+              margin-left: 8px;
+              vertical-align: middle;
+            `;
+            button.appendChild(tick);
+          }
+        }
       });
     });
   </script>

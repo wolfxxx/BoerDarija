@@ -200,5 +200,39 @@
 
   <!-- Add navigation script -->
   <script src="js/navigation.js"></script>
+  <script src="js/progress.js"></script>
+  <script>
+    // Add green tick marks for completed lessons
+    document.addEventListener('DOMContentLoaded', () => {
+      const startButtons = document.querySelectorAll('.start-button');
+      
+      startButtons.forEach(button => {
+        // Extract lesson ID from href (e.g., "lesson1.html" -> "lesson1")
+        const href = button.getAttribute('href');
+        if (href) {
+          const lessonId = href.replace('.html', '');
+          
+          // Check if lesson is complete
+          if (ProgressSystem.isComplete(lessonId)) {
+            // Create green tick mark
+            const tick = document.createElement('span');
+            tick.className = 'completion-tick';
+            tick.innerHTML = '✓';
+            tick.style.cssText = `
+              display: inline-block;
+              color: #00ff00;
+              font-weight: bold;
+              font-size: 1.2em;
+              margin-left: 8px;
+              vertical-align: middle;
+            `;
+            
+            // Insert tick after button text
+            button.appendChild(tick);
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>

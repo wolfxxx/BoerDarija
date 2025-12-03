@@ -215,24 +215,25 @@
         });
       });
 
-      // Highlight completed courses
-      const completedLessons = ProgressSystem.getData().completed;
-      document.querySelectorAll('.course-card').forEach(card => {
-        const link = card.querySelector('a.start-button');
-        if (link) {
-          const lessonId = link.getAttribute('href').replace('.html', '');
-          if (completedLessons.includes(lessonId)) {
-            card.classList.add('completed-card');
-            // Add a checkmark badge
-            const badge = document.createElement('div');
-            badge.className = 'completion-badge';
-            badge.innerHTML = '✓';
-            card.appendChild(badge);
-
-            // Update button
-            link.textContent = 'Review Module';
-            link.style.background = 'rgba(255, 255, 255, 0.1)';
-            link.style.border = '1px solid rgba(255, 255, 255, 0.3)';
+      // Add green tick marks for completed lessons
+      document.querySelectorAll('.start-button').forEach(button => {
+        const href = button.getAttribute('href');
+        if (href) {
+          const lessonId = href.replace('.html', '');
+          if (ProgressSystem.isComplete(lessonId)) {
+            // Create green tick mark
+            const tick = document.createElement('span');
+            tick.className = 'completion-tick';
+            tick.innerHTML = '✓';
+            tick.style.cssText = `
+              display: inline-block;
+              color: #00ff00;
+              font-weight: bold;
+              font-size: 1.2em;
+              margin-left: 8px;
+              vertical-align: middle;
+            `;
+            button.appendChild(tick);
           }
         }
       });
